@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_version">النسخة %s</string>
+
+
+    <string name="error_api_500">حدث خطأ في الخادم، رجاء المحاولة مرة أخرى</string>
+    <string name="error_api_general">حدث خطأ ما، رجاء المحاولة مرة أخرى</string>
+
+    <string name="error_empty_email">يجب ادخال البريد الالكترونى</string>
+    <string name="error_not_valid_email">من فضلك ادخل بريد الكترونى صحيح</string>
+
+    <string name="error_not_valid_password">يجب ان يكون طول كلمة المرور من 8 إلى 16 ويحتوى على الاقل حرف كبير، حرف صغير، رقم، وحرف خاص</string>
+    <string name="error_not_valid_iban">خطأ في الايبان من فضلك افحص الارقام</string>
+    <string name="ok">موافق</string>
+    <string name="select_all"> تحديد الكل</string>
+    <string name="deselect_all">الغاء تحديد الكل</string>
+    <string name="register_not_completed">لم يتم التسجيل</string>
+
+    <string name="retry">اعدالمحاولة</string>
+
+    <string name="n_a">غير متاح</string>
+
+    <!-- login -->
+    <string name="hint_email_login">البريد الالكترونى</string>
+
+    <string name="hint_password_login">كلمة المرور</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="forget_pass">هل نسيت كلمة المرور؟</string>
+    <string name="dont_have_account"><u>ليس لديك حساب</u></string>
+
+    <string name="invalid_login_data">البريد الالكترونى أو كلمة المرور غير صحيحين، الرجاء التأكد والمحاولة مرة أخرى</string>
+    <string name="invalid_confirmation_code">رقم التاكيد غير صحيح ، الرجاء التأكد والمحاولة مرة أخرى </string>
+
+    <!-- register -->
+    <string name="new_account">حساب جديد</string>
+
+    <string name="terms_agreement">أنا أوافق على</string>
+    <string name="terms_and_privacy">الشروط والأحكام</string>
+
+    <string name="first_name">الاسم الأول</string>
+    <string name="first_name_required">الاسم الأول *</string>
+    <string name="error_not_valid_name">يجب أن يكون الاسم من 3 إلى 16 حرف بدون أرقام أو علامات خاصة</string>
+
+    <string name="last_name">الاسم الأخير</string>
+    <string name="last_name_required">الاسم الأخير *</string>
+
+    <string name="company_name">اسم الشركة *</string>
+    <string name="error_not_valid_company">يجب ان يتكون اسم الشركة من ثلاث أحرف على الأقل</string>
+
+
+    <string name="country">البلد</string>
+    <string name="country_required">البلد *</string>
+
+    <string name="phone_number">رقم الهاتف</string>
+    <string name="phone_number_required">رقم الهاتف *</string>
+    <string name="error_not_valid_phone">يجب أن يكون رقم الهاتف من 4 إلى 12 رقم</string>
+
+    <string name="office_number">رقم المكتب *</string>
+
+    <string name="email">البريد الإلكتروني</string>
+    <string name="phone"> التليفون</string>
+    <string name="email_required">البريد الإلكتروني *</string>
+
+    <string name="passport_no">رقم جواز السفر</string>
+
+
+    <string name="password_required">كلمة المرور *</string>
+
+    <string name="e_wallet_iban">المحفظة الالكترونية</string>
+    <string name="wallet_number">رقم المحفظة</string>
+    <string name="error_not_valid_wallet">يجب أن يكون رقم المحفظة من 5 إلى 20 حرف أو رقم بدون علامات خاصة </string>
+
+
+    <string name="sign_up">التسجيل</string>
+
+    <string name="load_countries_failed">حدث خطأ في تحميل البلاد المتاحة، الرجاء المحاولة في وقت آخر</string>
+
+    <string name="register_completed">تم التسجيل بنجاح</string>
+
+
+    <!-- forget pass -->
+    <string name="forget_pass_title">استعادة كلمة المرور</string>
+    <string name="enter_email">من فضلك ادخل البريد الالكترونى</string>
+    <string name="enter_naw_pass_and_code">من فضلك ادخل كلمة المرور الجديدة</string>
+    <string name="enter_change_passeord">من فضلك غير كلمة المرور </string>
+
+    <string name="new_pass">كلمة المرور الجديدة</string>
+
+    <string name="renter_pass">اعد ادخال كلمة المرور</string>
+    <string name="exist_pass">كلمة المرور الحاليه</string>
+    <string name="error_not_valid_renter_pass">اعادة كلمة المرور يجب ان تتوافق مع كلمة المرور</string>
+
+    <string name="code">الرمز</string>
+
+    <string name="change_pass">تغيير كلمة المرور</string>
+
+    <string name="send_code">ارسال الرمز</string>
+
+    <string name="check_your_email">تم ارسال كود التحقق الى البريد الالكترونى</string>
+    <string name="forget_pass_completed">تم تغيير كلمة المرور بنجاح</string>
+
+    <!-- confirm Password -->
+    <string name="user_verification"> تاكيد المستخدم</string>
+    <string name="confirmation_code"> ادخل رقم التاكيد</string>
+    <string name="error_not_valid_confirmation">اخل رقم التاكيد</string>
+
+
+    <!-- confirm SignUp -->
+    <string name="confirm_message">من فضلك ادخل 6 اراقم المرسله الي ايميلك</string>
+    <string name="verify_confirm"> التاكيد</string>
+    <string name="cancel_confirm">الغاء</string>
+
+    <!-- home -->
+    <string name="home">الرئيسية</string>
+    <string name="new_booking">حجز جديد</string>
+    <string name="my_booking">حجوزاتي</string>
+    <string name="my_failed_transactions">العمليات الفاشلة</string>
+    <string name="profile">حسابي</string>
+    <string name="settings">الاعدادات</string>
+    <string name="change_lang">تغيير اللغة</string>
+
+    <string name="target_language">En</string>
+
+    <!-- hotels -->
+    <string name="hotels">الفنادق</string>
+    <string name="hotel_name">اسم الفندق</string>
+    <string name="special_code">الكود الخاص</string>
+    <string name="sub_Pcc">Sub Pcc</string>
+    <string name="check_in">الوصول</string>
+    <string name="check_out">المغادرة</string>
+
+
+    <string name="date_range_picker_title">اختار تاريخ الوصول والمغادؤة</string>
+
+    <plurals name="days_number">
+        <item quantity="zero">%d ليلة</item>
+        <item quantity="one">ليلة</item>
+        <item quantity="two">ليلتان</item>
+        <item quantity="few">%d ليالى</item>
+        <item quantity="many">%d ليلة</item>
+    </plurals>
+
+    <string name="room">حجرة</string>
+    <string name="adults">البالغين</string>
+    <string name="children">الاطفال</string>
+    <string name="add_another_room">اضافة غرفة أخرى</string>
+
+    <string name="age">العمر</string>
+    <string name="add_child">اضف طفل</string>
+    <string name="cancel">إلغاء</string>
+
+    <string name="search">ادخل حساب جديد</string>
+
+    <!-- hotels list -->
+    <string name="sort">ترتيب</string>
+    <string name="filter">تصفية</string>
+
+    <plurals name="selected_facilities">
+        <item quantity="zero"> تم اختيار %d خدمة </item>
+        <item quantity="one">  تم اختيار %d خدمة </item>
+        <item quantity="two"> تم اختيار %d خدمة </item>
+        <item quantity="few"> تم اختيار %d خدمة </item>
+        <item quantity="many"> تم اختيار %d خدمة </item>
+    </plurals>
+
+    <string name="hotel_empty">لا يوجد فنادق</string>
+
+    <string name="selected_rooms_added">تم إضافه الغرف المختاره الي سله المشتريات</string>
+    <string name="continue_shopping">مواصله الشراء</string>
+
+    <!-- transports -->
+    <string name="transports">المواصلات</string>
+    <string name="company">الشركة</string>
+    <string name="category">التصنيف</string>
+    <string name="vehicle_type">النوع </string>
+    <string name="routes">اختار الطريق</string>
+    <string name="services">الخدمات</string>
+
+    <string name="vehicle">المركبة</string>
+    <string name="passengers">المسافرون</string>
+    <string name="vehicles">المركبات</string>
+    <string name="passenger_per_vehicle">مسافر للمركبة</string>
+    <string name="vehicle_model">موديل  المركبة</string>
+    <string name="price_range">نطاق السعر</string>
+
+    <string name="date_picker_title">اختار تاريخ البدء</string>
+
+    <string name="capacity">السعة</string>
+
+    <string name="available_buses">المركبات المتاحة</string>
+
+    <string name="book_now">احجز الآن</string>
+
+    <plurals name="available_buses">
+        <item quantity="zero">لا يوجد مركبات متاحة</item>
+        <item quantity="one">متاح مركبة واحدة فقط</item>
+        <item quantity="two">متاح مركبتان</item>
+        <item quantity="few">متاح %d مركبات</item>
+        <item quantity="many">متاح %d مركبة</item>
+    </plurals>
+
+    <plurals name="selected_services">
+        <item quantity="zero"> تم اختيار %d خدمة </item>
+        <item quantity="one">  تم اختيار %d خدمة </item>
+        <item quantity="two"> تم اختيار %d خدمة </item>
+        <item quantity="few"> تم اختيار %d خدمة </item>
+        <item quantity="many"> تم اختيار %d خدمة </item>
+    </plurals>
+
+    <string name="transports_empty">لايوجد مركبات</string>
+    <string name="selected_vehicles_added">تم إضافه السيارات المختاره الي سله المشتريات</string>
+
+    <!-- checkout -->
+    <string name="checkout">الحجز</string>
+    <string name="details">التفاصيل</string>
+    <string name="info">المعلومات</string>
+    <string name="payment">الدفع</string>
+
+    <string name="travellers">المسافرين</string>
+    <string name="model">الموديل</string>
+    <string name="model_from_to">%1$d إلى %2$d </string>
+    <string name="price_unit">السعر/وحدة</string>
+    <string name="quantity">العدد</string>
+    <string name="price_info">التكلفة الكلية/وحدة محجوزة وليس للمسافرون</string>
+    <string name="confirm">تأكيد</string>
+    <string name="total_price">السعر الكلى</string>
+
+    <string name="contact_details">تفاصيل التواصل</string>
+    <string name="birth_date">تاريخ الميلاد</string>
+    <string name="city">المدينة</string>
+    <string name="fax">الفاكس</string>
+    <string name="mobile">الجوال</string>
+    <string name="gender">النوع</string>
+    <string name="country_profile">الدوله</string>
+    <string name="countrycode">كود الدروله</string>
+    <string name="itinerary_name">اسم خط سير الرحلة</string>
+    <string name="traveller_details">تفاصيل المسافر</string>
+    <string name="change_password_profile" tools:ignore="ExtraTranslation">تغيير الباسورد</string>
+    <string name="e_wallet_account">حساب المحفظه </string>
+    <string name="terms_agreement_general">انا اوافق علي الشروط والسياسات العامه</string>
+
+    <!-- sort & filter -->
+    <string name="price_ascending">السعر الأقل</string>
+    <string name="price_descending">السعر الأعلى</string>
+    <string name="company_name_ascending">اسم الشركة - أ إلى ي</string>
+    <string name="company_name_descending">اسم الشركة ي إلى أ</string>
+    <string name="stars_ascending">النجوم من 1 إلى 5</string>
+    <string name="starts_descending">النجوم من 5 إلى 1</string>
+
+    <string name="reset">إعداة تعيين</string>
+    <string name="price">السعر</string>
+    <string name="rating">التقييم</string>
+    <string name="apply">تطبيق</string>
+
+    <!-- hotel details -->
+    <string name="about">عنا</string>
+    <string name="policy">سياسات</string>
+    <string name="remarks">علامات</string>
+    <string name="contact_info">معلومات الاتصال</string>
+    <string name="facilities">المرافق</string>
+    <string name="show_rooms">عرض الغرف المتاحة</string>
+    <string name="available_rooms">الغرف المتاحة</string>
+
+    <string name="per_night">لكل ليلة</string>
+    <string name="free_cancellation">الغاء مجاني</string>
+    <string name="non_refundable">غير قابل للاسترجاع</string>
+    <string name="reserve">حجز</string>
+
+    <plurals name="rooms_left">
+        <item quantity="zero">لايوجد غرف متاحة</item>
+        <item quantity="one">باقى غرفة وحدة فقط</item>
+        <item quantity="two">متاح غرفتان فقط </item>
+        <item quantity="few">متاح %d غرف فقط</item>
+        <item quantity="many">متاح %d غرفة فقط</item>
+    </plurals>
+
+    <!-- profile -->
+    <string name="wallet_management">ادارة المحفظة</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="logout">تسجيل الخروج</string>
+
+    <!-- cart -->
+    <string name="my_cart">السلة</string>
+    <string name="cart_empty">سلة المشتريات فارغة</string>
+    <string name="cart_loading_error">لا يمكن تحميل محتويات سلة المشتريات ، الرجاء المحاولة مرة أخرى</string>
+
+    <string name="remove_all">حذف الكل</string>
+
+    <string name="amount">السعر</string>
+    <string name="vat">الضريبة</string>
+
+    <string name="total">الاجمالى</string>
+
+    <string name="male">ذكر</string>
+    <string name="checking">فحص</string>
+    <string name="saving">حفظ</string>
+    <string name="creditcard">كريديت</string>
+    <string name="female">انثى</string>
+
+    <string name="booking_summary">تقريرالحجز</string>
+
+    <string name="thank_you">شكرالك!</string>
+    <string name="failed_reservation">حجز خاطئ!</string>
+
+    <string name="order_success">تم ارسال الطلب بنجاح ورقم الطلب هو %d</string>
+    <string name="order_failed">حدث خطأ في ارسال الطلب ورقم الطلب هو %d</string>
+
+    <string name="reason">السبب</string>
+
+    <!-- wallet -->
+    <string name="wallet_empty">المحفظة فارغة</string>
+
+    <string name="main">الرئيسية</string>
+    <string name="select_wallet">اختيار محفظة</string>
+
+    <string name="ewallet_payment">الدفع بالمحفظة الالكترونية</string>
+    <string name="accountnumber">رقم الحساب :</string>
+    <string name="auth_code">رمز التحقق</string>
+
+    <string name="set_main_wallet">تعيين كمحفظة افتراضية</string>
+    <string name="add">اضافة</string>
+    <string name="update">تحديث</string>
+    <string name="delete">حذف</string>
+
+    <!-- my booking -->
+    <string name="status">الحالة</string>
+    <string name="status_reason">السبب</string>
+    <string name="from_date">من تاريخ</string>
+    <string name="to_date">إلى تاريخ</string>
+    <string name="booking_reference_number">رقم مرجع الحجز</string>
+    <string name="itinerary_number">رقم خط سير الرحلة</string>
+    <string name="transaction_token">رمز المعاملة</string>
+    <string name="customer_name">اسم العميل</string>
+    <string name="company_hotel_name">الاسم(اسم الفندق /اسم الشركه)</string>
+    <string name="copied_successfully">تم  تحميل %s بنجاح</string>
+    <string name="storage_permission_never_ask">يحتاج التطبيق لصلاحية الوصول إلى الذاكرة لتحميل الملف ، من فضلك قم بمنحها من خلال<b>الاعدادات</b></string>
+
+    <string name="my_booking_empty">لا يوجد حجوزات</string>
+
+    <string name="cancel_booking">إلغاءالحجز</string>
+    <string name="dismiss">عدم المتابعة</string>
+
+    <!-- cancel reservation -->
+    <string name="cancel_reservation">الغاء الحجز</string>
+    <string name="refund_amount">المبلغ المسترد</string>
+    <string name="cancellation_reason">سبب الالغاء</string>
+    <string name="reservation_cancelled_successfully">تم إلغاءالحجز  بنجاح</string>
+
+    <!-- hotel reservation -->
+    <string name="hotel_reservation">حجز الفندق</string>
+    <string name="copy">نسخ</string>
+    <string name="brn">رقم الحجز</string>
+    <string name="booking_date">تاريخ الحجز</string>
+    <string name="booking_amount">كمية الحجز</string>
+    <string name="room_name">اسم الغرفة</string>
+    <string name="total_pax">الضرائب الكلية</string>
+    <string name="payment_status">حالة الدفع</string>
+    <string name="invoice">فاتورة</string>
+    <string name="download">التحميل</string>
+
+    <!-- transportation reservation -->
+    <string name="transportation_reservation">حجز المواصلات</string>
+    <string name="transportation_company">شركة المواصلات</string>
+    <string name="travel_date">تاريخ السفر</string>
+    <string name="route">الطريق</string>
+
+    <!-- failed transportation -->
+    <string name="failed_transaction">العمليات الفاشلة</string>
+    <string name="transaction_type">نوع العملية</string>
+    <string name="date">التاريخ</string>
+    <string name="agent">العميل</string>
+    <string name="gateway">طريقة الدفع</string>
+    <string name="supplier">مزود الخدمة</string>
+    <string name="pre_pay_amount">المدفوع مقدماً</string>
+
+    <string name="contact_number">رقم التواصل</string>
+    <string name="address">العنوان</string>
+    <string name="cancellation_policy">سياسة الالغاء</string>
+    <string name="room_details">تفاصيل الغرف</string>
+    <string name="vehicles_details">تفاصيل المركبات</string>
+    <string name="price_details">تفاصيل السعر</string>
+    <string name="base_price">السعر الاساسي</string>
+
+</resources>

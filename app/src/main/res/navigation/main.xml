@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/searchPagerFragment">
+
+
+    <fragment
+        android:id="@+id/searchPagerFragment"
+        android:name="com.gama.task.ui.pager.MainCategoriesFragment"
+        tools:layout="@layout/fragment_main_category">
+        <action
+            android:id="@+id/action_searchPagerFragment_to_cinemaCardFragment"
+            app:destination="@id/cinemaCardFragment" />
+        <action
+            android:id="@+id/action_searchPagerFragment_to_gameCard"
+            app:destination="@id/gameCard" />
+        <action
+            android:id="@+id/action_searchPagerFragment_to_dataRechargeFragment"
+            app:destination="@id/dataRechargeFragment" />
+        <action
+            android:id="@+id/action_searchPagerFragment_to_giftCardFragment"
+            app:destination="@id/giftCardFragment" />
+        <action
+            android:id="@+id/action_searchPagerFragment_to_voiceRechargeFragment"
+            app:destination="@id/voiceRechargeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cinemaCardFragment"
+        android:name="com.gama.task.ui.fragments.CinemaCardFragment"
+        android:label="fragment_cinema_card"
+        tools:layout="@layout/fragment_cinema_card" />
+    <fragment
+        android:id="@+id/gameCard"
+        android:name="com.gama.task.ui.fragments.gamecards.GameCard"
+        android:label="fragment_game_card"
+        tools:layout="@layout/fragment_game_card" >
+        <action
+            android:id="@+id/action_gameCard_to_playStationFragment"
+            app:destination="@id/playStationFragment" />
+        <action
+            android:id="@+id/action_gameCard_to_nintendFragment"
+            app:destination="@id/nintendFragment" />
+        <action
+            android:id="@+id/action_gameCard_to_xboxFragment"
+            app:destination="@id/xboxFragment" />
+        <action
+            android:id="@+id/action_gameCard_to_pubgFragment"
+            app:destination="@id/pubgFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataRechargeFragment"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.DataRechargeFragment"
+        android:label="fragment_data_recharge"
+        tools:layout="@layout/fragment_data_recharge" >
+        <action
+            android:id="@+id/action_dataRechargeFragment_to_lebaraFragment"
+            app:destination="@id/lebaraFragment" />
+        <action
+            android:id="@+id/action_dataRechargeFragment_to_zainFragment"
+            app:destination="@id/zainFragment" />
+        <action
+            android:id="@+id/action_dataRechargeFragment_to_virginFragment"
+            app:destination="@id/virginFragment" />
+        <action
+            android:id="@+id/action_dataRechargeFragment_to_stcFragment"
+            app:destination="@id/stcFragment" />
+        <action
+            android:id="@+id/action_dataRechargeFragment_to_friendFragment"
+            app:destination="@id/friendFragment" />
+        <action
+            android:id="@+id/action_dataRechargeFragment_to_zainFragment2"
+            app:destination="@id/zainFragment" />
+        <action
+            android:id="@+id/action_dataRechargeFragment_to_MobilyFragment"
+            app:destination="@id/MobilyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/giftCardFragment"
+        android:name="com.gama.task.ui.fragments.GiftCardFragment"
+        android:label="fragment_gift_card"
+        tools:layout="@layout/fragment_gift_card" />
+    <fragment
+        android:id="@+id/voiceRechargeFragment"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.VoiceRechargeFragment"
+        android:label="fragment_voice_recharge"
+        tools:layout="@layout/fragment_voice_recharge" >
+        <action
+            android:id="@+id/action_voiceRechargeFragment_to_virginFragment2"
+            app:destination="@id/virginFragment" />
+        <action
+            android:id="@+id/action_voiceRechargeFragment_to_stcFragment"
+            app:destination="@id/stcvoiceFragment" />
+        <action
+            android:id="@+id/action_voiceRechargeFragment_to_lebaraFragment"
+            app:destination="@id/lebaraFragment" />
+        <action
+            android:id="@+id/action_voiceRechargeFragment_to_MobilyFragment"
+            app:destination="@id/MobilyvoiceFragment" />
+        <action
+            android:id="@+id/action_voiceRechargeFragment_to_zainFragment"
+            app:destination="@id/zainFragment" />
+        <action
+            android:id="@+id/action_voiceRechargeFragment_to_friendFragment"
+            app:destination="@id/friendFragment" />
+        <action
+            android:id="@+id/action_voiceRechargeFragment_to_goFragment"
+            app:destination="@id/goFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/friendFragment"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.friendfragment.FrindFragment"
+        android:label="fragment_friend"
+        tools:layout="@layout/fragment_data_recharg_friendi" />
+    <fragment
+        android:id="@+id/goFragment"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.gofragment.GoFragment"
+        android:label="fragment_go"
+        tools:layout="@layout/fragment_data_recharg_go" />
+    <fragment
+        android:id="@+id/MobilyFragment"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.mobilyfragment.MobilyFragment"
+        android:label="fragment_mobily"
+        tools:layout="@layout/fragment_data_recharg_mobily" />
+    <fragment
+        android:id="@+id/MobilyvoiceFragment"
+        android:name="com.gama.task.ui.fragments.voicerecharge.mobilyfragment.MobilyVoiceFragment"
+        android:label="fragment_mobily"
+        tools:layout="@layout/fragment_voice_rechare_mobily" />
+
+    <fragment
+        android:id="@+id/zainFragment"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.zainfragment.ZainFragment"
+        android:label="fragment_Zain"
+        tools:layout="@layout/fragment_data_recharg_zain" />
+
+    <fragment
+        android:id="@+id/lebaraFragment"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.lebarafragment.LebrataFragment"
+        android:label="fragment_lebara"
+        tools:layout="@layout/fragment_data_recharg_lebara" />
+
+    <fragment
+        android:id="@+id/stcFragment"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.stcfragment.StcFragment"
+        android:label="fragment_stc"
+        tools:layout="@layout/fragment_data_recharg_stc" />
+    <fragment
+        android:id="@+id/stcvoiceFragment"
+        android:name="com.gama.task.ui.fragments.voicerecharge.stcfragment.StcFragment"
+        android:label="fragment_stc"
+        tools:layout="@layout/fragment_voice_rechare_stc" />
+
+    <fragment
+        android:id="@+id/virginFragment"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.virginfragment.VirginFragment"
+        android:label="fragment_virgin"
+        tools:layout="@layout/fragment_data_recharg_virgin" />
+    <fragment
+        android:id="@+id/playStationFragment"
+        android:name="com.gama.task.ui.fragments.gamecards.playstationfragment.PlayStationFragment"
+        android:label="fragment_playstation"
+        tools:layout="@layout/fragment_game_card_playstation" />
+    <fragment
+        android:id="@+id/pubgFragment"
+        android:name="com.gama.task.ui.fragments.gamecards.pubgfragment.PubgFragment"
+        android:label="fragment_pubg"
+        tools:layout="@layout/fragment_game_card_pubg" />
+    <fragment
+        android:id="@+id/xboxFragment"
+        android:name="com.gama.task.ui.fragments.gamecards.xboxfragment.XboxFragment"
+        android:label="fragment_xbox"
+        tools:layout="@layout/fragment_game_card_xbox" />
+    <fragment
+        android:id="@+id/nintendFragment"
+        android:name="com.gama.task.ui.fragments.gamecards.nintendofragment.NintendFragment"
+        android:label="fragment_nintend"
+        tools:layout="@layout/fragment_game_card_nintend" />
+
+
+</navigation>

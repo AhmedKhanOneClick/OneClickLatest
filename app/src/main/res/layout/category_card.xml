@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="transport"
+            type="com.gama.task.models.Budgets.BudgetsResponse" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:orientation="vertical"
+        android:background="@drawable/button_main">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:orientation="horizontal"
+
+
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <ImageView
+                    android:id="@+id/iv_categoryCard"
+                    android:layout_width="@dimen/_65sdp"
+                    android:layout_height="@dimen/_65sdp"
+
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:layout_marginLeft="@dimen/_28sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:background="@drawable/bg_category_card_circule"
+                    android:padding="@dimen/x20dp"
+                    android:src="@drawable/ic_gift_card"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+
+                <TextView
+
+                    android:id="@+id/tv_catogory_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_29sdp"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:text="Recharge games"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_categoryCard_des"
+                    android:layout_width="@dimen/_160sdp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:lines="2"
+                    android:text="Xbox/FIFA/PUBG dfdfdfdfd ddfdsfdssdfsdfsfsfsfs "
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/fontColorCardDes"
+                    android:textSize="@dimen/txt_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.24"
+                    app:layout_constraintStart_toEndOf="@+id/iv_categoryCard"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_catogory_name" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="@dimen/x220dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+
+            android:background="@drawable/ic_bg_category_line" />
+    </LinearLayout>
+
+</layout>
