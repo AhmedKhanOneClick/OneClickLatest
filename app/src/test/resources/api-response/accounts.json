@@ -1,0 +1,85 @@
+{
+  "data": {
+    "accounts": [
+      {
+        "id": "c5d52242-c7a3-424d-975f-364dc2cd7b42",
+        "name": "Credit Card",
+        "type": "creditCard",
+        "on_budget": true,
+        "closed": false,
+        "note": null,
+        "balance": 0,
+        "cleared_balance": 0,
+        "uncleared_balance": 0,
+        "transfer_payee_id": "5f1841a5-d4b8-42c9-9cce-7e48904b2e4a",
+        "deleted": false
+      },
+      {
+        "id": "a3bb2807-7b47-4d1e-b0f8-96dd51e63701",
+        "name": "NB",
+        "type": "checking",
+        "on_budget": true,
+        "closed": false,
+        "note": null,
+        "balance": 100000,
+        "cleared_balance": 100000,
+        "uncleared_balance": 0,
+        "transfer_payee_id": "a49fcb4e-63c0-4d7c-9500-b11ec5eff39f",
+        "deleted": false
+      },
+      {
+        "id": "5979ba74-7ae1-4cb4-983a-4c209125de41",
+        "name": "GIB",
+        "type": "creditCard",
+        "on_budget": true,
+        "closed": false,
+        "note": null,
+        "balance": 2000000,
+        "cleared_balance": 2000000,
+        "uncleared_balance": 0,
+        "transfer_payee_id": "2592f2d2-8999-4e3b-aa40-da1e7dfcff8f",
+        "deleted": false
+      },
+      {
+        "id": "53548d4e-181c-461f-8cb9-b1b71fc30d77",
+        "name": "CON",
+        "type": "checking",
+        "on_budget": true,
+        "closed": false,
+        "note": null,
+        "balance": 2000000,
+        "cleared_balance": 2000000,
+        "uncleared_balance": 0,
+        "transfer_payee_id": "1c5639c3-35c5-4a4e-87b2-6613a427b9ae",
+        "deleted": false
+      },
+      {
+        "id": "46d93799-4aa7-4d21-a7d0-8ac4cde77a7c",
+        "name": "Saving Account",
+        "type": "savings",
+        "on_budget": true,
+        "closed": false,
+        "note": null,
+        "balance": 50000000,
+        "cleared_balance": 0,
+        "uncleared_balance": 50000000,
+        "transfer_payee_id": "a05d419d-2e11-4733-a0b4-0b9240103a8e",
+        "deleted": false
+      },
+      {
+        "id": "1b04b1d5-a789-411d-a284-087cc97aab10",
+        "name": "Cash",
+        "type": "cash",
+        "on_budget": true,
+        "closed": false,
+        "note": null,
+        "balance": 100000000,
+        "cleared_balance": 50000000,
+        "uncleared_balance": 50000000,
+        "transfer_payee_id": "ca4bbd23-d8c9-4bda-94fc-707fb5c8ee08",
+        "deleted": false
+      }
+    ],
+    "server_knowledge": 194
+  }
+}

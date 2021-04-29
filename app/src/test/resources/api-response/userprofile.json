@@ -1,0 +1,32 @@
+{
+  "userProfileViewModel": {
+    "travellerDetails": {
+      "firstName": "mohamed",
+      "lastName": "nosier",
+      "gender": 1,
+      "birthDate": "1992-09-15T00:00:00",
+      "passportNo": "43567890-",
+      "nationalityCode": "20",
+      "middleName": "mohamed",
+      "fullNameAR": "",
+      "phoneNumber": "01286072385",
+      "phoneNumberCountryCode": "20",
+      "email": "mohamednosier123@gmail.com"
+    },
+    "contactDetails": {
+      "gender": 1,
+      "firstName": "mohamed",
+      "lastName": "nosier",
+      "city": "cairo",
+      "email": "mohamednosier123@gmail.com",
+      "mobile": "20128607238",
+      "secondaryPhone": "20128607238",
+      "itineraryName": "Makkah"
+    },
+    "ibanNumber": "SA1790941327111000000002",
+    "defaultHomePage": 0
+  },
+  "isSuccess": true,
+  "message": null,
+  "logId": null
+}

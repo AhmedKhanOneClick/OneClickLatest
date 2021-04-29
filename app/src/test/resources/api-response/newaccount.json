@@ -1,0 +1,16 @@
+{
+  "account": {
+    "id": "a5b0d0c7-9b43-402b-bec3-b7fdda55f65c",
+    "name": "nosier120",
+    "type": "checking",
+    "on_budget": false,
+    "closed": false,
+    "note": "",
+    "balance": 100,
+    "cleared_balance": 0,
+    "uncleared_balance": 0,
+    "transfer_payee_id": "208b3513-989b-4ac3-be2d-0f6949a24e27",
+    "deleted": false
+  },
+  "server_knowledge": 93
+}

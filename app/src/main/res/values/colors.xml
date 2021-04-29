@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D6001B</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <!--    <color name="colorAccent">#147eb0</color>-->
+    <color name="colorAccent">#D3D3D3</color>
+
+    <color name="transparent">#00FFFFFF</color>
+    <color name="splash_color">#D6001B</color>
+    <color name="color_2e3540">#000000</color>
+    <color name="fontColorCardDes">#6A7995</color>
+    <color name="color_4f4f4f">#4f4f4f</color>
+    <color name="color_c424253d">#c424253d</color>
+    <color name="color_147eb0">#147eb0</color>
+    <color name="color_6e7faa">#6e7faa</color>
+    <color name="color_7f8dab">#7f8dab</color>
+    <color name="color_7b7b7b">#7b7b7b</color>
+    <color name="color_d4d4d4">#d4d4d4</color>
+
+    <color name="color_f8f8ff8">#f8f8f8</color>
+    <color name="color_f5f5f5">#f5f5f5</color>
+    <color name="color_f1f1f1">#f1f1f1</color>
+    <color name="color_e0e0e1">#e0e0e1</color>
+    <color name="color_979797">#979797</color>
+
+    <color name="color_ffcc00">#ffcc00</color>
+
+    <color name="color_AFAFAF">#AFAFAF</color>
+
+    <color name="color_FAFAFA">#FAFAFA</color>
+
+    <color name="color_80000000">#80000000</color>
+
+
+    <color name="color_ff5d5d">#ff5d5d</color>
+    <color name="color_1ea554">#1ea554</color>
+
+    <color name="slider_inactive_track">#26848dff</color>
+    <color name="slider_thumb_halo">#3D147EB0</color>
+    <color name="color_EFEFEF">#EFEFEF</color>
+
+    <color name="color_27c867">#27c867</color>
+
+    <color name="color_charging_card_green">#0600C1</color>
+</resources>

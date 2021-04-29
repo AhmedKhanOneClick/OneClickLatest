@@ -1,0 +1,510 @@
+{
+  "data": {
+    "companies": [
+      {
+        "id": 1,
+        "name": "Saudi Public Transport Company"
+      },
+      {
+        "id": 5,
+        "name": "aljazeera company for transportation"
+      },
+      {
+        "id": 7,
+        "name": "Al Arabia Company For The Transportation of pilgrims"
+      },
+      {
+        "id": 8,
+        "name": "Dalah Company For Transportation of Pilgrims"
+      },
+      {
+        "id": 9,
+        "name": "Al madinah Al menawarah for the transportation of pilgrims"
+      },
+      {
+        "id": 10,
+        "name": "Umm Alqura Co "
+      },
+      {
+        "id": 11,
+        "name": "Hafil Company For Transportaion"
+      },
+      {
+        "id": 13,
+        "name": "Abdulelah M. Ali Maghrabi for the transportation of pilgrims"
+      },
+      {
+        "id": 14,
+        "name": "Nasir Andullah Abu Sarhad Group for the transportation of pilgrims"
+      },
+      {
+        "id": 15,
+        "name": "Farouk Jamil Khogeer for the transportation of pilgrims"
+      },
+      {
+        "id": 16,
+        "name": "Qawafil international for tourism services"
+      },
+      {
+        "id": 17,
+        "name": "Shqadaf Company For Transportation"
+      },
+      {
+        "id": 18,
+        "name": "Rawahel al mashaer for the transportation of pilgrims "
+      },
+      {
+        "id": 19,
+        "name": "Rabitat Makah For Trading Transportation"
+      },
+      {
+        "id": 20,
+        "name": "Tabarak Internation for the transportation of pilgrims"
+      },
+      {
+        "id": 21,
+        "name": "Almassa Almotamiza for the transportation of pilgrims"
+      },
+      {
+        "id": 22,
+        "name": "Dura Al Munawwarah"
+      },
+      {
+        "id": 23,
+        "name": "Zaer transport company for Transportation"
+      },
+      {
+        "id": 24,
+        "name": "Carthage Alhadetha Company for the transportation of pilgrims"
+      },
+      {
+        "id": 26,
+        "name": "Saudi Qaed Co"
+      },
+      {
+        "id": 27,
+        "name": "Hussein Mohammad Hijazi For Transportaion of Tourism And Umraa"
+      },
+      {
+        "id": 28,
+        "name": "Mazaya For The Transportation of Pilgrims"
+      },
+      {
+        "id": 29,
+        "name": "Aram Advaced Co."
+      },
+      {
+        "id": 31,
+        "name": "Al Serag Transportation Co."
+      },
+      {
+        "id": 32,
+        "name": "Ruba Al Hijaz"
+      },
+      {
+        "id": 33,
+        "name": "alwessam almutamayiza for the transportation of pilgrims"
+      },
+      {
+        "id": 34,
+        "name": "EL Mahanaa El momaiz For The Transportation of Pilgrims"
+      },
+      {
+        "id": 35,
+        "name": "Rekab Alowla for the transportation of pilgrims"
+      },
+      {
+        "id": 36,
+        "name": "Al Safeer Company For The Transportation of pilgrims"
+      },
+      {
+        "id": 37,
+        "name": "Mustakbal Al Mashair For TheTransportation of Pilgrims"
+      },
+      {
+        "id": 38,
+        "name": "Arkan Almashaer for the transportation of pilgrims"
+      },
+      {
+        "id": 39,
+        "name": "Ameer Albaher For The Transportation of pilgrims"
+      },
+      {
+        "id": 5640,
+        "name": "dawahi alkhair company"
+      },
+      {
+        "id": 5642,
+        "name": "Al Khomri Company For Hotels, Hajj and Umrah"
+      },
+      {
+        "id": 5645,
+        "name": "Trabut Co Ltd"
+      },
+      {
+        "id": 5925,
+        "name": "Afaj Alalmeeya Company"
+      },
+      {
+        "id": 5926,
+        "name": "alwataniya company for umrah"
+      },
+      {
+        "id": 5928,
+        "name": "Al Baraka Company"
+      },
+      {
+        "id": 5932,
+        "name": "Samaya for the transportation of pilgrims"
+      },
+      {
+        "id": 5933,
+        "name": "Travel Gate"
+      },
+      {
+        "id": 5935,
+        "name": "SHARIA FOUNDATION"
+      },
+      {
+        "id": 5936,
+        "name": "saad sayed alsaadi"
+      },
+      {
+        "id": 173330,
+        "name": "basma emaar group for transportation"
+      },
+      {
+        "id": 198825,
+        "name": "Ghazi Odeh Al - Ahmadi Foundation for the transportation of pilgrims"
+      },
+      {
+        "id": 199480,
+        "name": "faisal alqithami for transporter"
+      },
+      {
+        "id": 199481,
+        "name": "Visitors for Umrah Services"
+      },
+      {
+        "id": 200565,
+        "name": "muasasat quraysh lilnaqaliat"
+      },
+      {
+        "id": 200874,
+        "name": "muasasat albayt aleatiq lilnaql albariyi"
+      },
+      {
+        "id": 201301,
+        "name": "muasasat badr tahir al'azhri lilnaql albariyi"
+      },
+      {
+        "id": 205711,
+        "name": "ِAbdoh hasan jorob shatta"
+      },
+      {
+        "id": 205954,
+        "name": "muasasat nasir eali muhamad mahdi linaql alzuwwar walmuetamirin"
+      },
+      {
+        "id": 206328,
+        "name": "muasasat sulayman bin mufawz bin fayiz alharbi lilnaqliat"
+      },
+      {
+        "id": 206581,
+        "name": "sharikat aldahaa alhadithat likhadamat almuetamarin almahduda"
+      },
+      {
+        "id": 206838,
+        "name": "Ayed Awad Al Harbi Transport Est"
+      },
+      {
+        "id": 207497,
+        "name": "muasasat al'iihsan lilnaqaliat"
+      },
+      {
+        "id": 208449,
+        "name": "muasasat hamd bin ebdalrhmn bin hamd albasam altijaria"
+      },
+      {
+        "id": 208589,
+        "name": "muasasat alzahrat almutamayizat linaql almuetamarin walziwwar"
+      },
+      {
+        "id": 208872,
+        "name": "muasasat bayan alfurasan almutahidat lilnaql albariyi"
+      },
+      {
+        "id": 209448,
+        "name": "bin khatlah development.co.ltd"
+      },
+      {
+        "id": 210182,
+        "name": "muasasat eabdallah muhamad alghamidi likhadamat almuetamarin"
+      },
+      {
+        "id": 210332,
+        "name": "muasasat safariat alrakb linaql almuetamarin"
+      },
+      {
+        "id": 210635,
+        "name": "muasasat qawafil albayan lilnaql albariyi"
+      },
+      {
+        "id": 211562,
+        "name": "Ahmed Mubarak Al Otaibi Transport Est"
+      },
+      {
+        "id": 212037,
+        "name": "sharikat 'awan alzuhur liltijarat walmuqawalat waleiqarat"
+      },
+      {
+        "id": 212682,
+        "name": "muasasat nayif eayid euayd almueabadii alharbii linaql almuetamrin walziwwar"
+      },
+      {
+        "id": 212683,
+        "name": "muasasat nusuk alrahmat linaql alhujaj walmuetamarin"
+      },
+      {
+        "id": 214177,
+        "name": "Saad Rashed Al - Lehyani Est"
+      },
+      {
+        "id": 215727,
+        "name": "Modern Wajih Foundation for the transfer of pilgrims and visitors"
+      },
+      {
+        "id": 216972,
+        "name": "majmueat alqaliti alduwalia"
+      },
+      {
+        "id": 217152,
+        "name": "Wafaa Foundation for the transfer of pilgrims and visitors"
+      },
+      {
+        "id": 217334,
+        "name": "Foundation Turki Mohammed Abdulrahman Juhani"
+      },
+      {
+        "id": 217518,
+        "name": "qasswa for haj & umra ltd."
+      },
+      {
+        "id": 217704,
+        "name": "muasasat alsafwat aleasriat linaql alhujaj walmuetamarin"
+      },
+      {
+        "id": 217892,
+        "name": "مؤسسة ريان زيني عارف زينول لنقل الحجاج والمعتمرين"
+      },
+      {
+        "id": 218271,
+        "name": "muasasat eayid hamidan hamuwd alsabhii lilnaql"
+      },
+      {
+        "id": 218464,
+        "name": "ajyal altwhed for transporter"
+      },
+      {
+        "id": 218854,
+        "name": "muasasat albadar walfajr lilnaqaliat"
+      },
+      {
+        "id": 219849,
+        "name": "muasasat eubayd 'ahmad aleamiri linaql alzuwwar walmuetamirin"
+      },
+      {
+        "id": 220252,
+        "name": "Naif Aloufi EST"
+      },
+      {
+        "id": 220253,
+        "name": "sharikat buruj alealam lil'iinsha' waltaemir almahduda"
+      },
+      {
+        "id": 221072,
+        "name": "Mhd bin Idris bin Awwad al Otaibi Est"
+      },
+      {
+        "id": 223007,
+        "name": "muasasat saeid 'ahmad alzahrani linaql alhujaj walmuetamarin"
+      },
+      {
+        "id": 223013,
+        "name": "sharikat rabitat almadina liltijarah walnaql almahduda"
+      },
+      {
+        "id": 223017,
+        "name": "muasasat aldiyafat almumayazat lilnaqliat"
+      },
+      {
+        "id": 223023,
+        "name": "muasasat muhamad ebdallh etaallh al'ahmadii linaql alhujaj walmuetamarin"
+      },
+      {
+        "id": 223025,
+        "name": "EZEE Saad Mohammed Al Qahtani Foundation for the transfer of pilgrims and Umrah"
+      },
+      {
+        "id": 223030,
+        "name": "al nadi alaalmi"
+      },
+      {
+        "id": 223035,
+        "name": "Reboo Taiba Company Ltd."
+      },
+      {
+        "id": 223041,
+        "name": "asfar alayman "
+      },
+      {
+        "id": 223046,
+        "name": "NAIF MESFER AL LEHYANI FOUNDATION FOR UMRAH"
+      },
+      {
+        "id": 223048,
+        "name": "jameel rizq alharbi foun dation"
+      },
+      {
+        "id": 223050,
+        "name": "Est hamda ahmed alsuhaimi"
+      },
+      {
+        "id": 223057,
+        "name": "saudi maan company"
+      },
+      {
+        "id": 223070,
+        "name": "duaa alkubra est"
+      },
+      {
+        "id": 223072,
+        "name": "sharikat khalid hamd eali hazazy"
+      },
+      {
+        "id": 223075,
+        "name": "trckrunaway transportion"
+      },
+      {
+        "id": 223077,
+        "name": "Alfaf company"
+      },
+      {
+        "id": 223087,
+        "name": "tareeq al hudda transport company"
+      },
+      {
+        "id": 223089,
+        "name": "muasasat eabdalmjyd eali alzahrani linaql alzuwwar walmuetamirin"
+      },
+      {
+        "id": 223096,
+        "name": "Qawafil alrraha"
+      },
+      {
+        "id": 223102,
+        "name": "Alajour Foundation for Transportation of Visitors and Umrah"
+      },
+      {
+        "id": 223116,
+        "name": "sharikat nabras alduwaliat liltanmiat alsiyahiat almahduda"
+      },
+      {
+        "id": 223143,
+        "name": "ahlam EST"
+      },
+      {
+        "id": 223145,
+        "name": "NADA ALTOMOH CO"
+      },
+      {
+        "id": 223178,
+        "name": "branch prince of sea"
+      }
+    ],
+    "categories": [
+      {
+        "id": 1,
+        "name": "VIP"
+      },
+      {
+        "id": 2,
+        "name": "Premium"
+      },
+      {
+        "id": 3,
+        "name": "Normal"
+      }
+    ],
+    "vehicleTypes": [
+      {
+        "id": 1,
+        "name": "Sedan Car"
+      },
+      {
+        "id": 2,
+        "name": "SUV Car"
+      },
+      {
+        "id": 3,
+        "name": "Bus"
+      },
+      {
+        "id": 4,
+        "name": "Van"
+      }
+    ],
+    "routes": [
+      {
+        "id": 58,
+        "name": "Jeddah - Makkah - Madinah - Madinah Airport"
+      }
+    ],
+    "additionalServcies": [
+      {
+        "id": 1,
+        "name": "Internet Service "
+      }
+    ],
+    "locations": [
+      {
+        "code": "SA1",
+        "name": "Makkah",
+        "country": "Saudi Arabia",
+        "countryCode": "SA"
+      },
+      {
+        "code": "SA4",
+        "name": "Madinah",
+        "country": "Saudi Arabia",
+        "countryCode": "SA"
+      }
+    ],
+    "modelsYears": [
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ]
+  },
+  "isSuccess": true,
+  "message": "",
+  "logId": "ab4c6677-b539-4f9e-ba61-df155f0ea50a"
+}

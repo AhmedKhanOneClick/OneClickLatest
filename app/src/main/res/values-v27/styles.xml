@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="colorPrimary">@color/splash_color</item>
+        <item name="colorPrimaryDark">@android:color/white</item>
+        <item name="colorAccent">@color/color_AFAFAF</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog1</item>
+    </style>
+</resources>

@@ -1,0 +1,3 @@
+include ':databinding-validation'
+include ':app'
+rootProject.name = "Task"

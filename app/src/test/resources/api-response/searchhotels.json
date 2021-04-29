@@ -1,0 +1,981 @@
+{
+  "data": {
+    "hotels": [
+      {
+        "name": "Botol Ajyad",
+        "id": "2367055",
+        "umrahHotelCode": "4800000756",
+        "description": null,
+        "imagePath": null,
+        "bannerImagePath": null,
+        "optionalAmenities": [],
+        "amenities": [],
+        "totalPrice": 142,
+        "currencyCode": "SAR",
+        "rating": 3,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      },
+      {
+        "name": "M by Millennium",
+        "id": "2062975",
+        "umrahHotelCode": "4800000390",
+        "description": "M Hotel Makkah by Millennium located in Makkah. It features air-conditioned rooms with free WiFi throughout the property. Guests can enjoy the on-site restaurant. Free private parking is available on site. Every room includes a flat-screen TV. Certain units include a seating area where you can relax. You will find a kettle in the room. All rooms include a private bathroom. There is free shuttle service at the property. The nearest airport is King Abdulaziz International Airport, 75 km from the property. This property is also rated for the best value in Makkah! Guests are getting more for their money when compared to other properties in this city.",
+        "imagePath": "https://xmldev.stage.aws.dotw.com/poze_hotel/20/2062975/OnLN8eEH_d2b5ca33bd970f64a6301fa75ae2eb22.png",
+        "bannerImagePath": "https://xmldev.stage.aws.dotw.com/poze_hotel/20/2062975/OnLN8eEH_d2b5ca33bd970f64a6301fa75ae2eb22.png",
+        "optionalAmenities": [],
+        "amenities": [],
+        "totalPrice": 168,
+        "currencyCode": "SAR",
+        "rating": 5,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      },
+      {
+        "name": "four points by ssheraton al foundoqiah",
+        "id": "2308285",
+        "umrahHotelCode": "4800000721",
+        "description": null,
+        "imagePath": null,
+        "bannerImagePath": null,
+        "optionalAmenities": [],
+        "amenities": [],
+        "totalPrice": 174,
+        "currencyCode": "SAR",
+        "rating": 5,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      },
+      {
+        "name": "dar al raies",
+        "id": "353213",
+        "umrahHotelCode": "4700002958",
+        "description": "Stop at Dar Al Raies to discover the wonders of Mecca. The hotel offers guests a range of services and amenities designed to provide comfort and convenience. Facilities like facilities for disabled guests, Wi-Fi in public areas, business center, family room, restaurant are readily available for you to enjoy. All rooms are designed and decorated to make guests feel right at home, and some rooms come with internet access – wireless, non smoking rooms, air conditioning, mini bar, telephone. The hotel offers various recreational opportunities. Dar Al Raies is an excellent choice from which to explore Mecca or to simply relax and rejuvenate.",
+        "imagePath": "http://pix6.agoda.net/hotelImages/353213/-1/5b01ff27ed50ff0881dd83736171a4c8.jpg?s=312x",
+        "bannerImagePath": "http://pix6.agoda.net/hotelImages/353213/-1/5b01ff27ed50ff0881dd83736171a4c8.jpg?s=312x",
+        "optionalAmenities": [],
+        "amenities": [
+          {
+            "name": "Satellite/cable channels",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Refrigerator",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Fire extinguisher",
+            "type": "",
+            "icon": "icon-extinguisher"
+          },
+          {
+            "name": "Staff trained in safety protocol",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Seating area",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Shower",
+            "type": "",
+            "icon": "icon_set_2_icon-111"
+          },
+          {
+            "name": "Sofa",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Telephone",
+            "type": "",
+            "icon": "icon_set_1_icon-90"
+          },
+          {
+            "name": "Toiletries",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Towels",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Desk",
+            "type": "",
+            "icon": "icon_set_2_icon-108"
+          },
+          {
+            "name": "Temperature check for guests and staff",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Coffee/tea maker",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Bathrobes",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Safe dining setup",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Physical distancing of at least 1 meter",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Hand sanitizer",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "First aid kit",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Wi-Fi in public areas",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Free Wi-Fi in all rooms!",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Wheelchair accessible",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Facilities for disabled guests",
+            "type": "",
+            "icon": "icon_set_1_icon-13"
+          },
+          {
+            "name": "Elevator",
+            "type": "",
+            "icon": "icon_set_1_icon-12"
+          },
+          {
+            "name": "Restaurants",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Room service",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Contactless check-in/out",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Daily housekeeping",
+            "type": "",
+            "icon": "icons-cleaning-tools"
+          },
+          {
+            "name": "Dry cleaning",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Food delivery",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Front desk [24-hour]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Laundry service",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Safety deposit boxes",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Smoke-free property",
+            "type": "",
+            "icon": "icons-smoke-free"
+          },
+          {
+            "name": "Family room",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Car park [free of charge]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Air conditioning",
+            "type": "",
+            "icon": "icons-air-conditioner"
+          },
+          {
+            "name": "Closet",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Wi-Fi [free]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          }
+        ],
+        "totalPrice": 172,
+        "currencyCode": "SAR",
+        "rating": 4,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      },
+      {
+        "name": "deyaft alrahman",
+        "id": "18427",
+        "umrahHotelCode": "4800000444",
+        "description": "near  haram min walk",
+        "imagePath": "//hotelmedia.crs.haj.gov.sa/MediaHandler.ashx?q=",
+        "bannerImagePath": "//hotelmedia.crs.haj.gov.sa/MediaHandler.ashx?q=",
+        "optionalAmenities": [],
+        "amenities": [
+          {
+            "name": "Internet",
+            "type": "",
+            "icon": "icon_set_1_icon-86"
+          },
+          {
+            "name": "Elevator",
+            "type": "",
+            "icon": "icon_set_1_icon-12"
+          },
+          {
+            "name": "Fitness",
+            "type": "",
+            "icon": "icon_set_2_icon-117"
+          },
+          {
+            "name": "Swimming pool.",
+            "type": "",
+            "icon": "icon_set_2_icon-110"
+          }
+        ],
+        "totalPrice": 216,
+        "currencyCode": "SAR",
+        "rating": 1,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      },
+      {
+        "name": "Lamar Hotel",
+        "id": "2090364",
+        "umrahHotelCode": "4700001607",
+        "description": "Lamar Ajyad Hotel is conveniently located in the popular Ajyad area. The hotel offers a wide range of amenities and perks to ensure you have a great time. To be found at the hotel are free Wi-Fi in all rooms, 24-hour security, 24-hour front desk, facilities for disabled guests, Wi-Fi in public areas. All rooms are designed and decorated to make guests feel right at home, and some rooms come with television LCD/plasma screen, carpeting, complimentary instant coffee, complimentary tea, mirror. The hotel offers various recreational opportunities. For reliable service and professional staff, Lamar Ajyad Hotel caters to your needs.",
+        "imagePath": "http://pix6.agoda.net/hotelImages/209/2090364/2090364_17032315240051728562.jpg?s=312x",
+        "bannerImagePath": "http://pix6.agoda.net/hotelImages/209/2090364/2090364_17032315240051728562.jpg?s=312x",
+        "optionalAmenities": [],
+        "amenities": [
+          {
+            "name": "Luggage storage",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Safety deposit boxes",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Security [24-hour]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Shops",
+            "type": "",
+            "icon": "icon-basket"
+          },
+          {
+            "name": "Car park [free of charge]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Smoking area",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Family room",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Laundry service",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Car park [nearby]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Shrine",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Gift/souvenir shop",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Front desk [24-hour]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Dry cleaning",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Elevator",
+            "type": "",
+            "icon": "icon_set_1_icon-12"
+          },
+          {
+            "name": "Facilities for disabled guests",
+            "type": "",
+            "icon": "icon_set_1_icon-13"
+          },
+          {
+            "name": "Free Wi-Fi in all rooms!",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Wi-Fi in public areas",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Ticket services",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Bar",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Restaurants",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Room service",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Check-in/out [express]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Check-in/out [private]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Concierge",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Currency exchange",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Daily housekeeping",
+            "type": "",
+            "icon": "icons-cleaning-tools"
+          },
+          {
+            "name": "Restaurant [halal]",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Shuttle service",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          }
+        ],
+        "totalPrice": 272,
+        "currencyCode": "SAR",
+        "rating": 1,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      },
+      {
+        "name": "Hotel Roissy Baraka",
+        "id": "13",
+        "umrahHotelCode": "4700000103",
+        "description": "Our Hotel has a distinguished location in terms of its distkance from AL-HARAM, 10 minutes walkCVSc",
+        "imagePath": "//hotelmedia.crs.haj.gov.sa/MediaHandler.ashx?q=66366ed3-8047-4039-98ac-a2bc59c726e5",
+        "bannerImagePath": "//hotelmedia.crs.haj.gov.sa/MediaHandler.ashx?q=66366ed3-8047-4039-98ac-a2bc59c726e5",
+        "optionalAmenities": [
+          {
+            "code": "1000024",
+            "categoryName": null,
+            "name": null,
+            "description": null,
+            "effectiveDate": "2020-11-12T00:00:00+00:00",
+            "expireDate": "2021-02-28T00:00:00+00:00",
+            "startTime": null,
+            "endTime": null,
+            "rateInfo": [
+              {
+                "amount": 100.0,
+                "currencyCode": "SAR",
+                "chargeCode": null,
+                "condition": "45",
+                "unit": null,
+                "quantity": 0
+              }
+            ]
+          },
+          {
+            "code": "1000032",
+            "categoryName": null,
+            "name": null,
+            "description": null,
+            "effectiveDate": "2021-03-01T00:00:00+00:00",
+            "expireDate": "2021-03-04T00:00:00+00:00",
+            "startTime": null,
+            "endTime": null,
+            "rateInfo": [
+              {
+                "amount": 100.0,
+                "currencyCode": "SAR",
+                "chargeCode": null,
+                "condition": null,
+                "unit": null,
+                "quantity": 0
+              }
+            ]
+          }
+        ],
+        "amenities": [
+          {
+            "name": "Wheelchair accessible",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Fitness",
+            "type": "",
+            "icon": "icon_set_2_icon-117"
+          },
+          {
+            "name": "Convenience store",
+            "type": "",
+            "icon": "icon_set_1_icon-49"
+          },
+          {
+            "name": "Shops",
+            "type": "",
+            "icon": "icon-basket"
+          },
+          {
+            "name": "Snack bar.",
+            "type": "",
+            "icon": "icon_set_1_icon-8"
+          },
+          {
+            "name": "Sun umbrella",
+            "type": "",
+            "icon": "pe-7s-umbrella"
+          },
+          {
+            "name": "Business center",
+            "type": "",
+            "icon": "icon_set_1_icon-1"
+          },
+          {
+            "name": "Fire extinguisher",
+            "type": "",
+            "icon": "icon-extinguisher"
+          },
+          {
+            "name": "CCTV in common property",
+            "type": "",
+            "icon": "icons-cctv-inside"
+          },
+          {
+            "name": "Smoke alarms",
+            "type": "",
+            "icon": "icons-fire-alarm"
+          },
+          {
+            "name": "Security alarm",
+            "type": "",
+            "icon": "icons-security-alarm"
+          },
+          {
+            "name": "Laundry (additional charge)",
+            "type": "",
+            "icon": "icon_set_2_icon-103"
+          },
+          {
+            "name": "Daily housekeeping",
+            "type": "",
+            "icon": "icons-cleaning-tools"
+          },
+          {
+            "name": "Swimming pool.",
+            "type": "",
+            "icon": "icon_set_2_icon-110"
+          },
+          {
+            "name": "Chocolate/cookies (additional charge)",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Fruit (additional charge)",
+            "type": "",
+            "icon": "icon_set_1_icon-20"
+          },
+          {
+            "name": "Restaurant.",
+            "type": "",
+            "icon": "icon_set_1_icon-58"
+          },
+          {
+            "name": "Bottle of water (additional charge)",
+            "type": "",
+            "icon": "icons-water-bottle"
+          },
+          {
+            "name": "Parking",
+            "type": "",
+            "icon": "icon_set_1_icon-27"
+          },
+          {
+            "name": "Vending machine(snacks)",
+            "type": "",
+            "icon": "icon_set_1_icon-9"
+          },
+          {
+            "name": "Elevator",
+            "type": "",
+            "icon": "icon_set_1_icon-12"
+          },
+          {
+            "name": "Vending machine (drinks)",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Heating",
+            "type": "",
+            "icon": "icons-heating"
+          },
+          {
+            "name": "Air conditioning",
+            "type": "",
+            "icon": "icons-air-conditioner"
+          },
+          {
+            "name": "Smoke-free property",
+            "type": "",
+            "icon": "icons-smoke-free"
+          },
+          {
+            "name": "Facilities for disabled guests",
+            "type": "",
+            "icon": "icon_set_1_icon-13"
+          },
+          {
+            "name": "General",
+            "type": "",
+            "icon": "icon_set_1_icon-65"
+          },
+          {
+            "name": "Internet",
+            "type": "",
+            "icon": "icon_set_1_icon-86"
+          },
+          {
+            "name": "CCTV outside property.",
+            "type": "",
+            "icon": "icons-cctv-outside"
+          },
+          {
+            "name": "Shuttle services",
+            "type": "",
+            "icon": "icon_set_1_icon-25"
+          },
+          {
+            "name": "Non-smoking rooms",
+            "type": "",
+            "icon": "icon_set_1_icon-47"
+          },
+          {
+            "name": "Safe Deposit Boxes",
+            "type": "",
+            "icon": "icon_set_2_icon-106"
+          }
+        ],
+        "totalPrice": 288,
+        "currencyCode": "SAR",
+        "rating": 1,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      },
+      {
+        "name": "marriot makkah",
+        "id": "1512308",
+        "umrahHotelCode": "4800000146",
+        "description": null,
+        "imagePath": null,
+        "bannerImagePath": null,
+        "optionalAmenities": [],
+        "amenities": [],
+        "totalPrice": 425,
+        "currencyCode": "SAR",
+        "rating": 5,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      },
+      {
+        "name": "le meriden towers makkah",
+        "id": "18123",
+        "umrahHotelCode": "4700002457",
+        "description": "Le Meridien Towers Makkah is elegantly designed and well equipped with kitchenettes. It is 3 minutes from Almasjid Alharam with our 24- hour shuttle service.The 5-star hotel offers air-conditioned suites decorated in warm earthly tones. They include a living area, a flat-screen TV with satellite channels and modern bathroom with signature bath amenities.The meridien Towers 'restaurant serves rich cuisine prepared with seasonal ingredients. After a day of sightseeing, guests can enjoy a refreshing drinks in the lobby lounge.A 24-hour front desk, a business canter and a gift shop are among the convenient facilities offered by the Lm Towers Makkah.",
+        "imagePath": "//hotelmedia.crs.haj.gov.sa/MediaHandler.ashx?q=B2F9A0CB-4979-4139-BF2D-4E45157AF377",
+        "bannerImagePath": "//hotelmedia.crs.haj.gov.sa/MediaHandler.ashx?q=B2F9A0CB-4979-4139-BF2D-4E45157AF377",
+        "optionalAmenities": [],
+        "amenities": [
+          {
+            "name": "Internet",
+            "type": "",
+            "icon": "icon_set_1_icon-86"
+          },
+          {
+            "name": "General",
+            "type": "",
+            "icon": "icon_set_1_icon-65"
+          },
+          {
+            "name": "Facilities for disabled guests",
+            "type": "",
+            "icon": "icon_set_1_icon-13"
+          },
+          {
+            "name": "Air conditioning",
+            "type": "",
+            "icon": "icons-air-conditioner"
+          },
+          {
+            "name": "Convenience store",
+            "type": "",
+            "icon": "icon_set_1_icon-49"
+          },
+          {
+            "name": "Shops",
+            "type": "",
+            "icon": "icon-basket"
+          },
+          {
+            "name": "Heating",
+            "type": "",
+            "icon": "icons-heating"
+          },
+          {
+            "name": "Safe Deposit Boxes",
+            "type": "",
+            "icon": "icon_set_2_icon-106"
+          },
+          {
+            "name": "Non-smoking rooms",
+            "type": "",
+            "icon": "icon_set_1_icon-47"
+          },
+          {
+            "name": "Elevator",
+            "type": "",
+            "icon": "icon_set_1_icon-12"
+          },
+          {
+            "name": "Parking",
+            "type": "",
+            "icon": "icon_set_1_icon-27"
+          },
+          {
+            "name": "Bottle of water (additional charge)",
+            "type": "",
+            "icon": "icons-water-bottle"
+          },
+          {
+            "name": "Restaurant.",
+            "type": "",
+            "icon": "icon_set_1_icon-58"
+          },
+          {
+            "name": "Fruit (additional charge)",
+            "type": "",
+            "icon": "icon_set_1_icon-20"
+          },
+          {
+            "name": "Chocolate/cookies (additional charge)",
+            "type": "",
+            "icon": "icon_set_1_icon-24"
+          },
+          {
+            "name": "Daily housekeeping",
+            "type": "",
+            "icon": "icons-cleaning-tools"
+          },
+          {
+            "name": "Laundry (additional charge)",
+            "type": "",
+            "icon": "icon_set_2_icon-103"
+          },
+          {
+            "name": "Key card access",
+            "type": "",
+            "icon": "icon_set_1_icon-35"
+          },
+          {
+            "name": "Security alarm",
+            "type": "",
+            "icon": "icons-security-alarm"
+          },
+          {
+            "name": "Smoke alarms",
+            "type": "",
+            "icon": "icons-fire-alarm"
+          },
+          {
+            "name": "CCTV in common property",
+            "type": "",
+            "icon": "icons-cctv-inside"
+          },
+          {
+            "name": "CCTV outside property.",
+            "type": "",
+            "icon": "icons-cctv-outside"
+          },
+          {
+            "name": "Fire extinguisher",
+            "type": "",
+            "icon": "icon-extinguisher"
+          },
+          {
+            "name": "Business center",
+            "type": "",
+            "icon": "icon_set_1_icon-1"
+          },
+          {
+            "name": "Shuttle services",
+            "type": "",
+            "icon": "icon_set_1_icon-25"
+          }
+        ],
+        "totalPrice": 430,
+        "currencyCode": "SAR",
+        "rating": 5,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      },
+      {
+        "name": "Millennium Taiba",
+        "id": "446060",
+        "umrahHotelCode": "4800000274",
+        "description": null,
+        "imagePath": null,
+        "bannerImagePath": null,
+        "optionalAmenities": [],
+        "amenities": [],
+        "totalPrice": 521,
+        "currencyCode": "SAR",
+        "rating": 5,
+        "promotionName": null,
+        "hasSpecialDeal": false
+      }
+    ],
+    "totalCount": 13,
+    "starRating": [
+      {
+        "rating": 1,
+        "hotelsCount": 3
+      },
+      {
+        "rating": 5,
+        "hotelsCount": 8
+      },
+      {
+        "rating": 3,
+        "hotelsCount": 1
+      },
+      {
+        "rating": 4,
+        "hotelsCount": 1
+      }
+    ],
+    "facilities": [
+      "Internet",
+      "Elevator",
+      "Fitness",
+      "Swimming pool.",
+      "Wheelchair accessible",
+      "Convenience store",
+      "Shops",
+      "Snack bar.",
+      "Sun umbrella",
+      "Business center",
+      "Fire extinguisher",
+      "CCTV in common property",
+      "Smoke alarms",
+      "Security alarm",
+      "Laundry (additional charge)",
+      "Daily housekeeping",
+      "Chocolate/cookies (additional charge)",
+      "Fruit (additional charge)",
+      "Restaurant.",
+      "Bottle of water (additional charge)",
+      "Parking",
+      "Vending machine(snacks)",
+      "Vending machine (drinks)",
+      "Heating",
+      "Air conditioning",
+      "Smoke-free property",
+      "Facilities for disabled guests",
+      "General",
+      "CCTV outside property.",
+      "Shuttle services",
+      "Non-smoking rooms",
+      "Safe Deposit Boxes",
+      "Key card access",
+      "Wheelchair Access",
+      "Air Conditioning",
+      "Concierge",
+      "Business Centre",
+      "Elevators",
+      "Multilingual Staff",
+      "Restaurant",
+      "Safety Deposit Box",
+      "Doctor On Call",
+      "Housekeeping-Daily",
+      "High Speed Internet",
+      "Adjoining Rooms",
+      "24-Hour Food And Beverage Outlet",
+      "Banquet Hall",
+      "Car Parking - Onsite Paid",
+      "Car Rental Desk",
+      "Complimentary In-Room Coffee Or Tea",
+      "Car Parking - Onsite Free",
+      "Dry Hotel – No Alcohol Served",
+      "Valet Parking",
+      "Porterage",
+      "Laundry Service",
+      "Halal Food Available",
+      "Room Service - 24 Hours",
+      "Satellite/cable channels",
+      "Refrigerator",
+      "Staff trained in safety protocol",
+      "Seating area",
+      "Shower",
+      "Sofa",
+      "Telephone",
+      "Toiletries",
+      "Towels",
+      "Desk",
+      "Temperature check for guests and staff",
+      "Coffee/tea maker",
+      "Bathrobes",
+      "Safe dining setup",
+      "Physical distancing of at least 1 meter",
+      "Hand sanitizer",
+      "First aid kit",
+      "Wi-Fi in public areas",
+      "Free Wi-Fi in all rooms!",
+      "Restaurants",
+      "Room service",
+      "Contactless check-in/out",
+      "Dry cleaning",
+      "Food delivery",
+      "Front desk [24-hour]",
+      "Laundry service",
+      "Safety deposit boxes",
+      "Family room",
+      "Car park [free of charge]",
+      "Closet",
+      "Wi-Fi [free]",
+      "Luggage storage",
+      "Security [24-hour]",
+      "Smoking area",
+      "Car park [nearby]",
+      "Shrine",
+      "Gift/souvenir shop",
+      "Ticket services",
+      "Bar",
+      "Check-in/out [express]",
+      "Check-in/out [private]",
+      "Currency exchange",
+      "Restaurant [halal]",
+      "Shuttle service"
+    ],
+    "isFromCache": false,
+    "cacheId": "0783d9ee-2181-45e0-ad02-4cdabf219b87",
+    "priceFrom": 142,
+    "priceTo": 1029,
+    "sortByFields": [
+      {
+        "key": "Price",
+        "name": "Price"
+      },
+      {
+        "key": "HotelName",
+        "name": "Hotel Name"
+      },
+      {
+        "key": "Rating",
+        "name": "Rating"
+      }
+    ],
+    "location": "Makkah"
+  },
+  "isSuccess": true,
+  "message": "",
+  "logId": "7770e603-63c7-43a6-bfc2-779f058a18fe"
+}
