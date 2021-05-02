@@ -154,6 +154,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/lords_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -163,6 +164,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/fifa_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -182,6 +184,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/freefire_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -191,6 +194,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/legends_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -210,6 +214,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/steam_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -219,6 +224,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/boloot_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -238,6 +244,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/jalsaat_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"

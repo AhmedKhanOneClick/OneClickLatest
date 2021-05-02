@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_135sdp"
+    android:layout_height="@dimen/_185sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/_15sdp"
+    android:layout_margin="@dimen/_8sdp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:orientation="vertical"
+            android:background="@drawable/card_back_itunes"
+            android:layout_margin="@dimen/_2sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/freefirelogo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:text="بطاقة شحن كارت"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:textSize="@dimen/_10sdp"
+
+
+                android:textAlignment="center"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/card_value_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="sans-serif"
+                android:text="10 GB Month"
+
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/card_value_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="monospace"
+
+                    android:text="160"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_35sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:fontFamily="sans-serif"
+                    android:text="sar"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/ic_oneclick_logo_white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:layout_marginLeft="@dimen/_8sdp"
+            >
+
+            <TextView
+                android:id="@+id/card_value_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:fontFamily="sans-serif"
+                android:text="395.00"
+                android:textColor="@color/color_4f4f4f"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3dp"
+                android:layout_gravity="bottom"
+                android:fontFamily="sans-serif"
+                android:text="S.R"
+                android:textSize="@dimen/_8sdp"
+                android:textStyle="bold"
+                android:gravity="bottom"
+
+                android:textColor="@color/color_7b7b7b" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/card_value_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginLeft="@dimen/_8sdp"
+            android:lines="1"
+            android:layout_marginRight="@dimen/_8sdp"
+            android:fontFamily="sans-serif"
+            android:text="Mobily Recharg Card 395 SAR"
+            android:textColor="#222222"
+            android:textSize="@dimen/_8sdp" />
+
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

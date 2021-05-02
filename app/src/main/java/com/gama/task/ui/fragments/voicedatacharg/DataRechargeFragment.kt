@@ -23,26 +23,26 @@ class DataRechargeFragment : Fragment(R.layout.fragment_data_recharge) {
                 DataRechargeFragmentDirections.actionDataRechargeFragmentToStcFragment()
             findNavController().navigate(action)
         }
-//        zain_card.setOnClickListener {
-//            val action=
-//                DataRechargeFragmentDirections.actionDataRechargeFragmentToZainFragment();
-//            findNavController().navigate(action)
-//        }
-//        friend_card.setOnClickListener {
-//            val action=
-//                DataRechargeFragmentDirections.actionDataRechargeFragmentToFriendFragment();
-//            findNavController().navigate(action)
-//        }
-//        lebara_card.setOnClickListener{
-//            val action=
-//                DataRechargeFragmentDirections.actionDataRechargeFragmentToLebaraFragment();
-//            findNavController().navigate(action)
-//        }
-//        virgin_card.setOnClickListener {
-//            val action=
-//                DataRechargeFragmentDirections.actionDataRechargeFragmentToVirginFragment();
-//            findNavController().navigate(action)
-//        }
+        zain_card.setOnClickListener {
+            val action=
+                DataRechargeFragmentDirections.actionDataRechargeFragmentToZainFragment();
+            findNavController().navigate(action)
+        }
+        friend_card.setOnClickListener {
+            val action=
+                DataRechargeFragmentDirections.actionDataRechargeFragmentToFriendFragment();
+            findNavController().navigate(action)
+        }
+        lebara_card.setOnClickListener{
+            val action=
+                DataRechargeFragmentDirections.actionDataRechargeFragmentToLebaraFragment();
+            findNavController().navigate(action)
+        }
+        virgin_card.setOnClickListener {
+            val action=
+                DataRechargeFragmentDirections.actionDataRechargeFragmentToVirginFragment();
+            findNavController().navigate(action)
+        }
 
     }
 }
