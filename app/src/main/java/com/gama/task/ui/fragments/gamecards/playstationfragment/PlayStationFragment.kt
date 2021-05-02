@@ -47,7 +47,7 @@ class PlayStationFragment:Fragment(R.layout.fragment_game_card_playstation),Play
                 ,playstationList.get(position).text4))
 
         if (!GlobalClass.globalCartList.isEmpty())
-            findNavController().navigate(XboxFragmentDirections.actionXboxFragmentToBottomSheetCheckOut2())
+            findNavController().navigate(PlayStationFragmentDirections.actionPlayStationFragmentToBottomSheetCheckOut22())
 
     }
 

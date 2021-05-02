@@ -58,7 +58,7 @@ class NintendFragment:Fragment(R.layout.fragment_game_card_nintend),NintendAdapt
         )
 
         if (!GlobalClass.globalCartList.isEmpty())
-            findNavController().navigate(XboxFragmentDirections.actionXboxFragmentToBottomSheetCheckOut2())
+            findNavController().navigate(NintendFragmentDirections.actionNintendFragmentToBottomSheetCheckOut22())
 
 
     }

@@ -56,7 +56,7 @@ class XboxFragment:Fragment(R.layout.fragment_game_card_xbox),XboxAdapter.OnItem
         )
 
 if (!GlobalClass.globalCartList.isEmpty())
-    findNavController().navigate(XboxFragmentDirections.actionXboxFragmentToBottomSheetCheckOut2())
+    findNavController().navigate(XboxFragmentDirections.actionXboxFragmentToBottomSheetCheckOut22())
 
     }
 

@@ -348,7 +348,11 @@
         android:id="@+id/cartFragment"
         android:name="com.gama.task.ui.fragments.cart.CartFragment"
         android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_fragmentpurchase1"
+            app:destination="@id/fragmentpurchase1" />
+    </fragment>
     <dialog
         android:id="@+id/bottomSheetCheckOut2"
         android:name="com.gama.task.ui.fragments.cart.BottomSheetCheckOut"
@@ -358,6 +362,33 @@
             android:id="@+id/action_bottomSheetCheckOut2_to_cartFragment"
             app:destination="@id/cartFragment" />
     </dialog>
+    <fragment
+        android:id="@+id/fragmentpurchase1"
+        android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase1"
+        android:label="fragment_sucess1"
+        tools:layout="@layout/fragment_sucess1" >
+        <action
+            android:id="@+id/action_fragmentpurchase1_to_fragmentpurchase2"
+            app:destination="@id/fragmentpurchase2" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentpurchase2"
+        android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase2"
+        android:label="fragment_sucess2"
+        tools:layout="@layout/fragment_sucess2" >
+        <action
+            android:id="@+id/action_fragmentpurchase2_to_fragmentpurchase3"
+            app:destination="@id/fragmentpurchase3" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentpurchase3"
+        android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase3"
+        android:label="fragment_sucess3"
+        tools:layout="@layout/fragment_sucess3" >
+        <action
+            android:id="@+id/action_fragmentpurchase3_to_searchPagerFragment"
+            app:destination="@id/searchPagerFragment" />
+    </fragment>
 
 
 </navigation>

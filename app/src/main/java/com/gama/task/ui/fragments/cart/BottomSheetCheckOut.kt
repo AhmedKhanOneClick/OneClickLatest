@@ -23,17 +23,17 @@ class BottomSheetCheckOut: BottomSheetDialogFragment() {
         return inflater.inflate(R.layout.fragment_botom_sheet_cart, container, false)
 
         check_out_btn.setOnClickListener {
-            findNavController().navigate(BottomSheetCheckOutDirections.actionBottomSheetCheckOut2ToCartFragment())
+           findNavController().navigate(BottomSheetCheckOutDirections.actionBottomSheetCheckOut2ToCartFragment())
 
         }
     }
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        check_out_btn.text="Check Out"+GlobalClass.globalCartList.size.toString()
+        check_out_btn.text="Check Out ( "+GlobalClass.globalCartList.size.toString()+" )"
         check_out_btn.setOnClickListener {
             //handle click event
-             findNavController().navigate(BottomSheetCheckOutDirections.actionBottomSheetCheckOut2ToCartFragment())
+            findNavController().navigate(BottomSheetCheckOutDirections.actionBottomSheetCheckOut2ToCartFragment())
 
         }
 

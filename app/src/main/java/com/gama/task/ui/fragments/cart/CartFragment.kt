@@ -3,6 +3,7 @@ package com.gama.task.ui.fragments.cart
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gama.task.R
@@ -17,6 +18,10 @@ class CartFragment :Fragment(R.layout.fragment_cart),CartAdapter.OnItemClickList
         cart_rv.adapter = CartAdapter(GlobalClass.globalCartList,this)
         cart_rv.layoutManager = LinearLayoutManager(context)
         cart_rv.setHasFixedSize(true)
+        checkout_btn.setOnClickListener {
+           findNavController().navigate(CartFragmentDirections.actionCartFragmentToFragmentpurchase1())
+
+        }
     }
 
     override fun onClick(position: Int) {
@@ -25,4 +30,7 @@ class CartFragment :Fragment(R.layout.fragment_cart),CartAdapter.OnItemClickList
         cart_rv.layoutManager = LinearLayoutManager(context)
         cart_rv.setHasFixedSize(true)
     }
+
+
+
 }

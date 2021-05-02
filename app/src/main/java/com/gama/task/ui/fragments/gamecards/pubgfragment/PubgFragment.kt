@@ -48,7 +48,7 @@ GlobalClass.globalCartList.add(CartItem(R.drawable.pubg_logo
     ,pubgList.get(position).text4))
 
         if (!GlobalClass.globalCartList.isEmpty())
-            findNavController().navigate(XboxFragmentDirections.actionXboxFragmentToBottomSheetCheckOut2())
+            findNavController().navigate(PubgFragmentDirections.actionPubgFragmentToBottomSheetCheckOut2())
 
 
         Toast.makeText(activity, "added pubg card num $position to cart", Toast.LENGTH_LONG).show()
