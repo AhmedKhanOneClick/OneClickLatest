@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.activities.MainActivity">
+
+    <data>
+
+        <variable
+            name="buildConfig"
+            type="com.gama.task.BuildConfig" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:openDrawer="start">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="4dp"
+                app:buttonGravity="center_vertical"
+                app:collapseIcon="@drawable/ic_menu_button_of_three_horizontal_lines"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+
+                app:logoDescription=" "
+                app:navigationIcon="@drawable/ic_menu_button_of_three_horizontal_lines"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:title=" "
+                tools:ignore="MissingConstraints">
+<ImageView
+
+    android:layout_width="@dimen/_100sdp"
+    android:layout_height="@dimen/_25sdp"
+    android:layout_marginLeft="@dimen/_55sdp"
+    android:src="@drawable/ic_oneclick_logo__on_white"
+    />
+                <ImageView
+                    android:id="@+id/cart_btnn"
+                    android:layout_width="@dimen/_22sdp"
+                    android:layout_height="@dimen/_22sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="end"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/ic_shopping_cart"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <fragment
+                android:id="@+id/nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:defaultNavHost="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                app:navGraph="@navigation/main"
+                tools:layout_editor_absoluteX="54dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/main_navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:theme="@style/NavigationTheme"
+            android:background="@drawable/bg_nav_gradient"
+            app:elevation="@dimen/x12dp"
+            app:headerLayout="@layout/nav_header"
+            app:itemBackground="@drawable/side_menu4"
+            app:itemIconTint="@color/splash_color"
+            app:menu="@menu/side_menu">
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+</layout>

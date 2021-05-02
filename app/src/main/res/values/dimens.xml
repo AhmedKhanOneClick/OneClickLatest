@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="status_bar_height">@dimen/x24dp</dimen>
+    <dimen name="navigation_bar_height">@dimen/x44dp</dimen>
+
+    <dimen name="shadow_default">@dimen/x4dp</dimen>
+
+    <dimen name="radius_small">@dimen/x10dp</dimen>
+    <dimen name="radius_default">@dimen/x16dp</dimen>
+    <dimen name="radius_button">@dimen/x25dp</dimen>
+
+    <dimen name="txt_tiny">@dimen/x10sp</dimen>
+    <dimen name="txt_tiny_plus">@dimen/x11sp</dimen>
+    <dimen name="txt_small">@dimen/x13sp</dimen>
+    <dimen name="txt_small_plus">@dimen/x15sp</dimen>
+    <dimen name="txt_medium">@dimen/x17sp</dimen>
+    <dimen name="txt_large">@dimen/x19sp</dimen>
+    <dimen name="txt_large_plus">@dimen/x23sp</dimen>
+    <dimen name="txt_huge">@dimen/x25sp</dimen>
+
+    <dimen name="register_item_margin_top">@dimen/x6dp</dimen>
+
+    <dimen name="switch_width">@dimen/x56dp</dimen>
+
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="max_edit_txt_length">16</integer>
+
+    <integer name="price_slider_from">1</integer>
+    <integer name="price_slider_to">10000</integer>
+
+    <array name="initial_slider_values">
+        <item>1</item>
+        <item>10000</item>
+    </array>
+</resources>

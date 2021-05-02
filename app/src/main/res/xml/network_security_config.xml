@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">travotels.com</domain>
+        <domain includeSubdomains="true">haj.gov.sa</domain>
+        <domain includeSubdomains="true">travotels-reports.s3.us-east-2.amazonaws.com</domain>
+        <domain includeSubdomains="true">10.0.2.2</domain>
+    </domain-config>
+</network-security-config>
