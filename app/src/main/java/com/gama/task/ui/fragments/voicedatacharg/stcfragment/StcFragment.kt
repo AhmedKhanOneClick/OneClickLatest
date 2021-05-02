@@ -17,17 +17,18 @@ class StcFragment : Fragment(R.layout.fragment_data_card_stc) {
 
         val stcList=ArrayList<StcData>()
 
-        stcList.add(StcData("2GB Per Month", "50", "100","Nintendo Recharg Card 50 SAR"))
-        stcList.add(StcData("5GB Per Month", "100", "200","Nintendo Recharg Card 100 SAR"))
-        stcList.add(StcData("10GB Per Month", "150", "300","Nintendo Recharg Card 150 SAR"))
-        stcList.add(StcData("15GB Per Month", "200", "400","Nintendo Recharg Card 200 SAR"))
-        stcList.add(StcData("20GB Per Month", "250", "500","Nintendo Recharg Card 250 SAR"))
-        stcList.add(StcData("25GB Per Month", "300", "600","Nintendo Recharg Card 300 SAR"))
-        stcList.add(StcData("30GB Per Month", "350", "700","Nintendo Recharg Card 350 SAR"))
-        stcList.add(StcData("40GB Per Month", "400", "800","Nintendo Recharg Card 400 SAR"))
+        stcList.add(StcData("10GB for 1 Month", "115", "115","Data Recharge Card 115 SAR"))
+        stcList.add(StcData("10GB for 2 Months", "173", "173","Data Recharge Card 173 SAR"))
+        stcList.add(StcData("10GB for 3 Months", "202", "202","Data Recharge Card 202 SAR"))
+        stcList.add(StcData("50GB for 2 Months", "253", "253","Data Recharge Card 253 SAR"))
+        stcList.add(StcData("100GB for 3 Months", "403", "403","Data Recharge Card 403 SAR"))
+        stcList.add(StcData("10GB for 3 Months", "202", "202","Data Recharge Card 202 SAR"))
+        stcList.add(StcData("10GB for 3 Months", "202", "202","Data Recharge Card 202 SAR"))
+        stcList.add(StcData("10GB for 3 Months", "202", "202","Data Recharge Card 202 SAR"))
+        stcList.add(StcData("10GB for 3 Months", "202", "202","Data Recharge Card 202 SAR"))
+
         stc_rv.adapter = StcAdapter(stcList)
         stc_rv.layoutManager = GridLayoutManager(context,2)
         stc_rv.setHasFixedSize(true)
-
     }
 }

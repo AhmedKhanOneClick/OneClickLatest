@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="70dp"
                 android:layout_height="35dp"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="10dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/mrsoollogo"/>
 
@@ -29,7 +29,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="sans-serif"
                 android:text="بطاقة شحن كارت"
-
+                android:layout_marginTop="@dimen/_10sdp"
                 android:textSize="@dimen/_10sdp"
 
 
@@ -80,7 +80,7 @@
 
             <ImageView
                 android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_12sdp"
+                android:layout_height="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/ic_oneclick_logo_white"/>

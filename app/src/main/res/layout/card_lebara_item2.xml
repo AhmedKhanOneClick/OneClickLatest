@@ -59,7 +59,7 @@
                     android:layout_gravity="center"
                     android:fontFamily="monospace"
                     android:text="160"
-
+                    android:letterSpacing="-0.1"
                     android:textSize="@dimen/_35sdp"
                     android:textStyle="bold"
                     android:textAlignment="center"
@@ -79,7 +79,7 @@
 
             <ImageView
                 android:layout_width="@dimen/_40sdp"
-                android:layout_height="@dimen/_12sdp"
+                android:layout_height="@dimen/_8sdp"
                 android:layout_marginTop="@dimen/_3sdp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/ic_oneclick_logo_white"/>

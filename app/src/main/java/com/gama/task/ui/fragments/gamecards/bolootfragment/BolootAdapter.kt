@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
 import com.gama.task.ui.fragments.giftcards.careemfragment.CareemAdapter
 import com.gama.task.ui.fragments.giftcards.careemfragment.CareemData
-import kotlinx.android.synthetic.main.card_careem_item.view.*
+import kotlinx.android.synthetic.main.card_boloot_item.view.*
 
 class BolootAdapter (private val bolootList: List<BolootData>):
     RecyclerView.Adapter<BolootAdapter.BolootViewHolder>() {
@@ -29,10 +29,10 @@ class BolootAdapter (private val bolootList: List<BolootData>):
     override fun getItemCount() = bolootList.size
 
     class BolootViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val textView1: TextView = itemView.card_value1_tv
-        val textView2: TextView = itemView.card_value2_tv
-        val textView3: TextView = itemView.card_value3_tv
-        val textView4: TextView = itemView.card_value4_tv
+        val textView1: TextView = itemView.card_value_1
+        val textView2: TextView = itemView.card_value_2
+        val textView3: TextView = itemView.card_value_3
+        val textView4: TextView = itemView.card_value_4
     }
 
 }
