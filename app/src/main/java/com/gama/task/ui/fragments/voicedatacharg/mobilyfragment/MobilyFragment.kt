@@ -32,7 +32,6 @@ class MobilyFragment : Fragment(R.layout.fragment_data_card_mobily),MobilyAdapte
         mobily_rv.adapter = MobilyAdapter(mobilyList,this)
         mobily_rv.layoutManager = GridLayoutManager(context,2)
         mobily_rv.setHasFixedSize(true)
-
     }
 
     override fun onClick(position: Int) {
