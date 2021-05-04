@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.fragments.voicedatacharg.VoiceRechargeFragment">
+    tools:context=".ui.fragments.voicerecharge.VoiceRechargeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -180,35 +180,35 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="190dp"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="-30dp"
-                    android:weightSum="2">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="190dp"-->
+<!--                    android:orientation="horizontal"-->
+<!--                    android:layout_marginTop="-30dp"-->
+<!--                    android:weightSum="2">-->
 
-                    <ImageView
-                        android:id="@+id/go_btn"
-                        android:layout_width="match_parent"
-                        android:layout_height="190dp"
-                        android:layout_marginRight="-10dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/go_selector"
-                        android:clickable="true"
-                        android:focusable="true" />
+<!--                    <ImageView-->
+<!--                        android:id="@+id/go_btn"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="190dp"-->
+<!--                        android:layout_marginRight="-10dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@drawable/go_selector"-->
+<!--                        android:clickable="true"-->
+<!--                        android:focusable="true" />-->
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="190dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/go_selector"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:layout_marginLeft="-10dp"
-                        android:visibility="invisible" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="190dp"-->
+<!--                        android:layout_weight="1"-->
+<!--                        android:background="@drawable/go_selector"-->
+<!--                        android:clickable="true"-->
+<!--                        android:focusable="true"-->
+<!--                        android:layout_marginLeft="-10dp"-->
+<!--                        android:visibility="invisible" />-->
 
 
-                </LinearLayout>
+<!--                </LinearLayout>-->
             </LinearLayout>
         </androidx.core.widget.NestedScrollView>
     </LinearLayout>

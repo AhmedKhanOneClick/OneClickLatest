@@ -53,16 +53,16 @@
 
         </RelativeLayout>
 
-        <!--        <View-->
+<!--        <View-->
 
-        <!--            android:layout_width="match_parent"-->
-        <!--            android:layout_height="4dp"-->
-        <!--            android:layout_gravity="bottom"-->
-        <!--            android:layout_marginLeft="60dp"-->
-        <!--            android:layout_marginTop="15dp"-->
-        <!--            android:layout_marginRight="60dp"-->
-        <!--            android:layout_marginBottom="20dp"-->
-        <!--            android:background="#FFFFFF" />-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="4dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginLeft="60dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginRight="60dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:background="#FFFFFF" />-->
         <ImageView
             android:layout_width="match_parent"
             android:layout_marginLeft="30dp"

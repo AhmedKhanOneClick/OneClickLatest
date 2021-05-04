@@ -39,14 +39,13 @@
                 app:title=" "
                 tools:ignore="MissingConstraints">
 <ImageView
-
     android:layout_width="@dimen/_100sdp"
     android:layout_height="@dimen/_25sdp"
     android:layout_marginLeft="@dimen/_55sdp"
     android:src="@drawable/ic_oneclick_logo__on_white"
     />
                 <ImageView
-                    android:id="@+id/cart_btnn"
+                    android:id="@+id/imageView2"
                     android:layout_width="@dimen/_22sdp"
                     android:layout_height="@dimen/_22sdp"
                     android:layout_alignParentEnd="true"

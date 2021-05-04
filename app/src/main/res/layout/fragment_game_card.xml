@@ -154,22 +154,23 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/lords_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
-                        android:layout_marginRight="-10dp"
                         android:layout_weight="1"
                         android:background="@drawable/lords_selector"
                         android:clickable="true"
+                        android:layout_marginRight="-10dp"
                         android:focusable="true" />
 
                     <ImageView
                         android:id="@+id/fifa_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
-                        android:layout_marginLeft="-10dp"
                         android:layout_weight="1"
                         android:background="@drawable/fifa_selector"
                         android:clickable="true"
+                        android:layout_marginLeft="-10dp"
                         android:focusable="true" />
 
 
@@ -183,6 +184,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/freefire_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -192,6 +194,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/legends_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -211,6 +214,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/steam_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -220,6 +224,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/boloot_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -239,6 +244,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/jalsaat_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"

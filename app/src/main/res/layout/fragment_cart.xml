@@ -37,14 +37,15 @@
               android:text="Total To Pay = "
 
               />
+
           <TextView
+              android:id="@+id/total"
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"
-              android:textSize="@dimen/_18sdp"
-              android:textStyle="bold"
               android:text="1900"
               android:textColor="@android:color/holo_red_dark"
-              />
+              android:textSize="@dimen/_18sdp"
+              android:textStyle="bold" />
           <TextView
               android:layout_width="wrap_content"
               android:layout_height="wrap_content"

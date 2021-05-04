@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
+import com.gama.task.ui.fragments.gamecards.nintendofragment.NintendAdapter
 import kotlinx.android.synthetic.main.card_nintendo_item.view.*
 import kotlinx.android.synthetic.main.card_playstation_item.view.*
 
@@ -34,17 +35,18 @@ class PlayStationAdapter(private val playsationList: List<PlayStationData>,priva
             val textView4: TextView = itemView.card_value_4
             init {
                 itemView.setOnClickListener {
-                   onItemClickListener.onClickL(adapterPosition)
+                    onItemClickListener.onClick(absoluteAdapterPosition)
                 }
                 itemView.setOnLongClickListener {
-                    onItemClickListener.onLongClick(absoluteAdapterPosition)
+                    onItemClickListener.onLongClick(adapterPosition)
+
                     return@setOnLongClickListener true
                 }
+
             }
         }
     interface OnItemClickListener{
-        fun onClickL(position: Int)
+        fun onClick(position: Int)
         fun onLongClick(position: Int)
     }
-
 }

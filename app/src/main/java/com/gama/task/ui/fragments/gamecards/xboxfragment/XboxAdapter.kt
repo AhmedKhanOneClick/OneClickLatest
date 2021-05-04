@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
-import kotlinx.android.synthetic.main.card_playstation_item.view.*
+import com.gama.task.ui.fragments.gamecards.steamfragment.SteamAdapter
 import kotlinx.android.synthetic.main.card_xbox_item.view.*
 
 
@@ -44,9 +44,9 @@ class XboxAdapter(private val xboxList: List<XboxData>,private val onItemClickLi
 
             }
         }
-    interface OnItemClickListener{
+
+    interface OnItemClickListener {
         fun onClick(position: Int)
         fun onLongClick(position: Int)
     }
-
 }

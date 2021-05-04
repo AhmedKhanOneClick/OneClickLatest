@@ -6,17 +6,15 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
+import com.gama.task.ui.fragments.gamecards.lordsfragment.LordsAdapter
 import kotlinx.android.synthetic.main.card_nintendo_item.view.*
 
 
-class NintendAdapter(private val nintendoList: List<NintendData>, private val onItemClickListener: OnItemClickListener) :
+class NintendAdapter(private val nintendoList: List<NintendData>,private val onItemClickListener: OnItemClickListener) :
         RecyclerView.Adapter<NintendAdapter.NintendoViewHolder>() {
-
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NintendoViewHolder {
-
             val itemView = LayoutInflater.from(parent.context).inflate(R.layout.card_nintendo_item,
                 parent, false)
-
             return NintendoViewHolder(itemView,onItemClickListener)
         }
         override fun onBindViewHolder(holder: NintendoViewHolder, position: Int) {
@@ -35,25 +33,19 @@ class NintendAdapter(private val nintendoList: List<NintendData>, private val on
             val textView3: TextView = itemView.card_value2_tv
             val textView4: TextView = itemView.card_value3_tv
             init {
-                itemView.setOnClickListener{
-                    onItemClickListener.onClick(adapterPosition)
+                itemView.setOnClickListener {
+                    onItemClickListener.onClick(absoluteAdapterPosition)
                 }
-                itemView.setOnLongClickListener{
-
-
+                itemView.setOnLongClickListener {
                     onItemClickListener.onLongClick(adapterPosition)
+
                     return@setOnLongClickListener true
                 }
+
             }
-
-
         }
-
-    interface  OnItemClickListener{
+    interface OnItemClickListener{
         fun onClick(position: Int)
         fun onLongClick(position: Int)
-
-
     }
-
 }

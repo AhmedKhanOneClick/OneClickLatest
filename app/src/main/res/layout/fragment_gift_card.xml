@@ -4,13 +4,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".ui.fragments.GiftCardFragment">
+    tools:context=".ui.fragments.giftcards.GiftCard">
 
     <LinearLayout
         android:layout_width="match_parent"
 
         android:layout_height="match_parent"
-        android:background="#E6EBF5"
+        android:background="@drawable/bq_w"
         android:orientation="vertical">
 
         <RelativeLayout
@@ -20,7 +20,6 @@
             android:layout_gravity="center_vertical">
 
             <TextView
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -55,16 +54,26 @@
 
         </RelativeLayout>
 
-        <View
+<!--        <View-->
 
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="4dp"-->
+<!--            android:layout_gravity="bottom"-->
+<!--            android:layout_marginLeft="60dp"-->
+<!--            android:layout_marginTop="15dp"-->
+<!--            android:layout_marginRight="60dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:background="#FFFFFF" />-->
+        <ImageView
             android:layout_width="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:layout_height="4dp"
             android:layout_gravity="bottom"
-            android:layout_marginLeft="60dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginRight="60dp"
             android:layout_marginBottom="20dp"
-            android:background="#FFFFFF" />
+            android:layout_marginTop="15dp"
+            android:background="@drawable/line"
+            />
 
         <androidx.core.widget.NestedScrollView
             android:layout_width="match_parent"
@@ -84,6 +93,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/amazon_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -93,6 +103,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/careem_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -112,6 +123,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/ebay_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -121,6 +133,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/facebook_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -140,6 +153,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/googleplay_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -149,6 +163,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/itunes_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -168,6 +183,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/mcaffee_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -177,6 +193,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/mrsool_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -196,6 +213,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/noon_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -205,6 +223,7 @@
                         android:focusable="true" />
 
                     <ImageView
+                        android:id="@+id/office_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -224,6 +243,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/razorgold_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -233,7 +253,7 @@
                         android:focusable="true" />
 
                     <ImageView
-
+                        android:id="@+id/skype_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -253,6 +273,7 @@
                     android:weightSum="2">
 
                     <ImageView
+                        android:id="@+id/tmmmt_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
@@ -262,7 +283,7 @@
                         android:focusable="true" />
 
                     <ImageView
-
+                        android:id="@+id/windows_btn"
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
