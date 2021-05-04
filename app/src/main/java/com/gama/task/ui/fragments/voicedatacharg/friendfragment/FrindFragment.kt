@@ -21,15 +21,15 @@ class FrindFragment : Fragment(R.layout.fragment_data_card_friendi),FriendiAdapt
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        friendiList.add(FriendiData("1.5GB for 1 Month", "37".toInt(), "37","Freindi Data Card 37 SAR"))
+        friendiList.add(FriendiData("3GB for 1 Month", "52".toInt(), "52","Freindi Data Card 52 SAR"))
+        friendiList.add(FriendiData("5GB for 1 Month", "63".toInt(), "63","Freindi Data Card 63 SAR"))
+        friendiList.add(FriendiData("8GB for 1 Month", "94".toInt(), "94","Freindi Data Card 94 SAR"))
+        friendiList.add(FriendiData("10GB for 1 Month", "105".toInt(), "105","Freindi Data Card 105 SAR"))
+        friendiList.add(FriendiData("10GB for 3 Months", "130".toInt(), "130","Freindi Data Card 130 SAR"))
+        friendiList.add(FriendiData("20GB for 3 Month", "199".toInt(), "199","Freindi Data Card 199 SAR"))
+        friendiList.add(FriendiData("50GB for 3 Month", "274".toInt(), "274","Freindi Data Card 274 SAR"))
 
-        friendiList.add(FriendiData("2GB Per Month", "50".toInt(), "100","Frind Recharg Card 50 SAR"))
-        friendiList.add(FriendiData("5GB Per Month", "100".toInt(), "200","Frind Recharg Card 100 SAR"))
-        friendiList.add(FriendiData("10GB Per Month", "150".toInt(), "300","Frind Recharg Card 150 SAR"))
-        friendiList.add(FriendiData("15GB Per Month", "200".toInt(), "400","Frind Recharg Card 200 SAR"))
-        friendiList.add(FriendiData("20GB Per Month", "250".toInt(), "500","Frind Recharg Card 250 SAR"))
-        friendiList.add(FriendiData("25GB Per Month", "300".toInt(), "600","Frind Recharg Card 300 SAR"))
-        friendiList.add(FriendiData("30GB Per Month", "350".toInt(), "700","Frind Recharg Card 350 SAR"))
-        friendiList.add(FriendiData("40GB Per Month", "400".toInt(), "800","Frind Recharg Card 400 SAR"))
         friendi_rv.adapter = FriendiAdapter(friendiList,this)
         friendi_rv.layoutManager = GridLayoutManager(context,2)
         friendi_rv.setHasFixedSize(true)
