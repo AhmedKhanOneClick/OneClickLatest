@@ -21,14 +21,14 @@ class MobilyFragment : Fragment(R.layout.fragment_data_card_mobily),MobilyAdapte
 
 
 
-        mobilyList.add(MobilyData("2GB Per Month", "50".toInt(), "100","Nintendo Recharg Card 50 SAR"))
-        mobilyList.add(MobilyData("5GB Per Month", "100".toInt(), "200","Nintendo Recharg Card 100 SAR"))
-        mobilyList.add(MobilyData("10GB Per Month", "150".toInt(), "300","Nintendo Recharg Card 150 SAR"))
-        mobilyList.add(MobilyData("15GB Per Month", "200".toInt(), "400","Nintendo Recharg Card 200 SAR"))
-        mobilyList.add(MobilyData("20GB Per Month", "250".toInt(), "500","Nintendo Recharg Card 250 SAR"))
-        mobilyList.add(MobilyData("25GB Per Month", "300".toInt(), "600","Nintendo Recharg Card 300 SAR"))
-        mobilyList.add(MobilyData("30GB Per Month", "350".toInt(), "700","Nintendo Recharg Card 350 SAR"))
-        mobilyList.add(MobilyData("40GB Per Month", "400".toInt(), "800","Nintendo Recharg Card 400 SAR"))
+        mobilyList.add(MobilyData("2GB for 1 Month", "65".toInt(), "65","Mobily Data Card 65 SAR"))
+        mobilyList.add(MobilyData("5GB for 1 Month", "90".toInt(), "90","Mobily Data Card 90 SAR"))
+        mobilyList.add(MobilyData("10GB for 1 Month", "109.25".toInt(), "109.25","Mobily Data Card 109.25 SAR"))
+        mobilyList.add(MobilyData("10GB for 3 Month", "200".toInt(), "200","Mobily Data Card 200 SAR"))
+        mobilyList.add(MobilyData("20GB for 3 Month", "260".toInt(), "260","Mobily Data Card 260 SAR"))
+        mobilyList.add(MobilyData("50GB for 3 Month", "310".toInt(), "310","Mobily Data Card 310 SAR"))
+        mobilyList.add(MobilyData("100GB for 3 Month", "375".toInt(), "375","Mobily Data Card 375 SAR"))
+        mobilyList.add(MobilyData("300GB for 3 Month", "525".toInt(), "525","Mobily Data Card 525 SAR"))
         mobily_rv.adapter = MobilyAdapter(mobilyList,this)
         mobily_rv.layoutManager = GridLayoutManager(context,2)
         mobily_rv.setHasFixedSize(true)
