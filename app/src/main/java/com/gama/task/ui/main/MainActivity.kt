@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
+import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import com.gama.task.R
 import com.gama.task.databinding.ActivityMainBinding
@@ -29,6 +30,9 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         drawer.addDrawerListener(toggle)
         toggle.syncState()
     }
+//val opencart=binding.openCartBtn.setOnClickListener {
+
+//}
 
     @Override
     override fun onBackPressed() {

@@ -45,7 +45,7 @@
     android:src="@drawable/ic_oneclick_logo__on_white"
     />
                 <ImageView
-                    android:id="@+id/imageView2"
+                    android:id="@+id/open_cart_btn"
                     android:layout_width="@dimen/_22sdp"
                     android:layout_height="@dimen/_22sdp"
                     android:layout_alignParentEnd="true"

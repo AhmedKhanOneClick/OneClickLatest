@@ -629,7 +629,11 @@
         android:id="@+id/fragmentpurchase3"
         android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase3"
         android:label="fragment_sucess3"
-        tools:layout="@layout/fragment_sucess3" />
+        tools:layout="@layout/fragment_sucess3" >
+        <action
+            android:id="@+id/action_fragmentpurchase3_to_fsearchPagerFragment"
+            app:destination="@id/searchPagerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentpurchase2"
         android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase2"
@@ -647,6 +651,7 @@
         <action
             android:id="@+id/action_fragmentpurchase1_to_fragmentpurchase2"
             app:destination="@id/fragmentpurchase2" />
+
     </fragment>
     <fragment
         android:id="@+id/cartFragment"
@@ -654,8 +659,29 @@
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" >
         <action
-            android:id="@+id/action_cartFragment_to_fragmentpurchase1"
+            android:id="@+id/action_cartFragment_to_fragmentcheckout1"
+            app:destination="@id/fragmentcheckout1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentWayCheckout"
+        android:name="com.gama.task.ui.fragments.payment.FragmentWayCheckout"
+        android:label="fragment_way_checkout"
+        tools:layout="@layout/fragment_way_checkout" >
+        <action
+            android:id="@+id/action_fragmentWayCheckout_to_fragmentpurchase1"
             app:destination="@id/fragmentpurchase1" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentcheckout1"
+        android:name="com.gama.task.ui.fragments.payment.Fragmentcheckout1"
+        android:label="fragment_confirm_checkout"
+        tools:layout="@layout/fragment_confirm_checkout" >
+        <action
+            android:id="@+id/action_fragmentcheckout1_to_fragmentWayCheckout"
+            app:destination="@id/fragmentWayCheckout" />
+        <action
+            android:id="@+id/action_fragmentcheckout1_to_searchPagerFragment"
+            app:destination="@id/searchPagerFragment" />
     </fragment>
 
 
