@@ -12,7 +12,7 @@
         android:id="@+id/check_out_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="check out (20)"
+        android:text="checkout (20)"
         android:paddingRight="@dimen/_60sdp"
         android:paddingLeft="@dimen/_70sdp"
         android:textStyle="bold"

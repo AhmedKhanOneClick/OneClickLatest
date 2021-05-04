@@ -30,7 +30,7 @@ class BottomSheetCheckOut: BottomSheetDialogFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-        check_out_btn.text="Check Out ( "+GlobalClass.globalCartList.size.toString()+" )"
+        check_out_btn.text="Checkout ( "+GlobalClass.globalCartList.size.toString()+" )"
         check_out_btn.setOnClickListener {
             //handle click event
            findNavController().navigate(BottomSheetCheckOutDirections.actionBottomSheetCheckOutToCartFragment())
