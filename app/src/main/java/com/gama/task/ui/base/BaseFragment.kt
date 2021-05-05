@@ -10,17 +10,27 @@ import androidx.appcompat.widget.Toolbar
 import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
+import androidx.databinding.library.baseAdapters.BR
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.gama.task.AppExecutors
 import com.gama.task.R
 import com.gama.task.binding.FragmentDataBindingComponent
+import com.gama.task.data.repository.AuthRepository
 import com.gama.task.models.Resource
 import com.gama.task.models.Status
+import com.gama.task.ui.common.DialogType
+import com.gama.task.ui.common.GeneralDialog
+import com.gama.task.ui.main.MainActivity
 import com.gama.task.ui.main.NavigationHost
 import com.gama.task.util.autoCleared
+import com.gama.task.util.extensions.openActivity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 abstract class BaseFragment<VM : ViewModel, DB : ViewDataBinding>(viewModelClass: Class<VM>) :
@@ -32,6 +42,8 @@ abstract class BaseFragment<VM : ViewModel, DB : ViewDataBinding>(viewModelClass
     @Inject
     lateinit var preferences: SharedPreferences
 
+    @Inject
+    lateinit var userAuthRepository: AuthRepository
 
     private var navigationHost: NavigationHost? = null
 
@@ -69,11 +81,14 @@ abstract class BaseFragment<VM : ViewModel, DB : ViewDataBinding>(viewModelClass
         return binding.root
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.setVariable(BR.isLoading, false)
         init()
+
         val mainToolbar: Toolbar = view.findViewById(R.id.toolbar) ?: return
+
         // If we have a toolbar and we are not attached to a navigation host, set up the toolbar
         // navigation icon.
         if (navigationHost == null) {
@@ -108,15 +123,31 @@ abstract class BaseFragment<VM : ViewModel, DB : ViewDataBinding>(viewModelClass
      */
     open fun isSharedViewModel() = false
 
+    override fun onDestroyView() {
+//        UIUtil.hideKeyboard(requireContext(), requireView())
+        super.onDestroyView()
+    }
+
     /**
      * handle api status [Status.LOADING] and [Status.ERROR]
      * @param apiStatus Resource<T> the response to handle its status
      */
     fun <T> handleApiStatus(apiStatus: Resource<T>) {
+
+        //close keyboard on start loading
+        if (apiStatus.status == Status.LOADING)
+//            UIUtil.hideKeyboard(requireContext(), requireView())
+
         // handle loading status
+        binding.setVariable(BR.isLoading, apiStatus.status == Status.LOADING)
+
+
         // update view if request has content
+        binding.setVariable(BR.isLoading, apiStatus.data != null)
+
         // user is logged in but token expired or it's login request with un valid data.
         if (apiStatus.code == 401) {
+            handle401Error()
         } else if (apiStatus.status == Status.ERROR) {
 
             // handle error status
@@ -124,6 +155,19 @@ abstract class BaseFragment<VM : ViewModel, DB : ViewDataBinding>(viewModelClass
         }
     }
 
+    /**
+     * handle [Status.ERROR] for apiServices when [Resource.code] = 401.
+     * logout user and navigate to [SplashActivity].
+     */
+    open fun handle401Error() {
+        lifecycleScope.launch(Dispatchers.IO) {
+            userAuthRepository.logout()
+
+            withContext(Dispatchers.Main) {
+                openActivity(MainActivity::class.java, true)
+            }
+        }
+    }
 
     /**
      * handle [Status.ERROR] for apiServices
@@ -136,12 +180,7 @@ abstract class BaseFragment<VM : ViewModel, DB : ViewDataBinding>(viewModelClass
             else -> getString(R.string.error_api_general)
         }
 
-//        GeneralDialog(ERROR, errorMsg).show(childFragmentManager, tag)
+        GeneralDialog(DialogType.ERROR, errorMsg).show(childFragmentManager, tag)
     }
 
 }
-
-
-
-
-

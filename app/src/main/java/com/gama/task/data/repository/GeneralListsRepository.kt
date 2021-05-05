@@ -2,10 +2,7 @@ package com.gama.task.data.repository
 
 import com.gama.task.data.api.ApiService
 import com.gama.task.di.NormalRequest
-import com.gama.task.models.Accounts
-import com.gama.task.models.Budgets
-import com.gama.task.models.GeneralResponse
-import com.gama.task.models.InsertAccounts
+import com.gama.task.models.*
 import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
 
@@ -34,5 +31,8 @@ class GeneralListsRepository @Inject constructor(@NormalRequest private val apiS
             override fun createCall() = apiService.insertaccount(account)
         }.asLiveData()
 
-
+    fun getAllCategoriesdata () =
+        object : NetworkOnlyResource<Categories, Categories>() {
+            override fun createCall() = apiService.get_categories()
+        }.asLiveData()
 }

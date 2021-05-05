@@ -1,10 +1,13 @@
 package com.gama.task.ui.base
 
+import android.content.Context
+import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
-import com.gama.task.R
+
+import com.gama.task.util.Localization
 
 abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity(), BaseView {
 
@@ -16,13 +19,23 @@ abstract class BaseActivity<DB : ViewDataBinding> : AppCompatActivity(), BaseVie
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //update the localization of the activity
-        setTheme(R.style.SplashTheme)
-        Thread.sleep(1000)
-        setTheme(R.style.AppTheme)
+        Localization.updateContextLocale(this)
         super.onCreate(savedInstanceState)
         initBindingLifeCycleOwner()
         init()
     }
+
+
+    override fun attachBaseContext(newBase: Context?) {
+        //update the localization of the activity
+        super.attachBaseContext(Localization.updateContextLocale(newBase))
+    }
+
+    override fun applyOverrideConfiguration(overrideConfiguration: Configuration?) {
+
+        super.applyOverrideConfiguration(baseContext.resources.configuration)
+    }
+
 
     override fun initBindingLifeCycleOwner() {
         binding.lifecycleOwner = this

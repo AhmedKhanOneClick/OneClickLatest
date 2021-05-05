@@ -5,7 +5,15 @@
     android:id="@+id/main"
     app:startDestination="@id/searchPagerFragment">
 
+    <fragment
+        android:id="@+id/login"
+        android:name="com.gama.task.ui.auth.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_searchPagerFragment"
+            app:destination="@id/searchPagerFragment" />
 
+    </fragment>
     <fragment
         android:id="@+id/searchPagerFragment"
         android:name="com.gama.task.ui.pager.MainCategoriesFragment"

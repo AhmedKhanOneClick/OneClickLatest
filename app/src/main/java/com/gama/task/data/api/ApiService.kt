@@ -1,14 +1,9 @@
 package com.gama.task.data.api
 
 import androidx.lifecycle.LiveData
-
-import com.gama.task.models.Accounts
-import com.gama.task.models.Budgets
-import com.gama.task.models.GeneralResponse
-import com.gama.task.models.InsertAccounts
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import com.gama.saudi2go.data.api.requests.LoginRequest
+import com.gama.task.models.*
+import retrofit2.http.*
 
 /**
  * All end points for the app.
@@ -24,6 +19,12 @@ interface ApiService {
 
     @POST("budgets/31594a4c-a709-4467-b83b-1dad94faf7fe/accounts")
     fun insertaccount(@Body account: InsertAccounts): LiveData<ApiResponse<GeneralResponse<Any>>>
-
+//    @POST("auth/login")
+//    fun login(@Body hotelsSearchRequest: LoginRequest): LiveData<ApiResponse<GeneralResponse<UserAuth>>>
+@FormUrlEncoded
+@POST("auth/login")
+fun login(@FieldMap body: Map<String, String>): LiveData<ApiResponse<UserAuth1>>
+    @GET("productCategories?page=1&size=20")
+    fun get_categories(): LiveData<ApiResponse<Categories>>
 
 }
