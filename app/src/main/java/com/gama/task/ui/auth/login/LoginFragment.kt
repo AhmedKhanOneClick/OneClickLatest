@@ -64,18 +64,18 @@ class LoginFragment :
 //
         viewModel.navigateToMainActivity.observe(viewLifecycleOwner, EventObserver {
 
-//            viewModel.accept_statues()
-//                .observe(viewLifecycleOwner) {
-//                    handleApiStatus(it)
-//                    if (it.status == Status.SUCCESS){
-//
-//                        Log.d(ContentValues.TAG, "accept_statues: "+it.toString())
-//
-//                    }else{
-////                        handle401Error()
-//                        Log.d(ContentValues.TAG, "accept_statues:1 ")
-//                    }
-//                }
+            viewModel.accept_statues()
+                .observe(viewLifecycleOwner) {
+                    handleApiStatus(it)
+                    if (it.status == Status.SUCCESS){
+
+                        Log.d(ContentValues.TAG, "accept_statues: "+it.toString())
+
+                    }else{
+//                        handle401Error()
+                        Log.d(ContentValues.TAG, "accept_statues:1 ")
+                    }
+                }
             openActivity(MainActivity::class.java, true)
 //            findNavController().navigate(
 //                R.id.action_searchPagerFragment,
