@@ -683,6 +683,46 @@
             android:id="@+id/action_fragmentcheckout1_to_searchPagerFragment"
             app:destination="@id/searchPagerFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/fragmentReceipt"
+        android:name="com.gama.task.ui.fragments.drawrmenu.FragmentReceipt"
+        android:label="fragment_receipt"
+        tools:layout="@layout/fragment_receipt" />
+    <fragment
+        android:id="@+id/fragmentTransactionsTables"
+        android:name="com.gama.task.ui.fragments.drawrmenu.transactionstable.FragmentTransactionsTables"
+        android:label="fragment_transactions_tables"
+        tools:layout="@layout/fragment_transactions_tables" >
+        <action
+            android:id="@+id/action_fragmentTransactionsTables_to_fragmentTransactionDetailes"
+            app:destination="@id/fragmentTransactionDetailes" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.gama.task.ui.fragments.drawrmenu.ReportsFragment"
+        android:label="fragment_menu_reports"
+        tools:layout="@layout/fragment_menu_reports" >
+        <action
+            android:id="@+id/action_reportsFragment_to_fragmentTransactionsTables"
+            app:destination="@id/fragmentTransactionsTables" />
+        <action
+            android:id="@+id/action_reportsFragment_to_fragmentOrderPrint"
+            app:destination="@id/fragmentOrderPrint" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOrderPrint"
+        android:name="com.gama.task.ui.fragments.drawrmenu.orderprinttable.FragmentOrderPrint"
+        android:label="fragment_order_print"
+        tools:layout="@layout/fragment_order_print" >
+        <action
+            android:id="@+id/action_fragmentOrderPrint_to_fragmentReceipt"
+            app:destination="@id/fragmentReceipt" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTransactionDetailes"
+        android:name="com.gama.task.ui.fragments.drawrmenu.transactiondetailes.FragmentTransactionDetailes"
+        android:label="fragment_teansaction_detailes"
+        tools:layout="@layout/fragment_teansaction_detailes" />
 
 
 </navigation>
