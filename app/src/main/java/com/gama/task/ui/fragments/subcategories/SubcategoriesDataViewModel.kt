@@ -1,4 +1,4 @@
-package com.gama.task.ui.fragments.voicedatacharg.mobilyfragment
+package com.gama.task.ui.fragments.subcategories
 
 import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
@@ -7,33 +7,39 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
 import com.gama.task.data.repository.GeneralListsRepository
-import com.gama.task.models.Content
-import com.gama.task.models.MobileData1
-
-import com.gama.task.models.Filter
+import com.gama.task.models.*
 
 import com.gama.task.util.Event
 
 /**
  * perform business logic and store ui states for [AccountListFragment].
  */
-class MobilyDataViewModel @ViewModelInject constructor(
+class SubcategoriesDataViewModel @ViewModelInject constructor(
     private val generalListsRepository: GeneralListsRepository
 ) : ViewModel() {
 
 
+    public val request_type = MutableLiveData<String>()
 
+
+
+    fun updateRequest(id: String) {
+        if (request_type.value != id)
+            request_type.value = id
+        Log.d("initHotelsAndTra", "initHotelsAndTransportation91: ")
+
+    }
 
 
     /**
      * The list of Accounts in the current page.
      */
-    private val _accountsList = MutableLiveData<MutableList<Content>?>(ArrayList())
+    private val _accountsList = MutableLiveData<MutableList<Content2>?>(ArrayList())
 
     /**
      * Immutable version of [_accountList].
      */
-    val accountsList = _accountsList as LiveData<MutableList<Content>>
+    val accountsList = _accountsList as LiveData<MutableList<Content2>>
 
 
     //result of total of list
@@ -71,7 +77,7 @@ class MobilyDataViewModel @ViewModelInject constructor(
     }
 
 //Get All Accounts
-    val allcontacts=generalListsRepository.getAllProducts().apply {
+    val allcontacts=generalListsRepository.getAllSubCategoriesdata(request_type.value!!.toString()).apply {
         observeForever {
 
             if (it.data != null) {

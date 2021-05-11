@@ -1,4 +1,4 @@
-package com.gama.task.ui.fragments.voicedatacharg.mobilyfragment
+package com.gama.task.ui.fragments.Categories
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -8,7 +8,9 @@ import androidx.recyclerview.widget.DiffUtil
 import com.gama.task.AppExecutors
 import com.gama.task.R
 import com.gama.task.databinding.CardMobilyItemBinding
+import com.gama.task.databinding.CategoryCardBinding
 import com.gama.task.models.Content
+import com.gama.task.models.Content1
 import com.gama.task.ui.base.DataBoundListAdapter
 
 
@@ -19,27 +21,27 @@ import com.gama.task.ui.base.DataBoundListAdapter
  * @param appExecutors AppExecutors executor pools.
  * @property onHotelClicked Function1<Hotel, Unit> action to perform when hotel selected.
  */
-class MobileDataAdapter(
+class CategoriesDataAdapter(
     private val dataBindingComponent: DataBindingComponent,
     private val appExecutors: AppExecutors,
-    private val onHotelClicked: (Content) -> Unit
-) : DataBoundListAdapter<Content, CardMobilyItemBinding>(
+    private val onHotelClicked: (Content1) -> Unit
+) : DataBoundListAdapter<Content1, CategoryCardBinding>(
     appExecutors,
-    object : DiffUtil.ItemCallback<Content>() {
-        override fun areItemsTheSame(oldItem: Content, newItem: Content) = false
-        override fun areContentsTheSame(oldItem: Content, newItem: Content) = false
+    object : DiffUtil.ItemCallback<Content1>() {
+        override fun areItemsTheSame(oldItem: Content1, newItem: Content1) = false
+        override fun areContentsTheSame(oldItem: Content1, newItem: Content1) = false
     }) {
 
-    override fun createBinding(parent: ViewGroup): CardMobilyItemBinding = DataBindingUtil.inflate(
+    override fun createBinding(parent: ViewGroup): CategoryCardBinding = DataBindingUtil.inflate(
         LayoutInflater.from(parent.context),
-        R.layout.card_mobily_item,
+        R.layout.category_card,
         parent,
         false,
         dataBindingComponent
     )
 
-    override fun bind(binding: CardMobilyItemBinding, item: Content, position: Int) {
-        binding.notification = item
+    override fun bind(binding: CategoryCardBinding, item: Content1, position: Int) {
+        binding.categories = item
 
 //        binding.recyclerAmenities.adapter =
 //            HotelAmenitiesAdapter(dataBindingComponent, appExecutors).apply {

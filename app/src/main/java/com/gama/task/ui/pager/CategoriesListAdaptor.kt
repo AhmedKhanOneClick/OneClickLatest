@@ -50,15 +50,15 @@ class CategoriesListAdaptor : RecyclerView.Adapter<CategoriesListAdaptor.Categor
         holder.itemView.setOnClickListener {
             var action: NavDirections? = null
             when (item.id) {
-                0 -> action =
-                    MainCategoriesFragmentDirections.actionSearchPagerFragmentToDataRechargeFragment()
-                1 -> action =
-                    MainCategoriesFragmentDirections.actionSearchPagerFragmentToVoiceRechargeFragment()
-                2 -> action = MainCategoriesFragmentDirections.actionSearchPagerFragmentToGameCard()
-                3 -> action =
-                    MainCategoriesFragmentDirections.actionSearchPagerFragmentToCinemaCardFragment()
-                4 -> action =
-                    MainCategoriesFragmentDirections.actionSearchPagerFragmentToGiftCardFragment()
+//                0 -> action =
+//                    MainCategoriesFragmentDirections.actionSearchPagerFragmentToDataRechargeFragment()
+//                1 -> action =
+//                    MainCategoriesFragmentDirections.actionSearchPagerFragmentToVoiceRechargeFragment()
+//                2 -> action = MainCategoriesFragmentDirections.actionSearchPagerFragmentToGameCard()
+//                3 -> action =
+//                    MainCategoriesFragmentDirections.actionSearchPagerFragmentToCinemaCardFragment()
+//                4 -> action =
+//                    MainCategoriesFragmentDirections.actionSearchPagerFragmentToGiftCardFragment()
             }
             if (action != null) {
                 holder.itemView.findNavController().navigate(action)

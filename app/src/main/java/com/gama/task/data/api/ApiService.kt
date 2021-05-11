@@ -24,7 +24,12 @@ interface ApiService {
 @FormUrlEncoded
 @POST("auth/login")
 fun login(@FieldMap body: Map<String, String>): LiveData<ApiResponse<UserAuth1>>
-    @GET("productCategories?page=1&size=20")
+    @GET("productCategories?page=1&size=10")
     fun get_categories(): LiveData<ApiResponse<Categories>>
+
+    @GET("productCategories/{id}")
+    fun get_subcategories(@Path("id") id: String): LiveData<ApiResponse<Subcategories>>
+    @GET("products?page=1&size=10&sort=updatedAt,desc")
+    fun getAllproducts(): LiveData<ApiResponse<Products>>
 
 }

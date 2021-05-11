@@ -5,22 +5,22 @@ import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
 @Keep
-data  class Categories(
+data  class Subcategories(
 //        @SerializedName("accounts") val accounts: List<Accounts1>,
 
-    @SerializedName("data") val data: Data1,
+    @SerializedName("data") val data: Data2,
 //    @SerializedName("data") val errors: List<Any>,
     @SerializedName("msg") val msg: String,
     @SerializedName("status") val status: Int
 ): IdentityGeneralResponse()
 @Keep
-data class Data1(
-    @SerializedName("content") val content: List<Content1>
+data class Data2(
+    @SerializedName("content") val content: List<Content2>
 //    ,
 //    @SerializedName("pageable") val pageable: Pageable
 ): IdentityGeneralResponse()
 @Keep
-data class Content1(
+data class Content2(
     @SerializedName("id") val id: String,
     @SerializedName("nameEn") val nameEn: String,
     @SerializedName("nameUr") val nameUr: String,
@@ -28,8 +28,7 @@ data class Content1(
 
     @SerializedName("descriptionEn") val descriptionEn: String,
     @SerializedName("descriptionUr") val descriptionUr: String,
-    @SerializedName("descriptionAr") val descriptionAr: String,
-    @SerializedName("imageURL") val imageURL: String
+    @SerializedName("descriptionAr") val descriptionAr: String
 
 ): IdentityGeneralResponse()
 //@Keep

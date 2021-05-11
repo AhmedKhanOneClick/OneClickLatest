@@ -9,16 +9,33 @@
     >
 
         <androidx.recyclerview.widget.RecyclerView
+
+
+            android:layout_marginBottom="5dp"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/x10dp"
+            android:paddingTop="@dimen/x4dp"
+            android:paddingEnd="@dimen/x10dp"
+            android:paddingBottom="230dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+
+
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="-160dp"
+
+            tools:ignore="MissingConstraints"
+
+
+
+
             android:id="@+id/rvCategories"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/ic_bg_category_list"
             android:divider="@color/transparent"
             android:dividerHeight="0dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+
             tools:listitem="@layout/category_card" />
 
 

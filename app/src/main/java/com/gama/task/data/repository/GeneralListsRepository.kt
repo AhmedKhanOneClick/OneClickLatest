@@ -35,4 +35,12 @@ class GeneralListsRepository @Inject constructor(@NormalRequest private val apiS
         object : NetworkOnlyResource<Categories, Categories>() {
             override fun createCall() = apiService.get_categories()
         }.asLiveData()
+    fun getAllSubCategoriesdata (id: String) =
+        object : NetworkOnlyResource<Subcategories, Subcategories>() {
+            override fun createCall() = apiService.get_subcategories(id)
+        }.asLiveData()
+    fun getAllProducts() =
+        object : NetworkOnlyResource<Products,Products>() {
+            override fun createCall() = apiService.getAllproducts()
+        }.asLiveData()
 }

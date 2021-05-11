@@ -16,8 +16,21 @@
     </fragment>
     <fragment
         android:id="@+id/searchPagerFragment"
-        android:name="com.gama.task.ui.pager.MainCategoriesFragment"
+        android:name="com.gama.task.ui.fragments.Categories.CategoriesFragment"
         tools:layout="@layout/fragment_main_category">
+        <action
+            android:id="@+id/actionsubcategories1"
+            app:destination="@id/subcategories"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right">
+
+
+        <argument
+            android:name="req_id"
+            app:argType="string" />
+        </action>
         <action
             android:id="@+id/action_searchPagerFragment_to_cinemaCardFragment"
             app:destination="@id/cinemaCardFragment" />
@@ -89,6 +102,15 @@
         android:name="com.gama.task.ui.fragments.GiftCardFragment"
         android:label="fragment_gift_card"
         tools:layout="@layout/fragment_gift_card" />
+    <fragment
+        android:id="@+id/subcategories"
+        android:name="com.gama.task.ui.fragments.subcategories.SubcategoriesFragment"
+
+        tools:layout="@layout/fragment_sub_category" >
+        <argument
+            android:name="req_id"
+            app:argType="string" />
+    </fragment>
     <fragment
         android:id="@+id/voiceRechargeFragment"
         android:name="com.gama.task.ui.fragments.voicedatacharg.VoiceRechargeFragment"
@@ -187,6 +209,10 @@
         android:name="com.gama.task.ui.fragments.gamecards.nintendofragment.NintendFragment"
         android:label="fragment_nintend"
         tools:layout="@layout/fragment_game_card_nintend" />
-
+    <fragment
+        android:id="@+id/mobiledata"
+        android:name="com.gama.task.ui.fragments.voicedatacharg.mobilyfragment.MobilyFragment"
+        android:label="fragment_nintend"
+        tools:layout="@layout/fragment_data_recharg_mobily" />
 
 </navigation>

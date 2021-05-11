@@ -1,36 +1,56 @@
 package com.gama.task.models
 
-
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
 
+/**
+ * @author Wellington Costa on 30/12/2017.
+ */
 @Keep
-data  class Categories(
+data class Products (
 //        @SerializedName("accounts") val accounts: List<Accounts1>,
 
-    @SerializedName("data") val data: Data1,
+    @SerializedName("data") val data: Data,
 //    @SerializedName("data") val errors: List<Any>,
     @SerializedName("msg") val msg: String,
     @SerializedName("status") val status: Int
 ): IdentityGeneralResponse()
 @Keep
-data class Data1(
-    @SerializedName("content") val content: List<Content1>
+data class Data(
+    @SerializedName("content") val content: List<Content>
 //    ,
 //    @SerializedName("pageable") val pageable: Pageable
 ): IdentityGeneralResponse()
 @Keep
-data class Content1(
-    @SerializedName("id") val id: String,
-    @SerializedName("nameEn") val nameEn: String,
-    @SerializedName("nameUr") val nameUr: String,
-    @SerializedName("nameAr") val nameAr: String,
-
-    @SerializedName("descriptionEn") val descriptionEn: String,
-    @SerializedName("descriptionUr") val descriptionUr: String,
-    @SerializedName("descriptionAr") val descriptionAr: String,
-    @SerializedName("imageURL") val imageURL: String
-
+data class Content(
+//    @SerializedName("data") val SKU: Any,
+//    @SerializedName("data") val brand: String,
+//    @SerializedName("data") val categoryId: String,
+//    @SerializedName("data") val cityId: Any,
+//    @SerializedName("data") val createdAt: Long,
+//    @SerializedName("data") val defaultImageURL: String,
+//    @SerializedName("data") val deletedAt: Any,
+//    @SerializedName("data") val descriptionAr: String,
+//    @SerializedName("data") val descriptionEn: String,
+//    @SerializedName("data") val descriptionUr: String,
+//    @SerializedName("data") val events: Any,
+//    @SerializedName("data") val gender: String,
+//    @SerializedName("data") val id: String,
+//    @SerializedName("data") val isActive: Boolean,
+//    @SerializedName("data") val isDeleted: Boolean,
+//    @SerializedName("data") val isFeatured: Boolean,
+//    @SerializedName("data") val keywords: Any,
+//    @SerializedName("data") val nameAr: String,
+//    @SerializedName("data") val nameEn: String,
+//    @SerializedName("data") val nameUr: String,
+    @SerializedName("price") val price: Int,
+//    @SerializedName("data") val productCategory: ProductCategory,
+//    @SerializedName("data") val provider: Provider,
+//    @SerializedName("data") val providerId: String,
+    @SerializedName("quantity") val quantity: Int,
+//    @SerializedName("data") val tags: Any,
+//    @SerializedName("data") val updatedAt: Long,
+//    @SerializedName("data") val weight: String
 ): IdentityGeneralResponse()
 //@Keep
 //data class Pageable(

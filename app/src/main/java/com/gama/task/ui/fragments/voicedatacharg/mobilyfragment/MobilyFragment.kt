@@ -9,7 +9,9 @@ import com.gama.task.ui.base.BaseFragment
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobilyBinding>(
     MobilyDataViewModel::class.java
 ) {
@@ -29,7 +31,7 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
 
     override fun init() {
 
-//        viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
+        viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
 //init account list
         initAccountList()
