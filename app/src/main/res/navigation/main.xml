@@ -723,6 +723,20 @@
         android:name="com.gama.task.ui.fragments.drawrmenu.transactiondetailes.FragmentTransactionDetailes"
         android:label="fragment_teansaction_detailes"
         tools:layout="@layout/fragment_teansaction_detailes" />
+    <fragment
+        android:id="@+id/accountFragmnet"
+        android:name="com.gama.task.ui.fragments.drawrmenu.AccountFragmnet"
+        android:label="fragment_menu_account"
+        tools:layout="@layout/fragment_menu_account" />
+    <fragment
+        android:id="@+id/settingFragment2"
+        android:name="com.gama.task.ui.fragments.drawrmenu.SettingFragment"
+        android:label="fragment_menu_setting"
+        tools:layout="@layout/fragment_menu_setting" />
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.gama.task.ui.fragments.drawrmenu.favourite.FavouritesFragment"
+        android:label="FavouritesFragment" />
 
 
 </navigation>
