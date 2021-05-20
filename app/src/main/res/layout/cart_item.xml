@@ -6,9 +6,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="@dimen/_4sdp"
     android:layout_margin="@dimen/_12sdp">
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+   >
+
 
     <ImageView
         android:id="@+id/card_image"
@@ -22,47 +25,66 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/card_name"
-        android:layout_width="@dimen/_110sdp"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="@dimen/_25sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:text="pubg charge cartpubg charge "
-        android:textAlignment="textEnd"
-        android:textSize="@dimen/_7sdp"
-        android:textStyle="bold"
-        android:textColor="@color/color_147eb0"
-        app:layout_constraintEnd_toStartOf="@+id/card_image"
-
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/card_price"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginRight="@dimen/_3sdp"
-        android:text="199.00"
-        android:textSize="@dimen/_10sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sar"
-        app:layout_constraintTop_toBottomOf="@+id/card_name" />
-    <TextView
-        android:id="@+id/sar"
-        android:layout_width="@dimen/_15sdp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8sdp"
-        android:layout_marginRight="@dimen/_10sdp"
-        android:text="SAR"
-        android:textSize="@dimen/_8sdp"
-        android:layout_marginBottom="@dimen/_15sdp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
         app:layout_constraintEnd_toStartOf="@+id/card_image"
-        app:layout_constraintTop_toBottomOf="@+id/card_name" />
-<!--
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="@dimen/_25sdp"
+            android:text="pubg  cartpubg charge "
+            android:textAlignment="viewStart"
+            android:textColor="@color/color_147eb0"
+            android:textSize="@dimen/_7sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/card_image"
+
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/card_image"
+            app:layout_constraintTop_toBottomOf="@+id/card_name">
+
+
+            <TextView
+                android:id="@+id/card_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="199.00"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/sar"
+                app:layout_constraintTop_toBottomOf="@+id/card_name" />
+
+            <TextView
+                android:id="@+id/sar"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:text="SAR"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/card_image"
+                app:layout_constraintTop_toBottomOf="@+id/card_name" />
+        </LinearLayout>
+    </LinearLayout>
+    <!--
     <Spinner
         android:id="@+id/quantitySpinner"
         android:layout_width="wrap_content"
@@ -76,6 +98,71 @@
         app:layout_constraintVertical_bias="0.288" />
 -->
 
+
+
+    <LinearLayout
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_65sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:background="@drawable/quantity_bg"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/view2"
+        app:layout_constraintStart_toEndOf="@+id/delet_item_btn"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+                    android:gravity="end"
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
+
+            <Button
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:background="@drawable/xd_up"
+               />
+            <Button
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_6sdp"
+                android:background="@drawable/xd_down"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:layout_weight="1"
+
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_19sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:layout_marginStart="@dimen/_9sdp"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+    </LinearLayout>
+<!--    <ImageView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginLeft="30dp"-->
+<!--        android:layout_marginRight="30dp"-->
+<!--        android:layout_height="4dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        android:background="@drawable/line2"-->
+<!--        />-->
     <ImageView
 
         android:id="@+id/delet_item_btn"
@@ -91,79 +178,5 @@
         app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_65sdp"
-        android:layout_marginLeft="@dimen/_5sdp"
-        android:background="@drawable/quantity_bg"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/view2"
-        app:layout_constraintStart_toEndOf="@+id/delet_item_btn"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_20sdp"
-            android:layout_marginRight="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_19sdp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1"
-                android:textSize="@dimen/_16sdp"
-                android:textStyle="bold"
-
-                android:layout_marginLeft="@dimen/_9sdp"
-                android:textColor="@android:color/black"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingTop="@dimen/_19sdp"
-            android:layout_marginRight="@dimen/_6sdp"
-            android:layout_marginLeft="@dimen/_10sdp">
-
-            <Button
-                android:layout_width="@dimen/_8sdp"
-                android:layout_height="@dimen/_5sdp"
-                android:background="@drawable/xd_up"
-                android:layout_marginTop="@dimen/_3sdp"/>
-            <Button
-                android:layout_width="@dimen/_8sdp"
-                android:layout_height="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_8sdp"
-                android:background="@drawable/xd_down"/>
-        </LinearLayout>
-    </LinearLayout>
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_marginLeft="30dp"-->
-<!--        android:layout_marginRight="30dp"-->
-<!--        android:layout_height="4dp"-->
-<!--        android:layout_gravity="bottom"-->
-<!--        android:layout_marginBottom="20dp"-->
-<!--        android:layout_marginTop="15dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        android:background="@drawable/line2"-->
-<!--        />-->
-    <View
-        android:id="@+id/view2"
-        android:layout_width="4dp"
-        android:layout_height="@dimen/_60sdp"
-        android:background="@drawable/line2"
-        android:layout_marginLeft="8dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/card_name"
-
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
 </androidx.cardview.widget.CardView>

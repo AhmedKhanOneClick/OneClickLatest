@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/_270sdp"
+    android:background="@drawable/pop_up_back"
+    android:padding="@dimen/_30sdp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sorting"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_9sdp"
+        android:background="@drawable/line_h"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="Recently Added"
+        android:drawableLeft="@drawable/sort_24"
+        android:drawablePadding="@dimen/_15sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16sdp"
+        android:background="@drawable/pop_up_text_back1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="Recently Added"
+        android:drawableLeft="@drawable/sort_24"
+        android:drawablePadding="@dimen/_15sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/pop_up_text_back1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:text="Recently Added"
+        android:drawableLeft="@drawable/sort_24"
+        android:drawablePadding="@dimen/_15sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_16sdp"
+        android:background="@drawable/pop_up_text_back1"
+        />
+
+</LinearLayout>

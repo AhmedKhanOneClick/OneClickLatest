@@ -16,10 +16,6 @@ object ClipboardUtil {
         val clip: ClipData = ClipData.newPlainText(label, txtToCopy)
         clipboard?.setPrimaryClip(clip) ?: return
 
-        Toast.makeText(
-            context,
-            context.getString(R.string.copied_successfully, label),
-            Toast.LENGTH_SHORT
-        ).show()
+
     }
 }

@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="ID">
+            android:text="@string/id">
 
         </TextView>
 
@@ -53,7 +53,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Date">
+            android:text="@string/date">
 
         </TextView>
 
@@ -75,7 +75,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Amount">
+            android:text="@string/amount">
 
         </TextView>
 
@@ -105,7 +105,7 @@
             android:layout_weight="1"
             android:background="@drawable/back_details"
             android:gravity="center"
-            android:text="Receipt"
+            android:text="@string/receipt"
             android:textSize="@dimen/_9sdp" />
 
 

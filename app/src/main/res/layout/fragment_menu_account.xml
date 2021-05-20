@@ -17,7 +17,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
 
-        android:text="Accounts"
+        android:text="@string/account"
+        android:layout_marginStart="@dimen/_20sdp"
         android:textSize="@dimen/_20sdp"
         android:textColor="@android:color/black"
         android:textStyle="bold"
@@ -40,12 +41,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="E-Wallet Balance"
-            android:textStyle="bold"
-            android:textSize="@dimen/_15sdp"
-            android:textColor="@android:color/black"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"/>
+            android:text="@string/e_wallet_balance"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -92,12 +94,14 @@
         android:orientation="vertical"
         android:background="@drawable/account_back"
         android:layout_margin="@dimen/_10sdp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="POS ID "
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"/>
+            android:text="@string/pos_id" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -126,12 +130,14 @@
         android:orientation="vertical"
         android:background="@drawable/account_back"
         android:layout_margin="@dimen/_10sdp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name  / Pos User"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"/>
+            android:text="@string/name_pos_user" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -152,19 +158,21 @@
         android:orientation="vertical"
         android:background="@drawable/account_back"
         android:layout_margin="@dimen/_10sdp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name  / Pos User"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"/>
+            android:text="@string/bakala_name" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_10sdp"
             android:lines="1"
-            android:text="Bakala Name"
+            android:text="@string/bakala_name"
             android:textSize="@dimen/_19sdp"
             android:textStyle="bold"
             android:gravity="center"
@@ -178,12 +186,14 @@
         android:orientation="vertical"
         android:background="@drawable/account_back"
         android:layout_margin="@dimen/_10sdp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Email"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"/>
+            android:text="@string/email" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -212,12 +222,14 @@
         android:orientation="vertical"
         android:background="@drawable/account_back"
         android:layout_margin="@dimen/_10sdp">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name  / Pos User"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"/>
+            android:text="@string/name_pos_user" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -236,14 +248,16 @@
 
         android:layout_height="@dimen/_60sdp"
         android:orientation="vertical"
-        android:background="@drawable/account_back"
-        android:layout_margin="@dimen/_10sdp">
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/account_back">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Name  / Pos User"
+            android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:layout_marginLeft="@dimen/_10sdp"/>
+            android:text="@string/name_pos_user"
+            android:layout_marginStart="10dp" />
 
         <TextView
             android:layout_width="wrap_content"

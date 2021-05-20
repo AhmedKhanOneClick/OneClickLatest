@@ -36,7 +36,9 @@
             android:layout_marginLeft="@dimen/_14sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:text="Gift Card / "
+
+
+         android:text="@string/gift_card"
             android:textSize="@dimen/_10sdp"
             android:textStyle="bold"/>
         <TextView
