@@ -20,9 +20,9 @@ class AmazonFragment: Fragment(R.layout.fragment_gift_card_amazon),AmazonAdapter
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        amazonList.add(AmazonData("2GB Per Month", "51".toInt(), "100","Amazon Recharg Card 50 SAR"))
-        amazonList.add(AmazonData("5GB Per Month", "100".toInt(), "200","Amazon Recharg Card 100 SAR"))
-        amazonList.add(AmazonData("10GB Per Month", "150".toInt(), "300","Amazon Recharg Card 150 SAR"))
+        amazonList.add(AmazonData("2GB Per Month", "51".toInt(), "51","Amazon Recharg Card 50 SAR"))
+        amazonList.add(AmazonData("5GB Per Month", "100".toInt(), "100","Amazon Recharg Card 100 SAR"))
+        amazonList.add(AmazonData("10GB Per Month", "150".toInt(), "150","Amazon Recharg Card 150 SAR"))
         amazonList.add(AmazonData("15GB Per Month", "200".toInt(), "400","Amazon Recharg Card 200 SAR"))
         amazonList.add(AmazonData("20GB Per Month", "250".toInt(), "500","Amazon Recharg Card 250 SAR"))
         amazonList.add(AmazonData("25GB Per Month", "300".toInt(), "600","Amazon Recharg Card 300 SAR"))
