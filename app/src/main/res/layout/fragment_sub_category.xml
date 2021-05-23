@@ -120,11 +120,7 @@
 
                 tools:listitem="@layout/sub_category_card" />
         </LinearLayout>
-        <include
-            android:id="@+id/loading_state"
-            layout="@layout/state_loading"
-            tools:visibility="gone"
-            app:isLoading="@{isLoading}" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

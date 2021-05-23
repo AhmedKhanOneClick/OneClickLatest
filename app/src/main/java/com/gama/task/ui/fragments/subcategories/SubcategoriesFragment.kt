@@ -65,12 +65,12 @@ class SubcategoriesFragment : BaseFragment<SubcategoriesDataViewModel, FragmentS
 
 
         }
-//        val layoutManager = GridLayoutManager(subcategoriescontext, 2)
+        val layoutManager = GridLayoutManager(context, 2)
 
         // at last set adapter to recycler view.
 
         // at last set adapter to recycler view.
-//        binding.rvCategories.setLsubcategoriesayoutManager(layoutManager)
+        binding.rvsubcategories.setLayoutManager(layoutManager)
         binding.rvsubcategories.adapter = subcategoriesDataAdapter
 
         scrollListener = object :

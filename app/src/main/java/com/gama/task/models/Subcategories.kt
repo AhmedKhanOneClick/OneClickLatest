@@ -15,7 +15,7 @@ data  class Subcategories(
 ): IdentityGeneralResponse()
 @Keep
 data class Data2(
-    @SerializedName("content") val content: List<Content2>
+    @SerializedName("subcategories") val subcategories: List<Content2>
 //    ,
 //    @SerializedName("pageable") val pageable: Pageable
 ): IdentityGeneralResponse()
@@ -28,7 +28,8 @@ data class Content2(
 
     @SerializedName("descriptionEn") val descriptionEn: String,
     @SerializedName("descriptionUr") val descriptionUr: String,
-    @SerializedName("descriptionAr") val descriptionAr: String
+    @SerializedName("descriptionAr") val descriptionAr: String,
+    @SerializedName("imageURL") val imageURL: String
 
 ): IdentityGeneralResponse()
 //@Keep

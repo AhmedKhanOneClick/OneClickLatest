@@ -119,17 +119,18 @@ android:layout_margin="@dimen/_5sdp">
             android:textStyle="bold"
             android:layout_marginTop="@dimen/_2sdp"
             android:textColor="@color/color_4f4f4f" />
+
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:fontFamily="sans-serif"
-            android:text="S.R"
-            android:textSize="@dimen/_8sdp"
-            android:textStyle="bold"
             android:gravity="bottom"
+            android:text="S.R"
+            android:textColor="@color/color_7b7b7b"
+            android:textSize="@dimen/_8sdp"
 
-            android:textColor="@color/color_7b7b7b" />
+            android:textStyle="bold" />
 
     </LinearLayout>
     <TextView

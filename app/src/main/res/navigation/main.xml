@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    app:startDestination="@id/searchPagerFragment">
-
+    app:startDestination="@id/MobilyFragment">
+<!--    app:startDestination="@id/MobilyFragment">-->
     <fragment
         android:id="@+id/login"
         android:name="com.gama.task.ui.auth.login.LoginFragment"

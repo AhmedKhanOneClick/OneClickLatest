@@ -43,11 +43,12 @@ data class Content(
 //    @SerializedName("data") val nameAr: String,
 //    @SerializedName("data") val nameEn: String,
 //    @SerializedName("data") val nameUr: String,
-    @SerializedName("price") val price: Int,
+    @SerializedName("price") val price: Double,
 //    @SerializedName("data") val productCategory: ProductCategory,
 //    @SerializedName("data") val provider: Provider,
 //    @SerializedName("data") val providerId: String,
     @SerializedName("quantity") val quantity: Int,
+     @SerializedName("createdAt") val createdAt: Double,
 //    @SerializedName("data") val tags: Any,
 //    @SerializedName("data") val updatedAt: Long,
 //    @SerializedName("data") val weight: String

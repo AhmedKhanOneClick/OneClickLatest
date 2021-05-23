@@ -1,20 +1,29 @@
 package com.gama.task.ui.fragments.voicedatacharg.mobilyfragment
 
+import android.app.Activity
+import android.content.ContentValues
+import android.content.Intent
+import android.util.Log
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
 import com.gama.task.databinding.FragmentDataRechargMobilyBinding
+import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
+import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment.Companion.TAG
 import com.gama.task.ui.base.BaseFragment
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
 import dagger.hilt.android.AndroidEntryPoint
 
+
 @AndroidEntryPoint
 class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobilyBinding>(
     MobilyDataViewModel::class.java
-) {
+),DepartmentFragment.Communicator {
 //    Fragment
 //}(R.layout.fragment_data_recharg_mobily)
 
@@ -53,6 +62,57 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
 //                return false
 //            }
 //        })
+        binding.sort.setOnClickListener {
+//            viewModel.accountsList.observe(viewLifecycleOwner) {
+//
+//                it.sortByDescending { it.price }
+//
+//                mobileDataAdapter.submitList(it)
+//                mobileDataAdapter.notifyDataSetChanged()
+//            }
+//
+//        }
+            DepartmentFragment.newInstance(
+                "", ""
+            )
+                .apply {
+//                    setTargetFragment(this,1)
+                    isCancelable = false }
+                .show(childFragmentManager, DepartmentFragment.TAG)
+        }
+        val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+        model.message.observe(viewLifecycleOwner) {
+            Log.d(ContentValues.TAG, "init: "+it.toString())
+            viewModel.accountsList.observe(viewLifecycleOwner) {
+
+                it.sortByDescending { it.createdAt }
+
+                mobileDataAdapter.submitList(it)
+                mobileDataAdapter.notifyDataSetChanged()
+            }
+        }
+
+        model.asc.observe(viewLifecycleOwner) {
+            Log.d(ContentValues.TAG, "init: "+it.toString())
+            viewModel.accountsList.observe(viewLifecycleOwner) {
+
+                it.sortBy { it.price }
+
+                mobileDataAdapter.submitList(it)
+                mobileDataAdapter.notifyDataSetChanged()
+            }
+        }
+
+        model.desc.observe(viewLifecycleOwner) {
+            Log.d(ContentValues.TAG, "init: "+it.toString())
+            viewModel.accountsList.observe(viewLifecycleOwner) {
+
+                it.sortByDescending { it.price }
+
+                mobileDataAdapter.submitList(it)
+                mobileDataAdapter.notifyDataSetChanged()
+            }
+        }
     }
 
 
@@ -101,7 +161,7 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
 
         viewModel.accountsList.observe(viewLifecycleOwner) {
 
-//it.sortBy { it.id }
+//it.sortByDescending { it.price }
 
             mobileDataAdapter.submitList(it)
             mobileDataAdapter.notifyDataSetChanged()
@@ -143,4 +203,55 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
 
     }
 
+    override fun onResume() {
+        Log.d(TAG, "sdfonResume:1 ")
+        super.onResume()
+
+        Log.d(TAG, "sdfonResume: ")
+    }
+
+    override fun onPause() {
+        Log.d(TAG, "sdfonPause: ")
+        super.onPause()
+        Log.d(TAG, "sdfonPause: 1")
+    }
+
+    override fun onStart() {
+        Log.d(TAG, "onStart: ")
+        super.onStart()
+        Log.d(TAG, "onStart:1 ")
+    }
+
+    override fun onStop() {
+        Log.d(TAG, "onStop: ")
+        super.onStop()
+        Log.d(TAG, "onStop:1 ")
+    }
+
+    override fun onDestroy() {
+        Log.d(TAG, "onDestroy: ")
+        super.onDestroy()
+        Log.d(TAG, "onDestroy: 1")
+    }
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        Log.d(TAG, "onActivityResult: 11324")
+            if (resultCode == Activity.RESULT_OK) {
+                if (data?.extras!!.containsKey("return")) {
+                    val myValue = data?.extras!!.getString("return")
+                    Log.d(TAG, "onActivityResult: " + myValue)
+                    // Use the returned value
+                }
+
+        }
+    }
+    override fun setI(name: String?) {
+        Log.d(TAG, "onActivityResult: 113245555")
+    }
+
+    override fun onAttachFragment(childFragment: Fragment) {
+        Log.d(TAG, "onActivityResult: 1132455557999")
+        super.onAttachFragment(childFragment)
+        Log.d(TAG, "onActivityResult: 1132455558798")
+    }
 }

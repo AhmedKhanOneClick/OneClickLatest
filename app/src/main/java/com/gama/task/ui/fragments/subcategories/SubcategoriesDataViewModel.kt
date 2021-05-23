@@ -77,7 +77,7 @@ class SubcategoriesDataViewModel @ViewModelInject constructor(
     }
 
 //Get All Accounts
-    val allcontacts=generalListsRepository.getAllSubCategoriesdata(request_type.value!!.toString()).apply {
+    val allcontacts=request_type.switchMap {generalListsRepository.getAllSubCategoriesdata(request_type.value!!.toString())}.apply {
         observeForever {
 
             if (it.data != null) {
@@ -85,7 +85,7 @@ class SubcategoriesDataViewModel @ViewModelInject constructor(
 
 _navigatewithresult.postValue("")
                 _accountsList.value =
-                    _accountsList.value!!.apply { addAll(it.data.data.content) }
+                    _accountsList.value!!.apply { addAll(it.data.data.subcategories) }
         }
         }
     }
