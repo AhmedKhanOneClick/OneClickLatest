@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gama.task.R
 import com.gama.task.ui.fragments.gamecards.nintendofragment.NintendAdapter
+import com.gama.task.ui.main.MainActivity
 import kotlinx.android.synthetic.main.fragment_cart.*
 import kotlinx.android.synthetic.main.fragment_game_card_nintend.*
 
@@ -49,6 +50,8 @@ checkout=0
         cart_rv.layoutManager = LinearLayoutManager(context)
         total.text=checkout.toString()
         cart_rv.setHasFixedSize(true)
+
+        (activity as MainActivity).observeCartCounter()
     }
 
 

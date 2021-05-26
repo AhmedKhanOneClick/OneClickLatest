@@ -633,6 +633,9 @@
         <action
             android:id="@+id/action_fragmentpurchase3_to_fsearchPagerFragment"
             app:destination="@id/searchPagerFragment" />
+        <action
+            android:id="@+id/action_fragmentpurchase3_to_allReceiptFragment"
+            app:destination="@id/allReceiptFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentpurchase2"
@@ -687,7 +690,11 @@
         android:id="@+id/fragmentReceipt"
         android:name="com.gama.task.ui.fragments.drawrmenu.FragmentReceipt"
         android:label="fragment_receipt"
-        tools:layout="@layout/fragment_receipt" />
+        tools:layout="@layout/fragment_receipt" >
+        <action
+            android:id="@+id/action_fragment_receipt_to_searchPagerFragment"
+            app:destination="@id/searchPagerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentTransactionsTables"
         android:name="com.gama.task.ui.fragments.drawrmenu.transactionstable.FragmentTransactionsTables"
@@ -737,6 +744,15 @@
         android:id="@+id/favouritesFragment"
         android:name="com.gama.task.ui.fragments.drawrmenu.favourite.FavouritesFragment"
         android:label="FavouritesFragment" />
+    <fragment
+        android:id="@+id/allReceiptFragment"
+        android:name="com.gama.task.ui.fragments.allreceipt.AllReceiptFragment"
+        android:label="fragment_all_receipt"
+        tools:layout="@layout/fragment_all_receipt" >
+        <action
+            android:id="@+id/action_allReceiptFragment_to_fragmentReceipt"
+            app:destination="@id/fragmentReceipt" />
+    </fragment>
 
 
 </navigation>

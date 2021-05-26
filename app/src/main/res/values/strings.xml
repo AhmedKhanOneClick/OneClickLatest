@@ -69,6 +69,8 @@
     <string name="cinema_cards_main">Cinema Cards</string>
     <string name="total_to_pay">Total To Pay =</string>
     <string name="checkout">CheckOut</string>
+    <string name="all_receipts">All Receipts</string>
+    <string name="final_receipt">Final Receipt</string>
 
 
 </resources>
