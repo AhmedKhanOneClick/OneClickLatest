@@ -71,6 +71,8 @@
     <string name="checkout">CheckOut</string>
     <string name="all_receipts">All Receipts</string>
     <string name="final_receipt">Final Receipt</string>
+    <string name="print_receipt">Print Receipt</string>
+    <string name="voucher_receipt">Voucher Receipt..</string>
 
 
 </resources>

@@ -40,6 +40,8 @@ class AllReceiptFragment:Fragment(R.layout.fragment_all_receipt),AllReceiptAdapt
 
     override fun onClick(position: Int) {
 
+
+        findNavController().navigate(AllReceiptFragmentDirections.actionAllReceiptFragmentToVoucherReceiptFragment())
     }
 
 

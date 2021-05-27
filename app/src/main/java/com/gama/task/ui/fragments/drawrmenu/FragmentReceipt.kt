@@ -29,6 +29,6 @@ class FragmentReceipt :Fragment(R.layout.fragment_receipt){
 
                 // findNavController().navigate(Fragmentpurchase3Directions.actionFragmentpurchase3ToFsearchPagerFragment())
             }
-        }, 3000) // 3000 is the delayed time in milliseconds.
+        }, 5000) // 3000 is the delayed time in milliseconds.
     }
     }

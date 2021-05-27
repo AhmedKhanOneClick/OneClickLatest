@@ -44,8 +44,8 @@
                 <ImageView
                     android:layout_width="@dimen/_100sdp"
                     android:layout_height="@dimen/_25sdp"
-                    android:layout_marginRight="@dimen/_50sdp"
-                    android:src="@drawable/ic_oneclick_logo__on_white" />
+                    android:layout_marginStart="@dimen/_50sdp"
+                      android:src="@drawable/ic_oneclick_logo__on_white" />
 
 
                 <LinearLayout

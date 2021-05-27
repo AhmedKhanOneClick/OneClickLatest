@@ -2,8 +2,8 @@
     <string name="app_name" translatable="false">On Click</string>
     <string name="app_version">V%s</string>
 
-    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
-    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="navigation_drawer_open" translatable="false">فتح القائمة الجانبية</string>
+    <string name="navigation_drawer_close" translatable="false">غلق القائمة الجانبية</string>
 
     <string name="error_api_500">Server Error, Please try again later</string>
     <string name="error_api_general">Something Error, Please try again later</string>
@@ -12,62 +12,62 @@
     <string name="error_not_valid_email">Please enter a valid email</string>
 
 
-    <string name="homepage">HomePage</string>
-    <string name="favorite">Favorite</string>
-    <string name="account">Account</string>
-    <string name="reports">Reports</string>
-    <string name="transactions">Transactions</string>
-    <string name="settings">Settings</string>
-    <string name="cart">Cart</string>
-    <string name="data_recharge_main">Data Recharge</string>
-    <string name="receipt">Receipt</string>
-    <string name="amount">Amount</string>
-    <string name="date">Date</string>
-    <string name="id">ID</string>
-    <string name="details">Details</string>
-    <string name="statues">Statues</string>
-    <string name="ott_cinema">OTT Cinema</string>
-    <string name="voice_recharge">Voice Recharge</string>
-    <string name="quantity">Quantity</string>
-    <string name="card_details">Card Details</string>
-    <string name="credit_card">Credit Card</string>
-    <string name="payment_account">Payment Account</string>
-    <string name="main_category">Main Category</string>
-    <string name="product_name">Product Name</string>
+    <string name="homepage"> الصفحة الرئيسية</string>
+    <string name="favorite">المفضلات</string>
+    <string name="account">حسابي</string>
+    <string name="reports">التقارير</string>
+    <string name="transactions">المعاملات </string>
+    <string name="settings">الاعدادات</string>
+    <string name="cart">السلة</string>
+    <string name="data_recharge_main">شحن البانات</string>
+    <string name="receipt">الايصال</string>
+    <string name="amount">الكمية</string>
+    <string name="date">التاريخ</string>
+    <string name="id">الرقم التسلسلي</string>
+    <string name="details">التفاصيل</string>
+    <string name="statues">الحالة</string>
+    <string name="ott_cinema">كروت السينيما</string>
+    <string name="voice_recharge">شحن البيانات الصوتية</string>
+    <string name="quantity">الكمية</string>
+    <string name="card_details">تفاصيل الكارت</string>
+    <string name="credit_card">بطاثة ائتمانية</string>
+    <string name="payment_account">حساب الدفع</string>
+    <string name="main_category">القسم الرئيسي</string>
+    <string name="product_name">اسم المنتج</string>
 
-    <string name="transactions_id">Transactions ID/</string>
-    <string name="cash_receipt">Cash Receipt</string>
-    <string name="shop_name">Shop Name</string>
-    <string name="thank_you">Thank You!</string>
-    <string name="address">Address</string>
-    <string name="tel">Tel</string>
-    <string name="manager">Manager</string>
-    <string name="lorem">Lorem</string>
-    <string name="consectetuer">Consectetuer</string>
+    <string name="transactions_id">مسلسل المعاملة /</string>
+    <string name="cash_receipt">ايصال الكاش</string>
+    <string name="shop_name">اسم المحل</string>
+    <string name="thank_you">شكرا لك !</string>
+    <string name="address">العنوان</string>
+    <string name="tel">هاتف</string>
+    <string name="manager">المدير</string>
+        <string name="lorem">المالك</string>
+    <string name="consectetuer">المحقق</string>
     <string name="amet">Amet</string>
-    <string name="price">Price</string>
-    <string name="vat">VAT</string>
-    <string name="sale">Sale</string>
-    <string name="total">Total</string>
-    <string name="bakala_address">Bakala Address</string>
-    <string name="view_on_map">View On Map</string>
-    <string name="device_theme">Device Theme</string>
-    <string name="device_language">Device Language</string>
-    <string name="device_order_print">Device Order Print</string>
-    <string name="transactions_statement">Transactions Statement</string>
-    <string name="e_wallet_balance">E-Wallet Balance</string>
-    <string name="pos_id">POS ID</string>
-    <string name="name_pos_user">Name / Pos User</string>
-    <string name="bakala_name">Bakala Name</string>
-    <string name="email">Email</string>
-    <string name="gift_card">Gift Card /</string>
-    <string name="game_card">Game Card /</string>
-    <string name="game_cards_main">Game Cards</string>
-    <string name="gift_cards_main">Gift Cards</string>
-    <string name="data_recharge_">Data Recharge /</string>
-    <string name="cinema_card">Cinema Card /</string>
-    <string name="cinema_cards_main">Cinema Cards</string>
-    <string name="total_to_pay">Total To Pay =</string>
-    <string name="checkout">CheckOut</string>
+    <string name="price">السعر</string>
+    <string name="vat">ضريبة القيمة المضافة</string>
+    <string name="sale">تخفيض</string>
+    <string name="total">المبلغ الكلي</string>
+    <string name="bakala_address">عوان البقالة</string>
+    <string name="view_on_map">عرض علي الخريطة</string>
+    <string name="device_theme">سمة الجهاز</string>
+    <string name="device_language">لغة الجهاز</string>
+    <string name="device_order_print">امر الطباعة </string>
+        <string name="transactions_statement">بيان المعاملات</string>
+    <string name="e_wallet_balance">رصيد المحفظة الإلكترونية</string>
+    <string name="pos_id">مسلسة مستخدم خدمة pos</string>
+    <string name="name_pos_user">الاسم / او مستخدم الخدمة pos</string>
+    <string name="bakala_name">اسم البقالة</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="gift_card">بطاقات الهدايا/</string>
+    <string name="game_card">بطاقات الالعاب/</string>
+    <string name="game_cards_main">بطاقات الالعاب/</string>
+    <string name="gift_cards_main">بطاقات الهدايا</string>
+    <string name="data_recharge_">بطاقات شحن البيانات الخلوية/</string>
+    <string name="cinema_card">بطاقات السينيما/</string>
+    <string name="cinema_cards_main">بطاقات السينيما</string>
+    <string name="total_to_pay">المبلغ الكلي للدفع</string>
+    <string name="checkout">الدفع</string>
 
 </resources>

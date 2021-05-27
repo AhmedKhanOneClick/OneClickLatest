@@ -3,6 +3,7 @@ package com.gama.task.ui.fragments.allreceipt
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -36,11 +37,12 @@ class AllReceiptAdapter(private val allReceiptList: List<CartItem>, private val 
 
         val cardImage: ImageView=itemView.voucher_img
         val cardName: TextView=itemView.voucher_text
+        val viewVioucher:Button=itemView.view_voucher_btn
        // val cardPrice: TextView=itemView.card_price
         //val cardDelete: ImageView=itemView.delet_item_btn
         init {
 
-            itemView.setOnClickListener {
+            itemView.view_voucher_btn.setOnClickListener {
                 onItemClickListener.onClick(adapterPosition)
             }
         }

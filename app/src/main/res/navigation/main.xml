@@ -752,7 +752,15 @@
         <action
             android:id="@+id/action_allReceiptFragment_to_fragmentReceipt"
             app:destination="@id/fragmentReceipt" />
+        <action
+            android:id="@+id/action_allReceiptFragment_to_voucherReceiptFragment"
+            app:destination="@id/voucherReceiptFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/voucherReceiptFragment"
+        android:name="com.gama.task.ui.fragments.allreceipt.VoucherReceiptFragment"
+        android:label="voucher_static_receipt"
+        tools:layout="@layout/voucher_static_receipt" />
 
 
 </navigation>
