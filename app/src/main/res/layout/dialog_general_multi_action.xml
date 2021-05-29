@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.gama.task.ui.common.DialogType" />
+
+        <import type="androidx.core.content.ContextCompat" />
+
+        <variable
+            name="msg"
+            type="String" />
+
+        <variable
+            name="dialogType"
+            type="DialogType" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minWidth="@dimen/x300dp">
+
+
+        <ImageView
+            android:id="@+id/img_dialog_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x12dp"
+            android:adjustViewBounds="true"
+            android:src="@{ContextCompat.getDrawable(context, dialogType.icon)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_dialog_error" />
+
+
+        <TextView
+            android:id="@+id/tv_msg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x12dp"
+            android:layout_marginTop="@dimen/x16dp"
+            android:layout_marginEnd="@dimen/x12dp"
+            android:gravity="center"
+            android:text="@{msg}"
+            android:textColor="@color/color_2e3540"
+            android:textSize="@dimen/txt_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_dialog_type"
+            tools:text="Please Complete all required information" />
+
+
+        <LinearLayout
+            android:id="@+id/action_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x14dp"
+            android:layout_marginTop="@dimen/x16dp"
+            android:layout_marginEnd="@dimen/x14dp"
+            android:layout_marginBottom="@dimen/x24dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_msg" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

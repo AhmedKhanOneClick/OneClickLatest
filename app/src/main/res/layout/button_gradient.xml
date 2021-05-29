@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="text"
+            type="String" />
+
+        <variable
+            name="icon"
+            type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="isEnabled"
+            type="Boolean" />
+    </data>
+
+    <com.google.android.material.button.MaterialButton
+        style="@style/clickable_view_foreground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@{(isEnabled ?? true)? @drawable/bg_button_gradient : @drawable/bg_button_gray}"
+        android:text="@{text}"
+        android:textAllCaps="false"
+        android:id="@+id/btn_gradient"
+        android:textSize="@dimen/txt_medium"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        app:icon="@{icon}"
+        android:enabled="@{isEnabled ?? true}"
+        app:iconGravity="textStart"
+        app:iconPadding="@dimen/x8dp"
+        app:iconTint="@android:color/white"
+        tools:text="Text" />
+</layout>

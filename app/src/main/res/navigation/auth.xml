@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth.xml"
+    app:startDestination="@id/loginFragment">
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.gama.task.ui.auth.login.LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+<!--        <action-->
+<!--            android:id="@+id/openRegister"-->
+<!--            app:destination="@id/registerFragment"-->
+<!--            app:enterAnim="@android:anim/slide_in_left"-->
+<!--            app:exitAnim="@android:anim/slide_out_right"-->
+<!--            app:popEnterAnim="@android:anim/slide_in_left"-->
+<!--            app:popExitAnim="@android:anim/slide_out_right" />-->
+
+<!--        <action-->
+<!--            android:id="@+id/openForgetPass"-->
+<!--            app:destination="@id/forgetPassFragment"-->
+<!--            app:enterAnim="@android:anim/slide_in_left"-->
+<!--            app:exitAnim="@android:anim/slide_out_right"-->
+<!--            app:popEnterAnim="@android:anim/slide_in_left"-->
+<!--            app:popExitAnim="@android:anim/slide_out_right" />-->
+
+    </fragment>
+
+<!--    <fragment-->
+<!--        android:id="@+id/registerFragment"-->
+<!--        android:name="com.gama.saudi2go.ui.auth.register.RegisterFragment"-->
+<!--        tools:layout="@layout/fragment_register" />-->
+
+
+<!--    <fragment-->
+<!--        android:id="@+id/forgetPassFragment"-->
+<!--        android:name="com.gama.saudi2go.ui.auth.forget_pass.ForgetPassFragment"-->
+<!--        tools:layout="@layout/fragment_forget_pass">-->
+
+<!--        <action-->
+<!--            android:id="@+id/resetPass"-->
+<!--            app:destination="@id/forgetPassResetFragment"-->
+<!--            app:enterAnim="@android:anim/slide_in_left"-->
+<!--            app:exitAnim="@android:anim/slide_out_right"-->
+<!--            app:popEnterAnim="@android:anim/slide_in_left"-->
+<!--            app:popExitAnim="@android:anim/slide_out_right">-->
+
+<!--            <argument-->
+<!--                android:name="email"-->
+<!--                app:argType="string" />-->
+
+<!--        </action>-->
+
+<!--    </fragment>-->
+
+<!--    <fragment-->
+<!--        android:id="@+id/forgetPassResetFragment"-->
+<!--        android:name="com.gama.saudi2go.ui.auth.forget_pass_reset.ForgetPassResetFragment"-->
+<!--        tools:layout="@layout/fragment_forget_pass_reset">-->
+
+<!--        <argument-->
+<!--            android:name="email"-->
+<!--            app:argType="string" />-->
+<!--    </fragment>-->
+
+
+</navigation>

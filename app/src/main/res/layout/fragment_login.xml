@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:validation="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.gama.databinding_validation.CommonPatterns" />
+
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/login_form"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x34dp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/mobily_logo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_email_container"
+                    style="@style/TextInputLayout.TransparentWithHint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/x49dp"
+                    android:layout_marginTop="@dimen/x40dp"
+                    android:layout_marginEnd="@dimen/x49dp"
+                    app:endIconDrawable="@drawable/ic_email"
+                    app:endIconMode="custom"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_logo"
+                    app:textWatcher="@{true}">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_email_login"
+                        android:inputType="textEmailAddress"
+                        validation:emptyErrorTxt="@{@string/error_empty_email}"
+                        validation:errorTxt="@{@string/error_not_valid_email}"
+                        validation:isRequired="@{true}"
+                        validation:pattern="@{CommonPatterns.EMAIL}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/et_password_container"
+                    style="@style/TextInputLayout.TransparentWithHint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x24dp"
+                    app:layout_constraintEnd_toEndOf="@id/et_email_container"
+                    app:layout_constraintStart_toStartOf="@id/et_email_container"
+                    app:layout_constraintTop_toBottomOf="@id/et_email_container"
+                    app:passwordToggleDrawable="@drawable/toggle_password"
+                    app:passwordToggleEnabled="true"
+                    app:textWatcher="@{true}">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_password_login"
+                        android:inputType="textPassword"
+                        validation:isRequired="@{true}" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <include
+                    android:id="@+id/btn_login"
+                    layout="@layout/button_gradient"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/x50dp"
+                    android:layout_marginStart="@dimen/x44dp"
+                    android:layout_marginTop="@dimen/x49dp"
+                    android:layout_marginEnd="@dimen/x44dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/et_password_container"
+                    app:text="@{@string/sign_in}" />
+
+                <ImageView
+                    android:id="@+id/img_footer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:adjustViewBounds="true"
+                    android:fitsSystemWindows="false"
+                    android:src="@drawable/login_footer"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/btn_forget_pass" />
+
+
+                <Button
+                    android:id="@+id/btn_forget_pass"
+                    style="?borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x10dp"
+                    android:layout_marginEnd="@dimen/x12dp"
+                    android:text="@string/forget_pass"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_6e6e6e"
+                    android:textSize="@dimen/txt_small"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@id/btn_login"
+                    app:layout_constraintTop_toBottomOf="@id/btn_login" />
+
+                <Button
+                    android:id="@+id/btn_register"
+                    style="?borderlessButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x24dp"
+                    android:text="@string/dont_have_account"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_147eb0"
+                    android:textSize="@dimen/txt_small_plus"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_forget_pass" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/loading_state"
+            layout="@layout/state_loading"
+            app:isLoading="@{isLoading}"
+            tools:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
