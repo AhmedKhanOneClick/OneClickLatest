@@ -2,12 +2,14 @@ package com.gama.task.models
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
+import io.realm.RealmModel
+import io.realm.annotations.PrimaryKey
+import io.realm.annotations.RealmClass
 
-/**
- * @author Wellington Costa on 30/12/2017.
- */
+
 @Keep
-data class Products (
+//@RealmClass
+open class Products (
 //        @SerializedName("accounts") val accounts: List<Accounts1>,
 
     @SerializedName("data") val data: Data,
@@ -22,6 +24,7 @@ data class Data(
 //    @SerializedName("pageable") val pageable: Pageable
 ): IdentityGeneralResponse()
 @Keep
+//@RealmClass
 data class Content(
 //    @SerializedName("data") val SKU: Any,
 //    @SerializedName("data") val brand: String,
@@ -47,12 +50,16 @@ data class Content(
 //    @SerializedName("data") val productCategory: ProductCategory,
 //    @SerializedName("data") val provider: Provider,
 //    @SerializedName("data") val providerId: String,
-    @SerializedName("quantity") val quantity: Int,
-     @SerializedName("createdAt") val createdAt: Double,
+    @SerializedName("quantity") val quantity: Double,
+     @SerializedName("createdAt") val createdAt: String,
 //    @SerializedName("data") val tags: Any,
 //    @SerializedName("data") val updatedAt: Long,
 //    @SerializedName("data") val weight: String
-): IdentityGeneralResponse()
+) : RealmModel {
+
+    @PrimaryKey
+    var databaseID: Int = 2
+}
 //@Keep
 //data class Pageable(
 //    @SerializedName("data") val page: String,

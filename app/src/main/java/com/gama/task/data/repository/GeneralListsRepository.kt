@@ -1,10 +1,17 @@
 package com.gama.task.data.repository
 
+import android.content.Context.MODE_PRIVATE
+import android.content.SharedPreferences
+import android.preference.PreferenceManager
+import com.gama.saudi2go.data.db.UserAuthDao
 import com.gama.task.data.api.ApiService
+import com.gama.task.data.db.FavouriteDao
 import com.gama.task.di.NormalRequest
 import com.gama.task.models.*
+import com.google.gson.Gson
 import dagger.hilt.android.scopes.ActivityScoped
 import javax.inject.Inject
+
 
 /**
  * Get Lookups data and manage its data sources.
@@ -13,7 +20,10 @@ import javax.inject.Inject
  * @constructor create instance using dagger constructor injection.
  */
 @ActivityScoped
-class GeneralListsRepository @Inject constructor(@NormalRequest private val apiService: ApiService) {
+class GeneralListsRepository @Inject constructor(
+    @NormalRequest private val apiService: ApiService, private val favouritedao: FavouriteDao,
+    private val userAuthDao: UserAuthDao
+) {
 
 
     fun getAllAccounts() =
@@ -35,12 +45,27 @@ class GeneralListsRepository @Inject constructor(@NormalRequest private val apiS
         object : NetworkOnlyResource<Categories, Categories>() {
             override fun createCall() = apiService.get_categories()
         }.asLiveData()
-    fun getAllSubCategoriesdata (id: String) =
+    fun getAllSubCategoriesdata(id: String) =
         object : NetworkOnlyResource<Subcategories, Subcategories>() {
             override fun createCall() = apiService.get_subcategories(id)
         }.asLiveData()
     fun getAllProducts() =
-        object : NetworkOnlyResource<Products,Products>() {
+        object : NetworkOnlyResource<Products, Products>() {
             override fun createCall() = apiService.getAllproducts()
         }.asLiveData()
+
+    fun insertOrUpdatefAVOURITE(content: Content) {
+//        var mPrefs: SharedPreferences = getPreferences(MODE_PRIVATE)
+        favouritedao.insertFavourite(content)
+//        val appSharedPrefs = PreferenceManager
+//            .getDefaultSharedPreferences(this.applicationContext)
+//        val prefsEditor = appSharedPrefs.edit()
+//        val gson = Gson()
+//        val json = gson.toJson(obj)
+//        prefsEditor.putString("MyObject", json)
+//        prefsEditor.commit()
+    }
+
+    fun deletefavourite(content: Content) = favouritedao.deleteHotel(content)
+    fun getAllFavourites() = favouritedao.getHotels()
 }

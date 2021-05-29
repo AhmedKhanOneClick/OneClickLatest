@@ -154,7 +154,16 @@
         android:id="@+id/MobilyFragment"
         android:name="com.gama.task.ui.fragments.voicedatacharg.mobilyfragment.MobilyFragment"
         android:label="fragment_mobily"
-        tools:layout="@layout/fragment_data_recharg_mobily" />
+        tools:layout="@layout/fragment_data_recharg_mobily" >
+        <action
+            android:id="@+id/action_favouritefragment"
+            app:destination="@id/FavouritesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/FavouritesFragment"
+        android:name="com.gama.task.ui.fragments.favourites.FavouritesFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourites" />
     <fragment
         android:id="@+id/MobilyvoiceFragment"
         android:name="com.gama.task.ui.fragments.voicerecharge.mobilyfragment.MobilyVoiceFragment"

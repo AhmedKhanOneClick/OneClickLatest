@@ -1,62 +1,74 @@
-package com.gama.task.ui.fragments.voicedatacharg.mobilyfragment
+package com.gama.task.ui.fragments.favourites
 
 import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
 import android.preference.PreferenceManager
 import android.util.Log
-import android.view.View
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
+import com.gama.task.data.repository.AuthRepository
 import com.gama.task.databinding.FragmentDataRechargMobilyBinding
+import com.gama.task.databinding.FragmentFavouritesBinding
 import com.gama.task.models.Content
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment.Companion.TAG
 import com.gama.task.ui.base.BaseFragment
+import com.gama.task.ui.fragments.voicedatacharg.mobilyfragment.SharedViewModel
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
 import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.card_mobily_item.view.*
 
 
 @AndroidEntryPoint
-class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobilyBinding>(
-    MobilyDataViewModel::class.java
-),DepartmentFragment.Communicator {
+class FavouritesFragment (): BaseFragment<FavouritesViewModel, FragmentFavouritesBinding>(
+    FavouritesViewModel::class.java
+) {
 //    Fragment
 //}(R.layout.fragment_data_recharg_mobily)
 
 
     var x:Int=1
-    private var mobileDataAdapter by autoCleared<MobileDataAdapter>()
+    private var favouritesAdapter by autoCleared<FavouritesAdapter>()
 
     /**
      * A recyclerView scrollListener to handle Scroll.
      */
     private var scrollListener by autoCleared<EndlessRecyclerViewScrollListener>()
 
-    override fun getLayoutRes() = R.layout.fragment_data_recharg_mobily
+    override fun getLayoutRes() = R.layout.fragment_favourites
 
     override fun init() {
 
-        viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
+//        viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
 //init account list
         initAccountList()
-
-        binding.fav.setOnClickListener {
-            findNavController().navigate(
-                R.id.action_favouritefragment
-            )
-        }
+        //init Add account
+//        binding.searchresult.setOnSearchClickListener {
+////            binding.toolbar.visibility= View.GONE
+////
+////            binding.userIcon.visibility= View.GONE
+////            binding.notificationIcon.visibility= View.GONE
+//
+//
+//        }
+//        binding.searchresult.setOnCloseListener(object : SearchView.OnCloseListener {
+//            override fun onClose(): Boolean {
+////                binding.toolbar.visibility= View.VISIBLE
+////                binding.userIcon.visibility= View.VISIBLE
+////                binding.notificationIcon.visibility= View.VISIBLE
+//
+//                return false
+//            }
+//        })
         binding.sort.setOnClickListener {
 //            viewModel.accountsList.observe(viewLifecycleOwner) {
 //
@@ -76,38 +88,38 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
                 .show(childFragmentManager, DepartmentFragment.TAG)
         }
         val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-        model.message.observe(viewLifecycleOwner) {
-            Log.d(ContentValues.TAG, "init: "+it.toString())
-            viewModel.accountsList.observe(viewLifecycleOwner) {
-
+//        model.message.observe(viewLifecycleOwner) {
+//            Log.d(ContentValues.TAG, "init: "+it.toString())
+//            viewModel.accountsList.observe(viewLifecycleOwner) {
+//
 //                it.sortByDescending { it.createdAt }
-
-                mobileDataAdapter.submitList(it)
-                mobileDataAdapter.notifyDataSetChanged()
-            }
-        }
-
-        model.asc.observe(viewLifecycleOwner) {
-            Log.d(ContentValues.TAG, "init: "+it.toString())
-            viewModel.accountsList.observe(viewLifecycleOwner) {
-
-                it.sortBy { it.price }
-
-                mobileDataAdapter.submitList(it)
-                mobileDataAdapter.notifyDataSetChanged()
-            }
-        }
-
-        model.desc.observe(viewLifecycleOwner) {
-            Log.d(ContentValues.TAG, "init: "+it.toString())
-            viewModel.accountsList.observe(viewLifecycleOwner) {
-
-                it.sortByDescending { it.price }
-
-                mobileDataAdapter.submitList(it)
-                mobileDataAdapter.notifyDataSetChanged()
-            }
-        }
+//
+//                favouritesAdapter.submitList(it)
+//                favouritesAdapter.notifyDataSetChanged()
+//            }
+//        }
+//
+//        model.asc.observe(viewLifecycleOwner) {
+//            Log.d(ContentValues.TAG, "init: "+it.toString())
+//            viewModel.accountsList.observe(viewLifecycleOwner) {
+//
+//                it.sortBy { it.price }
+//
+//                favouritesAdapter.submitList(it)
+//                favouritesAdapter.notifyDataSetChanged()
+//            }
+//        }
+//
+//        model.desc.observe(viewLifecycleOwner) {
+//            Log.d(ContentValues.TAG, "init: "+it.toString())
+//            viewModel.accountsList.observe(viewLifecycleOwner) {
+//
+//                it.sortByDescending { it.price }
+//
+//                favouritesAdapter.submitList(it)
+//                favouritesAdapter.notifyDataSetChanged()
+//            }
+//        }
     }
 
 
@@ -122,19 +134,9 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
         }
 
 
-        mobileDataAdapter = MobileDataAdapter(dataBindingComponent, appExecutors ) { content: Content, view: View ->
-view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
-//            binding.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
-            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-            model.sendfavourites(content)
-//viewModel.sendfavourites(content)
-            val appSharedPrefs = PreferenceManager
-                .getDefaultSharedPreferences(context)
-            val prefsEditor = appSharedPrefs.edit()
-            val gson = Gson()
-            val json = gson.toJson(content)
-            prefsEditor.putString("MyObject", json)
-            prefsEditor.commit()
+        favouritesAdapter = FavouritesAdapter(dataBindingComponent, appExecutors ) {
+//            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+//            model.sendfavourites(it)
 //                    findNavController().navigate(
 //                        R.id.hotelsListFragment,
 //                        bundleOf(
@@ -152,7 +154,7 @@ view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
 
         // at last set adapter to recycler view.
         binding.recyclerNotification.setLayoutManager(layoutManager)
-        binding.recyclerNotification.adapter = mobileDataAdapter
+        binding.recyclerNotification.adapter = favouritesAdapter
 
         scrollListener = object :
             EndlessRecyclerViewScrollListener(binding.recyclerNotification.layoutManager as LinearLayoutManager) {
@@ -165,13 +167,30 @@ view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
 
         binding.recyclerNotification.removeOnScrollListener(scrollListener)
         binding.recyclerNotification.addOnScrollListener(scrollListener)
-
-        viewModel.accountsList.observe(viewLifecycleOwner) {
+        val appSharedPrefs = PreferenceManager
+            .getDefaultSharedPreferences(context)
+        val gson = Gson()
+        val json = appSharedPrefs.getString("MyObject", "")
+        val obj = gson.fromJson(json, Content::class.java)
+         val _accountsList = MutableLiveData<MutableList<Content>?>(ArrayList())
+        _accountsList.value!!.add(obj)
+        _accountsList.value=_accountsList.value
+        _accountsList.observe(viewLifecycleOwner){
+            favouritesAdapter.submitList(it)
+            favouritesAdapter.notifyDataSetChanged()
+        }
+//        userrepositiry.getAllFavourites().apply {
+//            favouritesAdapter.submitList(it)
+//            favouritesAdapter.notifyDataSetChanged()
+//        }
+        val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+        model._accountsList.observe(viewLifecycleOwner) {
+//        viewModel.accountsList.observe(viewLifecycleOwner) {
 
 //it.sortByDescending { it.price }
 
-            mobileDataAdapter.submitList(it)
-            mobileDataAdapter.notifyDataSetChanged()
+            favouritesAdapter.submitList(it)
+            favouritesAdapter.notifyDataSetChanged()
 
         }
 
@@ -220,9 +239,9 @@ view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
 
         }
     }
-    override fun setI(name: String?) {
-        Log.d(TAG, "onActivityResult: 113245555")
-    }
+//    override fun setI(name: String?) {
+//        Log.d(TAG, "onActivityResult: 113245555")
+//    }
 
     override fun onAttachFragment(childFragment: Fragment) {
         Log.d(TAG, "onActivityResult: 1132455557999")

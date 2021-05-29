@@ -1,6 +1,5 @@
-package com.gama.task.ui.fragments.voicedatacharg.mobilyfragment
+package com.gama.task.ui.fragments.favourites
 
-import android.preference.PreferenceManager
 import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
@@ -14,12 +13,11 @@ import com.gama.task.models.MobileData1
 import com.gama.task.models.Filter
 
 import com.gama.task.util.Event
-import com.google.gson.Gson
 
 /**
  * perform business logic and store ui states for [AccountListFragment].
  */
-class MobilyDataViewModel @ViewModelInject constructor(
+class FavouritesViewModel @ViewModelInject constructor(
     private val generalListsRepository: GeneralListsRepository
 ) : ViewModel() {
 
@@ -28,8 +26,8 @@ class MobilyDataViewModel @ViewModelInject constructor(
 
 
     /**
-//     * The list of Accounts in the current page.
-//     */
+     * The list of Accounts in the current page.
+     */
     private val _accountsList = MutableLiveData<MutableList<Content>?>(ArrayList())
 
     /**
@@ -85,25 +83,8 @@ _navigatewithresult.postValue("")
         }
         }
     }
-fun addfavouriterealm(content:Content){
 
 
-}
 
-    public val _accountsList1 = MutableLiveData<MutableList<Content>?>(ArrayList())
-    public fun sendfavourites(content: Content) {
-//        if(generalListsRepository.getAllFavourites().contains(content)){
-////            _accountsList1.value!!.remove(content)
-////            _accountsList1.value=_accountsList.value
-//            generalListsRepository.deletefavourite(content)
-//        }else{
-//            _accountsList1.value!!.add(content)
-//            _accountsList1.value=_accountsList.value
-            generalListsRepository.insertOrUpdatefAVOURITE(content)
-//        favouritedao.insertFavourite(content)
-
-
-//        }
-    }
 
 }

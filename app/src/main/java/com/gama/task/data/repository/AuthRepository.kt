@@ -2,8 +2,10 @@ package com.gama.task.data.repository
 
 
 import com.gama.saudi2go.data.db.UserAuthDao
+import com.gama.saudi2go.data.db.insertOrUpdate
 
 import com.gama.task.data.api.ApiService
+import com.gama.task.data.db.FavouriteDao
 import com.gama.task.di.IdentityRequest
 import com.gama.task.models.*
 import dagger.hilt.android.scopes.ActivityScoped
@@ -20,6 +22,7 @@ import javax.inject.Inject
 @ActivityScoped
 class AuthRepository @Inject constructor(
     @IdentityRequest private val apiService: ApiService,
+     private val favouritedao: FavouriteDao,
     private val userAuthDao: UserAuthDao
 ) {
 
@@ -50,7 +53,9 @@ class AuthRepository @Inject constructor(
      * insert an instance of user response into database.
      */
     fun insertUserAuth(userAuth: UserAuth) = userAuthDao.insertOrUpdateUserAuth(userAuth)
-
+    fun insertOrUpdatefAVOURITE(content: Content) = favouritedao.insertFavourite(content)
+    fun deletefavourite(content: Content) = favouritedao.deleteHotel(content)
+    fun getAllFavourites() = favouritedao.getHotels()
     /**
      * Get stored user in db
      */

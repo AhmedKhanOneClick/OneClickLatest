@@ -86,7 +86,6 @@ android:id="@+id/sort"
                 android:src="@drawable/sort" />
 
             <ImageView
-                android:id="@+id/fav"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:scaleType="fitXY"
@@ -133,7 +132,7 @@ android:id="@+id/sort"
 
         app:layout_constraintVertical_bias="0.0"
         tools:layout_editor_absoluteX="-160dp"
-        tools:listitem="@layout/card_mobily_item"
+        tools:listitem="@layout/card_favourites_item"
         tools:ignore="MissingConstraints" />
     <androidx.core.widget.NestedScrollView
         android:visibility="gone"

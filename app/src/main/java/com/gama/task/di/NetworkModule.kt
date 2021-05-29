@@ -78,6 +78,7 @@ object NetworkModule {
                 if (this != null) {
                     request = request.newBuilder()
                         .header("Authorization", "Bearer  $token")
+//                        .header("language","ar")
 //                        .header("Authorization", "$tokenType $accessToken")
                         .build()
                 }
