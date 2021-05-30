@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context="com.gama.task.ui.fragments.allreceipt.VoucherReceiptFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/voucher_receipt"
+        android:textSize="@dimen/_15sdp"
+        android:layout_margin="@dimen/_10sdp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/bg_button_gray"
+        />
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_400sdp"
+    android:layout_margin="@dimen/_16sdp"
+    android:background="@drawable/static_voucher_receipt"
+    />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/print_receipt"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/_15sdp"
+        android:layout_margin="@dimen/_10sdp"/>
+</LinearLayout>

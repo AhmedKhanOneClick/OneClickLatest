@@ -4,28 +4,32 @@
     tools:showIn="navigation_view">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home_Page"
+            android:id="@+id/searchPagerFragment"
             android:icon="@drawable/ic_homepage"
-            android:title="Home Page"></item>
+            android:title="@string/homepage"/>
         <item
-            android:id="@+id/nav_favorite"
+            android:id="@+id/favouritesFragment"
             android:icon="@drawable/ic_favorite"
-            android:title="Favorite"></item>
+            android:title="@string/favorite"/>
         <item
-            android:id="@+id/nav_account"
+            android:id="@+id/accountFragmnet"
             android:icon="@drawable/ic_profile"
-            android:title="Account"></item>
+            android:title= "@string/account"/>
         <item
-            android:id="@+id/nav_reports"
+            android:id="@+id/reportsFragment"
             android:icon="@drawable/ic_reports"
-            android:title="Reports"></item>
+            android:title="@string/reports"/>
         <item
-            android:id="@+id/nav_transactions"
+            android:id="@+id/fragmentTransactionsTables"
             android:icon="@drawable/ic_transactions"
-            android:title="Transactions"></item>
+            android:title="@string/transactions"/>
         <item
-            android:id="@+id/nav_settings"
+            android:id="@+id/settingFragment2"
             android:icon="@drawable/ic_settings"
-            android:title="Settings"></item>
+            android:title="@string/settings" />
+        <item
+            android:id="@+id/cartFragment"
+            android:icon="@drawable/ic_shopping_cart"
+            android:title="@string/cart"/>
     </group>
 </menu>

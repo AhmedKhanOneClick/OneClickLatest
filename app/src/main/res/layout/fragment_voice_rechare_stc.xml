@@ -36,7 +36,7 @@
             android:layout_marginLeft="@dimen/_14sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:text="Data Recharge / "
+            android:text="@string/voice_recharge"
             android:textSize="@dimen/_10sdp"
             android:textStyle="bold"/>
         <TextView

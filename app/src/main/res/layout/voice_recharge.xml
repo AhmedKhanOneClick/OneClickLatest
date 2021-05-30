@@ -20,11 +20,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#E6EBF5"
+
         android:orientation="vertical">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-
+            android:weightSum="2"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical">
 
@@ -34,18 +35,19 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="30dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"
-                android:text="Data Recharge"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:text="@string/data_recharge_main"
                 android:textSize="20dp"
-                android:textStyle="bold"></TextView>
+                android:layout_weight="1"
+                android:textStyle="bold"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="30dp"
+               android:layout_weight="1"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -68,7 +70,7 @@
                     android:src="@drawable/menu" />
             </LinearLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
         <View
 

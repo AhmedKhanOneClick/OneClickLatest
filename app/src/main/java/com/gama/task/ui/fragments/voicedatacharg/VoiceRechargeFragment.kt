@@ -12,9 +12,9 @@ class VoiceRechargeFragment : Fragment(R.layout.fragment_voice_recharge) {
         super.onViewCreated(view, savedInstanceState)
         mobily_btn.setOnClickListener{
 
-            val action=VoiceRechargeFragmentDirections.actionVoiceRechargeFragmentToMobilyFragment()
+            //val action=VoiceRechargeFragmentDirections.actionVoiceRechargeFragmentToMobilyFragment()
 
-            findNavController().navigate(action)
+            //findNavController().navigate(action)
         }
 //        stc_btn.setOnClickListener {
 //            val action=VoiceRechargeFragmentDirections.actionVoiceRechargeFragmentToStcFragment()

@@ -34,8 +34,41 @@ class GameCard : Fragment(R.layout.fragment_game_card) {
                 GameCardDirections.actionGameCardToPubgFragment()
             findNavController().navigate(action)
         }
-
-
+        boloot_btn.setOnClickListener {
+            val action=
+                GameCardDirections.actionGameCardToBolootFragment()
+            findNavController().navigate(action)
+        }
+        fifa_btn.setOnClickListener {
+            val action=
+                GameCardDirections.actionGameCardToFifaFragment()
+            findNavController().navigate(action)
+        }
+        freefire_btn.setOnClickListener {
+            val action=
+                GameCardDirections.actionGameCardToFreefireFragment()
+            findNavController().navigate(action)
+        }
+        jalsaat_btn.setOnClickListener {
+            val action=
+                GameCardDirections.actionGameCardToJalsaatFragment()
+            findNavController().navigate(action)
+        }
+        legends_btn.setOnClickListener {
+            val action=
+                GameCardDirections.actionGameCardToLegendsFragment()
+            findNavController().navigate(action)
+        }
+        lords_btn.setOnClickListener {
+            val action=
+                GameCardDirections.actionGameCardToLordsFragment()
+            findNavController().navigate(action)
+        }
+        steam_btn.setOnClickListener {
+            val action=
+                GameCardDirections.actionGameCardToSteamFragment()
+            findNavController().navigate(action)
+        }
     }
 
 

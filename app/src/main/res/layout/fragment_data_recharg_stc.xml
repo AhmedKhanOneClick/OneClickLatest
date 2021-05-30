@@ -36,7 +36,7 @@
             android:layout_marginLeft="@dimen/_14sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginBottom="@dimen/_5sdp"
-            android:text="Data Recharge / "
+            android:text="@string/data_recharge_"
             android:textSize="@dimen/_10sdp"
             android:textStyle="bold"/>
         <TextView
@@ -80,21 +80,35 @@
                 android:src="@drawable/menu" />
         </LinearLayout>
     </LinearLayout>
-
-    <View
-
+    <ImageView
         android:id="@+id/view"
         android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_height="4dp"
         android:layout_gravity="bottom"
-        android:layout_marginRight="@dimen/_25sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginLeft="@dimen/_25sdp"
-        android:background="#E6E2E4"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/line"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        />
+<!--    <View-->
+
+<!--        android:id="@+id/view"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="4dp"-->
+<!--        android:layout_gravity="bottom"-->
+<!--        android:layout_marginRight="@dimen/_25sdp"-->
+<!--        android:layout_marginTop="@dimen/_10sdp"-->
+<!--        android:layout_marginLeft="@dimen/_25sdp"-->
+<!--        android:background="#E6E2E4"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />-->
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -141,7 +155,6 @@
                             <ImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="@dimen/_25sdp"
-
                                 android:layout_gravity="center_horizontal"
                                 android:background="@drawable/stc_logo1"/>
 
@@ -164,7 +177,6 @@
                                 android:fontFamily="sans-serif"
                                 android:text="10 GB Month"
                                 android:textSize="@dimen/_12sdp"
-
                                 android:textStyle="bold"
                                 android:textAlignment="center"
                                 android:textColor="@android:color/white" />
@@ -179,12 +191,10 @@
                                     android:layout_gravity="center"
                                     android:fontFamily="monospace"
                                     android:text="160"
-
                                     android:textSize="@dimen/_35sdp"
                                     android:textStyle="bold"
                                     android:textAlignment="center"
                                     android:textColor="@android:color/white" />
-
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
