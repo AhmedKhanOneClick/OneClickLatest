@@ -107,60 +107,62 @@
 
     <!-- sub category 1 -->
 
-    <string name="s1s0">All Receipts</string>
-    <string name="s1s1">Final Receipt</string>
-    <string name="s1s2">Print Receipt</string>
-    <string name="s1s3">Voucher Receipt..</string>
-    <string name="s1s4">All Receipts</string>
-    <string name="s1s5">Final Receipt</string>
+    <string name="s1s0">stc</string>
+    <string name="s1s1">mobily</string>
+    <string name="s1s2">Virgin</string>
+    <string name="s1s3">zain</string>
+    <string name="s1s4">FRIENDI</string>
+    <string name="s1s5">Lebara</string>
 
     <!-- sub category 2 -->
 
-    <string name="s2s0">اس تي سي </string>
-    <string name="s2s1">موبايلي</string>
-    <string name="s2s2">فيرجن</string>
-    <string name="s2s3">زين</string>
-    <string name="s2s4">فريندي</string>
-    <string name="s2s5">ليبرا</string>
+
+    <string name="s2s0">stc</string>
+    <string name="s2s1">mobily</string>
+    <string name="s2s2">Virgin</string>
+    <string name="s2s3">zain</string>
+    <string name="s2s4">FRIENDI</string>
+    <string name="s2s5">Lebara</string>
 
     <!-- sub category 3 -->
 
-    <string name="s3s0">All Receipts</string>
-    <string name="s3s1">Final Receipt</string>
-    <string name="s3s2">Print Receipt</string>
-    <string name="s3s3">Voucher Receipt..</string>
-    <string name="s3s4">All Receipts</string>
-    <string name="s3s5">Final Receipt</string>
-    <string name="s3s6">All Receipts</string>
-    <string name="s3s7">Final Receipt</string>
-    <string name="s3s8">Print Receipt</string>
-    <string name="s3s9">Voucher Receipt..</string>
-    <string name="s3s10">All Receipts</string>
+    <string name="s3s0">Xbox</string>
+    <string name="s3s1">Nintendo</string>
+    <string name="s3s2">PUBG</string>
+    <string name="s3s3">Playstation</string>
+    <string name="s3s4">Fifa</string>
+    <string name="s3s5">Lords</string>
+    <string name="s3s6">Mobile Legends</string>
+    <string name="s3s7">Free Fire</string>
+    <string name="s3s8">Vip Boloot</string>
+    <string name="s3s9">Steam</string>
+    <string name="s3s10">Vip Jalsaat</string>
 
     <!-- sub category 4 -->
 
-    <string name="s4s0">All Receipts</string>
-    <string name="s4s1">Final Receipt</string>
-    <string name="s4s2">Print Receipt</string>
-    <string name="s4s3">Voucher Receipt..</string>
-    <string name="s4s4">All Receipts</string>
+    <string name="s4s0">Netflix</string>
+    <string name="s4s1">Starz Play</string>
+    <string name="s4s2">Shahid Vip</string>
+    <string name="s4s3">Weyyak</string>
+    <string name="s4s4">kitaab sawti</string>
+
 
     <!-- sub category 5 -->
 
-    <string name="s5s0">All Receipts</string>
-    <string name="s5s1">Final Receipt</string>
-    <string name="s5s2">Print Receipt</string>
-    <string name="s5s3">Voucher Receipt..</string>
-    <string name="s5s4">All Receipts</string>
-    <string name="s5s5">Final Receipt</string>
-    <string name="s5s6">All Receipts</string>
-    <string name="s5s7">Final Receipt</string>
-    <string name="s5s8">Print Receipt</string>
-    <string name="s5s9">Voucher Receipt..</string>
-    <string name="s5s10">All Receipts</string>
-    <string name="s5s11">Print Receipt</string>
-    <string name="s5s12">Voucher Receipt..</string>
-    <string name="s5s13">All Receipts</string>
+    <string name="s5s0">Careem</string>
+    <string name="s5s1">Amazon</string>
+    <string name="s5s2">FaceBook</string>
+    <string name="s5s3">Ebay</string>
+    <string name="s5s4">I Tunes</string>
+    <string name="s5s5">Google Play</string>
+    <string name="s5s6">Marsool</string>
+    <string name="s5s7">MCafe</string>
+    <string name="s5s8">MicroSoft Office</string>
+    <string name="s5s9">Noon</string>
+    <string name="s5s10">Skype</string>
+    <string name="s5s11">Razer</string>
+    <string name="s5s12">Microsoft Windows</string>
+    <string name="s5s13">Tmmmt</string>
 
 
 

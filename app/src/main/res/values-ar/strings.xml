@@ -127,44 +127,43 @@
 
     <!-- sub category 3 -->
 
-    <string name="s3s0">بطاقات الالعاب</string>
-    <string name="s3s1">نينتندو</string>
-    <string name="s3s2">اكس بوكس</string>
-    <string name="s3s3">بلايستشين</string>
-    <string name="s3s4">ببجي</string>
-    <string name="s3s5">لوردز</string>
-    <string name="s3s6">فيفا</string>
-    <string name="s3s7">فريفاير</string>
-    <string name="s3s8">ستيم</string>
-    <string name="s3s9">موبايل ليجندز</string>
-    <string name="s3s10">في اي بي بلوت</string>
-    <string name="s3s11">في أي بي جلسات</string>
+    <string name="s3s0">نينتندو</string>
+    <string name="s3s1">اكس بوكس</string>
+    <string name="s3s2">بلايستشين</string>
+    <string name="s3s3">ببجي</string>
+    <string name="s3s4">لوردز</string>
+    <string name="s3s5">فيفا</string>
+    <string name="s3s6">فريفاير</string>
+    <string name="s3s7">ستيم</string>
+    <string name="s3s8">موبايل ليجندز</string>
+    <string name="s3s9">في اي بي بلوت</string>
+    <string name="s3s10">في أي بي جلسات</string>
 
     <!-- sub category 4 -->
 
-    <string name="s4s1">نتفليكس</string>
-    <string name="s4s2">ستارز بلاي</string>
-    <string name="s4s3">وياك</string>
-    <string name="s4s4">شاهد في اي بي</string>
-    <string name="s4s5">كتاب صوتي</string>
-    <string name="s4s0">اشتراكات السينما</string>
+    <string name="s4s0">نتفليكس</string>
+    <string name="s4s1">ستارز بلاي</string>
+    <string name="s4s2">وياك</string>
+    <string name="s4s3">شاهد في اي بي</string>
+    <string name="s4s4">كتاب صوتي</string>
+
 
     <!-- sub category 5 -->
 
-    <string name="s5s0">بطاقات الهدايا</string>
-    <string name="s5s1">امازون</string>
-    <string name="s5s2">كريم</string>
-    <string name="s5s3">ايباي</string>
-    <string name="s5s4">فيسبوك</string>
-    <string name="s5s5">جوجل بلاي</string>
-    <string name="s5s6">ايتونز</string>
-    <string name="s5s7">ميكروسوفت ويندوز</string>
-    <string name="s5s9">ميكروسوفت اوفيس</string>
-    <string name="s5s10">مكافي</string>
-    <string name="s5s11">مرسول</string>
-    <string name="s5s12">رازير جولد</string>
-    <string name="s5s13">نون</string>
-    <string name="s5s14">تمت</string>
-    <string name="s5s15">سكايب</string>
+
+    <string name="s5s0">امازون</string>
+    <string name="s5s1">كريم</string>
+    <string name="s5s2">ايباي</string>
+    <string name="s5s3">فيسبوك</string>
+    <string name="s5s4">جوجل بلاي</string>
+    <string name="s5s5">ايتونز</string>
+    <string name="s5s6">ميكروسوفت ويندوز</string>
+    <string name="s5s7">ميكروسوفت اوفيس</string>
+    <string name="s5s8">مكافي</string>
+    <string name="s5s9">مرسول</string>
+    <string name="s5s10">رازير جولد</string>
+    <string name="s5s11">نون</string>
+    <string name="s5s12">تمت</string>
+    <string name="s5s13">سكايب</string>
 
 </resources>
