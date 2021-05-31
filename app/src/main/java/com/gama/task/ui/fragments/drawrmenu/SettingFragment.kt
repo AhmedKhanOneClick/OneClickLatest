@@ -19,7 +19,7 @@ class SettingFragment:Fragment(R.layout.fragment_menu_setting) {
 
         val sp: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         val mEdit1 : SharedPreferences.Editor= sp.edit()
-/*
+
         val callback: OnBackPressedCallback =
             object : OnBackPressedCallback(true /* enabled by default */) {
                  override fun handleOnBackPressed() {
@@ -29,8 +29,7 @@ Log.e("lllll","lllll")
             }
             
 
-        requireActivity().onBackPressedDispatcher.addCallback(requireActivity(), callback)
-*/
+
 
         //radio group to check account type
         language_group.setOnCheckedChangeListener(
