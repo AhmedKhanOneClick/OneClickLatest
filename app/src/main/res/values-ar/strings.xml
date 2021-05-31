@@ -70,4 +70,99 @@
     <string name="total_to_pay">المبلغ الكلي للدفع</string>
     <string name="checkout">الدفع</string>
 
+
+    <string name="all_receipts">كل الايصالات</string>
+    <string name="final_receipt">الايصال النهائي</string>
+    <string name="print_receipt">طباعة الايصال</string>
+    <string name="voucher_receipt">ايصال الشحن ..</string>
+
+    <string name="card_num">رقم الكارت</string>
+    <string name="terminal_num">رقم الجهاز</string>
+    <string name="serial">الرقم التسلسلي.</string>
+    <string name="user_instruction">تعليمات المستخدم</string>
+    <string name="static_user_info">AIG Pharmaceuticals is a growing Pharmaceutical company that was established in 2010 with its headquarters located in Cairo and Delta with the objective of providing high quality and innovative products to the Egyptian market .In 2011, after 9 years of operations, AIG has grown from a small local company to a market leader of approximately 500 customers.</string>
+    <string name="light">فاتح</string>
+    <string name="dark">داكن</string>
+
+
+    <!-- main category-->
+    <string name="category_title0">Data Recharge</string>
+    <string name="category_paragraph_0">mobily - zain - Lebara - Virgin - FRIENDI - stc</string>
+
+    <string name="category_title1">Voice Recharge</string>
+    <string name="category_paragraph_1">Mobily - Zain - Lebara - Virgin - FRIENDI - Stc - GO</string>
+
+    <string name="category_title2">Games Cards</string>
+    <string name="category_paragraph_2">Nintendo - Xbox - PUBG - FIFA - VIP Jalsat - Mobile Legends..</string>
+
+    <string name="category_title3">(OTT) Cinema</string>
+    <string name="category_paragraph_3">STARZPLAY - Netflix - Kitab Sawti - Weyyka - Shaid Vip/</string>
+
+    <string name="category_title4">Gift Cards</string>
+    <string name="category_paragraph_4">Skype - Microsoft - Mcafee - Facebook</string>
+
+    <string name="category_title5">Favorites</string>
+    <string name="category_paragraph_5">Long Press On Any Card to Add/Remove Form Your Favorites</string>
+
+
+    <!-- sub category 1 -->
+
+    <string name="s1s0">الاتصالات
+ السعودية </string>
+    <string name="s1s1">موبايلي</string>
+    <string name="s1s2">فيرجن</string>
+    <string name="s1s3">زين</string>
+    <string name="s1s4">فريندي</string>
+    <string name="s1s5">ليبرا</string>
+
+    <!-- sub category 2 -->
+
+    <string name="s2s0">الاتصالات
+ السعودية </string>
+    <string name="s2s1">موبايلي</string>
+    <string name="s2s2">فيرجن</string>
+    <string name="s2s3">زين</string>
+    <string name="s2s4">فريندي</string>
+    <string name="s2s5">ليبرا</string>
+
+    <!-- sub category 3 -->
+
+    <string name="s3s0"></string>
+    <string name="s3s1">Final Receipt</string>
+    <string name="s3s2">Print Receipt</string>
+    <string name="s3s3">Voucher Receipt..</string>
+    <string name="s3s4">All Receipts</string>
+    <string name="s3s5">Final Receipt</string>
+    <string name="s3s6">All Receipts</string>
+    <string name="s3s7">Final Receipt</string>
+    <string name="s3s8">Print Receipt</string>
+    <string name="s3s9">Voucher Receipt..</string>
+    <string name="s3s10">All Receipts</string>
+
+    <!-- sub category 4 -->
+
+    <string name="s4s0">All Receipts</string>
+    <string name="s4s1">Final Receipt</string>
+    <string name="s4s2">Print Receipt</string>
+    <string name="s4s3">Voucher Receipt..</string>
+    <string name="s4s4">All Receipts</string>
+
+    <!-- sub category 5 -->
+
+    <string name="s5s0">All Receipts</string>
+    <string name="s5s1">Final Receipt</string>
+    <string name="s5s2">Print Receipt</string>
+    <string name="s5s3">Voucher Receipt..</string>
+    <string name="s5s4">All Receipts</string>
+    <string name="s5s5">Final Receipt</string>
+    <string name="s5s6">All Receipts</string>
+    <string name="s5s7">Final Receipt</string>
+    <string name="s5s8">Print Receipt</string>
+    <string name="s5s9">Voucher Receipt..</string>
+    <string name="s5s10">All Receipts</string>
+    <string name="s5s11">Print Receipt</string>
+    <string name="s5s12">Voucher Receipt..</string>
+    <string name="s5s13">All Receipts</string>
+
+
 </resources>
