@@ -1,23 +1,30 @@
 package com.gama.task.ui.pager
 
+import android.content.res.Resources
+import android.provider.Settings.Global.getString
 import com.gama.task.R
 import com.gama.task.models.CategoryItem
+import com.gama.task.ui.main.MainActivity
 
 /*
     created by Abdallah.elsyd.sh@gmail.com
  */
-class CategoryLisDataSource {
-    companion object {
+class CategoryLisDataSource:MainActivity() {
+
+
         fun createDataSet(): ArrayList<CategoryItem> {
+
             val list = ArrayList<CategoryItem>()
             list.add(
                 CategoryItem(
                     0,
-                    R.string.category_title0.toString(),
-                    R.string.category_paragraph_0.toString(),
+                   getString(R.string.category_title0),
+                    getString(R.string.amount),
                     R.drawable.ic_data
                 )
             )
+
+
             list.add(
                 CategoryItem(
                     1,
@@ -61,6 +68,6 @@ class CategoryLisDataSource {
                 )
             )
             return list
-        }
+
     }
 }

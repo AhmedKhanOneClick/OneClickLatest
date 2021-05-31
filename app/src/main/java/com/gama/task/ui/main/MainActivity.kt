@@ -33,7 +33,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
 @AndroidEntryPoint
-class MainActivity : LocaleAwareCompatActivity() {
+open class MainActivity : LocaleAwareCompatActivity() {
     private val viewModel by viewModels<MainViewModel>()
     lateinit var LocaleAwareCompatActivity: LocaleAwareCompatActivity
     private lateinit var appBarConfiguration: AppBarConfiguration
