@@ -29,7 +29,10 @@
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
-
+        <receiver
+            android:name="com.gama.task.ui.fragments.payment.MyReceiver"
+            android:enabled="true"
+            android:exported="true" />
         <activity
             android:name="com.gama.task.ui.main.MainActivity"
             android:screenOrientation="portrait"

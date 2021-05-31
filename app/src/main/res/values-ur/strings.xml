@@ -1,0 +1,170 @@
+<resources>
+    <string name="app_name" translatable="false">On Click</string>
+    <string name="app_version">V%s</string>
+
+    <string name="navigation_drawer_open" translatable="false">فتح القائمة الجانبية</string>
+    <string name="navigation_drawer_close" translatable="false">غلق القائمة الجانبية</string>
+
+    <string name="error_api_500">Server Error, Please try again later</string>
+    <string name="error_api_general">Something Error, Please try again later</string>
+
+    <string name="error_empty_email">Email can\'t be empty</string>
+    <string name="error_not_valid_email">Please enter a valid email</string>
+
+
+    <string name="homepage"> الصفحة الرئيسية</string>
+    <string name="favorite">المفضلات</string>
+    <string name="account">حسابي</string>
+    <string name="reports">التقارير</string>
+    <string name="transactions">المعاملات </string>
+    <string name="settings">الاعدادات</string>
+    <string name="cart">السلة</string>
+    <string name="data_recharge_main">شحن البانات</string>
+    <string name="receipt">الايصال</string>
+    <string name="amount">الكمية</string>
+    <string name="date">التاريخ</string>
+    <string name="id">الرقم التسلسلي</string>
+    <string name="details">التفاصيل</string>
+    <string name="statues">الحالة</string>
+    <string name="ott_cinema">كروت السينيما</string>
+    <string name="voice_recharge">شحن البيانات الصوتية</string>
+    <string name="quantity">الكمية</string>
+    <string name="card_details">تفاصيل الكارت</string>
+    <string name="credit_card">بطاثة ائتمانية</string>
+    <string name="payment_account">حساب الدفع</string>
+    <string name="main_category">القسم الرئيسي</string>
+    <string name="product_name">اسم المنتج</string>
+
+    <string name="transactions_id">مسلسل المعاملة /</string>
+    <string name="cash_receipt">ايصال الكاش</string>
+    <string name="shop_name">اسم المحل</string>
+    <string name="thank_you">شكرا لك !</string>
+    <string name="address">العنوان</string>
+    <string name="tel">هاتف</string>
+    <string name="manager">المدير</string>
+    <string name="lorem">المالك</string>
+    <string name="consectetuer">المحقق</string>
+    <string name="amet">Amet</string>
+    <string name="price">السعر</string>
+    <string name="vat">ضريبة القيمة المضافة</string>
+    <string name="sale">تخفيض</string>
+    <string name="total">المبلغ الكلي</string>
+    <string name="bakala_address">عوان البقالة</string>
+    <string name="view_on_map">عرض علي الخريطة</string>
+    <string name="device_theme">سمة الجهاز</string>
+    <string name="device_language">لغة الجهاز</string>
+    <string name="device_order_print">امر الطباعة </string>
+    <string name="transactions_statement">بيان المعاملات</string>
+    <string name="e_wallet_balance">رصيد المحفظة الإلكترونية</string>
+    <string name="pos_id">مسلسة مستخدم خدمة pos</string>
+    <string name="name_pos_user">الاسم / او مستخدم الخدمة pos</string>
+    <string name="bakala_name">اسم البقالة</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="gift_card">بطاقات الهدايا/</string>
+    <string name="game_card">بطاقات الالعاب/</string>
+    <string name="game_cards_main">بطاقات الالعاب/</string>
+    <string name="gift_cards_main">بطاقات الهدايا</string>
+    <string name="data_recharge_">بطاقات شحن البيانات الخلوية/</string>
+    <string name="cinema_card">بطاقات السينيما/</string>
+    <string name="cinema_cards_main">بطاقات السينيما</string>
+    <string name="total_to_pay">المبلغ الكلي للدفع</string>
+    <string name="checkout">الدفع</string>
+
+
+    <string name="all_receipts">كل الايصالات</string>
+    <string name="final_receipt">الايصال النهائي</string>
+    <string name="print_receipt">طباعة الايصال</string>
+    <string name="voucher_receipt">ايصال الشحن ..</string>
+
+    <string name="card_num">رقم الكارت</string>
+    <string name="terminal_num">رقم الجهاز</string>
+    <string name="serial">الرقم التسلسلي.</string>
+    <string name="user_instruction">تعليمات المستخدم</string>
+    <string name="static_user_info">AIG Pharmaceuticals is a growing Pharmaceutical company that was established in 2010 with its headquarters located in Cairo and Delta with the objective of providing high quality and innovative products to the Egyptian market .In 2011, after 9 years of operations, AIG has grown from a small local company to a market leader of approximately 500 customers.</string>
+    <string name="light">فاتح</string>
+    <string name="dark">داكن</string>
+
+
+    <!-- main category-->
+    <string name="category_title0">Data Recharge</string>
+    <string name="category_paragraph_0">mobily - zain - Lebara - Virgin - FRIENDI - stc</string>
+
+    <string name="category_title1">Voice Recharge</string>
+    <string name="category_paragraph_1">Mobily - Zain - Lebara - Virgin - FRIENDI - Stc - GO</string>
+
+    <string name="category_title2">Games Cards</string>
+    <string name="category_paragraph_2">Nintendo - Xbox - PUBG - FIFA - VIP Jalsat - Mobile Legends..</string>
+
+    <string name="category_title3">(OTT) Cinema</string>
+    <string name="category_paragraph_3">STARZPLAY - Netflix - Kitab Sawti - Weyyka - Shaid Vip/</string>
+
+    <string name="category_title4">Gift Cards</string>
+    <string name="category_paragraph_4">Skype - Microsoft - Mcafee - Facebook</string>
+
+    <string name="category_title5">Favorites</string>
+    <string name="category_paragraph_5">Long Press On Any Card to Add/Remove Form Your Favorites</string>
+
+
+    <!-- sub category 1 -->
+
+    <string name="s1s0">الاتصالات
+ السعودية </string>
+    <string name="s1s1">موبايلي</string>
+    <string name="s1s2">فيرجن</string>
+    <string name="s1s3">زين</string>
+    <string name="s1s4">فريندي</string>
+    <string name="s1s5">ليبرا</string>
+
+    <!-- sub category 2 -->
+
+    <string name="s2s0">الاتصالات
+ السعودية </string>
+    <string name="s2s1"> الاتصالات السعودیة</string>
+    <string name="s2s2">ورجن</string>
+    <string name="s2s3">زین</string>
+    <string name="s2s4">فريندي</string>
+    <string name="s2s5">لیبارا</string>
+
+
+
+    <!-- sub category 3 -->
+
+    <string name="s3s0">ایکس بکس</string>
+    <string name="s3s1">Final Receipt</string>
+    <string name="s3s2">Print Receipt</string>
+    <string name="s3s3">Voucher Receipt..</string>
+    <string name="s3s4">All Receipts</string>
+    <string name="s3s5">Final Receipt</string>
+    <string name="s3s6">All Receipts</string>
+    <string name="s3s7">Final Receipt</string>
+    <string name="s3s8">Print Receipt</string>
+    <string name="s3s9">Voucher Receipt..</string>
+    <string name="s3s10">All Receipts</string>
+
+    <!-- sub category 4 -->
+
+    <string name="s4s0">All Receipts</string>
+    <string name="s4s1">Final Receipt</string>
+    <string name="s4s2">Print Receipt</string>
+    <string name="s4s3">Voucher Receipt..</string>
+    <string name="s4s4">All Receipts</string>
+
+    <!-- sub category 5 -->
+
+    <string name="s5s0">All Receipts</string>
+    <string name="s5s1">Final Receipt</string>
+    <string name="s5s2">Print Receipt</string>
+    <string name="s5s3">Voucher Receipt..</string>
+    <string name="s5s4">All Receipts</string>
+    <string name="s5s5">Final Receipt</string>
+    <string name="s5s6">All Receipts</string>
+    <string name="s5s7">Final Receipt</string>
+    <string name="s5s8">Print Receipt</string>
+    <string name="s5s9">Voucher Receipt..</string>
+    <string name="s5s10">All Receipts</string>
+    <string name="s5s11">Print Receipt</string>
+    <string name="s5s12">Voucher Receipt..</string>
+    <string name="s5s13">All Receipts</string>
+
+
+</resources>

@@ -739,7 +739,12 @@
         android:id="@+id/settingFragment2"
         android:name="com.gama.task.ui.fragments.drawrmenu.SettingFragment"
         android:label="fragment_menu_setting"
-        tools:layout="@layout/fragment_menu_setting" />
+        tools:layout="@layout/fragment_menu_setting" >
+
+        <action
+            android:id="@+id/action_allReceiptFragment_to_settingFragment2"
+            app:destination="@id/settingFragment2" />
+    </fragment>
     <fragment
         android:id="@+id/favouritesFragment"
         android:name="com.gama.task.ui.fragments.drawrmenu.favourite.FavouritesFragment"
