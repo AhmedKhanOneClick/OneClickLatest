@@ -24,7 +24,20 @@ class MobilyDataViewModel @ViewModelInject constructor(
 ) : ViewModel() {
 
 
+    public val request_type = MutableLiveData<String>()
+    public val language = MutableLiveData<String>()
 
+
+    fun updateRequest(id: String,lng: String) {
+        if (request_type.value != id) {
+            request_type.value = id
+        }
+        if(language.value!=lng){
+            language.value=lng
+        }
+        Log.d("initHotelsAndTra", "initHotelsAndTransportation91: ")
+
+    }
 
 
     /**
@@ -73,7 +86,7 @@ class MobilyDataViewModel @ViewModelInject constructor(
     }
 
 //Get All Accounts
-    val allcontacts=generalListsRepository.getAllProducts().apply {
+    val allcontacts=language.switchMap {generalListsRepository.getAllProducts(request_type.value!!.toString(),language.value!!.toString())}.apply {
         observeForever {
 
             if (it.data != null) {

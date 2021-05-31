@@ -34,7 +34,7 @@ class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCat
     override fun getLayoutRes() = R.layout.fragment_main_category
 
     override fun init() {
-
+        viewModel.updateRequest("en")
         viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
 //init account list

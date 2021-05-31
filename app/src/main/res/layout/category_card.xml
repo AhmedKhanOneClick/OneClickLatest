@@ -64,7 +64,7 @@
                     android:layout_marginTop="@dimen/_29sdp"
                     android:gravity="center"
                     android:textAlignment="center"
-                    android:text="@{categories.nameEn}"
+                    android:text="@{categories.name}"
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/_18sdp"
                     android:textStyle="bold"
@@ -77,7 +77,7 @@
 
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:lines="2"
-                    android:text="@{categories.descriptionEn}"
+                    android:text="@{categories.description}"
                     android:textAlignment="viewStart"
                     android:textColor="@color/fontColorCardDes"
                     android:textSize="@dimen/txt_small"

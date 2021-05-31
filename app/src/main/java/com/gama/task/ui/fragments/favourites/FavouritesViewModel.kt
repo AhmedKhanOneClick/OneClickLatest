@@ -71,7 +71,7 @@ class FavouritesViewModel @ViewModelInject constructor(
     }
 
 //Get All Accounts
-    val allcontacts=generalListsRepository.getAllProducts().apply {
+    val allcontacts=generalListsRepository.getAllProducts("","").apply {
         observeForever {
 
             if (it.data != null) {

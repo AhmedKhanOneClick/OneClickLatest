@@ -20,12 +20,16 @@ class SubcategoriesDataViewModel @ViewModelInject constructor(
 
 
     public val request_type = MutableLiveData<String>()
+    public val language = MutableLiveData<String>()
 
 
-
-    fun updateRequest(id: String) {
-        if (request_type.value != id)
+    fun updateRequest(id: String,lng: String) {
+        if (request_type.value != id) {
             request_type.value = id
+        }
+        if(language.value!=lng){
+            language.value=lng
+        }
         Log.d("initHotelsAndTra", "initHotelsAndTransportation91: ")
 
     }

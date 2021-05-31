@@ -29,7 +29,9 @@ data class Content2(
     @SerializedName("descriptionEn") val descriptionEn: String,
     @SerializedName("descriptionUr") val descriptionUr: String,
     @SerializedName("descriptionAr") val descriptionAr: String,
-    @SerializedName("imageURL") val imageURL: String
+    @SerializedName("imageURL") val imageURL: String,
+    @SerializedName("name") val name: String,
+    @SerializedName("description") val description: String
 
 ): IdentityGeneralResponse()
 //@Keep

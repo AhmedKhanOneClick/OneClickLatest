@@ -10,6 +10,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,6 +20,7 @@ import com.gama.task.models.Content
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment.Companion.TAG
 import com.gama.task.ui.base.BaseFragment
+import com.gama.task.ui.fragments.subcategories.SubcategoriesFragmentArgs
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
@@ -34,7 +36,7 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
 //    Fragment
 //}(R.layout.fragment_data_recharg_mobily)
 
-
+    private val args by navArgs<MobilyFragmentArgs>()
     var x:Int=1
     private var mobileDataAdapter by autoCleared<MobileDataAdapter>()
 
@@ -46,7 +48,9 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
     override fun getLayoutRes() = R.layout.fragment_data_recharg_mobily
 
     override fun init() {
-
+        Log.d(TAG, "init: "+args.reqId)
+        viewModel.updateRequest(args.reqId,"en")
+//        viewModel.updateRequest1("en")
         viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
 //init account list

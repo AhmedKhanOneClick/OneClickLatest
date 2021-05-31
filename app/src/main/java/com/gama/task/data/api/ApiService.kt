@@ -25,11 +25,11 @@ interface ApiService {
 @POST("auth/login")
 fun login(@FieldMap body: Map<String, String>): LiveData<ApiResponse<UserAuth1>>
     @GET("productCategories?page=1&size=10")
-    fun get_categories(): LiveData<ApiResponse<Categories>>
+    fun get_categories(@Query("lng") lng: String): LiveData<ApiResponse<Categories>>
 
     @GET("productCategories/{id}")
     fun get_subcategories(@Path("id") id: String): LiveData<ApiResponse<Subcategories>>
     @GET("products?page=1&size=10&sort=updatedAt,desc")
-    fun getAllproducts(): LiveData<ApiResponse<Products>>
+    fun getAllproducts(@Query("categoryId") id: String,@Query("lng") lng: String): LiveData<ApiResponse<Products>>
 
 }

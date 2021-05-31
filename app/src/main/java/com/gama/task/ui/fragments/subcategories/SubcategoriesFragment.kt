@@ -1,5 +1,7 @@
 package com.gama.task.ui.fragments.subcategories
 
+import androidx.core.os.bundleOf
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -33,7 +35,7 @@ class SubcategoriesFragment : BaseFragment<SubcategoriesDataViewModel, FragmentS
     override fun getLayoutRes() = R.layout.fragment_sub_category
 
     override fun init() {
-        viewModel.updateRequest(args.reqId)
+        viewModel.updateRequest(args.reqId,"en")
         viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
 //init account list
@@ -54,13 +56,13 @@ class SubcategoriesFragment : BaseFragment<SubcategoriesDataViewModel, FragmentS
 
 
         subcategoriesDataAdapter = SubcategoriesDataAdapter(dataBindingComponent, appExecutors) {
-//                    findNavController().navigate(
-//                        R.id.hotelsListFragment,
-//                        bundleOf(
-//                            "req_no" to it.id.toString()
-////                            "hotelSearchRequest" to viewModel.accountsList.value!!
-//                        )
-//                    )
+                    findNavController().navigate(
+                        R.id.actionproducts,
+                        bundleOf(
+                            "req_id" to it.id.toString()
+//                            "hotelSearchRequest" to viewModel.accountsList.value!!
+                        )
+                    )
 
 
 

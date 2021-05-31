@@ -118,6 +118,6 @@ class AuthRepository @Inject constructor(
 
     fun getAllCategoriesdata () =
         object : NetworkOnlyResource<Categories, Categories>() {
-            override fun createCall() = apiService.get_categories()
+            override fun createCall() = apiService.get_categories("en")
         }.asLiveData()
 }

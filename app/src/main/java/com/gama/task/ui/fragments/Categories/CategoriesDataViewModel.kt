@@ -23,7 +23,16 @@ class CategoriesDataViewModel @ViewModelInject constructor(
 ) : ViewModel() {
 
 
+    public val request_type = MutableLiveData<String>()
 
+
+
+    fun updateRequest(id: String) {
+        if (request_type.value != id)
+            request_type.value = id
+        Log.d("initHotelsAndTra", "initHotelsAndTransportation91: ")
+
+    }
 
 
     /**
@@ -72,7 +81,7 @@ class CategoriesDataViewModel @ViewModelInject constructor(
     }
 
 //Get All Accounts
-    val allcontacts=generalListsRepository.getAllCategoriesdata().apply {
+    val allcontacts=request_type.switchMap {generalListsRepository.getAllCategoriesdata(request_type.value!!.toString())}.apply {
         observeForever {
 
             if (it.data != null) {

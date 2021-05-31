@@ -41,17 +41,17 @@ class GeneralListsRepository @Inject constructor(
             override fun createCall() = apiService.insertaccount(account)
         }.asLiveData()
 
-    fun getAllCategoriesdata () =
+    fun getAllCategoriesdata (lng: String) =
         object : NetworkOnlyResource<Categories, Categories>() {
-            override fun createCall() = apiService.get_categories()
+            override fun createCall() = apiService.get_categories(lng)
         }.asLiveData()
     fun getAllSubCategoriesdata(id: String) =
         object : NetworkOnlyResource<Subcategories, Subcategories>() {
             override fun createCall() = apiService.get_subcategories(id)
         }.asLiveData()
-    fun getAllProducts() =
+    fun getAllProducts(id: String,lng:String) =
         object : NetworkOnlyResource<Products, Products>() {
-            override fun createCall() = apiService.getAllproducts()
+            override fun createCall() = apiService.getAllproducts(id,lng)
         }.asLiveData()
 
     fun insertOrUpdatefAVOURITE(content: Content) {

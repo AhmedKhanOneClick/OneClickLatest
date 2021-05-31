@@ -15,7 +15,7 @@ class DataRechargeFragment : Fragment(R.layout.fragment_data_recharge) {
         super.onViewCreated(view, savedInstanceState)
         mobily_card.setOnClickListener{
             val action=
-                DataRechargeFragmentDirections.actionDataRechargeFragmentToMobilyFragment()
+                DataRechargeFragmentDirections.actionDataRechargeFragmentToMobilyFragment("")
             findNavController().navigate(action)
         }
         stc_card.setOnClickListener {
