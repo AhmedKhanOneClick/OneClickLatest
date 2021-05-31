@@ -13,16 +13,16 @@ class CategoryLisDataSource {
             list.add(
                 CategoryItem(
                     0,
-                    "Data Recharge",
-                    "mobily - zain - Lebara - Virgin - FRIENDI - stc",
+                    R.string.category_title0.toString(),
+                    R.string.category_paragraph_0.toString(),
                     R.drawable.ic_data
                 )
             )
             list.add(
                 CategoryItem(
                     1,
-                    "Voice Recharge",
-                    "Mobily - Zain - Lebara - Virgin - FRIENDI - Stc - GO",
+                    R.string.category_title1.toString(),
+                    R.string.category_paragraph_1.toString(),
                     R.drawable.ic_voice
                 )
             )
@@ -30,16 +30,16 @@ class CategoryLisDataSource {
             list.add(
                 CategoryItem(
                     2,
-                    "Games Cards",
-                    "Nintendo - Xbox - PUBG - FIFA - VIP Jalsat - Mobile Legends...",
+                    R.string.category_title2.toString(),
+                    R.string.category_paragraph_2.toString(),
                     R.drawable.ic_game_recharge
                 )
             )
             list.add(
                 CategoryItem(
                     3,
-                    "(OTT) Cinema",
-                    "STARZPLAY - Netflix - Kitab Sawti - Weyyka - Shaid Vip",
+                    R.string.category_title3.toString(),
+                    R.string.category_paragraph_3.toString(),
                     R.drawable.ic_cinima,
 
                     )
@@ -47,16 +47,16 @@ class CategoryLisDataSource {
             list.add(
                 CategoryItem(
                     4,
-                    "Gift Cards",
-                    "Skype - Microsoft - Mcafee - Facebook",
+                    R.string.category_title4.toString(),
+                    R.string.category_paragraph_4.toString(),
                     R.drawable.ic_gift_card,
                 )
             )
             list.add(
                 CategoryItem(
                     5,
-                    "Favorites",
-                    "Long Press On Any Card to Add/Remove Form Your Favorites",
+                    R.string.category_title5.toString(),
+                    R.string.category_paragraph_5.toString(),
                     R.drawable.ic_favorite
                 )
             )

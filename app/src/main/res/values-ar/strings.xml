@@ -86,23 +86,23 @@
 
 
     <!-- main category-->
-    <string name="category_title0">Data Recharge</string>
-    <string name="category_paragraph_0">mobily - zain - Lebara - Virgin - FRIENDI - stc</string>
+    <string name="category_title0">شحن الانترنت</string>
+    <string name="category_paragraph_0">موبايلي - زين - ليبرا - فيرجن - فريندي - اس تي سي</string>
 
-    <string name="category_title1">Voice Recharge</string>
-    <string name="category_paragraph_1">Mobily - Zain - Lebara - Virgin - FRIENDI - Stc - GO</string>
+    <string name="category_title1">شحن الجوال</string>
+    <string name="category_paragraph_1">موبايلي - زين - ليبرا - فيرجن - فريندي - اس تي سي - جو</string>
 
-    <string name="category_title2">Games Cards</string>
-    <string name="category_paragraph_2">Nintendo - Xbox - PUBG - FIFA - VIP Jalsat - Mobile Legends..</string>
+    <string name="category_title2">بطاقات الالعاب</string>
+    <string name="category_paragraph_2">نينتندو - إكس بوكس - ببجي - فيفا - في اي بي جلسات - موبايل ليجند</string>
 
-    <string name="category_title3">(OTT) Cinema</string>
-    <string name="category_paragraph_3">STARZPLAY - Netflix - Kitab Sawti - Weyyka - Shaid Vip/</string>
+    <string name="category_title3">اشتراكات السينما</string>
+    <string name="category_paragraph_3">ستارز بلاي - نتفلكس - كتاب صوتي - وياك -شاهد في اي بي</string>
 
-    <string name="category_title4">Gift Cards</string>
-    <string name="category_paragraph_4">Skype - Microsoft - Mcafee - Facebook</string>
+    <string name="category_title4">بطاقات الهدايا</string>
+    <string name="category_paragraph_4">سكايب - ميكروسوف - مكافي - فيسبوك</string>
 
-    <string name="category_title5">Favorites</string>
-    <string name="category_paragraph_5">Long Press On Any Card to Add/Remove Form Your Favorites</string>
+        <string name="category_title5">المفضلات</string>
+    <string name="category_paragraph_5">اضغط مطولا لاضافة الكارت الي المفضلة</string>
 
 
     <!-- sub category 1 -->
