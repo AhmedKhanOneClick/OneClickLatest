@@ -86,7 +86,7 @@ open class MainActivity : LocaleAwareCompatActivity() {
     }
     public fun updateLangToUR() {
         //  if (sp != null && lang == "en")
-    //    updateLocale(Locales.Urdu)
+        updateLocale(Locales.Urdu)
 
     }
 
