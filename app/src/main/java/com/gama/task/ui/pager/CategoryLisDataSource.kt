@@ -60,7 +60,7 @@ import kotlin.coroutines.coroutineContext
             list.add(
                 CategoryItem(
                     5,
-                    context.getString(R.string.category_title5),
+                    context.getString(R.string.category_title5)+"",
                     context.getString(R.string.category_paragraph_5),
                     R.drawable.ic_favorite
                 )
