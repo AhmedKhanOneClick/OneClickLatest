@@ -54,7 +54,7 @@ Log.e("lllll","lllll")
 
                 }
                 else if(checkedId==R.id.radio_urdo) {
-                    (activity as MainActivity).updateLangToUR()
+                    (activity as MainActivity).updateLangToAR()
                     mEdit1.apply{
                         putString("lang","ur")
 

@@ -84,11 +84,12 @@ open class MainActivity : LocaleAwareCompatActivity() {
        updateLocale(Locales.English)
 
     }
-    public fun updateLangToUR() {
+   // public fun updateLangToUR() {
         //  if (sp != null && lang == "en")
-        updateLocale(Locales.Urdu)
+     //   updateLocale(Locales.Urdu)
+       // updateLocale(Locales.Arabic)
 
-    }
+    //}
 
 
 
