@@ -19,6 +19,13 @@ android {
         versionName "1.0"
         resConfigs "en", "ar"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        bundle {
+            language {
+                enableSplit = false
+            }
+        }
+
     }
 
 
@@ -244,4 +251,8 @@ dependencies {
     // sdb library for dimention
     implementation 'com.intuit.sdp:sdp-android:1.0.6'
     implementation 'com.google.code.gson:gson:2.8.6'
+
+
+    implementation 'com.zeugmasolutions.localehelper:locale-helper-android:1.1.4'
+
 }

@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name" translatable="false">On Click</string>
+    <string name="app_version">V%s</string>
+
+    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
+    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+
+    <string name="error_api_500">سرور کی خرابی ، براہ کرم بعد میں دوبارہ کوشش کریں</string>
+    <string name="error_api_general">کچھ خرابی ، براہ کرم بعد میں دوبارہ کوشش کریں</string>
+
+    <string name="error_empty_email">ای میل خالی نہیں ہوسکتی ہے</string>
+    <string name="error_not_valid_email">ایک درست ای میل درج کریں</string>
+
+    <!--side menu-->
+    <string name="homepage">ہوم پیج</string>
+    <string name="favorite">پسندیدہ</string>
+    <string name="account">کھاتہ</string>
+    <string name="reports">رپورٹس</string>
+    <string name="transactions">لین دین</string>
+    <string name="settings">ترتیبات</string>
+    <string name="cart">ٹوکری</string>
+    <string name="data_recharge_main">ڈیٹا ریچارج</string>
+    <string name="receipt">رسید</string>
+
+    <string name="date">تاریخ</string>
+    <string name="id">ID</string>
+    <string name="details">تفصیلات</string>
+    <string name="statues">مجسمے</string>
+    <string name="ott_cinema">او ٹی ٹی سنیما</string>
+    <string name="voice_recharge">وائس ریچارج</string>
+    <string name="quantity">مقدار</string>
+    <string name="card_details">کارڈ کی تفصیلات</string>
+    <string name="credit_card">کریڈٹ کارڈ</string>
+    <string name="payment_account">ادائیگی کا کھاتہ</string>
+    <string name="main_category">مین قسم</string>
+    <string name="product_name">پروڈکٹ کا نام</string>
+
+    <string name="transactions_id">ٹرانزیکشن ID /</string>
+    <string name="cash_receipt">کیش کی رسید</string>
+    <string name="shop_name">دکان کا نام</string>
+    <string name="thank_you">Thank You!</string>
+    <string name="address">پتہ</string>
+    <string name="tel">ٹیلیفون</string>
+    <string name="manager">منیجر</string>
+    <string name="lorem">لوریم</string>
+    <string name="consectetuer">کنسٹیٹیوئر</string>
+    <string name="amet">امیٹ</string>
+    <string name="price">قیمت</string>
+    <string name="vat">VAT</string>
+    <string name="sale">فروخت</string>
+    <string name="total">کل</string>
+    <string name="bakala_address">باکالا پتہ</string>
+    <string name="view_on_map">نقشہ پر دیکھیں</string>
+    <string name="device_theme">ڈیوائس تھیم</string>
+    <string name="device_language">ڈیوائس لینگویج</string>
+    <string name="device_order_print">ڈیوائس آرڈر پرنٹ</string>
+    <string name="transactions_statement">لین دین کا بیان</string>
+    <string name="e_wallet_balance">ای والٹ بیلنس</string>
+    <string name="pos_id">POS ID</string>
+    <string name="name_pos_user">نام / پوز صارف</string>
+    <string name="bakala_name">باکالا نام</string>
+    <string name="email">ای میل</string>
+    <string name="gift_card">تحفہ والا کارڈ /</string>
+    <string name="game_card">کھیل ہی کھیل میں <کارڈ/></string>
+    <string name="game_cards_main">کھیل ہی کھیل میں کارڈ</string>
+    <string name="gift_cards_main">گفٹ کارڈز</string>
+    <string name="data_recharge_">ڈیٹا ریچارج /</string>
+    <string name="cinema_card">سنیما کارڈ /</string>
+    <string name="cinema_cards_main">سنیما کارڈز</string>
+    <string name="total_to_pay">ادا کرنے کے لئے کل =</string>
+    <string name="checkout">اس کو دیکھو</string>
+
+    <string name="amount">Amount</string>
+
+    <string name="all_receipts">All Receipts</string>
+    <string name="final_receipt">Final Receipt</string>
+    <string name="print_receipt">Print Receipt</string>
+    <string name="voucher_receipt">Voucher Receipt..</string>
+
+    <string name="card_num">Card Num</string>
+    <string name="terminal_num">Terminal Num</string>
+    <string name="serial">Serial.</string>
+    <string name="user_instruction">User Instruction</string>
+    <string name="static_user_info">AIG Pharmaceuticals is a growing Pharmaceutical company that was established in 2010 with its
+        headquarters located in Cairo and Delta with the objective of providing high quality and innovative products to the
+        Egyptian market .In 2011, after 9 years of operations, AIG has grown from a small local company to a market leader
+        of approximately 500 customers.</string>
+    <string name="light">روشنی</string>
+    <string name="dark">گہرا</string>
+    <!-- main category-->
+    <string name="category_title0">ڈیٹا ریچارج</string>
+    <string name="category_paragraph_0">موبائلی - زین - الاتصالات السعودیة - لیبارا - ورجن -  فرینڈی - گو</string>
+
+    <string name="category_title1">وائس ریچارج</string>
+    <string name="category_paragraph_1">موبائلی - زین - الاتصالات السعودیة - لیبارا - ورجن -  فرینڈی </string>
+
+    <string name="category_title2">گیم کارڈ</string>
+    <string name="category_paragraph_2">نینٹینڈو - ایکس بکس - پب جی - فیفا  - وی ائ پی جلسات - موبائل لیجنڈس</string>
+
+    <string name="category_title3">سنیما</string>
+    <string name="category_paragraph_3">اسٹارز پلے - نیٹ فلکس -کتاب سوتی - ویاک -شاہد وی ائ پی</string>
+
+    <string name="category_title4">گفٹ کارڈز</string>
+    <string name="category_paragraph_4">اسکائپ - مائیکرو سافٹ - میک آفی - فیس بک  - مرسول </string>
+
+    <string name="category_title5">پسندیدہ</string>
+    <string name="category_paragraph_5">کسی بھی کارڈ پر دیر سے دبائیں تاکہ آپ اپنے پسندیدہ صفحات کو شامل خارج کرسکیں</string>
+
+
+
+</resources>
