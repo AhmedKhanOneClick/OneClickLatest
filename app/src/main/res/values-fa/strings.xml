@@ -104,7 +104,7 @@
     <string name="category_paragraph_4">اسکائپ - مائیکرو سافٹ - میک آفی - فیس بک  - مرسول </string>
 
     <string name="category_title5">پسندیدہ</string>
-        <string name="category_paragraph_5">کسی بھی کارڈ پر دیر سے دبائیں تاکہ آپ اپنے پسندیدہ صفحات کو شامل خارج کرسکیں</string>
+    <string name="category_paragraph_5">کسی بھی کارڈ پر دیر سے دبائیں تاکہ آپ اپنے پسندیدہ صفحات کو شامل خارج کرسکیں</string>
 
 
     <!-- sub category 1 -->
@@ -441,10 +441,10 @@
     <string name="lebaraDataprice4">240</string>
     <string name="lebaraDatadescr4">Lebara Data Card 240 SAR</string>
     <string name="google_maps_api">AIzaSyAodPzqQmmFS8NMlPP2pzUXUHiVn6vNB0s</string>
+    <string name="s5s13">Tmmmt</string>
     <string name="mobilyname1">Careem</string>
     <string name="mobilyprice1">Careem</string>
     <string name="mobilydescr1">Careem</string>
-    <string name="s5s13">Tmmmt</string>
     <string name="time">time</string>
 
 </resources>

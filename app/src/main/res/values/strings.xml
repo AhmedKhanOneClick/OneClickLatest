@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name" translatable="false">On Click</string>
+    <string name="app_name">On Click</string>
     <string name="app_version">V%s</string>
 
-    <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
-    <string name="navigation_drawer_close" translatable="false">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="error_api_500">Server Error, Please try again later</string>
     <string name="error_api_general">Something Error, Please try again later</string>
@@ -169,7 +169,290 @@
     <string name="mobilyname1">Careem</string>
     <string name="mobilyprice1">Careem</string>
     <string name="mobilydescr1">Careem</string>
-    <string name="time">Time</string>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="mobilyname2">Recharge Card</string>
+    <string name="mobilyprice2">25</string>
+    <string name="mobilydescr2">Mobily Recharge Card 25 SAR</string>
+
+    <string name="mobilyname3">Recharge Card</string>
+    <string name="mobilyprice3">35</string>
+    <string name="mobilydescr3">Mobily Recharge Card 35 SAR</string>
+
+    <string name="mobilyname4">Recharge Card</string>
+    <string name="mobilyprice4">58</string>
+    <string name="mobilydescr4">Mobily Recharge Card 58 SAR</string>
+
+    <string name="mobilyname5">Recharge Card</string>
+    <string name="mobilyprice5">115</string>
+    <string name="mobilydescr5">Mobily Recharge Card 115 SAR</string>
+
+    <string name="mobilyname6">Recharge Card</string>
+    <string name="mobilyprice6">230</string>
+    <string name="mobilydescr6">Mobily Recharge Card 230 SAR</string>
+
+    <string name="mobilyname7">Recharge Card</string>
+    <string name="mobilyprice7">395</string>
+    <string name="mobilydescr7">Mobily Recharge Card 395 SAR</string>
+
+
+    <string name="mobilyDataname1">5 GB Month</string>
+    <string name="mobilyDataprice1">90</string>
+    <string name="mobilyDatadescr1">Mobily Data Card 90 SAR</string>
+
+    <string name="mobilyDataname2">10 GB Month</string>
+    <string name="mobilyDataprice2">110</string>
+    <string name="mobilyDatadescr2">Mobily Data Card 110 SAR</string>
+
+    <string name="mobilyDataname3">10 GB 3 Months</string>
+    <string name="mobilyDataprice3">200</string>
+    <string name="mobilyDatadescr3">Mobily Data Card 200 SAR</string>
+
+    <string name="mobilyDataname4">20 GB 3 Months</string>
+    <string name="mobilyDataprice4">240</string>
+    <string name="mobilyDatadescr4">Mobily Data Card 240 SAR</string>
+
+    <!--    stc products -->
+    <string name="stcname1">Recharge Card</string>
+    <string name="stcprice1">20</string>
+    <string name="stcdescr1">STC Recharge Card 20 SAR</string>
+
+    <string name="stcname2">Recharge Card</string>
+    <string name="stcprice2">25</string>
+    <string name="stcdescr2">STC Recharge Card 25 SAR</string>
+
+    <string name="stcname3">Recharge Card</string>
+    <string name="stcprice3">35</string>
+    <string name="stcdescr3">STC Recharge Card 35 SAR</string>
+
+    <string name="stcname4">Recharge Card</string>
+    <string name="stcprice4">58</string>
+    <string name="stcdescr4">STC Recharge Card 58 SAR</string>
+
+    <string name="stcname5">Recharge Card</string>
+    <string name="stcprice5">115</string>
+    <string name="stcdescr5">STC Recharge Card 115 SAR</string>
+
+    <string name="stcname6">Recharge Card</string>
+    <string name="stcprice6">230</string>
+    <string name="stcdescr6">STC Recharge Card 230 SAR</string>
+
+    <string name="stcname7">Recharge Card</string>
+    <string name="stcprice7">395</string>
+    <string name="stcdescr7">STC Recharge Card 395 SAR</string>
+
+
+    <string name="stcDataname1">5 GB Month</string>
+    <string name="stcDataprice1">90</string>
+    <string name="stcDatadescr1">STC Data Card 90 SAR</string>
+
+    <string name="stcDataname2">10 GB Month</string>
+    <string name="stcDataprice2">110</string>
+    <string name="stcDatadescr2">STC Data Card 110 SAR</string>
+
+    <string name="stcDataname3">10 GB 3 Months</string>
+    <string name="stcDataprice3">200</string>
+    <string name="stcDatadescr3">STC Data Card 200 SAR</string>
+
+    <string name="stcDataname4">20 GB 3 Months</string>
+    <string name="stcDataprice4">240</string>
+    <string name="stcDatadescr4">STC Data Card 240 SAR</string>
+
+    <!--    zain products -->
+    <string name="zainname1">Recharge Card</string>
+    <string name="zainprice1">20</string>
+    <string name="zaindescr1">Zain Recharge Card 20 SAR</string>
+
+    <string name="zainname2">Recharge Card</string>
+    <string name="zainprice2">25</string>
+    <string name="zaindescr2">Zain Recharge Card 25 SAR</string>
+
+    <string name="zainname3">Recharge Card</string>
+    <string name="zainprice3">35</string>
+    <string name="zaindescr3">Zain Recharge Card 35 SAR</string>
+
+    <string name="zainname4">Recharge Card</string>
+    <string name="zainprice4">58</string>
+    <string name="zaindescr4">Zain Recharge Card 58 SAR</string>
+
+    <string name="zainname5">Recharge Card</string>
+    <string name="zainprice5">115</string>
+    <string name="zaindescr5">Zain Recharge Card 115 SAR</string>
+
+    <string name="zainname6">Recharge Card</string>
+    <string name="zainprice6">230</string>
+    <string name="zaindescr6">Zain Recharge Card 230 SAR</string>
+
+    <string name="zainname7">Recharge Card</string>
+    <string name="zainprice7">395</string>
+    <string name="zaindescr7">Zain Recharge Card 395 SAR</string>
+
+
+    <string name="zainDataname1">5 GB Month</string>
+    <string name="zainDataprice1">90</string>
+    <string name="zainDatadescr1">Zain Data Card 90 SAR</string>
+
+    <string name="zainDataname2">10 GB Month</string>
+    <string name="zainDataprice2">110</string>
+    <string name="zainDatadescr2">Zain Data Card 110 SAR</string>
+
+    <string name="zainDataname3">10 GB 3 Months</string>
+    <string name="zainDataprice3">200</string>
+    <string name="zainDatadescr3">Zain Data Card 200 SAR</string>
+
+    <string name="zainDataname4">20 GB 3 Months</string>
+    <string name="zainDataprice4">240</string>
+    <string name="zainDatadescr4">Zain Data Card 240 SAR</string>
+
+    <!--    virgin products -->
+    <string name="virginname1">Recharge Card</string>
+    <string name="virginprice1">20</string>
+    <string name="virgindescr1">Virgin Recharge Card 20 SAR</string>
+
+    <string name="virginname2">Recharge Card</string>
+    <string name="virginprice2">25</string>
+    <string name="virgindescr2">Virgin Recharge Card 25 SAR</string>
+
+    <string name="virginname3">Recharge Card</string>
+    <string name="virginprice3">35</string>
+    <string name="virgindescr3">Virgin Recharge Card 35 SAR</string>
+
+    <string name="virginname4">Recharge Card</string>
+    <string name="virginprice4">58</string>
+    <string name="virgindescr4">Virgin Recharge Card 58 SAR</string>
+
+    <string name="virginname5">Recharge Card</string>
+    <string name="virginprice5">115</string>
+    <string name="virgindescr5">Virgin Recharge Card 115 SAR</string>
+
+    <string name="virginname6">Recharge Card</string>
+    <string name="virginprice6">230</string>
+    <string name="virgindescr6">Virgin Recharge Card 230 SAR</string>
+
+    <string name="virginname7">Recharge Card</string>
+    <string name="virginprice7">395</string>
+    <string name="virgindescr7">Virgin Recharge Card 395 SAR</string>
+
+
+    <string name="virginDataname1">5 GB Month</string>
+    <string name="virginDataprice1">90</string>
+    <string name="virginDatadescr1">Virgin Data Card 90 SAR</string>
+
+    <string name="virginDataname2">10 GB Month</string>
+    <string name="virginDataprice2">110</string>
+    <string name="virginDatadescr2">Virgin Data Card 110 SAR</string>
+
+    <string name="virginDataname3">10 GB 3 Months</string>
+    <string name="virginDataprice3">200</string>
+    <string name="virginDatadescr3">Virgin Data Card 200 SAR</string>
+
+    <string name="virginDataname4">20 GB 3 Months</string>
+    <string name="virginDataprice4">240</string>
+    <string name="virginDatadescr4">Virgin Data Card 240 SAR</string>
+
+    <!--    friendi products -->
+    <string name="friendiname1">Recharge Card</string>
+    <string name="friendiprice1">20</string>
+    <string name="friendidescr1">Friendi Recharge Card 20 SAR</string>
+
+    <string name="friendiname2">Recharge Card</string>
+    <string name="friendiprice2">25</string>
+    <string name="friendidescr2">Friendi Recharge Card 25 SAR</string>
+
+    <string name="friendiname3">Recharge Card</string>
+    <string name="friendiprice3">35</string>
+    <string name="friendidescr3">Friendi Recharge Card 35 SAR</string>
+
+    <string name="friendiname4">Recharge Card</string>
+    <string name="friendiprice4">58</string>
+    <string name="friendidescr4">Friendi Recharge Card 58 SAR</string>
+
+    <string name="friendiname5">Recharge Card</string>
+    <string name="friendiprice5">115</string>
+    <string name="friendidescr5">Friendi Recharge Card 115 SAR</string>
+
+    <string name="friendiname6">Recharge Card</string>
+    <string name="friendiprice6">230</string>
+    <string name="friendidescr6">Friendi Recharge Card 230 SAR</string>
+
+    <string name="friendiname7">Recharge Card</string>
+    <string name="friendiprice7">395</string>
+    <string name="friendidescr7">Friendi Recharge Card 395 SAR</string>
+
+
+    <string name="friendiDataname1">5 GB Month</string>
+    <string name="friendiDataprice1">90</string>
+    <string name="friendiDatadescr1">Friendi Data Card 90 SAR</string>
+
+    <string name="friendiDataname2">10 GB Month</string>
+    <string name="friendiDataprice2">110</string>
+    <string name="friendiDatadescr2">Friendi Data Card 110 SAR</string>
+
+    <string name="friendiDataname3">10 GB 3 Months</string>
+    <string name="friendiDataprice3">200</string>
+    <string name="friendiDatadescr3">Friendi Data Card 200 SAR</string>
+
+    <string name="friendiDataname4">20 GB 3 Months</string>
+    <string name="friendiDataprice4">240</string>
+    <string name="friendiDatadescr4">Friendi Data Card 240 SAR</string>
+
+    <!--    lebara products -->
+    <string name="lebaraname1">Recharge Card</string>
+    <string name="lebaraprice1">20</string>
+    <string name="lebaradescr1">Lebara Recharge Card 20 SAR</string>
+
+    <string name="lebaraname2">Recharge Card</string>
+    <string name="lebaraprice2">25</string>
+    <string name="lebaradescr2">Lebara Recharge Card 25 SAR</string>
+
+    <string name="lebaraname3">Recharge Card</string>
+    <string name="lebaraprice3">35</string>
+    <string name="lebaradescr3">Lebara Recharge Card 35 SAR</string>
+
+    <string name="lebaraname4">Recharge Card</string>
+    <string name="lebaraprice4">58</string>
+    <string name="lebaradescr4">Lebara Recharge Card 58 SAR</string>
+
+    <string name="lebaraname5">Recharge Card</string>
+    <string name="lebaraprice5">115</string>
+    <string name="lebaradescr5">Lebara Recharge Card 115 SAR</string>
+
+    <string name="lebaraname6">Recharge Card</string>
+    <string name="lebaraprice6">230</string>
+    <string name="lebaradescr6">Lebara Recharge Card 230 SAR</string>
+
+    <string name="lebaraname7">Recharge Card</string>
+    <string name="lebaraprice7">395</string>
+    <string name="lebaradescr7">Lebara Recharge Card 395 SAR</string>
+
+
+    <string name="lebaraDataname1">5 GB Month</string>
+    <string name="lebaraDataprice1">90</string>
+    <string name="lebaraDatadescr1">Lebara Data Card 90 SAR</string>
+
+    <string name="lebaraDataname2">10 GB Month</string>
+    <string name="lebaraDataprice2">110</string>
+    <string name="lebaraDatadescr2">Lebara Data Card 110 SAR</string>
+
+    <string name="lebaraDataname3">10 GB 3 Months</string>
+    <string name="lebaraDataprice3">200</string>
+    <string name="lebaraDatadescr3">Lebara Data Card 200 SAR</string>
+
+    <string name="lebaraDataname4">20 GB 3 Months</string>
+    <string name="lebaraDataprice4">240</string>
+    <string name="lebaraDatadescr4">Lebara Data Card 240 SAR</string>
+    <string name="time">time</string>
 </resources>

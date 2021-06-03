@@ -3,5 +3,5 @@
     <!--    <string name="google_maps_api" translatable="false">AIzaSyDJHmxqgx4Hd5Fc_Mnr16LGNEwQByg_wAM</string>-->
 
 
-    <string name="google_maps_api" translatable="false">AIzaSyAodPzqQmmFS8NMlPP2pzUXUHiVn6vNB0s</string>
+    <string name="google_maps_api">AIzaSyAodPzqQmmFS8NMlPP2pzUXUHiVn6vNB0s</string>
 </resources>

@@ -172,6 +172,16 @@
     <string name="mobilyprice1">20</string>
     <string name="mobilydescr1">موبايلي شحن رصيد جوال 20 ريال</string>
 
+
+
+
+
+
+
+
+
+
+
     <string name="mobilyname2">Recharge Card</string>
     <string name="mobilyprice2">25</string>
     <string name="mobilydescr2">Mobily Recharge Card 25 SAR</string>
@@ -442,5 +452,7 @@
     <string name="lebaraDataname4">20 GB 3 Months</string>
     <string name="lebaraDataprice4">240</string>
     <string name="lebaraDatadescr4">Lebara Data Card 240 SAR</string>
+    <string name="google_maps_api">AIzaSyAodPzqQmmFS8NMlPP2pzUXUHiVn6vNB0s</string>
+    <string name="time">time</string>
 
 </resources>

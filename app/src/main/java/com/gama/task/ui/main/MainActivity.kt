@@ -1,7 +1,9 @@
 package com.gama.task.ui.main
 
 import android.app.TaskStackBuilder
+import android.content.Context
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.os.PersistableBundle
 import android.util.Log
@@ -22,12 +24,10 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import com.gama.task.R
-import com.gama.task.databinding.ActivityMainBinding
 import com.gama.task.ui.base.BaseActivity
 import com.gama.task.ui.fragments.cart.GlobalClass
 import com.google.android.material.navigation.NavigationView
-import com.zeugmasolutions.localehelper.LocaleAwareCompatActivity
-import com.zeugmasolutions.localehelper.Locales
+import com.zeugmasolutions.localehelper.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -68,28 +68,6 @@ open class MainActivity : LocaleAwareCompatActivity() {
 
 //val opencart=binding.openCartBtn.setOnClickListener {
 
-    override fun updateLocale(locale: Locale) {
-        super.updateLocale(locale)
-    }
-
-
-
-    public fun updateLangToAR() {
-
-        // if (sp != null && lang == "ar")
-        updateLocale(Locales.Arabic)
-    }
-    public fun updateLangToEN() {
-        //  if (sp != null && lang == "en")
-       updateLocale(Locales.English)
-
-    }
-   // public fun updateLangToUR() {
-        //  if (sp != null && lang == "en")
-     //   updateLocale(Locales.Urdu)
-       // updateLocale(Locales.Arabic)
-
-    //}
 
 
 
@@ -129,4 +107,39 @@ open class MainActivity : LocaleAwareCompatActivity() {
 
 
     }
+
+
+
+
+
+
+    override fun updateLocale(locale: Locale) {
+        super.updateLocale(locale)
+    }
+
+
+
+    public fun updateLangToAR() {
+
+        // if (sp != null && lang == "ar")
+        updateLocale(Locales.Arabic)
+    }
+    public fun updateLangToEN() {
+        //  if (sp != null && lang == "en")
+        updateLocale(Locales.English)
+
+    }
+
+
+    public fun updateLangToUR() {
+        //  if (sp != null && lang == "en")
+        updateLocale(Locales.Urdu)
+
+        // updateLocale(Locales.Arabic)
+
+    }
+
+
+
+
 }

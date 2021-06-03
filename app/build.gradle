@@ -11,6 +11,11 @@ apply plugin: 'org.jetbrains.dokka-android'
 android {
     compileSdkVersion 30
     buildToolsVersion "29.0.3"
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
 
     defaultConfig {
         applicationId "com.gama.task"
@@ -18,7 +23,7 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-        resConfigs "en", "ar"
+        resConfigs "en", "ar","ur"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
