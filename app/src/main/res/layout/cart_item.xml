@@ -126,7 +126,8 @@
                 android:layout_marginBottom="@dimen/_3sdp"
                 android:background="@drawable/xd_up"
                />
-            <Button
+
+                    <Button
                 android:layout_width="@dimen/_8sdp"
                 android:layout_height="@dimen/_5sdp"
                 android:layout_marginTop="@dimen/_6sdp"
