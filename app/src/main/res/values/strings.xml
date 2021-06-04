@@ -87,5 +87,8 @@
     <string name="password">Password</string>
     <string name="forget_password">Forget Password</string>
     <string name="donot_haveacc">Don\'t Have An Account</string>
+    <string name="invalid_login_Data">Invalid Login Data</string>
+    <string name="copied_successfully">copied_successfully</string>
+
 
 </resources>

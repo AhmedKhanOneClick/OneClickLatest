@@ -189,7 +189,7 @@ class LoginFragment :
      * override 401 error handling in login request to show error msg with invalid inputs.
      */
     override fun handle401Error() {
-        GeneralDialog(DialogType.ERROR, getString(R.string.invalid_login_data)).show(
+        GeneralDialog(DialogType.ERROR, getString(R.string.invalid_login_Data)).show(
             childFragmentManager,
             tag
         )

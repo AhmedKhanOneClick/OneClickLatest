@@ -131,7 +131,7 @@ abstract class BaseDialogFragment<DB : ViewDataBinding> : DialogFragment(), Base
      */
     open fun <T> handleApiErrorStatus(apiStatus: Resource<T>) {
         val errorMsg = when {
-            apiStatus.code == 401 -> getString(R.string.invalid_login_data)
+            apiStatus.code == 401 -> getString(R.string.invalid_login_Data)
             apiStatus.code == 500 -> getString(R.string.error_api_500)
             apiStatus.message != null -> apiStatus.message
             else -> getString(R.string.error_api_general)

@@ -83,4 +83,11 @@
     <string name="static_user_info">AIG Pharmaceuticals is a growing Pharmaceutical company that was established in 2010 with its headquarters located in Cairo and Delta with the objective of providing high quality and innovative products to the Egyptian market .In 2011, after 9 years of operations, AIG has grown from a small local company to a market leader of approximately 500 customers.</string>
     <string name="light">فاتح</string>
     <string name="dark">داكن</string>
+
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="donot_haveacc">Don\'t Have An Account</string>
+    <string name="invalid_login_Data">Invalid Login Data</string>
+    <string name="copied_successfully">copied_successfully</string>
+
 </resources>

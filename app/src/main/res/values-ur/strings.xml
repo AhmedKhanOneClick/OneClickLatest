@@ -106,6 +106,10 @@
     <string name="category_title5">پسندیدہ</string>
     <string name="category_paragraph_5">کسی بھی کارڈ پر دیر سے دبائیں تاکہ آپ اپنے پسندیدہ صفحات کو شامل خارج کرسکیں</string>
 
-
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="donot_haveacc">Don\'t Have An Account</string>
+    <string name="invalid_login_Data">Invalid Login Data</string>
+    <string name="copied_successfully">copied_successfully</string>
 
 </resources>
