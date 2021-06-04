@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    tools:context="com.gama.task.ui.fragments.drawrmenu.FragmentReceipt">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+        android:layout_gravity="start"
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_16sdp"
+        android:text="@string/voucher_receipt"
+        />
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_16sdp"
+        android:textStyle="bold"
+        android:text="220202"
+        android:textColor="@color/colorPrimary"
+
+        />
+</LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/line_h"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_550sdp"
+
+
+        android:background="@drawable/receipt_back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/_50sdp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:src="@drawable/one_click_logo_gray"
+                />
+            <ImageView
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:src="@drawable/mobily_logo"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_17sdp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:text="@string/voucher_receipt"
+                android:textColor="@android:color/black"
+                android:textAllCaps="true"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="3"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_6sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/amount"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="123 SR "
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="المبلغ "
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_6sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/card_num"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2039203"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="رقم البطاقة"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="121212121211121212"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_19sdp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:textColor="@android:color/black"/>
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:text="--------------------------------------------------------------"
+
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="3"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_6sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/date"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="12/03/2021 "
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="التاريخ"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_6sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Time"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="12:20 PM"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="الوقت "
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_6sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/terminal_num"
+                        android:textAlignment="viewStart"
+
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="123 "
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="رقم الجهاز"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp" />
+                </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:text="--------------------------------------------------------------"
+
+
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="3"
+
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/serial"
+                        android:textAlignment="viewStart"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                         android:text="6534425"
+                        android:textAlignment="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="الرقم التسلسلي"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+
+    </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:text="--------------------------------------------------------------"
+
+
+                />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/user_instruction"
+                        android:textAlignment="viewStart"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+
+                        android:textAlignment="center"
+                        android:text="@string/static_user_info"
+                          android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13sdp"
+                android:layout_gravity="center"
+                android:text="-------------------------------"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                >
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_weight="1"
+                        android:text="@string/thank_you"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/black"
+
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+
+
+
+
+
+            </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+</LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+

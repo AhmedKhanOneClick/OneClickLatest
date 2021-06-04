@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.gama.task.ui.fragments.drawrmenu.AccountFragmnet">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/account"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:textSize="@dimen/_20sdp"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_10sdp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:src="@drawable/line_h"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="@dimen/_80sdp"
+        android:background="@drawable/account_back"
+        android:layout_margin="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/e_wallet_balance"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+
+            android:layout_marginRight="@dimen/_10sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:lines="1"
+                android:text="22.0"
+                android:textSize="@dimen/_19sdp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textColor="#FF1744"
+                />
+        </LinearLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SAR"
+            android:textSize="@dimen/_15sdp"
+            android:layout_gravity="right"
+
+            android:layout_marginRight="@dimen/_7sdp"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:src="@drawable/line_h"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="vertical"
+        android:background="@drawable/account_back"
+        android:layout_margin="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/pos_id" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:lines="1"
+            android:text="223434340"
+            android:textSize="@dimen/_19sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FF1744"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:src="@drawable/line_h"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="vertical"
+        android:background="@drawable/account_back"
+        android:layout_margin="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/name_pos_user" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:lines="1"
+            android:text="Mouhammed Khan"
+            android:textSize="@dimen/_19sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FF1744"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="vertical"
+        android:background="@drawable/account_back"
+        android:layout_margin="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/bakala_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:lines="1"
+            android:text="@string/bakala_name"
+            android:textSize="@dimen/_19sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FF1744"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="vertical"
+        android:background="@drawable/account_back"
+        android:layout_margin="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/email" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:lines="1"
+            android:text="dev@bakr@gmail.com"
+            android:textSize="@dimen/_19sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FF1744"
+            />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_2sdp"
+        android:src="@drawable/line_h"
+
+        android:layout_marginTop="@dimen/_10sdp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="vertical"
+        android:background="@drawable/account_back"
+        android:layout_margin="@dimen/_10sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/name_pos_user" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:lines="1"
+            android:text="Mouhammed Khan"
+            android:textSize="@dimen/_19sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FF1744"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="@dimen/_60sdp"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/account_back">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/name_pos_user"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:lines="1"
+            android:text="Mouhammed Khan"
+            android:textSize="@dimen/_19sdp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#FF1744"
+            />
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>
