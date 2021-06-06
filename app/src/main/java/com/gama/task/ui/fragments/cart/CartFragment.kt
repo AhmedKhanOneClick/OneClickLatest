@@ -30,7 +30,7 @@ class CartFragment :Fragment(R.layout.fragment_cart),CartAdapter.OnItemClickList
         cart_rv.setHasFixedSize(true)
         total.text=checkout.toString()
         checkout_btn.setOnClickListener {
-           findNavController().navigate(CartFragmentDirections.actionCartFragmentToFragmentcheckout1())
+         //-  findNavController().navigate(CartFragmentDirections.actionCartFragmentToFragmentcheckout1())
 
         }
     }

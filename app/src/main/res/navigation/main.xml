@@ -239,5 +239,80 @@
         android:name="com.gama.task.ui.fragments.voicedatacharg.mobilyfragment.MobilyFragment"
         android:label="fragment_nintend"
         tools:layout="@layout/fragment_data_recharg_mobily" />
+    <fragment
+        android:id="@+id/cartFragment"
+        android:name="com.gama.task.ui.fragments.cart.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/fragmentTransactionsTables"
+        android:name="com.gama.task.ui.fragments.drawrmenu.transactionstable.FragmentTransactionsTables"
+        android:label="fragment_transactions_tables"
+        tools:layout="@layout/fragment_transactions_tables" />
+    <fragment
+        android:id="@+id/fragmentTransactionDetailes"
+        android:name="com.gama.task.ui.fragments.drawrmenu.transactiondetailes.FragmentTransactionDetailes"
+        android:label="fragment_teansaction_detailes"
+        tools:layout="@layout/fragment_teansaction_detailes" />
+    <fragment
+        android:id="@+id/fragmentpurchase2"
+        android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase2"
+        android:label="fragment_sucess2"
+        tools:layout="@layout/fragment_sucess2" />
+    <fragment
+        android:id="@+id/fragmentpurchase1"
+        android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase1"
+        android:label="fragment_sucess1"
+        tools:layout="@layout/fragment_sucess1" />
+    <fragment
+        android:id="@+id/allReceiptFragment"
+        android:name="com.gama.task.ui.fragments.allreceipt.AllReceiptFragment"
+        android:label="fragment_all_receipt"
+        tools:layout="@layout/fragment_all_receipt" />
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.gama.task.ui.fragments.drawrmenu.ReportsFragment"
+        android:label="fragment_menu_reports"
+        tools:layout="@layout/fragment_menu_reports" />
+    <dialog
+        android:id="@+id/bottomSheetCheckOut"
+        android:name="com.gama.task.ui.fragments.cart.BottomSheetCheckOut"
+        android:label="fragment_botom_sheet_cart"
+        tools:layout="@layout/fragment_botom_sheet_cart" />
+    <fragment
+        android:id="@+id/fragmentReceipt"
+        android:name="com.gama.task.ui.fragments.drawrmenu.FragmentReceipt"
+        android:label="fragment_receipt"
+        tools:layout="@layout/fragment_receipt" />
+    <fragment
+        android:id="@+id/fragmentWayCheckout"
+        android:name="com.gama.task.ui.fragments.payment.FragmentWayCheckout"
+        android:label="fragment_way_checkout"
+        tools:layout="@layout/fragment_way_checkout" />
+    <fragment
+        android:id="@+id/fragmentcheckout1"
+        android:name="com.gama.task.ui.fragments.payment.Fragmentcheckout1"
+        android:label="fragment_confirm_checkout"
+        tools:layout="@layout/fragment_confirm_checkout" />
+    <fragment
+        android:id="@+id/accountFragmnet"
+        android:name="com.gama.task.ui.fragments.drawrmenu.AccountFragmnet"
+        android:label="fragment_menu_account"
+        tools:layout="@layout/fragment_menu_account" />
+    <fragment
+        android:id="@+id/fragmentOrderPrint"
+        android:name="com.gama.task.ui.fragments.drawrmenu.orderprinttable.FragmentOrderPrint"
+        android:label="fragment_order_print"
+        tools:layout="@layout/fragment_order_print" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.gama.task.ui.fragments.drawrmenu.SettingFragment"
+        android:label="fragment_menu_setting"
+        tools:layout="@layout/fragment_menu_setting" />
+    <fragment
+        android:id="@+id/fragmentpurchase3"
+        android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase3"
+        android:label="fragment_sucess3"
+        tools:layout="@layout/fragment_sucess3" />
 
 </navigation>

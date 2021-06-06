@@ -89,5 +89,11 @@
     <string name="donot_haveacc">Don\'t Have An Account</string>
     <string name="invalid_login_Data">Invalid Login Data</string>
     <string name="copied_successfully">copied_successfully</string>
+    <string name="confirm_checkout">تاكيد عملية الدفع</string>
+    <string name="add_more_cards">اضافة المزيد من الكروت</string>
+    <string name="e_wallet_balance1">المحفظة الالكترونية</string>
+    <string name="bank_card">بطاقة بنكية</string>
+    <string name="sign_in">تسجيل الدخول</string>
+    <string name="ok">OK</string>
 
 </resources>

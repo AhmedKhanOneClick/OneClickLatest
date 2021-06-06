@@ -29,7 +29,7 @@ class BottomSheetCheckOut: BottomSheetDialogFragment() {
 
 
         check_out_btn.setOnClickListener {
-            findNavController().navigate(BottomSheetCheckOutDirections.actionBottomSheetCheckOutToCartFragment())
+            //- findNavController().navigate(BottomSheetCheckOutDirections.actionBottomSheetCheckOutToCartFragment())
 
         }
     }
@@ -39,7 +39,7 @@ class BottomSheetCheckOut: BottomSheetDialogFragment() {
         check_out_btn.text="Checkout ( "+GlobalClass.globalCartList.size.toString()+" )"
         check_out_btn.setOnClickListener {
             //handle click event
-           findNavController().navigate(BottomSheetCheckOutDirections.actionBottomSheetCheckOutToCartFragment())
+        //-    findNavController().navigate(BottomSheetCheckOutDirections.actionBottomSheetCheckOutToCartFragment())
 
           //  var activity :MainActivity
             //activity.cart_counter.setText("sdf")

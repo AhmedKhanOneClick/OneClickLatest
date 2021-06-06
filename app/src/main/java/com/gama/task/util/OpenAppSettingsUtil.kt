@@ -14,7 +14,7 @@ object OpenAppSettingsUtil {
     fun openAppSettings(context: Context, @StringRes msgRes: Int) {
         val builder = AlertDialog.Builder(context)
         builder.setMessage(msgRes)
-        builder.setPositiveButton(R.string.ok) { dialog: DialogInterface, which: Int ->
+        builder.setPositiveButton("OK") { dialog: DialogInterface, which: Int ->
             val packageUri =
                 Uri.fromParts("package", context.packageName, null)
             val applicationDetailsSettingsIntent = Intent()

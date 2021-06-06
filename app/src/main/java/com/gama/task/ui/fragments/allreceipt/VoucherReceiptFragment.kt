@@ -7,7 +7,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gama.task.R
 import com.gama.task.ui.fragments.cart.CartAdapter
-import com.gama.task.ui.fragments.cart.CartFragmentDirections
+//- import com.gama.task.ui.fragments.cart.CartFragmentDirections
 import com.gama.task.ui.fragments.cart.GlobalClass
 import com.gama.task.ui.main.MainActivity
 import kotlinx.android.synthetic.main.fragment_all_receipt.*

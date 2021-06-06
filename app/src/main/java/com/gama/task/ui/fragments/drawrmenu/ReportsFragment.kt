@@ -13,12 +13,12 @@ class ReportsFragment:Fragment(R.layout.fragment_menu_reports) {
 
         device_order_print.setOnClickListener {
 
-            findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
+         //-    findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
         }
 
         transaction_statement.setOnClickListener {
 
-            findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentTransactionsTables())
+           //- findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentTransactionsTables())
         }
 
     }

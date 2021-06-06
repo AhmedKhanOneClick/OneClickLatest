@@ -111,5 +111,13 @@
     <string name="donot_haveacc">Don\'t Have An Account</string>
     <string name="invalid_login_Data">Invalid Login Data</string>
     <string name="copied_successfully">copied_successfully</string>
+    <string name="confirm_checkout">Confirm Checkout</string>
+    <string name="add_more_cards">Add More Cards</string>
+    <string name="e_wallet_balance1">E_wallet Balance</string>
+    <string name="bank_card">Bank Card</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="ok">OK</string>
+
 
 </resources>

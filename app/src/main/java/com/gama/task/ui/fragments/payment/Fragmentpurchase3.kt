@@ -22,7 +22,7 @@ class Fragmentpurchase3: Fragment(R.layout.fragment_sucess3) {
             view?.post {
                //findNavController().navigate(Fragmentpurchase3Directions.())
 
-                findNavController().navigate(Fragmentpurchase3Directions.actionFragmentpurchase3ToAllReceiptFragment())
+              //  findNavController().navigate(Fragmentpurchase3Directions.actionFragmentpurchase3ToAllReceiptFragment())
 
                 // findNavController().navigate(Fragmentpurchase3Directions.actionFragmentpurchase3ToFsearchPagerFragment())
             }

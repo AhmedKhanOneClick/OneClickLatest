@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gama.task.R
 import com.gama.task.ui.fragments.voicedatacharg.gofragment.GoAdapter
-import kotlinx.android.synthetic.main.fragment_data_card_go.*
+//- import kotlinx.android.synthetic.main.fragment_data_card_go.*
 import kotlinx.android.synthetic.main.fragment_order_print.*
 
 class FragmentOrderPrint:Fragment(R.layout.fragment_order_print),OrderPrintAdapter.OnItemClickListener {
@@ -39,7 +39,7 @@ class FragmentOrderPrint:Fragment(R.layout.fragment_order_print),OrderPrintAdapt
 
     override fun onClick(position: Int) {
 
-        findNavController().navigate(FragmentOrderPrintDirections.actionFragmentOrderPrintToFragmentReceipt())
+      //-  findNavController().navigate(FragmentOrderPrintDirections.actionFragmentOrderPrintToFragmentReceipt())
     }
 
     override fun onLongClick(position: Int) {

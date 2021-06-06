@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.gama.task.R
 import com.gama.task.ui.fragments.drawrmenu.orderprinttable.OrderPrintAdapter
 import com.gama.task.ui.fragments.drawrmenu.orderprinttable.OrderPrintTableData
-import com.gama.task.ui.fragments.giftcards.tmmmtfragment.TmmmtFragmentDirections
+//- import com.gama.task.ui.fragments.giftcards.tmmmtfragment.TmmmtFragmentDirections
 import kotlinx.android.synthetic.main.fragment_order_print.*
 import kotlinx.android.synthetic.main.fragment_transactions_tables.*
 
@@ -40,7 +40,7 @@ class FragmentTransactionsTables:Fragment(R.layout.fragment_transactions_tables)
     }
 
     override fun onClick(position: Int) {
-      findNavController().navigate(FragmentTransactionsTablesDirections.actionFragmentTransactionsTablesToFragmentTransactionDetailes())
+     // findNavController().navigate(FragmentTransactionsTablesDirections.actionFragmentTransactionsTablesToFragmentTransactionDetailes())
     }
 
     override fun onLongClick(position: Int) {

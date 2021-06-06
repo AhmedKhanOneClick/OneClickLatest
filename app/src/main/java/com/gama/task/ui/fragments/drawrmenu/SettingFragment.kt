@@ -31,7 +31,7 @@ class SettingFragment:Fragment(R.layout.fragment_menu_setting) {
                         putString("lang", "ar")
 
                     }.apply()
-                    findNavController().navigate(SettingFragmentDirections.actionAllReceiptFragmentToSettingFragment2())
+                   //- findNavController().navigate(SettingFragmentDirections.actionAllReceiptFragmentToSettingFragment2())
                 } else if (checkedId == R.id.radio_english) {
                     (activity as MainActivity).updateLangToEN()
 
@@ -39,7 +39,7 @@ class SettingFragment:Fragment(R.layout.fragment_menu_setting) {
                         putString("lang", "en")
 
                     }.apply()
-                    findNavController().navigate(SettingFragmentDirections.actionAllReceiptFragmentToSettingFragment2())
+                    //- findNavController().navigate(SettingFragmentDirections.actionAllReceiptFragmentToSettingFragment2())
 
                 } else if (checkedId == R.id.radio_urdo) {
                     (activity as MainActivity).updateLangToUR()
@@ -47,7 +47,7 @@ class SettingFragment:Fragment(R.layout.fragment_menu_setting) {
                         putString("lang", "ur")
 
                     }.apply()
-                    findNavController().navigate(SettingFragmentDirections.actionAllReceiptFragmentToSettingFragment2())
+                  //-  findNavController().navigate(SettingFragmentDirections.actionAllReceiptFragmentToSettingFragment2())
                 }
 
 

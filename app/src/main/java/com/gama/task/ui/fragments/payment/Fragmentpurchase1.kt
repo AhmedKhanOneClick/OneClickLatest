@@ -14,7 +14,7 @@ class Fragmentpurchase1: Fragment(R.layout.fragment_sucess1) {
 
 
             view?.post {
-                findNavController().navigate(Fragmentpurchase1Directions.actionFragmentpurchase1ToFragmentpurchase2())
+               // findNavController().navigate(Fragmentpurchase1Directions.actionFragmentpurchase1ToFragmentpurchase2())
             }
         }, 1000) // 3000 is the delayed time in milliseconds.
     }

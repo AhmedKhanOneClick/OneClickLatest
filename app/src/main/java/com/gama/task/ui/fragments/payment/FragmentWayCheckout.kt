@@ -32,7 +32,7 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
         }
 
         bank_card.setOnClickListener {
-            findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase1())
+            //findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase1())
             Log.d("TAG", "onViewCreated: ")
             sendAmountToMadaApplication()
             //            findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase1())
