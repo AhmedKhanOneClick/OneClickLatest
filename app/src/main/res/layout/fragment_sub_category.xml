@@ -47,7 +47,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Voice Recharge"
+                    android:text="Sub Categories"
                     android:textSize="20dp"
                     android:textStyle="bold"></TextView>
 

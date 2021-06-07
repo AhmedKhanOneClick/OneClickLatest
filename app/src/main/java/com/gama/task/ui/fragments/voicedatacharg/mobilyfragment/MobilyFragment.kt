@@ -6,6 +6,7 @@ import android.content.Intent
 import android.preference.PreferenceManager
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -20,7 +21,10 @@ import com.gama.task.models.Content
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment.Companion.TAG
 import com.gama.task.ui.base.BaseFragment
+import com.gama.task.ui.fragments.cart.GlobalClass
+import com.gama.task.ui.fragments.cart.models.CartItem
 import com.gama.task.ui.fragments.subcategories.SubcategoriesFragmentArgs
+import com.gama.task.ui.main.MainActivity
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
@@ -127,7 +131,30 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
 
 
         mobileDataAdapter = MobileDataAdapter(dataBindingComponent, appExecutors ) { content: Content, view: View ->
-view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
+
+            if  (view .id==R.id.favourites ){
+
+                Log.e("click","favourites")
+                view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
+
+            }else{
+
+                GlobalClass.globalCartList.add(
+                    CartItem(R.drawable.facebook
+                        ,content.price
+                        ,content.quantity
+                        ,content.createdAt))
+
+                if (!GlobalClass.globalCartList.isEmpty()){
+                    (activity as MainActivity).observeCartCounter()
+                    val action=MobilyFragmentDirections.actionMobilyFragmentToBottomSheetCheckOut()
+                    findNavController().navigate(action)
+                  // findNavController().navigate(MobilyFragmentDirections.action_MobilyFragment_to_bottomSheetCheckOut())
+            }
+            }
+
+
+
 //            binding.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
             val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
             model.sendfavourites(content)

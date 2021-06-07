@@ -50,7 +50,7 @@ data class Content(
 //    @SerializedName("data") val productCategory: ProductCategory,
 //    @SerializedName("data") val provider: Provider,
 //    @SerializedName("data") val providerId: String,
-    @SerializedName("quantity") val quantity: Double,
+    @SerializedName("quantity") val quantity: Int,
      @SerializedName("createdAt") val createdAt: String,
 //    @SerializedName("data") val tags: Any,
 //    @SerializedName("data") val updatedAt: Long,

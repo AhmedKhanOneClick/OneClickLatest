@@ -23,9 +23,9 @@ class CartAdapter(private val cartList: List<CartItem>,private val  onItemClickL
 
     override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
         val currentItem = cartList[position]
-       holder.cardImage.setImageResource(currentItem.text1)
-        holder.cardPrice.text = currentItem.text3
-        holder.cardName.text = currentItem.text4
+       holder.cardImage.setImageResource(currentItem.img_id)
+        holder.cardPrice.text = currentItem.Price.toString()
+        holder.cardName.text = currentItem.Title
     }
 
     override fun getItemCount()=cartList.size

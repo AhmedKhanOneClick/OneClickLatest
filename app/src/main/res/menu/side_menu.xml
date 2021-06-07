@@ -8,24 +8,28 @@
             android:icon="@drawable/ic_homepage"
             android:title="@string/homepage"></item>
         <item
-            android:id="@+id/nav_favorite"
+            android:id="@+id/favouritesFragment"
             android:icon="@drawable/ic_favorite"
             android:title="@string/favorite"></item>
         <item
-            android:id="@+id/nav_account"
+            android:id="@+id/accountFragmnet"
             android:icon="@drawable/ic_profile"
-            android:title="Account"></item>
+            android:title="@string/account"></item>
         <item
-            android:id="@+id/nav_reports"
+            android:id="@+id/reportsFragment"
             android:icon="@drawable/ic_reports"
-            android:title="Reports"></item>
+            android:title="@string/reports"></item>
         <item
-            android:id="@+id/nav_transactions"
+            android:id="@+id/transaction_statement"
             android:icon="@drawable/ic_transactions"
-            android:title="Transactions"></item>
+            android:title="@string/transactions"></item>
         <item
-            android:id="@+id/nav_settings"
+            android:id="@+id/settingFragment"
             android:icon="@drawable/ic_settings"
-            android:title="Settings"></item>
+            android:title="@string/settings"></item>
+        <item
+            android:id="@+id/cartFragment"
+            android:icon="@drawable/ic_shopping_cart"
+            android:title="@string/cart"></item>
     </group>
 </menu>

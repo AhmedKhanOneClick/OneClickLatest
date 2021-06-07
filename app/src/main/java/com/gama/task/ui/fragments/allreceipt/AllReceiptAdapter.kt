@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
 import com.gama.task.ui.fragments.cart.models.CartItem
 import kotlinx.android.synthetic.main.all_receipts_item.view.*
-import kotlinx.android.synthetic.main.cart_item.view.*
 
 class AllReceiptAdapter(private val allReceiptList: List<CartItem>, private val  onItemClickListener: OnItemClickListener) :RecyclerView.Adapter<AllReceiptAdapter.AllReceiptViewHolder>(){
 
@@ -25,9 +24,9 @@ class AllReceiptAdapter(private val allReceiptList: List<CartItem>, private val 
 
     override fun onBindViewHolder(holder: AllReceiptViewHolder, position: Int) {
         val currentItem = allReceiptList[position]
-       holder.cardImage.setImageResource(currentItem.text1)
+       holder.cardImage.setImageResource(currentItem.img_id)
        // holder.cardPrice.text = currentItem.text3
-       holder.cardName.text = currentItem.text4
+       holder.cardName.text = currentItem.Title
     }
 
     override fun getItemCount()=allReceiptList.size

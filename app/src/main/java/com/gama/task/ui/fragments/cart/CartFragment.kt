@@ -3,17 +3,13 @@ package com.gama.task.ui.fragments.cart
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gama.task.R
-import com.gama.task.ui.fragments.gamecards.nintendofragment.NintendAdapter
 import com.gama.task.ui.main.MainActivity
 import kotlinx.android.synthetic.main.fragment_cart.*
-import kotlinx.android.synthetic.main.fragment_game_card_nintend.*
 
 class CartFragment :Fragment(R.layout.fragment_cart),CartAdapter.OnItemClickListener {
-    var checkout=0
+    var checkout=0.00
     //var check_deleted=0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -23,7 +19,7 @@ class CartFragment :Fragment(R.layout.fragment_cart),CartAdapter.OnItemClickList
 
         for (item in iterator) {
 
-            checkout+=item.text2
+            checkout+=item.Price
         }
         cart_rv.adapter = CartAdapter(GlobalClass.globalCartList,this)
         cart_rv.layoutManager = LinearLayoutManager(context)
@@ -39,12 +35,12 @@ class CartFragment :Fragment(R.layout.fragment_cart),CartAdapter.OnItemClickList
 
 
       GlobalClass.globalCartList.removeAt(position)
-checkout=0
+checkout=0.00
        // val iterator = GlobalClass.globalCartList.listIterator()
 
         for (item in GlobalClass.globalCartList) {
 
-            checkout+=item.text2
+            checkout+=item.Price
         }
         cart_rv.adapter = CartAdapter(GlobalClass.globalCartList,this)
         cart_rv.layoutManager = LinearLayoutManager(context)

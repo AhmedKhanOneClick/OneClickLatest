@@ -28,7 +28,8 @@ class MobileDataAdapter(
     private val dataBindingComponent: DataBindingComponent,
     private val appExecutors: AppExecutors,
 
-    private val onHotelClicked: (Content,it: View) -> Unit
+    private val onHotelClicked: (Content,it: View) -> Unit,
+   // private val onCardlClicked: (Content) -> Unit
 ) : DataBoundListAdapter<Content, CardMobilyItemBinding>(
     appExecutors,
     object : DiffUtil.ItemCallback<Content>() {
@@ -59,6 +60,13 @@ class MobileDataAdapter(
 //            val model = ViewModelProvider(context).get(SharedViewModel::class.java)
 //            model1.sendfavourites(item)
             onHotelClicked(item,it)
+//            itemClick(layoutPosition)
+        }
+
+
+        binding.root.setOnClickListener {
+            onHotelClicked(item,it)
+//       onCardlClicked(item)
 //            itemClick(layoutPosition)
         }
     }

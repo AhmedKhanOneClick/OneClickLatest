@@ -59,7 +59,9 @@ open class MainActivity : LocaleAwareCompatActivity() {
 
         toggle.syncState()
 
-
+        open_cart_btn.setOnClickListener {
+            //findNavController(R.id.ma).navigate(R.id.cartFragment)
+        }
 
     }
 
