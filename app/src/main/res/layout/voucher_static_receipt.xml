@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
 
 
-    tools:context="com.gama.task.ui.fragments.drawrmenu.FragmentReceipt">
+    tools:context="com.gama.task.ui.fragments.sidemenu.FragmentReceipt">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"

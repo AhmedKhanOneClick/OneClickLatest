@@ -1,15 +1,11 @@
-package com.gama.task.ui.fragments.drawrmenu.transactionstable
+package com.gama.task.ui.fragments.sidemenu.transactionstable
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gama.task.R
-import com.gama.task.ui.fragments.drawrmenu.orderprinttable.OrderPrintAdapter
-import com.gama.task.ui.fragments.drawrmenu.orderprinttable.OrderPrintTableData
 //- import com.gama.task.ui.fragments.giftcards.tmmmtfragment.TmmmtFragmentDirections
-import kotlinx.android.synthetic.main.fragment_order_print.*
 import kotlinx.android.synthetic.main.fragment_transactions_tables.*
 
 class FragmentTransactionsTables:Fragment(R.layout.fragment_transactions_tables),TransactionsAdapter.OnItemClickListener {

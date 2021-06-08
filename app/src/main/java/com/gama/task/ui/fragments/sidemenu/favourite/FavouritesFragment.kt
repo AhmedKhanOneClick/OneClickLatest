@@ -1,4 +1,4 @@
-package com.gama.task.ui.fragments.drawrmenu.favourite
+package com.gama.task.ui.fragments.sidemenu.favourite
 
 import androidx.fragment.app.Fragment
 

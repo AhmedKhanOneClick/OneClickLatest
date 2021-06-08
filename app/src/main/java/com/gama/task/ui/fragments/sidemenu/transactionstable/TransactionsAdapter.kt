@@ -1,16 +1,11 @@
-package com.gama.task.ui.fragments.drawrmenu.transactionstable
+package com.gama.task.ui.fragments.sidemenu.transactionstable
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
-import com.gama.task.ui.fragments.drawrmenu.orderprinttable.OrderPrintAdapter
-import com.gama.task.ui.fragments.drawrmenu.orderprinttable.OrderPrintTableData
 import kotlinx.android.synthetic.main.table_item.view.*
-import kotlinx.android.synthetic.main.table_receipt_item.view.*
-import kotlinx.android.synthetic.main.table_receipt_item.view.amount
-import kotlinx.android.synthetic.main.table_receipt_item.view.date
 import kotlinx.android.synthetic.main.table_receipt_item.view.id_table
 
 class TransactionsAdapter(var transactionsList:ArrayList<TransactionTableData>,private val onItemClickListener: OnItemClickListener)

@@ -1,13 +1,10 @@
-package com.gama.task.ui.fragments.drawrmenu.orderprinttable
+package com.gama.task.ui.fragments.sidemenu.orderprinttable
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gama.task.R
-import com.gama.task.ui.fragments.voicedatacharg.gofragment.GoAdapter
 //- import kotlinx.android.synthetic.main.fragment_data_card_go.*
 import kotlinx.android.synthetic.main.fragment_order_print.*
 

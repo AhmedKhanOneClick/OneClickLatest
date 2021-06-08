@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context="com.gama.task.ui.fragments.drawrmenu.orderprinttable.FragmentOrderPrint"
+    tools:context="com.gama.task.ui.fragments.sidemenu.orderprinttable.FragmentOrderPrint"
     >
 
     <LinearLayout

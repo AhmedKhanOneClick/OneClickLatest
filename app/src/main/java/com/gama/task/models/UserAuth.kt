@@ -11,6 +11,7 @@ import io.realm.annotations.RealmClass
 @RealmClass
 open class UserAuth(
     @SerializedName("token") var token: String = "",
+    @SerializedName("id") var id: String = "",
 //    @SerializedName("expires_in") var expiresIn: Int = 0,
 //    @SerializedName("refresh_token") var refresh_token: String = "",
 //    @SerializedName("scope") var scope: String = "",

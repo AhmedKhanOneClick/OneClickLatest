@@ -1,9 +1,8 @@
-package com.gama.task.ui.fragments.drawrmenu
+package com.gama.task.ui.fragments.sidemenu
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import com.gama.task.R
 import kotlinx.android.synthetic.main.fragment_menu_reports.*
 

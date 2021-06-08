@@ -3,6 +3,8 @@ package com.gama.task.data.api
 import androidx.lifecycle.LiveData
 import com.gama.saudi2go.data.api.requests.LoginRequest
 import com.gama.task.models.*
+import com.gama.task.models.menumodel.profile.ProfileModel
+import retrofit2.Call
 import retrofit2.http.*
 
 /**
@@ -31,5 +33,9 @@ fun login(@FieldMap body: Map<String, String>): LiveData<ApiResponse<UserAuth1>>
     fun get_subcategories(@Path("id") id: String): LiveData<ApiResponse<Subcategories>>
     @GET("products?page=1&size=10&sort=updatedAt,desc")
     fun getAllproducts(@Query("categoryId") id: String,@Query("lng") lng: String): LiveData<ApiResponse<Products>>
+
+
+    @GET("users/me")
+    fun getUserLoggedInProfile(@Header("Authorization")authHeader:String): Call<ProfileModel>
 
 }

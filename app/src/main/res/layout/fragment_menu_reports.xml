@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="#D3DbEb"
     android:orientation="vertical"
-    tools:context="com.gama.task.ui.fragments.drawrmenu.ReportsFragment"
+    tools:context="com.gama.task.ui.fragments.sidemenu.ReportsFragment"
     >
 <TextView
     android:layout_width="wrap_content"

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import androidx.core.os.bundleOf
 import androidx.databinding.library.baseAdapters.BR
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 
 import com.gama.databinding_validation.validate

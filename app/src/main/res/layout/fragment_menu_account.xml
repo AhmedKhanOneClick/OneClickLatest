@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.gama.task.ui.fragments.drawrmenu.AccountFragmnet">
+    tools:context="com.gama.task.ui.fragments.sidemenu.AccountFragmnet">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -58,6 +58,7 @@
             android:layout_marginRight="@dimen/_10sdp">
 
             <TextView
+                android:id="@+id/account_balance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/_10sdp"
@@ -104,10 +105,12 @@
             android:text="@string/pos_id" />
 
         <TextView
+            android:id="@+id/account_pos_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_10sdp"
             android:lines="1"
+
             android:text="223434340"
             android:textSize="@dimen/_19sdp"
             android:textStyle="bold"
@@ -140,6 +143,7 @@
             android:text="@string/name_pos_user" />
 
         <TextView
+            android:id="@+id/account_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_10sdp"
@@ -168,6 +172,7 @@
             android:text="@string/bakala_name" />
 
         <TextView
+            android:id="@+id/account_shop_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_10sdp"
@@ -196,6 +201,7 @@
             android:text="@string/email" />
 
         <TextView
+            android:id="@+id/account_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_10sdp"
@@ -229,9 +235,10 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="@dimen/_10sdp"
             android:layout_marginTop="@dimen/_10sdp"
-            android:text="@string/name_pos_user" />
+            android:text="@string/phone" />
 
         <TextView
+            android:id="@+id/account_phone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/_10sdp"

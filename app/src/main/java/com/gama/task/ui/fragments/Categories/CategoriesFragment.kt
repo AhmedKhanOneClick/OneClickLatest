@@ -1,5 +1,7 @@
 package com.gama.task.ui.fragments.Categories
 
+import android.content.SharedPreferences
+import android.preference.PreferenceManager
 import androidx.core.os.bundleOf
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -34,7 +36,9 @@ class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCat
     override fun getLayoutRes() = R.layout.fragment_main_category
 
     override fun init() {
-        viewModel.updateRequest("en")
+        val sp: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+        var lang=sp.getString("lang",null)
+        viewModel.updateRequest(lang.toString())
         viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
 //init account list

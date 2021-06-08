@@ -1,12 +1,10 @@
-package com.gama.task.ui.fragments.drawrmenu.orderprinttable
+package com.gama.task.ui.fragments.sidemenu.orderprinttable
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
-import kotlinx.android.synthetic.main.fragment_order_print.view.*
 import kotlinx.android.synthetic.main.table_receipt_item.view.*
 
 class OrderPrintAdapter (var oderPrintList:ArrayList<OrderPrintTableData>,private val onItemClickListener: OnItemClickListener  ):RecyclerView.Adapter<OrderPrintAdapter.OrderPrinterViewHolder>(){

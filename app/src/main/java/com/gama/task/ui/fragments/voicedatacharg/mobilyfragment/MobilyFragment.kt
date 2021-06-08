@@ -3,6 +3,7 @@ package com.gama.task.ui.fragments.voicedatacharg.mobilyfragment
 import android.app.Activity
 import android.content.ContentValues
 import android.content.Intent
+import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import android.util.Log
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.ImageView
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
@@ -53,7 +55,10 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
 
     override fun init() {
         Log.d(TAG, "init: "+args.reqId)
-        viewModel.updateRequest(args.reqId,"en")
+        val sp: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+        var lang=sp.getString("lang",null)
+
+        viewModel.updateRequest(args.reqId,lang.toString())
 //        viewModel.updateRequest1("en")
         viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
@@ -144,6 +149,7 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
                         ,content.price
                         ,content.quantity
                         ,content.createdAt))
+                //ad id for the car 
 
                 if (!GlobalClass.globalCartList.isEmpty()){
                     (activity as MainActivity).observeCartCounter()

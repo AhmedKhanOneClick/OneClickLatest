@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
 
     android:orientation="vertical"
-    tools:context="com.gama.task.ui.fragments.drawrmenu.transactionstable.FragmentTransactionsTables"
+    tools:context="com.gama.task.ui.fragments.sidemenu.transactionstable.FragmentTransactionsTables"
     >
 
     <LinearLayout

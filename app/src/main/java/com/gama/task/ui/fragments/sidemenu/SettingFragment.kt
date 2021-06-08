@@ -1,12 +1,10 @@
-package com.gama.task.ui.fragments.drawrmenu
+package com.gama.task.ui.fragments.sidemenu
 
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.preference.PreferenceManager
-import android.util.Log
 import android.view.View
 import android.widget.RadioGroup
-import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.gama.task.R
