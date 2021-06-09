@@ -75,6 +75,7 @@
             android:layout_marginStart="@dimen/x12dp"
             android:layout_marginTop="@dimen/x22dp"
             android:layout_marginEnd="@dimen/x12dp"
+
             android:layout_marginBottom="@dimen/x32dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@id/tv_msg"

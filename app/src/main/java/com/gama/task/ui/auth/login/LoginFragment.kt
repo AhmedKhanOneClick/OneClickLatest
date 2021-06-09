@@ -37,8 +37,8 @@ class LoginFragment :
 
         initScrollChildToMathScreenSize()
         initSignIn()
-        initSignUp()
-        initForgetPass()
+        //initSignUp()
+        //initForgetPass()
     }
 
 
@@ -199,6 +199,7 @@ class LoginFragment :
     /**
      * init registerTxt click. open register screen on click.
      */
+    /*
     private fun initSignUp() {
         binding.btnRegister.setOnClickListener {
 //            findNavController().navigate(R.id.openRegister)
@@ -214,16 +215,18 @@ class LoginFragment :
         }
     }
 
+
+     */
     /**
      * when view draw on screen and not fill the screen add top margin to the footer
      * to make it align the screen bottom.
      */
     override fun onGlobalLayout() {
         if (binding.loginForm.height < binding.root.height) {
-            binding.imgFooter.layoutParams =
-                (binding.imgFooter.layoutParams as ViewGroup.MarginLayoutParams).apply {
-                    topMargin = binding.root.height - binding.loginForm.height
-                }
+          //  binding.imgFooter.layoutParams =
+            //    (binding.imgFooter.layoutParams as ViewGroup.MarginLayoutParams).apply {
+              //      topMargin = binding.root.height - binding.loginForm.height
+               // }
         }
 
         if (binding.loginForm.viewTreeObserver.isAlive)

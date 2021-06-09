@@ -26,15 +26,15 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/login_form"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
 
                 <ImageView
                     android:id="@+id/img_logo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/x34dp"
+                    android:layout_marginTop="@dimen/_50sdp"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/mobily_logo"
+                    android:src="@drawable/ic_oneclick_logo__on_white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -60,6 +60,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/email"
+                        android:layout_marginTop="@dimen/_80sdp"
                         android:text="test_admin@oneclick.com"
                         android:inputType="textEmailAddress"
                         validation:emptyErrorTxt="@{@string/error_empty_email}"
@@ -97,6 +98,7 @@
                     android:id="@+id/btn_login"
                     layout="@layout/button_gradient"
                     android:layout_width="0dp"
+
                     android:layout_height="@dimen/x50dp"
                     android:layout_marginStart="@dimen/x44dp"
                     android:layout_marginTop="@dimen/x49dp"
@@ -105,48 +107,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/et_password_container"
                     app:text="@{@string/sign_in}" />
-
-                <ImageView
-                    android:id="@+id/img_footer"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
-                    android:adjustViewBounds="true"
-                    android:fitsSystemWindows="false"
-                    android:src="@drawable/login_footer"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/btn_forget_pass" />
-
-
-                <Button
-                    android:id="@+id/btn_forget_pass"
-                    style="?borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/x10dp"
-                    android:layout_marginEnd="@dimen/x12dp"
-                    android:text="@string/forget_password"
-                    android:textAllCaps="false"
-                    android:textColor="@color/color_6e6e6e"
-                    android:textSize="@dimen/txt_small"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="@id/btn_login"
-                    app:layout_constraintTop_toBottomOf="@id/btn_login" />
-
-                <Button
-                    android:id="@+id/btn_register"
-                    style="?borderlessButtonStyle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/x24dp"
-                    android:text="@string/donot_haveacc"
-                    android:textAllCaps="false"
-                    android:textColor="@color/color_147eb0"
-                    android:textSize="@dimen/txt_small_plus"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/btn_forget_pass" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

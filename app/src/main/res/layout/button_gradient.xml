@@ -22,7 +22,7 @@
         style="@style/clickable_view_foreground"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@{(isEnabled ?? true)? @drawable/bg_button_gradient : @drawable/bg_button_gray}"
+        android:background="@drawable/bg_cart_counter_red"
         android:text="@{text}"
         android:textAllCaps="false"
         android:id="@+id/btn_gradient"

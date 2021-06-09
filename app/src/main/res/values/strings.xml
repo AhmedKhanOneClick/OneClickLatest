@@ -97,13 +97,11 @@
     <string name="sign_in">Sign In</string>
     <string name="ok">OK</string>
     <string name="phone">Phone</string>
-
-
-
-
-
-
-
+    <string name="login">Log In</string>
+    <string name="sorting">Sorting</string>
+    <string name="recently_added">Recently Added</string>
+    <string name="price_high_to_low">Price: High to Low</string>
+    <string name="price_low_to_high">Price: Low to High</string>
 
 
 </resources>
