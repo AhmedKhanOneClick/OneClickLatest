@@ -31,7 +31,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_160sdp"
-                android:background="@drawable/confirmation_back"
+                android:background="@drawable/card_back_friendi"
 
                 android:src="@drawable/credit_card"
                 android:padding="@dimen/_45sdp"
@@ -71,7 +71,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_160sdp"
-                android:background="@drawable/confirmation_back"
+                android:background="@drawable/card_back_friendi"
 
                 android:src="@drawable/wallet_"
                 android:padding="@dimen/_45sdp"

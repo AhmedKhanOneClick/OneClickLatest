@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2"
-
         android:layout_gravity="center_vertical"
         >
 
@@ -30,19 +29,15 @@
             >
 
             <ImageView
-
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_160sdp"
-                android:background="@drawable/confirmation_back"
-
-                android:src="@drawable/confirmation"
+                android:background="@drawable/card_back_friendi"
+                android:src="@drawable/card_back_friendi"
                 android:padding="@dimen/_45sdp"
-
                 />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
-
                 android:layout_gravity="center"
                 android:text="@string/confirm_checkout"
                 android:textStyle="bold"
@@ -54,7 +49,6 @@
                 android:textAlignment="center"
                 android:gravity="center"
                 android:layout_margin="@dimen/_5sdp"
-
                 />
 
 
@@ -70,17 +64,14 @@
             >
 
             <ImageView
-
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_160sdp"
-                android:background="@drawable/confirmation_back"
-
-                android:src="@drawable/shopping"
+                android:background="@drawable/card_back_friendi"
+                android:src="@drawable/shahid_vip"
                 android:padding="@dimen/_45sdp"
-
                 />
-            <TextView
 
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_gravity="center"
@@ -93,9 +84,7 @@
                 android:textColor="@android:color/black"
                 android:textAlignment="center"
                 android:gravity="center"
-
                 android:layout_margin="@dimen/_5sdp"
-
                 />
 
 
