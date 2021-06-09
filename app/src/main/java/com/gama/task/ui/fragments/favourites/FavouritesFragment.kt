@@ -1,19 +1,17 @@
 package com.gama.task.ui.fragments.favourites
 
+import android.annotation.SuppressLint
 import android.app.Activity
-import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
 import android.preference.PreferenceManager
 import android.util.Log
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
-import com.gama.task.data.repository.AuthRepository
-import com.gama.task.databinding.FragmentDataRechargMobilyBinding
 import com.gama.task.databinding.FragmentFavouritesBinding
 import com.gama.task.models.Content
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
@@ -23,8 +21,10 @@ import com.gama.task.ui.fragments.voicedatacharg.mobilyfragment.SharedViewModel
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
-import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.AndroidEntryPoint
+import java.util.*
 
 
 @AndroidEntryPoint
@@ -124,6 +124,7 @@ class FavouritesFragment (): BaseFragment<FavouritesViewModel, FragmentFavourite
 
 
 
+    @SuppressLint("NewApi")
     private fun initAccountList() {
 
         viewModel.returnwithsuccess.observe(viewLifecycleOwner, EventObserver {
@@ -134,7 +135,8 @@ class FavouritesFragment (): BaseFragment<FavouritesViewModel, FragmentFavourite
         }
 
 
-        favouritesAdapter = FavouritesAdapter(dataBindingComponent, appExecutors ) {
+        favouritesAdapter = FavouritesAdapter(dataBindingComponent, appExecutors) {
+
 //            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 //            model.sendfavourites(it)
 //                    findNavController().navigate(
@@ -167,66 +169,35 @@ class FavouritesFragment (): BaseFragment<FavouritesViewModel, FragmentFavourite
 
         binding.recyclerNotification.removeOnScrollListener(scrollListener)
         binding.recyclerNotification.addOnScrollListener(scrollListener)
-        val appSharedPrefs = PreferenceManager
-            .getDefaultSharedPreferences(context)
-        val gson = Gson()
-        val json = appSharedPrefs.getString("MyObject", "")
-        val obj = gson.fromJson(json, Content::class.java)
-         val _accountsList = MutableLiveData<MutableList<Content>?>(ArrayList())
-        _accountsList.value!!.add(obj)
-        _accountsList.value=_accountsList.value
-        _accountsList.observe(viewLifecycleOwner){
-            favouritesAdapter.submitList(it)
-            favouritesAdapter.notifyDataSetChanged()
-        }
-//        userrepositiry.getAllFavourites().apply {
-//            favouritesAdapter.submitList(it)
-//            favouritesAdapter.notifyDataSetChanged()
-//        }
+        val appSharedPrefs = requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
         val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-        model._accountsList.observe(viewLifecycleOwner) {
-//        viewModel.accountsList.observe(viewLifecycleOwner) {
 
-//it.sortByDescending { it.price }
+        val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
+        Log.d(TAG, "initAccountList: " + serializedObject.toString())
 
-            favouritesAdapter.submitList(it)
-            favouritesAdapter.notifyDataSetChanged()
+        if (!serializedObject.equals("")) {
+//            val gson = Gson()
+            val gson = GsonBuilder().serializeNulls().create()
 
+            val fromJson: List<Content> =
+                gson.fromJson(serializedObject, object : TypeToken<ArrayList<Content?>?>() {}.type)
+            Log.d(TAG, "initAccountList: "+fromJson.size)
+            model.sendfavourites2()
+            for ( i in 0..fromJson.size-1){
+
+                Log.d(TAG, "initAccountList: "+fromJson[i])
+                model.sendfavourites1(fromJson[i])
+            }
+            Log.d(TAG, "initAccountList: dfsf")
+            model._accountsList1.observe(viewLifecycleOwner){
+                favouritesAdapter.submitList(it)
+                favouritesAdapter.notifyDataSetChanged()
+            }
         }
 
-
     }
 
-    override fun onResume() {
-        Log.d(TAG, "sdfonResume:1 ")
-        super.onResume()
 
-        Log.d(TAG, "sdfonResume: ")
-    }
-
-    override fun onPause() {
-        Log.d(TAG, "sdfonPause: ")
-        super.onPause()
-        Log.d(TAG, "sdfonPause: 1")
-    }
-
-    override fun onStart() {
-        Log.d(TAG, "onStart: ")
-        super.onStart()
-        Log.d(TAG, "onStart:1 ")
-    }
-
-    override fun onStop() {
-        Log.d(TAG, "onStop: ")
-        super.onStop()
-        Log.d(TAG, "onStop:1 ")
-    }
-
-    override fun onDestroy() {
-        Log.d(TAG, "onDestroy: ")
-        super.onDestroy()
-        Log.d(TAG, "onDestroy: 1")
-    }
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         Log.d(TAG, "onActivityResult: 11324")
@@ -248,4 +219,5 @@ class FavouritesFragment (): BaseFragment<FavouritesViewModel, FragmentFavourite
         super.onAttachFragment(childFragment)
         Log.d(TAG, "onActivityResult: 1132455558798")
     }
+
 }

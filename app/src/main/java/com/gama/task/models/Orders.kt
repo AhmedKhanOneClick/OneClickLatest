@@ -9,50 +9,41 @@ import io.realm.annotations.RealmClass
 
 @Keep
 //@RealmClass
-open class Products (
+open class Orders (
 //        @SerializedName("accounts") val accounts: List<Accounts1>,
 
-    @SerializedName("data") val data: Data,
+    @SerializedName("data") val data: Data6,
 //    @SerializedName("data") val errors: List<Any>,
     @SerializedName("msg") val msg: String,
     @SerializedName("status") val status: Int
 ): IdentityGeneralResponse()
 @Keep
-data class Data(
-    @SerializedName("content") val content: List<Content>
+data class Data6(
+    @SerializedName("content") val content: List<Content6>
 //    ,
 //    @SerializedName("pageable") val pageable: Pageable
 ): IdentityGeneralResponse()
 @Keep
-//@RealmClass
-data class Content(
+
+data class Content6(
+
     @SerializedName("id") val id: String,
-    @SerializedName("nameEn") val nameEn: String,
-    @SerializedName("nameUr") val nameUr: String,
-    @SerializedName("nameAr") val nameAr: String,
+    @SerializedName("purchasedDate") val purchasedDate: Double,
+    @SerializedName("total") val total: Double,
+    @SerializedName("totalWithVAT") val totalWithVAT: Double,
+    @SerializedName("discount") val discount: Double,
+    @SerializedName("vat") val vat: Double,
+    @SerializedName("subTotal") val subTotal: Double,
+    @SerializedName("status") val status: String,
+    @SerializedName("vendorId") val vendorId: String,
+    @SerializedName("isDeleted") val isDeleted: Boolean,
 
-    @SerializedName("descriptionEn") val descriptionEn: String,
-    @SerializedName("descriptionUr") val descriptionUr: String,
-    @SerializedName("descriptionAr") val descriptionAr: String,
 
 
-    @SerializedName("price") val price: Double,
-    @SerializedName("defaultImageURL") val defaultImageURL: String,
-//    @SerializedName("data") val productCategory: ProductCategory,
-//    @SerializedName("data") val provider: Provider,
-//    @SerializedName("data") val providerId: String,
-    @SerializedName("quantity") val quantity: Int,
-     @SerializedName("createdAt") val createdAt: String,
-    @SerializedName("name") val name: String,
-    @SerializedName("description") val description: String,
-//    @SerializedName("data") val tags: Any,
-//    @SerializedName("data") val updatedAt: Long,
-//    @SerializedName("data") val weight: String
-) : RealmModel {
+    @SerializedName("createdAt") val createdAt: String,
+     @SerializedName("updatedAt") val updatedAt: String,
 
-    @PrimaryKey
-    var databaseID: Int = 2
-}
+) : IdentityGeneralResponse()
 //@Keep
 //data class Pageable(
 //    @SerializedName("data") val page: String,

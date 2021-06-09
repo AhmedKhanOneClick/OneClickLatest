@@ -2,57 +2,79 @@ package com.gama.task.models
 
 import androidx.annotation.Keep
 import com.google.gson.annotations.SerializedName
-import io.realm.RealmModel
-import io.realm.annotations.PrimaryKey
-import io.realm.annotations.RealmClass
+
 
 
 @Keep
-//@RealmClass
-open class Products (
+open class OrdersDetails (
 //        @SerializedName("accounts") val accounts: List<Accounts1>,
 
-    @SerializedName("data") val data: Data,
+    @SerializedName("data") val data: Data7,
 //    @SerializedName("data") val errors: List<Any>,
     @SerializedName("msg") val msg: String,
     @SerializedName("status") val status: Int
 ): IdentityGeneralResponse()
 @Keep
-data class Data(
-    @SerializedName("content") val content: List<Content>
+data class Data7(
+    @SerializedName("content") val content: Content7
 //    ,
 //    @SerializedName("pageable") val pageable: Pageable
 ): IdentityGeneralResponse()
 @Keep
-//@RealmClass
-data class Content(
+
+data class Content7(
+
     @SerializedName("id") val id: String,
-    @SerializedName("nameEn") val nameEn: String,
-    @SerializedName("nameUr") val nameUr: String,
-    @SerializedName("nameAr") val nameAr: String,
+    @SerializedName("purchasedDate") val purchasedDate: Double,
+    @SerializedName("total") val total: Double,
+    @SerializedName("totalWithVAT") val totalWithVAT: Double,
+    @SerializedName("discount") val discount: Double,
+    @SerializedName("vat") val vat: Double,
+    @SerializedName("subTotal") val subTotal: Double,
+    @SerializedName("status") val status: String,
+    @SerializedName("vendorId") val vendorId: String,
+    @SerializedName("isDeleted") val isDeleted: Boolean,
 
-    @SerializedName("descriptionEn") val descriptionEn: String,
-    @SerializedName("descriptionUr") val descriptionUr: String,
-    @SerializedName("descriptionAr") val descriptionAr: String,
 
 
+    @SerializedName("createdAt") val createdAt: String,
+     @SerializedName("updatedAt") val updatedAt: String,
+    @SerializedName("products") val products: List<Prodcut>,
+) : IdentityGeneralResponse()
+@Keep
+data class Prodcut(
+//    @SerializedName("data") val SKU: Any,
+//    @SerializedName("data") val brand: String,
+//    @SerializedName("data") val categoryId: String,
+//    @SerializedName("data") val cityId: Any,
+//    @SerializedName("data") val createdAt: Long,
+//    @SerializedName("data") val defaultImageURL: String,
+//    @SerializedName("data") val deletedAt: Any,
+//    @SerializedName("data") val descriptionAr: String,
+//    @SerializedName("data") val descriptionEn: String,
+//    @SerializedName("data") val descriptionUr: String,
+//    @SerializedName("data") val events: Any,
+//    @SerializedName("data") val gender: String,
+//    @SerializedName("data") val id: String,
+//    @SerializedName("data") val isActive: Boolean,
+//    @SerializedName("data") val isDeleted: Boolean,
+//    @SerializedName("data") val isFeatured: Boolean,
+//    @SerializedName("data") val keywords: Any,
+//    @SerializedName("data") val nameAr: String,
+//    @SerializedName("data") val nameEn: String,
+//    @SerializedName("data") val nameUr: String,
     @SerializedName("price") val price: Double,
-    @SerializedName("defaultImageURL") val defaultImageURL: String,
 //    @SerializedName("data") val productCategory: ProductCategory,
 //    @SerializedName("data") val provider: Provider,
 //    @SerializedName("data") val providerId: String,
-    @SerializedName("quantity") val quantity: Int,
-     @SerializedName("createdAt") val createdAt: String,
+    @SerializedName("quantity") val quantity: Double,
+    @SerializedName("createdAt") val createdAt: String,
     @SerializedName("name") val name: String,
-    @SerializedName("description") val description: String,
+
 //    @SerializedName("data") val tags: Any,
 //    @SerializedName("data") val updatedAt: Long,
 //    @SerializedName("data") val weight: String
-) : RealmModel {
-
-    @PrimaryKey
-    var databaseID: Int = 2
-}
+) : IdentityGeneralResponse()
 //@Keep
 //data class Pageable(
 //    @SerializedName("data") val page: String,

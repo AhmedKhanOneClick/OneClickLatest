@@ -26,7 +26,6 @@ class UserAuthDao @Inject constructor() {
     /**
      * delete the user.
      */
-
     fun deleteUserAuth() = delete<UserAuth>()
 
 
@@ -35,7 +34,7 @@ class UserAuthDao @Inject constructor() {
      */
     fun getUserToken() = getUserAuth()?.token
 
-    //fun getUserId() = getUserId()?.id
+    fun getUserId() = getUserAuth()?.profile?.id
 
 
     /**

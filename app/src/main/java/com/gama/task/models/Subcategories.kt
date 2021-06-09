@@ -7,14 +7,25 @@ import com.google.gson.annotations.SerializedName
 @Keep
 data  class Subcategories(
 //        @SerializedName("accounts") val accounts: List<Accounts1>,
-
+    @SerializedName("msg") val msg: String,
     @SerializedName("data") val data: Data2,
 //    @SerializedName("data") val errors: List<Any>,
-    @SerializedName("msg") val msg: String,
+
     @SerializedName("status") val status: Int
 ): IdentityGeneralResponse()
 @Keep
 data class Data2(
+//    @SerializedName("id") val id: String,
+//    @SerializedName("nameEn") val nameEn: String,
+//    @SerializedName("nameUr") val nameUr: String,
+//    @SerializedName("nameAr") val nameAr: String,
+//
+//    @SerializedName("descriptionEn") val descriptionEn: String,
+//    @SerializedName("descriptionUr") val descriptionUr: String,
+//    @SerializedName("descriptionAr") val descriptionAr: String,
+//    @SerializedName("imageURL") val imageURL: String,
+//    @SerializedName("name") val name: String,
+//    @SerializedName("description") val description: String
     @SerializedName("subcategories") val subcategories: List<Content2>
 //    ,
 //    @SerializedName("pageable") val pageable: Pageable

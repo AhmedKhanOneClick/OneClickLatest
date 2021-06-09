@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="java.util.concurrent.TimeUnit" />
+        <import type="androidx.lifecycle.LiveData" />
+
+        <import type="androidx.lifecycle.MutableLiveData" />
+        <variable
+            name="requests1"
+            type="com.gama.task.models.Content7" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:background="#08000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingClass">
+<LinearLayout
+    android:background="#E6EBF5"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/transaction_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Transaction ID / 523646"></TextView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/x2dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+
+
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/account_card">
+
+
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="#6A7995"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{requests1.createdAt}"
+                android:textColor="#444343"
+                android:textSize="30dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/account_card">
+
+
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Name"
+                android:textColor="#6A7995"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{requests1.products.get(0).name}"
+                android:textColor="#444343"
+                android:textSize="30dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/account_card">
+
+
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Main Category"
+                android:textColor="#6A7995"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{requests1.products.get(0).name}"
+                android:textColor="#444343"
+                android:textSize="30dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/account_card">
+
+
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Statues"
+                android:textColor="#6A7995"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/statues"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{requests1.status}"
+                android:textColor="#444343"
+                android:textSize="30dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/account_card">
+
+
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:textColor="#6A7995"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(requests1.total)}"
+                android:textColor="#444343"
+                android:textSize="30dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/account_card">
+
+
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Amount"
+                android:textColor="#6A7995"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(requests1.subTotal)}"
+                android:textColor="#444343"
+                android:textSize="30dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/account_card">
+
+
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Made Of Transactions"
+                android:textColor="#6A7995"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{String.valueOf(requests1.total)}"
+                android:textColor="#444343"
+                android:textSize="30dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+    <com.google.android.material.card.MaterialCardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@android:color/transparent"
+
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="left"
+            android:gravity="left"
+            android:background="@drawable/account_card">
+
+
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card Details"
+                android:textColor="#6A7995"
+                android:textSize="30sp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:id="@+id/card_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{requests1.createdAt}"
+                android:textColor="#444343"
+                android:textSize="30dp"
+                android:textStyle="bold"
+
+                tools:ignore="MissingConstraints" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+</LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </layout>

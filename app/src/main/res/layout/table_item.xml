@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="java.util.concurrent.TimeUnit" />
+        <import type="androidx.lifecycle.LiveData" />
+
+        <import type="androidx.lifecycle.MutableLiveData" />
+        <variable
+            name="notification"
+            type="com.gama.task.models.Content6" />
+    </data>
+<LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="@dimen/_32sdp"
-    android:layout_marginRight="@dimen/_20sdp"
-    android:layout_marginLeft="@dimen/_20sdp"
+    android:layout_height="@dimen/_70sdp"
+    android:layout_marginRight="@dimen/_11sdp"
+    android:layout_marginLeft="@dimen/_11sdp"
     android:orientation="vertical"
-    android:layout_marginTop="@dimen/_2sdp"
-    android:weightSum="2"
+    android:layout_marginTop="1dp"
+
     >
 <LinearLayout
+    android:layout_marginTop=".5dp"
+    android:background="@drawable/table_bg"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -25,12 +42,13 @@
         android:orientation="horizontal">
 
         <TextView
+            android:padding="1dp"
             android:id="@+id/id_table"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/id">
+            android:text="@{notification.id}">
 
         </TextView>
 
@@ -48,12 +66,13 @@
         android:orientation="horizontal">
 
         <TextView
+            android:padding="1dp"
             android:id="@+id/date_"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/date">
+            android:text="@{notification.createdAt}">
 
         </TextView>
 
@@ -75,7 +94,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="@string/amount">
+            android:text="@{String.valueOf(notification.total)}">
 
         </TextView>
 
@@ -101,7 +120,7 @@
             android:textStyle="bold"
             android:gravity="center"
             android:textColor="#43A047"
-            android:text="@string/statues">
+            android:text="@{notification.status}">
 
         </TextView>
 
@@ -121,11 +140,11 @@
         <TextView
             android:id="@+id/table_details_"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-                android:background="@drawable/back_details"
+            android:background="@drawable/back_details"
             android:gravity="center"
-
+android:layout_gravity="center"
             android:textSize="@dimen/_8sdp"
             android:textStyle="bold"
             android:paddingLeft="16dp"
@@ -136,9 +155,6 @@
 
     </LinearLayout>
 </LinearLayout>
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/_2sdp"
-        android:layout_weight="1"
-       android:background="@drawable/line_h"/>
+
 </LinearLayout>
+</layout>
