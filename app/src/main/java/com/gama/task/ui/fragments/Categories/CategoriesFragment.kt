@@ -3,6 +3,7 @@ package com.gama.task.ui.fragments.Categories
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import androidx.core.os.bundleOf
+import androidx.lifecycle.observe
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager

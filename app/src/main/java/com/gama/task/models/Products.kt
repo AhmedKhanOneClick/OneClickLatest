@@ -10,12 +10,12 @@ import io.realm.annotations.RealmClass
 @Keep
 //@RealmClass
 open class Products (
-//        @SerializedName("accounts") val accounts: List<Accounts1>,
+                     //@SerializedName("accounts") val accounts: List<Accounts1>,
 
-    @SerializedName("data") val data: Data,
+@SerializedName("data") val data: Data,
 //    @SerializedName("data") val errors: List<Any>,
-    @SerializedName("msg") val msg: String,
-    @SerializedName("status") val status: Int
+@SerializedName("msg") val msg: String,
+@SerializedName("status") val status: Int
 ): IdentityGeneralResponse()
 @Keep
 data class Data(
@@ -41,10 +41,11 @@ data class Content(
 //    @SerializedName("data") val productCategory: ProductCategory,
 //    @SerializedName("data") val provider: Provider,
 //    @SerializedName("data") val providerId: String,
-    @SerializedName("quantity") val quantity: Int,
-     @SerializedName("createdAt") val createdAt: String,
+    @SerializedName("quantity") val quantity: Double,
+    @SerializedName("createdAt") val createdAt: String,
     @SerializedName("name") val name: String,
     @SerializedName("description") val description: String,
+
 //    @SerializedName("data") val tags: Any,
 //    @SerializedName("data") val updatedAt: Long,
 //    @SerializedName("data") val weight: String

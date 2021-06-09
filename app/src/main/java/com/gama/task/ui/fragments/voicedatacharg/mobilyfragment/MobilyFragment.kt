@@ -9,6 +9,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
@@ -20,6 +21,9 @@ import com.gama.task.models.Content
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment.Companion.TAG
 import com.gama.task.ui.base.BaseFragment
+import com.gama.task.ui.fragments.cart.GlobalClass
+import com.gama.task.ui.fragments.cart.models.CartItem
+import com.gama.task.ui.main.MainActivity
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
@@ -138,8 +142,27 @@ lateinit var  arrayItems: ArrayList<Content>
 
 
         mobileDataAdapter = MobileDataAdapter(dataBindingComponent, appExecutors) { content: Content, view: View ->
-            if(view.id==R.id.favourites){
+            if  (view .id==R.id.favourites ){
 
+                Log.e("click","favourites")
+                view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
+
+            }else{
+
+                GlobalClass.globalCartList.add(
+                    CartItem(R.drawable.facebook
+                        ,content.price
+                        ,content.quantity.toInt()
+                        ,content.createdAt)
+                )
+                //ad id for the car
+
+                if (!GlobalClass.globalCartList.isEmpty()){
+                    (activity as MainActivity).observeCartCounter()
+                    val action=MobilyFragmentDirections.actionMobilyFragmentToBottomSheetCheckOut()
+                    findNavController().navigate(action)
+                    // findNavController().navigate(MobilyFragmentDirections.action_MobilyFragment_to_bottomSheetCheckOut())
+                }
             }
 //view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
 //            binding.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
@@ -170,14 +193,14 @@ lateinit var  arrayItems: ArrayList<Content>
                     val json = gson.toJson(fromJson)
                     prefsEditor.putString("MyObject", json)
                     prefsEditor.commit()
-                    view.favourites.setImageDrawable(resources.getDrawable(R.drawable.favourites))
+                    view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
                 }else{
                     arrayItems.add(content)
                     fromJson=arrayItems
                     val json = gson.toJson(fromJson)
                     prefsEditor.putString("MyObject", json)
                     prefsEditor.commit()
-                    view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
+                    view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
                 }
 
             }else{
@@ -195,7 +218,7 @@ lateinit var  arrayItems: ArrayList<Content>
                 val json = gson.toJson(fromJson1)
                 prefsEditor.putString("MyObject", json)
                 prefsEditor.commit()
-                view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
+                view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
             }
 //            val json = gson.toJson(data)
 //            prefsEditor.putString("MyObject", json)

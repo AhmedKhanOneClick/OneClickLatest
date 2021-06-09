@@ -29,7 +29,7 @@ android:layout_margin="@dimen/_5sdp">
         android:layout_width="match_parent"
         android:layout_height="@dimen/_140sdp"
         android:orientation="vertical"
-        android:background="@drawable/card_back_virgin"
+
         android:layout_margin="@dimen/_2sdp">
 <RelativeLayout
     android:layout_width="match_parent"
@@ -39,26 +39,27 @@ android:layout_margin="@dimen/_5sdp">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:image="@{notification.createdAt}"
-        android:src="@drawable/favourites">
+        android:src="@drawable/favourites"
+        android:translationZ="90dp"
+        >
 
     </ImageView>
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_categoryCard"
-        android:adjustViewBounds="true"
-        android:layout_width="@dimen/_50sdp"
-        android:layout_height="@dimen/_50sdp"
-        app:imageUrl="@{`http://143.198.117.2:8080/api/files/` +notification.defaultImageURL}"
-        android:layout_marginTop="@dimen/_28sdp"
-        android:layout_marginLeft="@dimen/_28sdp"
-        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:padding="@dimen/x20dp"
 
-        app:placeHolder="@{@drawable/mobily_logo}"
-        tools:src="@drawable/mobily_logo"
+        android:adjustViewBounds="true"
+
+        app:imageUrl="@{`http://143.198.117.2:8080/api/files/` +notification.defaultImageURL}"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:placeHolder="@{@drawable/mobily_logo}"
+        />
 
 </RelativeLayout>
 

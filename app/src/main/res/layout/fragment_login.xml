@@ -30,11 +30,11 @@
 
                 <ImageView
                     android:id="@+id/img_logo"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/x34dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_110sdp"
+                   android:layout_margin="@dimen/_35sdp"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/mobily_logo"
+                    android:src="@drawable/ic_oneclick_logo__on_white"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -113,12 +113,13 @@
                     android:layout_gravity="bottom"
                     android:adjustViewBounds="true"
                     android:fitsSystemWindows="false"
-                    android:src="@drawable/login_footer"
+
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toTopOf="@id/btn_forget_pass" />
 
 
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/btn_forget_pass"
                     style="?borderlessButtonStyle"
                     android:layout_width="wrap_content"
@@ -134,6 +135,7 @@
                     app:layout_constraintTop_toBottomOf="@id/btn_login" />
 
                 <Button
+                    android:visibility="gone"
                     android:id="@+id/btn_register"
                     style="?borderlessButtonStyle"
                     android:layout_width="wrap_content"
