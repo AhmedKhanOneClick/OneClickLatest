@@ -35,15 +35,15 @@
                     android:adjustViewBounds="true"
                     android:layout_width="@dimen/_65sdp"
                     android:layout_height="@dimen/_65sdp"
-                     app:imageUrl="@{categories.imageURL}"
-                    android:layout_marginTop="@dimen/_28sdp"
-                    android:layout_marginLeft="@dimen/_28sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    android:background="@drawable/bg_category_card_circule"
-                    android:padding="@dimen/x20dp"
-
+                    app:imageUrl="@{categories.imageURL}"
                     app:placeHolder="@{@drawable/ic_gift_card}"
-                    tools:src="@drawable/ic_gift_card"
+
+                    android:layout_marginTop="@dimen/_28sdp"
+                   android:layout_marginStart="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:background="@drawable/bg_category_card_circule"
+                    android:padding="@dimen/_13sdp"
+                    android:src="@drawable/ic_gift_card"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
@@ -63,8 +63,9 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/_29sdp"
                     android:gravity="center"
-                    android:textAlignment="center"
                     android:text="@{categories.name}"
+                    android:textAlignment="center"
+
                     android:textColor="@android:color/black"
                     android:textSize="@dimen/_18sdp"
                     android:textStyle="bold"
@@ -78,6 +79,7 @@
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:lines="2"
                     android:text="@{categories.description}"
+
                     android:textAlignment="viewStart"
                     android:textColor="@color/fontColorCardDes"
                     android:textSize="@dimen/txt_small"
@@ -99,5 +101,8 @@
 
             android:background="@drawable/ic_bg_category_line" />
     </LinearLayout>
+
+
+
 
 </layout>
