@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="java.util.concurrent.TimeUnit" />
+
+        <import type="androidx.lifecycle.LiveData" />
+
+        <import type="androidx.lifecycle.MutableLiveData" />
+
+        <variable
+            name="requests1"
+            type="com.gama.task.models.MobileData" />
+    </data>
+<LinearLayout
+    android:background="#E6EBF5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+    >
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="createOrder"
+    android:visibility="gone"
+    android:id="@+id/create"></Button>
+    <LinearLayout
+
+
+       android:background="@drawable/btn_rounded_grey"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:weightSum="5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:text="id">
+
+            </TextView>
+
+            <View
+                android:layout_width="4dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line_v"></View>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/date">
+
+            </TextView>
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line_v"></View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/amount">
+
+            </TextView>
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line_v"></View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="statues">
+
+            </TextView>
+
+            <View
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/line_v"></View>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/_9sdp"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:text="@string/details"/>
+
+
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:backgroundTint="#E6EBF5"
+        android:background="#E6EBF5"
+
+        android:layout_marginBottom="5dp"
+        android:clipToPadding="false"
+        android:paddingStart="@dimen/x10dp"
+        android:paddingTop="@dimen/x4dp"
+        android:paddingEnd="@dimen/x10dp"
+        android:paddingBottom="230dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+
+
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="-160dp"
+
+        tools:ignore="MissingConstraints"
+
+
+
+
+        android:id="@+id/rv_menu_oder_detailes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:divider="@color/transparent"
+        android:dividerHeight="0dp"
+
+        tools:listitem="@layout/table_item" />
+</LinearLayout>
+</layout>

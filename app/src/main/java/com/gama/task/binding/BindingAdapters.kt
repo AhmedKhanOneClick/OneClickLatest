@@ -1,18 +1,26 @@
 package com.gama.task.binding
 
 import android.annotation.SuppressLint
+import android.content.ContentValues
+import android.content.Context
 import android.graphics.Typeface
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.widget.doOnTextChanged
 import androidx.databinding.BindingAdapter
+import com.gama.task.models.Content
+import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
 import com.gama.task.util.extensions.getDrawableCompat
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.slider.RangeSlider
 import com.google.android.material.textfield.TextInputLayout
+import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
 import java.text.SimpleDateFormat
+import java.util.*
 
 
 object BindingAdapters {
@@ -380,6 +388,55 @@ object BindingAdapters {
 
         setImageDrawable(context.getDrawableCompat(resourceId))
     }
+    @JvmStatic
+    @BindingAdapter("image")
+    fun ImageView.setdatetime(image: String?) {
+ var  resourceId=0
+        if (image == null)
+            return
+        val appSharedPrefs = context.getSharedPreferences("pref", Context.MODE_PRIVATE)
+        val prefsEditor = appSharedPrefs.edit()
+//            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
+        val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
+        Log.d(DepartmentFragment.TAG, "initAccountList: " + serializedObject.toString())
+
+        if (!serializedObject.equals("")) {
+            Log.d(DepartmentFragment.TAG, "initAccountList:sdfj ")
+            val gson = GsonBuilder().serializeNulls().create()
+
+            var fromJson: List<Content> =
+                gson.fromJson(
+                    serializedObject,
+                    object : TypeToken<ArrayList<Content?>?>() {}.type
+                )
+            Log.d(DepartmentFragment.TAG, "initAccountList: " + fromJson.size)
+            var arrayItems: ArrayList<Content>
+            arrayItems= arrayListOf()
+
+            arrayItems= fromJson as ArrayList<Content>
+  for(i in 0..arrayItems.size-1){
+      if(arrayItems[i].createdAt.equals(image)){
+           resourceId = context.resources.getIdentifier(
+              "amazon",
+              "drawable",
+              context.packageName
+          )
+      }
+  }
+        }else{
+            resourceId = context.resources.getIdentifier(
+                "favourites",
+                "drawable",
+                context.packageName
+            )
+        }
+
+
+        if (resourceId == 0)
+            return
+
+        setImageDrawable(context.getDrawableCompat(resourceId))
+    }
 
 }

@@ -8,6 +8,9 @@
         <variable
             name="subcategories"
             type="com.gama.task.models.Content2" />
+<!--        <variable-->
+<!--            name="subcategories"-->
+<!--            type="com.gama.task.models.Data2" />-->
     </data>
 
     <LinearLayout
@@ -25,8 +28,8 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-            app:imageUrl="@{subcategories.imageURL}"
-            android:background="@drawable/bg_category_card_circule"
+            app:imageUrl="@{`http://143.198.117.2:8080/api/files/` +subcategories.imageURL}"
+
             android:padding="@dimen/x20dp"
 
             app:placeHolder="@{@drawable/ic_gift_card}"
@@ -37,7 +40,7 @@
     android:layout_height="wrap_content"
     android:text="@{subcategories.name}"
     android:layout_marginTop="15dp"
-    android:textSize="25dp"
+    android:textSize="20dp"
     android:textStyle="bold"></TextView>
     </LinearLayout>
 

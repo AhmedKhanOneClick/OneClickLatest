@@ -181,6 +181,51 @@
         android:label="fragment_favourite"
         tools:layout="@layout/fragment_favourites" />
     <fragment
+        android:id="@+id/getreports"
+        android:name="com.gama.task.ui.fragments.reports.ReportsFragment"
+        android:label="fragment_get_reports"
+        tools:layout="@layout/reports" >
+        <action
+            android:id="@+id/getreportsfragment"
+            app:destination="@id/getorders"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right">
+
+
+
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/getorders"
+        android:name="com.gama.task.ui.fragments.orders.OrdersFragment"
+        android:label="fragment_gift_card"
+        tools:layout="@layout/fragment_transactions_tables" >
+        <action
+            android:id="@+id/getorderdetails"
+            app:destination="@id/orderdetails"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right">
+
+
+            <argument
+                android:name="req_id"
+                app:argType="string" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/orderdetails"
+        android:name="com.gama.task.ui.fragments.orders.detailsorder.OrderDetailsFragment"
+        android:label="transaction_ Details"
+        tools:layout="@layout/transaction_id" >
+        <argument
+            android:name="req_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
         android:id="@+id/MobilyvoiceFragment"
         android:name="com.gama.task.ui.fragments.voicerecharge.mobilyfragment.MobilyVoiceFragment"
         android:label="fragment_mobily"

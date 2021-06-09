@@ -2,11 +2,11 @@ package com.gama.task.ui.fragments.voicedatacharg.mobilyfragment
 
 import android.app.Activity
 import android.content.ContentValues
+import android.content.Context
 import android.content.Intent
 import android.preference.PreferenceManager
 import android.util.Log
 import android.view.View
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -20,11 +20,12 @@ import com.gama.task.models.Content
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment.Companion.TAG
 import com.gama.task.ui.base.BaseFragment
-import com.gama.task.ui.fragments.subcategories.SubcategoriesFragmentArgs
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
 import com.google.gson.Gson
+import com.google.gson.GsonBuilder
+import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.card_mobily_item.view.*
 
@@ -35,7 +36,7 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
 ),DepartmentFragment.Communicator {
 //    Fragment
 //}(R.layout.fragment_data_recharg_mobily)
-
+lateinit var  arrayItems: ArrayList<Content>
     private val args by navArgs<MobilyFragmentArgs>()
     var x:Int=1
     private var mobileDataAdapter by autoCleared<MobileDataAdapter>()
@@ -48,8 +49,9 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
     override fun getLayoutRes() = R.layout.fragment_data_recharg_mobily
 
     override fun init() {
-        Log.d(TAG, "init: "+args.reqId)
-        viewModel.updateRequest(args.reqId,"en")
+        arrayItems= arrayListOf()
+        Log.d(TAG, "init: " + args.reqId)
+        viewModel.updateRequest(args.reqId, "en")
 //        viewModel.updateRequest1("en")
         viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
@@ -57,6 +59,15 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
         initAccountList()
 
         binding.fav.setOnClickListener {
+            val appSharedPrefs = PreferenceManager
+                .getDefaultSharedPreferences(context)
+            val prefsEditor = appSharedPrefs.edit()
+
+                val gson = Gson()
+            val json = gson.toJson(arrayItems)
+////                set.addAll(content)
+                prefsEditor.putString("MyObject", json)
+                prefsEditor.commit()
             findNavController().navigate(
                 R.id.action_favouritefragment
             )
@@ -81,7 +92,7 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
         }
         val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
         model.message.observe(viewLifecycleOwner) {
-            Log.d(ContentValues.TAG, "init: "+it.toString())
+            Log.d(ContentValues.TAG, "init: " + it.toString())
             viewModel.accountsList.observe(viewLifecycleOwner) {
 
 //                it.sortByDescending { it.createdAt }
@@ -92,7 +103,7 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
         }
 
         model.asc.observe(viewLifecycleOwner) {
-            Log.d(ContentValues.TAG, "init: "+it.toString())
+            Log.d(ContentValues.TAG, "init: " + it.toString())
             viewModel.accountsList.observe(viewLifecycleOwner) {
 
                 it.sortBy { it.price }
@@ -103,7 +114,7 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
         }
 
         model.desc.observe(viewLifecycleOwner) {
-            Log.d(ContentValues.TAG, "init: "+it.toString())
+            Log.d(ContentValues.TAG, "init: " + it.toString())
             viewModel.accountsList.observe(viewLifecycleOwner) {
 
                 it.sortByDescending { it.price }
@@ -126,19 +137,70 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
         }
 
 
-        mobileDataAdapter = MobileDataAdapter(dataBindingComponent, appExecutors ) { content: Content, view: View ->
-view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
+        mobileDataAdapter = MobileDataAdapter(dataBindingComponent, appExecutors) { content: Content, view: View ->
+            if(view.id==R.id.favourites){
+
+            }
+//view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
 //            binding.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
             val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-            model.sendfavourites(content)
-//viewModel.sendfavourites(content)
-            val appSharedPrefs = PreferenceManager
-                .getDefaultSharedPreferences(context)
+      val appSharedPrefs = requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
             val prefsEditor = appSharedPrefs.edit()
-            val gson = Gson()
-            val json = gson.toJson(content)
-            prefsEditor.putString("MyObject", json)
-            prefsEditor.commit()
+            val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
+            Log.d(TAG, "initAccountList: " + serializedObject.toString())
+
+            if (!serializedObject.equals("")) {
+                Log.d(TAG, "initAccountList:sdfj ")
+                val gson = GsonBuilder().serializeNulls().create()
+
+                var fromJson: List<Content> =
+                    gson.fromJson(
+                        serializedObject,
+                        object : TypeToken<java.util.ArrayList<Content?>?>() {}.type
+                    )
+                Log.d(TAG, "initAccountList: " + fromJson.size)
+                var arrayItems: ArrayList<Content>
+                arrayItems= arrayListOf()
+
+                arrayItems= fromJson as ArrayList<Content>
+                if(arrayItems.contains(content)){
+
+                    arrayItems.remove(content)
+                    fromJson=arrayItems
+                    val json = gson.toJson(fromJson)
+                    prefsEditor.putString("MyObject", json)
+                    prefsEditor.commit()
+                    view.favourites.setImageDrawable(resources.getDrawable(R.drawable.favourites))
+                }else{
+                    arrayItems.add(content)
+                    fromJson=arrayItems
+                    val json = gson.toJson(fromJson)
+                    prefsEditor.putString("MyObject", json)
+                    prefsEditor.commit()
+                    view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
+                }
+
+            }else{
+                val arrayItems: ArrayList<Content>
+                arrayItems= arrayListOf()
+                Log.d(TAG, "initAccountList:sdfs ")
+                val gson = GsonBuilder().serializeNulls().create()
+                arrayItems.add(content)
+//                arrayItems.add(content)
+//                val gson = GsonBuilder().serializeNulls().create()
+
+                var fromJson1: List<Content>
+                fromJson1=arrayItems
+
+                val json = gson.toJson(fromJson1)
+                prefsEditor.putString("MyObject", json)
+                prefsEditor.commit()
+                view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
+            }
+//            val json = gson.toJson(data)
+//            prefsEditor.putString("MyObject", json)
+//            prefsEditor.commit()
+
 //                    findNavController().navigate(
 //                        R.id.hotelsListFragment,
 //                        bundleOf(
@@ -181,6 +243,10 @@ view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
 
 
     }
+
+
+
+
 
     override fun onResume() {
         Log.d(TAG, "sdfonResume:1 ")
@@ -233,4 +299,5 @@ view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
         super.onAttachFragment(childFragment)
         Log.d(TAG, "onActivityResult: 1132455558798")
     }
+   
 }

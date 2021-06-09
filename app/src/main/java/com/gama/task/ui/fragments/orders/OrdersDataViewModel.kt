@@ -1,4 +1,4 @@
-package com.gama.task.ui.fragments.subcategories
+package com.gama.task.ui.fragments.orders
 
 import android.util.Log
 import androidx.hilt.lifecycle.ViewModelInject
@@ -6,30 +6,30 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.switchMap
+import com.gama.saudi2go.data.db.UserAuthDao
+import com.gama.task.data.repository.AuthRepository
 import com.gama.task.data.repository.GeneralListsRepository
 import com.gama.task.models.*
+import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment.Companion.TAG
 
 import com.gama.task.util.Event
 
 /**
  * perform business logic and store ui states for [AccountListFragment].
  */
-class SubcategoriesDataViewModel @ViewModelInject constructor(
+class OrdersDataViewModel @ViewModelInject constructor(
     private val generalListsRepository: GeneralListsRepository
+  , private val userAuthDao: UserAuthDao
 ) : ViewModel() {
 
-
     public val request_type = MutableLiveData<String>()
-    public val language = MutableLiveData<String>()
 
+    private val _departments = MutableLiveData<Order>()
+    val departments = _departments as LiveData<Order>
 
-    fun updateRequest(id: String,lng: String) {
-        if (request_type.value != id) {
+    fun updateRequest(id: String) {
+        if (request_type.value != id)
             request_type.value = id
-        }
-        if(language.value!=lng){
-            language.value=lng
-        }
         Log.d("initHotelsAndTra", "initHotelsAndTransportation91: ")
 
     }
@@ -38,22 +38,14 @@ class SubcategoriesDataViewModel @ViewModelInject constructor(
     /**
      * The list of Accounts in the current page.
      */
-    private val _accountsList = MutableLiveData<MutableList<Content2>?>(ArrayList())
+    private val _accountsList = MutableLiveData<MutableList<Content6>?>(ArrayList())
 
     /**
      * Immutable version of [_accountList].
      */
-    val accountsList = _accountsList as LiveData<MutableList<Content2>>
+    val accountsList = _accountsList as LiveData<MutableList<Content6>>
 
-    /**
-     * The list of Accounts in the current page.
-     */
-//    private val _accountsList = MutableLiveData<MutableList<Data2>?>(ArrayList())
-//
-//    /**
-//     * Immutable version of [_accountList].
-//     */
-//    val accountsList = _accountsList as LiveData<MutableList<Data2>>
+
     //result of total of list
     private val _navigatewithresult = MutableLiveData<String>()
 
@@ -88,22 +80,42 @@ class SubcategoriesDataViewModel @ViewModelInject constructor(
 
     }
 
-//Get All Accounts
-    val allcontacts=language.switchMap {generalListsRepository.getAllSubCategoriesdata(request_type.value!!.toString(),language.value!!.toString())}.apply {
+    //Get All Accounts
+    val allcontacts=request_type.switchMap {generalListsRepository.getAllOrdersdata(request_type.value!!.toString())}.apply {
         observeForever {
 
             if (it.data != null) {
-            Log.d("fetchContacts", "fetchContacts: "+it.data.data)
+                Log.d("fetchContacts", "fetchContacts: "+it.data.data)
 
-_navigatewithresult.postValue("")
+                _navigatewithresult.postValue("")
                 _accountsList.value =
-//                    _accountsList.value!!.apply { addAll(listOf(it.data.data)) }
-                _accountsList.value!!.apply { addAll(it.data.data.subcategories) }
-        }
+                    _accountsList.value!!.apply { addAll(it.data.data.content) }
+            }
         }
     }
 
 
+    fun accept_statues1()=
 
+        generalListsRepository.createOrder(departments.value!!)
+            .apply {
+                observeForever {
+                    if(it.status==Status.SUCCESS){
+                        Log.d(TAG, "accept_statues: "+it)
+                    }else{
+                        Log.d(TAG, "accept_statues: error"+it.message+" "+it.status+" "+it.code+" "+it.message)
+                    }
 
+                }
+            }
+
+//    fun initHotelSearchRequest1() = Order(
+//departments.value
+//
+//    )
+    fun addDepts(depts:Order){
+        _departments.value=depts
+
+    }
+    fun getvendorid():String= userAuthDao.getUserId().toString()
 }

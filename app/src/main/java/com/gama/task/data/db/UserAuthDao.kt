@@ -34,6 +34,8 @@ class UserAuthDao @Inject constructor() {
      */
     fun getUserToken() = getUserAuth()?.token
 
+    fun getUserId() = getUserAuth()?.profile?.id
+
 
     /**
      * get the user token type

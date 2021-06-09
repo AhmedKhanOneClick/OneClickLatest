@@ -28,8 +28,14 @@ fun login(@FieldMap body: Map<String, String>): LiveData<ApiResponse<UserAuth1>>
     fun get_categories(@Query("lng") lng: String): LiveData<ApiResponse<Categories>>
 
     @GET("productCategories/{id}")
-    fun get_subcategories(@Path("id") id: String): LiveData<ApiResponse<Subcategories>>
+    fun get_subcategories(@Path("id") id: String,@Query("lng") lng: String): LiveData<ApiResponse<Subcategories>>
     @GET("products?page=1&size=10&sort=updatedAt,desc")
     fun getAllproducts(@Query("categoryId") id: String,@Query("lng") lng: String): LiveData<ApiResponse<Products>>
+    @GET("orders?page=1&size=13&sort=updatedAt,desc")
+    fun get_orders(): LiveData<ApiResponse<Orders>>
+    @POST("orders")
+    fun createorder(@Body sendFilter: Order): LiveData<ApiResponse<GeneralResponse<Any>>>
+    @GET("orders/{orderId}")
+    fun getAllDetails(@Path("orderId") orderId: String): LiveData<ApiResponse<OrdersDetails>>
 
 }

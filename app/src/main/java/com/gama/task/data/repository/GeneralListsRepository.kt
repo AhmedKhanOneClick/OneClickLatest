@@ -45,15 +45,18 @@ class GeneralListsRepository @Inject constructor(
         object : NetworkOnlyResource<Categories, Categories>() {
             override fun createCall() = apiService.get_categories(lng)
         }.asLiveData()
-    fun getAllSubCategoriesdata(id: String) =
+    fun getAllSubCategoriesdata(id: String,lng:String) =
         object : NetworkOnlyResource<Subcategories, Subcategories>() {
-            override fun createCall() = apiService.get_subcategories(id)
+            override fun createCall() = apiService.get_subcategories(id,lng)
         }.asLiveData()
     fun getAllProducts(id: String,lng:String) =
         object : NetworkOnlyResource<Products, Products>() {
             override fun createCall() = apiService.getAllproducts(id,lng)
         }.asLiveData()
-
+    fun getAllOrdersdata (lng: String) =
+        object : NetworkOnlyResource<Orders, Orders>() {
+            override fun createCall() = apiService.get_orders()
+        }.asLiveData()
     fun insertOrUpdatefAVOURITE(content: Content) {
 //        var mPrefs: SharedPreferences = getPreferences(MODE_PRIVATE)
         favouritedao.insertFavourite(content)
@@ -68,4 +71,12 @@ class GeneralListsRepository @Inject constructor(
 
     fun deletefavourite(content: Content) = favouritedao.deleteHotel(content)
     fun getAllFavourites() = favouritedao.getHotels()
+    fun createOrder(changepass: Order) =
+        object : NetworkOnlyResource<Any, GeneralResponse<Any>>() {
+            override fun createCall() = apiService.createorder(changepass)
+        }.asLiveData()
+    fun getAllDetails(orderId: String) =
+        object : NetworkOnlyResource<OrdersDetails, OrdersDetails>() {
+            override fun createCall() = apiService.getAllDetails(orderId)
+        }.asLiveData()
 }

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="java.util.concurrent.TimeUnit" />
+        <import type="androidx.lifecycle.LiveData" />
+
+        <import type="androidx.lifecycle.MutableLiveData" />
+        <variable
+            name="requests1"
+            type="com.gama.task.models.Content7" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<LinearLayout
+    android:background="#E6EBF5"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/transaction_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Reports"></TextView>
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="@dimen/x2dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:orientation="vertical"
+        android:background="@drawable/button_main">
+
+
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:orientation="horizontal"
+
+
+            >
+
+
+            <LinearLayout
+                android:id="@+id/linear1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+
+
+                <TextView
+android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/oeder_print"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_29sdp"
+
+                    android:textAlignment="center"
+                    android:text="Device Order Print"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="@dimen/x220dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+
+            android:background="@drawable/ic_bg_category_line" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_120sdp"
+        android:orientation="vertical"
+        android:background="@drawable/button_main">
+
+
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:orientation="horizontal"
+
+
+            >
+
+
+            <LinearLayout
+                android:id="@+id/linear2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/transaction_statement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_29sdp"
+
+                    android:textAlignment="center"
+                    android:text="transaction statement"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_18sdp"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_marginTop="20dp"
+            android:layout_width="@dimen/x220dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+
+            android:background="@drawable/ic_bg_category_line" />
+    </LinearLayout>
+
+</LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </layout>
