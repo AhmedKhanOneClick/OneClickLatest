@@ -227,7 +227,8 @@ lateinit var  arrayItems: ArrayList<Content>
                 GlobalClass.globalCartList.add(
                     CartItem(content.defaultImageURL
                         ,content.price
-                        ,content.quantity.toInt()
+                       // ,content.quantity.toInt()
+                        ,1
                         ,content.description
                         ,content.description)
                 )

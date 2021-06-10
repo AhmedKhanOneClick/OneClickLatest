@@ -102,9 +102,9 @@
 
     <LinearLayout
         android:layout_width="@dimen/_90sdp"
-        android:layout_height="@dimen/_65sdp"
+        android:layout_height="@dimen/_50sdp"
         android:layout_marginLeft="@dimen/_1sdp"
-        android:background="@drawable/quantity_bg"
+        android:background="@drawable/back_details"
         android:layout_gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/view2"
@@ -121,15 +121,17 @@
                     android:layout_gravity="center">
 
             <Button
-                android:layout_width="@dimen/_8sdp"
-                android:layout_height="@dimen/_5sdp"
+                android:id="@+id/add_item"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_marginBottom="@dimen/_3sdp"
                 android:background="@drawable/xd_up"
                />
 
                     <Button
-                android:layout_width="@dimen/_8sdp"
-                android:layout_height="@dimen/_5sdp"
+                        android:id="@+id/remove_item"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_6sdp"
                 android:background="@drawable/xd_down"/>
         </LinearLayout>
@@ -138,15 +140,17 @@
             android:layout_height="wrap_content"
 android:layout_weight="1"
 
-            android:layout_marginRight="@dimen/_5sdp"
-            android:layout_marginTop="@dimen/_19sdp">
+
+
+          android:layout_gravity="center">
 
             <TextView
+                android:id="@+id/cart_counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:layout_marginStart="@dimen/_9sdp"
-                android:textSize="@dimen/_16sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:textSize="@dimen/_22sdp"
                 android:textStyle="bold"
 
                 android:textColor="@android:color/black"/>
