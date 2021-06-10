@@ -3,6 +3,7 @@ package com.gama.task.ui.fragments.sidemenu
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.gama.task.R
 import kotlinx.android.synthetic.main.fragment_menu_reports.*
 
@@ -12,12 +13,12 @@ class ReportsFragment:Fragment(R.layout.fragment_menu_reports) {
 
         device_order_print.setOnClickListener {
 
-         //-    findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
+          findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
         }
 
         transaction_statement.setOnClickListener {
 
-           //- findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentTransactionsTables())
+          findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentTransactionsTables())
         }
 
     }
