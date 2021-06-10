@@ -295,6 +295,9 @@
         <action
             android:id="@+id/action_cartFragment_to_allReceiptFragment"
             app:destination="@id/allReceiptFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_fragmentcheckout1"
+            app:destination="@id/fragmentcheckout1" />
     </fragment>
     <fragment
         android:id="@+id/fragmentTransactionsTables"
@@ -373,6 +376,9 @@
         <action
             android:id="@+id/action_fragmentWayCheckout_to_fragmentpurchase2"
             app:destination="@id/fragmentpurchase2" />
+        <action
+            android:id="@+id/action_fragmentWayCheckout_to_allReceiptFragment"
+            app:destination="@id/allReceiptFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentcheckout1"

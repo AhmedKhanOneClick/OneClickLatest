@@ -36,6 +36,7 @@
                     android:layout_height="wrap_content">
                     <ImageView
                         android:id="@+id/favourites"
+                        android:visibility="gone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:image="@{notification.createdAt}"
@@ -68,12 +69,9 @@
                         android:layout_alignParentTop="true"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-
-
+                        android:textFontWeight="700"
                         android:layout_gravity="center"
-
                         android:layout_marginBottom="88dp"
-
                         android:fontFamily="sans-serif"
                         android:text="@{notification.name}"
                         android:textAlignment="center"

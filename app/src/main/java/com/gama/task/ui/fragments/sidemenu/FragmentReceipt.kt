@@ -25,7 +25,7 @@ class FragmentReceipt :Fragment(R.layout.fragment_receipt){
             view?.post {
                 //findNavController().navigate(Fragmentpurchase3Directions.())
 
-               findNavController().navigate(FragmentReceiptDirections.actionFragmentReceiptToSearchPagerFragment())
+//               findNavController().navigate(FragmentReceiptDirections.actionFragmentReceiptToSearchPagerFragment())
 
                 // findNavController().navigate(Fragmentpurchase3Directions.actionFragmentpurchase3ToFsearchPagerFragment())
             }

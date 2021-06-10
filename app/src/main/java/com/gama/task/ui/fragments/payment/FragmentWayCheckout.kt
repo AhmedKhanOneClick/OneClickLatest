@@ -28,14 +28,14 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
 
         post_balance.setOnClickListener {
 
-           findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase2())
+           findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
         }
 
         bank_card.setOnClickListener {
             //findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase1())
             Log.d("TAG", "onViewCreated: ")
             sendAmountToMadaApplication()
-                        findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase2())
+                        findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
         } }
     private fun sendAmountToMadaApplication() {
         if (!isMadaAppInstalled()){
