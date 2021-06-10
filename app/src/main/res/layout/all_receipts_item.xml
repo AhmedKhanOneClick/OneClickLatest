@@ -13,8 +13,9 @@
 
     <ImageView
         android:id="@+id/voucher_img"
-        android:layout_width="@dimen/_80sdp"
+        android:layout_width="@dimen/_60sdp"
         android:layout_height="@dimen/_65sdp"
+        android:padding="@dimen/_4sdp"
         android:layout_margin="@dimen/_5sdp"
         android:src="@drawable/nintend_logo"
 

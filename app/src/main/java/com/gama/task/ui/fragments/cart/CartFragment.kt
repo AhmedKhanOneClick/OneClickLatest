@@ -3,6 +3,7 @@ package com.gama.task.ui.fragments.cart
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.gama.task.R
 import com.gama.task.ui.main.MainActivity
@@ -21,12 +22,12 @@ class CartFragment :Fragment(R.layout.fragment_cart),CartAdapter.OnItemClickList
 
             checkout+=item.Price
         }
-        cart_rv.adapter = CartAdapter(GlobalClass.globalCartList,this)
+        cart_rv.adapter = CartAdapter(this.requireContext(),GlobalClass.globalCartList,this)
         cart_rv.layoutManager = LinearLayoutManager(context)
         cart_rv.setHasFixedSize(true)
         total.text=checkout.toString()
         checkout_btn.setOnClickListener {
-         //-  findNavController().navigate(CartFragmentDirections.actionCartFragmentToFragmentcheckout1())
+          findNavController().navigate(CartFragmentDirections.actionCartFragmentToAllReceiptFragment())
 
         }
     }
@@ -42,7 +43,7 @@ checkout=0.00
 
             checkout+=item.Price
         }
-        cart_rv.adapter = CartAdapter(GlobalClass.globalCartList,this)
+        cart_rv.adapter = CartAdapter(this.requireContext(),GlobalClass.globalCartList,this)
         cart_rv.layoutManager = LinearLayoutManager(context)
         total.text=checkout.toString()
         cart_rv.setHasFixedSize(true)

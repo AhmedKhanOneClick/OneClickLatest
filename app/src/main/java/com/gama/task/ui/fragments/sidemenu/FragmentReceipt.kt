@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.gama.task.R
 import com.gama.task.ui.fragments.cart.GlobalClass
 //- import com.gama.task.ui.fragments.payment.Fragmentpurchase3Directions
@@ -24,7 +25,7 @@ class FragmentReceipt :Fragment(R.layout.fragment_receipt){
             view?.post {
                 //findNavController().navigate(Fragmentpurchase3Directions.())
 
-                //- findNavController().navigate(FragmentReceiptDirections.actionFragmentReceiptToSearchPagerFragment())
+               findNavController().navigate(FragmentReceiptDirections.actionFragmentReceiptToSearchPagerFragment())
 
                 // findNavController().navigate(Fragmentpurchase3Directions.actionFragmentpurchase3ToFsearchPagerFragment())
             }

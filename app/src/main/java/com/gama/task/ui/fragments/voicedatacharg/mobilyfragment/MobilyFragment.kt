@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import android.util.Log
 import android.view.View
@@ -40,10 +41,17 @@ class MobilyFragment : BaseFragment<MobilyDataViewModel, FragmentDataRechargMobi
 ),DepartmentFragment.Communicator {
 //    Fragment
 //}(R.layout.fragment_data_recharg_mobily)
+
+
+    private val girde=true
+
 lateinit var  arrayItems: ArrayList<Content>
     private val args by navArgs<MobilyFragmentArgs>()
     var x:Int=1
     private var mobileDataAdapter by autoCleared<MobileDataAdapter>()
+
+
+
 
     /**
      * A recyclerView scrollListener to handle Scroll.
@@ -55,12 +63,24 @@ lateinit var  arrayItems: ArrayList<Content>
     override fun init() {
         arrayItems= arrayListOf()
         Log.d(TAG, "init: " + args.reqId)
-        viewModel.updateRequest(args.reqId, "en")
+        val sp: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+        var lang=sp.getString("lang",null)
+
+        viewModel.updateRequest(args.reqId, lang.toString())
 //        viewModel.updateRequest1("en")
         viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
 //init account list
         initAccountList()
+
+        binding.gride.setOnClickListener {
+
+
+        }
+        binding.List.setOnClickListener {
+
+        }
+
 
         binding.fav.setOnClickListener {
             val appSharedPrefs = PreferenceManager
@@ -145,15 +165,71 @@ lateinit var  arrayItems: ArrayList<Content>
             if  (view .id==R.id.favourites ){
 
                 Log.e("click","favourites")
-                view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
+                val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+                val appSharedPrefs = requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
+                val prefsEditor = appSharedPrefs.edit()
+                val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
+                Log.d(TAG, "initAccountList: " + serializedObject.toString())
+
+                if (!serializedObject.equals("")) {
+                    Log.d(TAG, "initAccountList:sdfj ")
+                    val gson = GsonBuilder().serializeNulls().create()
+
+                    var fromJson: List<Content> =
+                        gson.fromJson(
+                            serializedObject,
+                            object : TypeToken<java.util.ArrayList<Content?>?>() {}.type
+                        )
+                    Log.d(TAG, "initAccountList: " + fromJson.size)
+                    var arrayItems: ArrayList<Content>
+                    arrayItems= arrayListOf()
+
+                    arrayItems= fromJson as ArrayList<Content>
+                    if(arrayItems.contains(content)){
+
+                        arrayItems.remove(content)
+                        fromJson=arrayItems
+                        val json = gson.toJson(fromJson)
+                        prefsEditor.putString("MyObject", json)
+                        prefsEditor.commit()
+                        view.favourites.background=(resources.getDrawable(R.drawable.bg_rounded_gray))
+                    }else{
+                        arrayItems.add(content)
+                        fromJson=arrayItems
+                        val json = gson.toJson(fromJson)
+                        prefsEditor.putString("MyObject", json)
+                        prefsEditor.commit()
+                        view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
+                    }
+
+                }else{
+                    val arrayItems: ArrayList<Content>
+                    arrayItems= arrayListOf()
+                    Log.d(TAG, "initAccountList:sdfs ")
+                    val gson = GsonBuilder().serializeNulls().create()
+                    arrayItems.add(content)
+//                arrayItems.add(content)
+//                val gson = GsonBuilder().serializeNulls().create()
+
+                    var fromJson1: List<Content>
+                    fromJson1=arrayItems
+
+                    val json = gson.toJson(fromJson1)
+                    prefsEditor.putString("MyObject", json)
+                    prefsEditor.commit()
+
+                    //-------------------------------------------------------------------------------------------------
+                    //view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
+                }
 
             }else{
 
                 GlobalClass.globalCartList.add(
-                    CartItem(R.drawable.facebook
+                    CartItem(content.defaultImageURL
                         ,content.price
                         ,content.quantity.toInt()
-                        ,content.createdAt)
+                        ,content.description
+                        ,content.description)
                 )
                 //ad id for the car
 
@@ -166,60 +242,7 @@ lateinit var  arrayItems: ArrayList<Content>
             }
 //view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
 //            binding.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
-            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-      val appSharedPrefs = requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
-            val prefsEditor = appSharedPrefs.edit()
-            val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
-            Log.d(TAG, "initAccountList: " + serializedObject.toString())
 
-            if (!serializedObject.equals("")) {
-                Log.d(TAG, "initAccountList:sdfj ")
-                val gson = GsonBuilder().serializeNulls().create()
-
-                var fromJson: List<Content> =
-                    gson.fromJson(
-                        serializedObject,
-                        object : TypeToken<java.util.ArrayList<Content?>?>() {}.type
-                    )
-                Log.d(TAG, "initAccountList: " + fromJson.size)
-                var arrayItems: ArrayList<Content>
-                arrayItems= arrayListOf()
-
-                arrayItems= fromJson as ArrayList<Content>
-                if(arrayItems.contains(content)){
-
-                    arrayItems.remove(content)
-                    fromJson=arrayItems
-                    val json = gson.toJson(fromJson)
-                    prefsEditor.putString("MyObject", json)
-                    prefsEditor.commit()
-                    view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
-                }else{
-                    arrayItems.add(content)
-                    fromJson=arrayItems
-                    val json = gson.toJson(fromJson)
-                    prefsEditor.putString("MyObject", json)
-                    prefsEditor.commit()
-                    view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
-                }
-
-            }else{
-                val arrayItems: ArrayList<Content>
-                arrayItems= arrayListOf()
-                Log.d(TAG, "initAccountList:sdfs ")
-                val gson = GsonBuilder().serializeNulls().create()
-                arrayItems.add(content)
-//                arrayItems.add(content)
-//                val gson = GsonBuilder().serializeNulls().create()
-
-                var fromJson1: List<Content>
-                fromJson1=arrayItems
-
-                val json = gson.toJson(fromJson1)
-                prefsEditor.putString("MyObject", json)
-                prefsEditor.commit()
-                view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
-            }
 //            val json = gson.toJson(data)
 //            prefsEditor.putString("MyObject", json)
 //            prefsEditor.commit()
@@ -235,12 +258,12 @@ lateinit var  arrayItems: ArrayList<Content>
 
 
         }
-        val layoutManager = GridLayoutManager(context, 2)
-
+        val GridelayoutManager = GridLayoutManager(context, 2)
+       // val LinearLayoutManager=LinearLayoutManager(context)
         // at last set adapter to recycler view.
 
         // at last set adapter to recycler view.
-        binding.recyclerNotification.setLayoutManager(layoutManager)
+        binding.recyclerNotification.setLayoutManager(GridelayoutManager)
         binding.recyclerNotification.adapter = mobileDataAdapter
 
         scrollListener = object :

@@ -1,18 +1,17 @@
 package com.gama.task.ui.fragments.voicedatacharg.mobilyfragment
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DiffUtil
 import com.gama.task.AppExecutors
 import com.gama.task.R
 import com.gama.task.databinding.CardMobilyItemBinding
 import com.gama.task.models.Content
 import com.gama.task.ui.base.DataBoundListAdapter
+import kotlinx.android.synthetic.main.card_favourites_item.view.*
 import kotlinx.android.synthetic.main.card_mobily_item.view.*
 
 
@@ -54,6 +53,7 @@ class MobileDataAdapter(
 //            }
 
 //        binding.root.setOnClickListener { onHotelClicked(item) }
+
         binding.root.favourites.setOnClickListener {
 //            if(binding.root.favourites.drawable== resources.getDrawable(=R.drawable.favourites))
 //            val contect=it.context.applicationContext.r

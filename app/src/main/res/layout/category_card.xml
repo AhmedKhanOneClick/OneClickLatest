@@ -33,17 +33,18 @@
                 <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/iv_categoryCard"
                     android:adjustViewBounds="true"
-                    android:layout_width="@dimen/_65sdp"
-                    android:layout_height="@dimen/_65sdp"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp"
                      app:imageUrl="@{`http://143.198.117.2:8080/api/files/` +categories.imageURL}"
                     android:layout_marginTop="@dimen/_28sdp"
-                    android:layout_marginLeft="@dimen/_28sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginStart="@dimen/_20sdp"
 
-                    android:padding="@dimen/x20dp"
+
+                    android:padding="@dimen/_8sdp"
 
                     app:placeHolder="@{@drawable/ic_gift_card}"
-                    tools:src="@drawable/ic_gift_card"
+
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />

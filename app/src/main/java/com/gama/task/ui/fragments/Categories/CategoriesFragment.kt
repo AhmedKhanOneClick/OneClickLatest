@@ -60,6 +60,9 @@ class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCat
 
 
         categoriesDataAdapter = CategoriesDataAdapter(dataBindingComponent, appExecutors) {
+
+
+
                     findNavController().navigate(
                         R.id.actionsubcategories1,
                         bundleOf(

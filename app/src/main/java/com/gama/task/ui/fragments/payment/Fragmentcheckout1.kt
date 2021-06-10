@@ -16,12 +16,12 @@ import kotlinx.android.synthetic.main.fragment_confirm_checkout.*
        add_more_cards.setOnClickListener {
 
 
-           //findNavController().navigate(Fragmentcheckout1Directions.actionFragmentcheckout1ToSearchPagerFragment())
+          findNavController().navigate(Fragmentcheckout1Directions.actionFragmentcheckout1ToSearchPagerFragment())
 
        }
         confirmcheckout.setOnClickListener {
 
-            //findNavController().navigate(Fragmentcheckout1Directions.actionFragmentcheckout1ToFragmentWayCheckout())
+          findNavController().navigate(Fragmentcheckout1Directions.actionFragmentcheckout1ToFragmentWayCheckout())
         }
 
 

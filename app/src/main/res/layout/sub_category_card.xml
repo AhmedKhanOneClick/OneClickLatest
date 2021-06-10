@@ -15,16 +15,17 @@
 
     <LinearLayout
         android:gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_170sdp"
         android:orientation="vertical"
         android:background="@drawable/brand_bg">
         <ImageView
                     android:id="@+id/iv_categoryCard"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+            android:layout_marginTop="@dimen/_12sdp"
 
-                    android:src="@drawable/ic_gift_card"
+
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -33,15 +34,21 @@
             android:padding="@dimen/x20dp"
 
             app:placeHolder="@{@drawable/ic_gift_card}"
-            tools:src="@drawable/ic_gift_card"
+
             />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@{subcategories.name}"
-    android:layout_marginTop="15dp"
-    android:textSize="20dp"
-    android:textStyle="bold"></TextView>
+    android:textColor="#6A7995"
+    android:layout_marginStart="@dimen/_24sdp"
+    android:layout_marginEnd="@dimen/_24sdp"
+    android:layout_marginTop="@dimen/_5sdp"
+    android:lines="2"
+
+    android:layout_marginBottom="@dimen/_15sdp"
+    android:textSize="@dimen/_13sdp"
+    android:textStyle="bold"/>
     </LinearLayout>
 
 </layout>

@@ -291,7 +291,11 @@
         android:id="@+id/cartFragment"
         android:name="com.gama.task.ui.fragments.cart.CartFragment"
         android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_allReceiptFragment"
+            app:destination="@id/allReceiptFragment" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentTransactionsTables"
         android:name="com.gama.task.ui.fragments.sidemenu.transactionstable.FragmentTransactionsTables"
@@ -311,12 +315,23 @@
         android:id="@+id/fragmentpurchase1"
         android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase1"
         android:label="fragment_sucess1"
-        tools:layout="@layout/fragment_sucess1" />
+        tools:layout="@layout/fragment_sucess1" >
+        <action
+            android:id="@+id/action_fragmentpurchase1_to_allReceiptFragment"
+            app:destination="@id/allReceiptFragment" />
+    </fragment>
     <fragment
         android:id="@+id/allReceiptFragment"
         android:name="com.gama.task.ui.fragments.allreceipt.AllReceiptFragment"
         android:label="fragment_all_receipt"
-        tools:layout="@layout/fragment_all_receipt" />
+        tools:layout="@layout/fragment_all_receipt" >
+        <action
+            android:id="@+id/action_allReceiptFragment_to_fragmentReceipt"
+            app:destination="@id/fragmentReceipt" />
+        <action
+            android:id="@+id/action_allReceiptFragment_to_voucherReceiptFragment"
+            app:destination="@id/voucherReceiptFragment" />
+    </fragment>
     <fragment
         android:id="@+id/reportsFragment"
         android:name="com.gama.task.ui.fragments.sidemenu.ReportsFragment"
@@ -342,17 +357,35 @@
         android:id="@+id/fragmentReceipt"
         android:name="com.gama.task.ui.fragments.sidemenu.FragmentReceipt"
         android:label="fragment_receipt"
-        tools:layout="@layout/fragment_receipt" />
+        tools:layout="@layout/fragment_receipt">
+        <action
+            android:id="@+id/action_fragmentReceipt_to_searchPagerFragment"
+            app:destination="@id/searchPagerFragment" />
+
+    </fragment>
+
+
     <fragment
         android:id="@+id/fragmentWayCheckout"
         android:name="com.gama.task.ui.fragments.payment.FragmentWayCheckout"
         android:label="fragment_way_checkout"
-        tools:layout="@layout/fragment_way_checkout" />
+        tools:layout="@layout/fragment_way_checkout" >
+        <action
+            android:id="@+id/action_fragmentWayCheckout_to_fragmentpurchase2"
+            app:destination="@id/fragmentpurchase2" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentcheckout1"
         android:name="com.gama.task.ui.fragments.payment.Fragmentcheckout1"
         android:label="fragment_confirm_checkout"
-        tools:layout="@layout/fragment_confirm_checkout" />
+        tools:layout="@layout/fragment_confirm_checkout" >
+        <action
+            android:id="@+id/action_fragmentcheckout1_to_fragmentWayCheckout"
+            app:destination="@id/fragmentWayCheckout" />
+        <action
+            android:id="@+id/action_fragmentcheckout1_to_searchPagerFragment"
+            app:destination="@id/searchPagerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/accountFragmnet"
         android:name="com.gama.task.ui.fragments.sidemenu.AccountFragmnet"
@@ -377,10 +410,26 @@
         android:id="@+id/fragmentpurchase3"
         android:name="com.gama.task.ui.fragments.payment.Fragmentpurchase3"
         android:label="fragment_sucess3"
-        tools:layout="@layout/fragment_sucess3" />
+        tools:layout="@layout/fragment_sucess3"
+        >
+        <action
+            android:id="@+id/action_fragmentpurchase3_to_allReceiptFragment"
+            app:destination="@id/settingFragment" />
+
+    </fragment>
     <fragment
         android:id="@+id/favouritesFragment"
         android:name="com.gama.task.ui.fragments.sidemenu.favourite.FavouritesFragment"
         android:label="FavouritesFragment" />
+    <fragment
+        android:id="@+id/voucherReceiptFragment"
+        android:name="com.gama.task.ui.fragments.allreceipt.VoucherReceiptFragment"
+        android:label="VoucherReceiptFragment" >
+
+        <action
+            android:id="@+id/action_voucherReceiptFragment_to_searchPagerFragment"
+            app:destination="@id/searchPagerFragment" />
+
+    </fragment>
 
 </navigation>
