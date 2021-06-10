@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">On Click</string>
+    <string name="app_name" translatable="true">ون كليك</string>
     <string name="app_version">V%s</string>
 
     <string name="navigation_drawer_open" translatable="false">Open navigation drawer</string>
@@ -88,36 +88,23 @@
     <string name="light">روشنی</string>
     <string name="dark">گہرا</string>
     <!-- main category-->
-    <string name="category_title0">ڈیٹا ریچارج</string>
-    <string name="category_paragraph_0">موبائلی - زین - الاتصالات السعودیة - لیبارا - ورجن -  فرینڈی - گو</string>
 
-    <string name="category_title1">وائس ریچارج</string>
-    <string name="category_paragraph_1">موبائلی - زین - الاتصالات السعودیة - لیبارا - ورجن -  فرینڈی </string>
+    <string name="password">پاس ورڈ</string>
+    <string name="forget_password">پاسورڈ بھول گے</string>
+    <string name="donot_haveacc">آپ کا اکاؤنٹ نہیں ہے</string>
+    <string name="invalid_login_Data">غلط لاگ ان ڈیٹا</string>
+    <string name="copied_successfully">کامیابی سے کاپی ہوئی</string>
+    <string name="confirm_checkout">چیک آؤٹ کی تصدیق کریں</string>
+    <string name="add_more_cards">مزید کارڈ شامل کریں</string>
+    <string name="e_wallet_balance1">ای_والٹ بیلنس</string>
+    <string name="bank_card">بینک کارڈ</string>
 
-    <string name="category_title2">گیم کارڈ</string>
-    <string name="category_paragraph_2">نینٹینڈو - ایکس بکس - پب جی - فیفا  - وی ائ پی جلسات - موبائل لیجنڈس</string>
-
-    <string name="category_title3">سنیما</string>
-    <string name="category_paragraph_3">اسٹارز پلے - نیٹ فلکس -کتاب سوتی - ویاک -شاہد وی ائ پی</string>
-
-    <string name="category_title4">گفٹ کارڈز</string>
-    <string name="category_paragraph_4">اسکائپ - مائیکرو سافٹ - میک آفی - فیس بک  - مرسول </string>
-
-    <string name="category_title5">پسندیدہ</string>
-    <string name="category_paragraph_5">کسی بھی کارڈ پر دیر سے دبائیں تاکہ آپ اپنے پسندیدہ صفحات کو شامل خارج کرسکیں</string>
-
-    <string name="password">Password</string>
-    <string name="forget_password">Forget Password</string>
-    <string name="donot_haveacc">Don\'t Have An Account</string>
-    <string name="invalid_login_Data">Invalid Login Data</string>
-    <string name="copied_successfully">copied_successfully</string>
-    <string name="confirm_checkout">Confirm Checkout</string>
-    <string name="add_more_cards">Add More Cards</string>
-    <string name="e_wallet_balance1">E_wallet Balance</string>
-    <string name="bank_card">Bank Card</string>
-
-    <string name="sign_in">Sign In</string>
-    <string name="ok">OK</string>
+    <string name="sign_in">سائن ان</string>
+    <string name="ok">ٹھیک ہے</string>
+    <string name="phone">فون</string>
+    <string name="recently_added">حال ہی میں شامل</string>
+    <string name="price_high_to_low">قیمت: کم سے کم</string>
+    <string name="price_low_to_high">قیمت: کم سے زیادہ</string>
 
 
 </resources>

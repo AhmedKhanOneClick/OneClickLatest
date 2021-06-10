@@ -23,6 +23,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="4"
+            android:layout_margin="@dimen/_5sdp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             >
@@ -31,7 +32,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_160sdp"
-                android:background="@drawable/card_back_friendi"
+                android:background="@drawable/bg_rounded_dialog"
 
                 android:src="@drawable/credit_card"
                 android:padding="@dimen/_45sdp"
@@ -63,6 +64,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:weightSum="4"
+            android:layout_margin="@dimen/_5sdp"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             >
@@ -71,7 +73,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_160sdp"
-                android:background="@drawable/card_back_friendi"
+                android:background="@drawable/bg_rounded_dialog"
 
                 android:src="@drawable/wallet_"
                 android:padding="@dimen/_45sdp"
