@@ -23,10 +23,10 @@
             android:id="@+id/reportsFragment"
             android:icon="@drawable/ic_reports"
             android:title="@string/reports"></item>
-        <item
-            android:id="@+id/transaction_statement"
-            android:icon="@drawable/ic_transactions"
-            android:title="@string/transactions"></item>
+<!--        <item-->
+<!--            android:id="@+id/transaction_statement"-->
+<!--            android:icon="@drawable/ic_transactions"-->
+<!--            android:title="@string/transactions"></item>-->
         <item
             android:id="@+id/settingFragment"
             android:icon="@drawable/ic_settings"

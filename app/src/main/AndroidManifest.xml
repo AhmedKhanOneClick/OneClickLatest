@@ -15,7 +15,7 @@
         android:icon="@drawable/oneclick_logo"
         android:label="OneClick"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:roundIcon="@drawable/oneclick_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.statusBarLight"
         android:usesCleartextTraffic="true"

@@ -1,5 +1,6 @@
 package com.gama.task.ui.fragments.reports
 
+import android.os.Bundle
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -7,6 +8,7 @@ import com.gama.task.ui.base.BaseFragment
 import com.gama.task.R
 import com.gama.task.databinding.ReportsBinding
 import com.gama.task.databinding.TransactionIdBinding
+import com.gama.task.ui.fragments.sidemenu.ReportsFragmentDirections
 
 
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,9 +41,22 @@ class ReportsFragment :
 
 private fun initDetails(){
 binding.linear2.setOnClickListener {
-    findNavController().navigate(R.id.getreportsfragment)
+    findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentTransactionsTables())
 }
+    binding.linear1.setOnClickListener {
+        findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
+    }
 }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding.linear2.setOnClickListener {
+            findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentTransactionsTables())
+        }
+        binding.linear1.setOnClickListener {
+            findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
+        }
+    }
     /**
      * Add Anew Contact.
      */

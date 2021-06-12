@@ -47,7 +47,7 @@
                     android:layout_marginLeft="30dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"
-                    android:text="Sub Categories"
+                    android:text="Sub-Categories"
                     android:textSize="20dp"
                     android:textStyle="bold"></TextView>
 
@@ -59,23 +59,23 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                    <ImageView
+<!--                    <ImageView-->
 
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/sort" />
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:src="@drawable/sort" />-->
 
-                    <ImageView
-                        android:layout_width="70dp"
-                        android:layout_height="70dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/gradle" />
+<!--                    <ImageView-->
+<!--                        android:layout_width="70dp"-->
+<!--                        android:layout_height="70dp"-->
+<!--                        android:scaleType="fitXY"-->
+<!--                        android:src="@drawable/gradle" />-->
 
-                    <ImageView
+<!--                    <ImageView-->
 
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
-                        android:src="@drawable/menu" />
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="40dp"-->
+<!--                        android:src="@drawable/menu" />-->
                 </LinearLayout>
 
             </RelativeLayout>
