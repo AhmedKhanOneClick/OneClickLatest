@@ -20,11 +20,7 @@
         tools:layout="@layout/fragment_main_category">
         <action
             android:id="@+id/actionsubcategories1"
-            app:destination="@id/subcategories"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right">
+            app:destination="@id/subcategories">
 
 
         <argument
@@ -35,10 +31,7 @@
         <action
             android:id="@+id/action_mainCategory_to_cart"
             app:destination="@id/cartFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right"/>
+          />
         <action
             android:id="@+id/action_searchPagerFragment_to_cinemaCardFragment"
             app:destination="@id/cinemaCardFragment" />
@@ -121,10 +114,7 @@
         <action
             android:id="@+id/actionproducts"
             app:destination="@id/MobilyFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right">
+          >
 
 
             <argument
@@ -137,10 +127,7 @@
         <action
             android:id="@+id/action_subcategory_to_cart"
             app:destination="@id/cartFragment"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right"/>
+      />
     </fragment>
     <fragment
         android:id="@+id/voiceRechargeFragment"
@@ -212,10 +199,7 @@
         <action
             android:id="@+id/getreportsfragment"
             app:destination="@id/getorders"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right">
+            >
 
 
 
@@ -229,10 +213,8 @@
         <action
             android:id="@+id/getorderdetails"
             app:destination="@id/orderdetails"
-            app:enterAnim="@android:anim/slide_in_left"
-            app:exitAnim="@android:anim/slide_out_right"
-            app:popEnterAnim="@android:anim/slide_in_left"
-            app:popExitAnim="@android:anim/slide_out_right">
+
+            >
 
 
             <argument
