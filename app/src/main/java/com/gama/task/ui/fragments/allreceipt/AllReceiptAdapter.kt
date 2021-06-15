@@ -16,7 +16,6 @@ import kotlinx.android.synthetic.main.all_receipts_item.view.*
 class AllReceiptAdapter(private val  context: Context,private val allReceiptList: List<CartItem>, private val  onItemClickListener: OnItemClickListener) :RecyclerView.Adapter<AllReceiptAdapter.AllReceiptViewHolder>(){
 
 
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AllReceiptViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(
             R.layout.all_receipts_item,

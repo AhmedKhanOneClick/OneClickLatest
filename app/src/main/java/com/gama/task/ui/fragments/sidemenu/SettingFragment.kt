@@ -18,6 +18,16 @@ class SettingFragment:Fragment(R.layout.fragment_menu_setting) {
         val sp: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         val mEdit1: SharedPreferences.Editor = sp.edit()
 
+        var lang=sp.getString("lang",null)
+        if (lang.equals("ar")){
+            language_group.check(R.id.radio_arabic)
+        }
+        if (lang.equals("ur")){
+            language_group.check(R.id.radio_urdo)
+        }
+        if (lang.equals("en")){
+            language_group.check(R.id.radio_english)
+        }
 
         //radio group to check account type
         language_group.setOnCheckedChangeListener(

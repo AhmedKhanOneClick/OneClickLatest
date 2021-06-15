@@ -32,6 +32,7 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.card_mobily_item.view.*
 
 
@@ -80,7 +81,11 @@ lateinit var  arrayItems: ArrayList<Content>
         binding.List.setOnClickListener {
 
         }
+        (activity as MainActivity).open_cart_btn.setOnClickListener {
+            val action=MobilyFragmentDirections.actionMobilyFragmentToCart()
+findNavController().navigate(action)
 
+        }
 
         binding.fav.setOnClickListener {
             val appSharedPrefs = PreferenceManager

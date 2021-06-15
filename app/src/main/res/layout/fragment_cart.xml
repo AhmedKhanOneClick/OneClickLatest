@@ -21,6 +21,7 @@
         <androidx.recyclerview.widget.RecyclerView
 
             android:id="@+id/cart_rv"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
       <LinearLayout
@@ -60,7 +61,9 @@
             android:id="@+id/checkout_btn"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_50sdp"
-            android:layout_margin="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
             android:background="@drawable/red_rounded_bg"
             android:text="@string/checkout"
             android:textSize="@dimen/_14sdp"

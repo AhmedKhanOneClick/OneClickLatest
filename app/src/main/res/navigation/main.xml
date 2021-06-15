@@ -31,6 +31,14 @@
             android:name="req_id"
             app:argType="string" />
         </action>
+
+        <action
+            android:id="@+id/action_mainCategory_to_cart"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
         <action
             android:id="@+id/action_searchPagerFragment_to_cinemaCardFragment"
             app:destination="@id/cinemaCardFragment" />
@@ -122,7 +130,17 @@
             <argument
                 android:name="req_id"
                 app:argType="string" />
+
+
         </action>
+
+        <action
+            android:id="@+id/action_subcategory_to_cart"
+            app:destination="@id/cartFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right"/>
     </fragment>
     <fragment
         android:id="@+id/voiceRechargeFragment"
@@ -174,6 +192,9 @@
         <action
             android:id="@+id/action_favouritefragment"
             app:destination="@id/FavouritesFragment" />
+        <action
+            android:id="@+id/action_mobily_fragment_to_cart"
+            app:destination="@id/cartFragment" />
         <action
             android:id="@+id/action_MobilyFragment_to_bottomSheetCheckOut"
             app:destination="@id/bottomSheetCheckOut" />
@@ -435,6 +456,10 @@
         <action
             android:id="@+id/action_voucherReceiptFragment_to_searchPagerFragment"
             app:destination="@id/searchPagerFragment" />
+        <argument
+            android:name="img_id"
+            app:argType="string"
+            android:defaultValue="sadfs" />
 
     </fragment>
 

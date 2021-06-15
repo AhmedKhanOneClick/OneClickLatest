@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name" translatable="true">ون كليك</string>
+
+
     <string name="app_version">V%s</string>
 
     <string name="navigation_drawer_open" translatable="false">فتح القائمة الجانبية</string>

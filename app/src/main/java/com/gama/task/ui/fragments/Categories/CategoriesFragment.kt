@@ -13,10 +13,13 @@ import com.gama.task.R
 
 import com.gama.task.databinding.FragmentMainCategoryBinding
 import com.gama.task.ui.base.BaseFragment
+import com.gama.task.ui.fragments.voicedatacharg.mobilyfragment.MobilyFragmentDirections
+import com.gama.task.ui.main.MainActivity
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
 class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCategoryBinding>(
@@ -93,6 +96,13 @@ class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCat
 
         binding.rvCategories.removeOnScrollListener(scrollListener)
         binding.rvCategories.addOnScrollListener(scrollListener)
+
+
+        (activity as MainActivity).open_cart_btn.setOnClickListener {
+            val action= CategoriesFragmentDirections.actionMainCategoryToCart()
+            findNavController().navigate(action)
+
+        }
 
         viewModel.accountsList.observe(viewLifecycleOwner) {
 

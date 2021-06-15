@@ -38,8 +38,10 @@ class AllReceiptFragment:Fragment(R.layout.fragment_all_receipt),AllReceiptAdapt
 
     override fun onClick(position: Int) {
 
+val action=AllReceiptFragmentDirections.actionAllReceiptFragmentToVoucherReceiptFragment()
 
-    findNavController().navigate(AllReceiptFragmentDirections.actionAllReceiptFragmentToVoucherReceiptFragment())
+        action.imgId=GlobalClass.globalCartList.get(position).img_id
+        findNavController().navigate(action)
     }
 
 

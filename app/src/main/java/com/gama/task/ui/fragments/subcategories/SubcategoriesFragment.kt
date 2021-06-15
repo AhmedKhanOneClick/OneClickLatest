@@ -3,6 +3,7 @@ package com.gama.task.ui.fragments.subcategories
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import androidx.core.os.bundleOf
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.GridLayoutManager
@@ -13,10 +14,13 @@ import com.gama.task.R
 import com.gama.task.databinding.FragmentMainCategoryBinding
 import com.gama.task.databinding.FragmentSubCategoryBinding
 import com.gama.task.ui.base.BaseFragment
+import com.gama.task.ui.fragments.voicedatacharg.mobilyfragment.MobilyFragmentDirections
+import com.gama.task.ui.main.MainActivity
 import com.gama.task.util.EndlessRecyclerViewScrollListener
 import com.gama.task.util.EventObserver
 import com.gama.task.util.autoCleared
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.activity_main.*
 
 @AndroidEntryPoint
 class SubcategoriesFragment : BaseFragment<SubcategoriesDataViewModel, FragmentSubCategoryBinding>(
@@ -78,6 +82,14 @@ class SubcategoriesFragment : BaseFragment<SubcategoriesDataViewModel, FragmentS
         // at last set adapter to recycler view.
         binding.rvsubcategories.setLayoutManager(layoutManager)
         binding.rvsubcategories.adapter = subcategoriesDataAdapter
+
+
+        (activity as MainActivity).open_cart_btn.setOnClickListener {
+
+            val action=SubcategoriesFragmentDirections.actionSubcategoryToCart()
+            findNavController().navigate(action)
+
+        }
 
         scrollListener = object :
             EndlessRecyclerViewScrollListener(binding.rvsubcategories.layoutManager as LinearLayoutManager) {
