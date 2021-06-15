@@ -17,17 +17,17 @@ import com.gama.task.ui.main.MainActivity
 import kotlinx.android.synthetic.main.fragment_all_receipt.*
 import kotlinx.android.synthetic.main.fragment_cart.*
 import kotlinx.android.synthetic.main.voucher_static_receipt.*
+import java.text.SimpleDateFormat
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.time.format.FormatStyle
+import java.util.*
 
 class VoucherReceiptFragment:Fragment(R.layout.voucher_static_receipt){
 
 val args:VoucherReceiptFragmentArgs by navArgs()
     var imgId=""
-    @RequiresApi(Build.VERSION_CODES.O)
-    val currentDateTime=LocalDateTime.now()
-    @RequiresApi(Build.VERSION_CODES.O)
+    val simpleDateFormat= SimpleDateFormat("dd-MM-yyyy HH:MM:SS")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -40,9 +40,9 @@ val args:VoucherReceiptFragmentArgs by navArgs()
             .load(url)
             .centerCrop()
             .into(card_ligo);
-
-        voucher_date.text=currentDateTime.format(DateTimeFormatter.ISO_DATE)
-        voucher_time.text=currentDateTime.format(DateTimeFormatter.ofLocalizedTime(FormatStyle.SHORT))
+        var currentDT: String = simpleDateFormat.format(Date())
+       voucher_date.text=currentDT.substring(0,10).toString()
+        voucher_time.text=currentDT.substring(11,16).toString()
     }
 
 

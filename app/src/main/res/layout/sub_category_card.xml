@@ -32,10 +32,10 @@
             app:imageUrl="@{`http://143.198.117.2:8080/api/files/` +subcategories.imageURL}"
 
             android:padding="@dimen/x20dp"
+/>
+           <!-- app:placeHolder="@{@drawable/ic_gift_card}" -->
 
-            app:placeHolder="@{@drawable/ic_gift_card}"
 
-            />
 <TextView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

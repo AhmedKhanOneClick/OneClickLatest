@@ -96,7 +96,7 @@ class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCat
 
         binding.rvCategories.removeOnScrollListener(scrollListener)
         binding.rvCategories.addOnScrollListener(scrollListener)
-
+/*
 
         (activity as MainActivity).open_cart_btn.setOnClickListener {
             val action= CategoriesFragmentDirections.actionMainCategoryToCart()
@@ -104,6 +104,7 @@ class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCat
 
         }
 
+  */
         viewModel.accountsList.observe(viewLifecycleOwner) {
 
 //it.sortBy { it.id }
