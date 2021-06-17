@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.gama.saudi2go.data.db.UserAuthDao
 import com.gama.task.R
 import com.gama.task.data.api.RetrofitClient
@@ -23,6 +24,10 @@ class AccountFragmnet:Fragment(R.layout.fragment_menu_account) {
         Log.e("profile",token)
 getProfile1(token)
 
+        add_balance.setOnClickListener {
+            val action=AccountFragmnetDirections.actionAccountFragmnetToAddBalanceFragment()
+            findNavController().navigate(action)
+        }
     }
 
     private fun getProfile1(token: String) {

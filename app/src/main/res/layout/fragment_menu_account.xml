@@ -277,7 +277,21 @@
             android:gravity="center"
             android:textColor="#FF1744"
             />
+
     </LinearLayout>
+
+    <Button
+        android:id="@+id/add_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_balance"
+        android:background="@drawable/bg_cart_counter_red"
+        android:textSize="@dimen/_16sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:padding="@dimen/_3sdp"/>
 
 </LinearLayout>
 

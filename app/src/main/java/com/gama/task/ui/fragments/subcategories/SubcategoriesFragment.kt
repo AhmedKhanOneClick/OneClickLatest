@@ -2,6 +2,7 @@ package com.gama.task.ui.fragments.subcategories
 
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import android.util.Log
 import androidx.core.os.bundleOf
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
@@ -64,10 +65,13 @@ class SubcategoriesFragment : BaseFragment<SubcategoriesDataViewModel, FragmentS
 
 
         subcategoriesDataAdapter = SubcategoriesDataAdapter(dataBindingComponent, appExecutors) {
+
+            Log.e("sub category ",it.imageURL)
                     findNavController().navigate(
                         R.id.actionproducts,
                         bundleOf(
-                            "req_id" to it.id.toString()
+                            "req_id" to it.id,
+                            "logo_url" to it.imageURL
 //                            "hotelSearchRequest" to viewModel.accountsList.value!!
                         )
                     )

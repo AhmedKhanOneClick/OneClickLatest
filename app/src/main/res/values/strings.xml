@@ -101,6 +101,11 @@
     <string name="price_high_to_low">Price: High to Low</string>
     <string name="price_low_to_high">Price: Low to High</string>
     <string name="subcategoty">subcategoty</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="chose_balance">Chose Balance</string>
+    <string name="submit">Submit</string>
+    <string name="add_balance">Add Balance</string>
 
 
 </resources>

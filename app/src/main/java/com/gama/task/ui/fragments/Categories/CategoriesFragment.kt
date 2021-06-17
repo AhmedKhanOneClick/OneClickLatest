@@ -2,6 +2,7 @@ package com.gama.task.ui.fragments.Categories
 
 import android.content.SharedPreferences
 import android.preference.PreferenceManager
+import android.util.Log
 import androidx.core.os.bundleOf
 import androidx.lifecycle.observe
 import androidx.navigation.Navigation.findNavController
@@ -71,6 +72,7 @@ class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCat
                         bundleOf(
                             "req_id" to it.id.toString()
 //                            "hotelSearchRequest" to viewModel.accountsList.value!!
+
                         )
                     )
 
@@ -93,6 +95,7 @@ class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCat
 //                        Log.d(TAG, "onLoadMore: ")
             }
         }
+
 
         binding.rvCategories.removeOnScrollListener(scrollListener)
         binding.rvCategories.addOnScrollListener(scrollListener)

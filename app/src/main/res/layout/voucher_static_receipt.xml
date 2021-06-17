@@ -46,9 +46,9 @@
         android:background="@drawable/line_h"/>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_550sdp"
+        android:layout_height="@dimen/_580sdp"
 
-
+android:layout_marginBottom="@dimen/_35sdp"
         android:background="@drawable/receipt_back">
 
         <LinearLayout
@@ -67,12 +67,13 @@
                 />
             <ImageView
                 android:id="@+id/card_ligo"
-                android:layout_width="@dimen/_120sdp"
-                android:layout_height="@dimen/_50sdp"
+                android:layout_width="@dimen/_190sdp"
+                android:layout_height="@dimen/_60sdp"
                 android:layout_gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="fitCenter"
 
-                android:layout_marginRight="@dimen/_25sdp"
-                android:layout_marginLeft="@dimen/_20sdp"
+
                 android:layout_marginTop="@dimen/_5sdp"
                 android:src="@drawable/mobily_logo"
                 />
@@ -86,9 +87,9 @@
                 android:text="@string/voucher_receipt"
                 android:textColor="@android:color/black"
                 android:textAllCaps="true"
-                android:layout_marginRight="@dimen/_10sdp"
-                android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_10sdp"/>
+                android:layout_marginBottom="@dimen/_5sdp"
+
+                android:layout_marginTop="@dimen/_6sdp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -376,7 +377,6 @@
                         android:text="@string/user_instruction"
                         android:textAlignment="viewStart"
                         android:textColor="@android:color/black"
-
                         android:textSize="@dimen/_10sdp"
                         android:textStyle="bold" />
 

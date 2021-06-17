@@ -231,16 +231,25 @@ findNavController().navigate(action)
 
                 GlobalClass.globalCartList.add(
                     CartItem(content.defaultImageURL
+
+                        ,content.id
+
                         ,content.price
-                       // ,content.quantity.toInt()
+
                         ,1
+
                         ,content.description
-                        ,content.description)
+
+                        ,content.description
+
+                        ,args.logoUrl)
                 )
                 //ad id for the car
 
                 if (!GlobalClass.globalCartList.isEmpty()){
                     (activity as MainActivity).observeCartCounter()
+
+                    Log.e("logo",args.logoUrl)
                     val action=MobilyFragmentDirections.actionMobilyFragmentToBottomSheetCheckOut()
                     findNavController().navigate(action)
                     // findNavController().navigate(MobilyFragmentDirections.action_MobilyFragment_to_bottomSheetCheckOut())

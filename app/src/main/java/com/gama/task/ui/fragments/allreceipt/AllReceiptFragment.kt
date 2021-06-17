@@ -1,6 +1,7 @@
 package com.gama.task.ui.fragments.allreceipt
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -40,7 +41,10 @@ class AllReceiptFragment:Fragment(R.layout.fragment_all_receipt),AllReceiptAdapt
 
 val action=AllReceiptFragmentDirections.actionAllReceiptFragmentToVoucherReceiptFragment()
 
-        action.imgId=GlobalClass.globalCartList.get(position).img_id
+
+        action.imgId=GlobalClass.globalCartList.get(position).logo
+       // action.position=position
+        Log.e("price - quantty",GlobalClass.globalCartList.get(position).Price.toString()+" - "+GlobalClass.globalCartList.get(position).quanty.toString())
         findNavController().navigate(action)
     }
 
