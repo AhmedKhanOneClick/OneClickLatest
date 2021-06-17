@@ -9,9 +9,9 @@ import com.google.gson.annotations.SerializedName
 open class OrdersDetails (
 //        @SerializedName("accounts") val accounts: List<Accounts1>,
 
-    @SerializedName("data") val data: Data7,
+    @SerializedName("data") val data: Content7,
 //    @SerializedName("data") val errors: List<Any>,
-    @SerializedName("msg") val msg: String,
+//    @SerializedName("msg") val msg: String,
     @SerializedName("status") val status: Int
 ): IdentityGeneralResponse()
 @Keep
@@ -25,20 +25,20 @@ data class Data7(
 data class Content7(
 
     @SerializedName("id") val id: String,
-    @SerializedName("purchasedDate") val purchasedDate: Double,
-    @SerializedName("total") val total: Double,
-    @SerializedName("totalWithVAT") val totalWithVAT: Double,
-    @SerializedName("discount") val discount: Double,
-    @SerializedName("vat") val vat: Double,
-    @SerializedName("subTotal") val subTotal: Double,
+    @SerializedName("purchasedDate") val purchasedDate: Int,
+    @SerializedName("total") val total: Int,
+    @SerializedName("totalWithVAT") val totalWithVAT: Int,
+    @SerializedName("discount") val discount: Int,
+    @SerializedName("vat") val vat: Int,
+    @SerializedName("subTotal") val subTotal: Int,
     @SerializedName("status") val status: String,
     @SerializedName("vendorId") val vendorId: String,
     @SerializedName("isDeleted") val isDeleted: Boolean,
 
 
 
-    @SerializedName("createdAt") val createdAt: String,
-     @SerializedName("updatedAt") val updatedAt: String,
+    @SerializedName("createdAt") val createdAt: Long,
+     @SerializedName("updatedAt") val updatedAt: Long,
     @SerializedName("products") val products: List<Prodcut>,
 ) : IdentityGeneralResponse()
 @Keep
@@ -63,11 +63,12 @@ data class Prodcut(
 //    @SerializedName("data") val nameAr: String,
 //    @SerializedName("data") val nameEn: String,
 //    @SerializedName("data") val nameUr: String,
-    @SerializedName("price") val price: Double,
+    @SerializedName("quantity") val quantity: Int,
+    @SerializedName("price") val price: Int,
 //    @SerializedName("data") val productCategory: ProductCategory,
 //    @SerializedName("data") val provider: Provider,
 //    @SerializedName("data") val providerId: String,
-    @SerializedName("quantity") val quantity: Double,
+
     @SerializedName("createdAt") val createdAt: String,
     @SerializedName("name") val name: String,
 

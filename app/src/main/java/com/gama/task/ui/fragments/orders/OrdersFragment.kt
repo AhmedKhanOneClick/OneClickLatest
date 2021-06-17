@@ -77,13 +77,13 @@ binding.create.setOnClickListener {
 ////                            "hotelSearchRequest" to viewModel.accountsList.value!!
 //                        )
 //                    )
-//            findNavController().navigate(
-//                R.id.getorderdetails,
-//                bundleOf(
-//                    "req_id" to content.id.toString()
-////                            "hotelSearchRequest" to viewModel.accountsList.value!!
-//                )
-//            )
+            findNavController().navigate(
+                R.id.getorderdetails,
+                bundleOf(
+                    "req_id" to content.id.toString()
+//                            "hotelSearchRequest" to viewModel.accountsList.value!!
+                )
+            )
             Log.d(TAG, "initAccountList: "+content.id.toString())
 
 
