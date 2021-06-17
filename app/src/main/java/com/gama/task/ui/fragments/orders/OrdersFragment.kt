@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
 
-import com.gama.task.databinding.FragmentMainCategoryBinding
+
 import com.gama.task.databinding.FragmentTransactionsTablesBinding
 import com.gama.task.models.Content
 import com.gama.task.models.Content6

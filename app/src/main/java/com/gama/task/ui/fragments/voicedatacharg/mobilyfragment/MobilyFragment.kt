@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.preference.PreferenceManager
 import android.util.Log
 import android.view.View
@@ -51,7 +52,9 @@ lateinit var  arrayItems: ArrayList<Content>
     override fun init() {
         arrayItems= arrayListOf()
         Log.d(TAG, "init: " + args.reqId)
-        viewModel.updateRequest(args.reqId, "en")
+        val sp: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
+        var lang=sp.getString("lang",null)
+        viewModel.updateRequest(args.reqId, lang.toString())
 //        viewModel.updateRequest1("en")
         viewModel.allcontacts.observe(viewLifecycleOwner, ::handleApiStatus)
 
@@ -59,15 +62,15 @@ lateinit var  arrayItems: ArrayList<Content>
         initAccountList()
 
         binding.fav.setOnClickListener {
-            val appSharedPrefs = PreferenceManager
-                .getDefaultSharedPreferences(context)
-            val prefsEditor = appSharedPrefs.edit()
-
-                val gson = Gson()
-            val json = gson.toJson(arrayItems)
-////                set.addAll(content)
-                prefsEditor.putString("MyObject", json)
-                prefsEditor.commit()
+//            val appSharedPrefs = PreferenceManager
+//                .getDefaultSharedPreferences(context)
+//            val prefsEditor = appSharedPrefs.edit()
+//
+//                val gson = Gson()
+//            val json = gson.toJson(arrayItems)
+//////                set.addAll(content)
+//                prefsEditor.putString("MyObject", json)
+//                prefsEditor.commit()
             findNavController().navigate(
                 R.id.action_favouritefragment
             )
@@ -140,7 +143,7 @@ lateinit var  arrayItems: ArrayList<Content>
         mobileDataAdapter = MobileDataAdapter(dataBindingComponent, appExecutors) { content: Content, view: View ->
             if(view.id==R.id.favourites){
 
-            }
+
 //view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
 //            binding.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
             val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
@@ -171,6 +174,15 @@ lateinit var  arrayItems: ArrayList<Content>
                     prefsEditor.putString("MyObject", json)
                     prefsEditor.commit()
                     view.favourites.setImageDrawable(resources.getDrawable(R.drawable.favourites))
+                    val appSharedPrefs = PreferenceManager
+                        .getDefaultSharedPreferences(context)
+                    val prefsEditor = appSharedPrefs.edit()
+
+                    val gson1 = Gson()
+                    val json1 = gson1.toJson(arrayItems)
+////                set.addAll(content)
+                    prefsEditor.putString("MyObject", json1)
+                    prefsEditor.commit()
                 }else{
                     arrayItems.add(content)
                     fromJson=arrayItems
@@ -178,6 +190,15 @@ lateinit var  arrayItems: ArrayList<Content>
                     prefsEditor.putString("MyObject", json)
                     prefsEditor.commit()
                     view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
+                    val appSharedPrefs = PreferenceManager
+                        .getDefaultSharedPreferences(context)
+                    val prefsEditor = appSharedPrefs.edit()
+
+                    val gson1 = Gson()
+                    val json1 = gson1.toJson(arrayItems)
+////                set.addAll(content)
+                    prefsEditor.putString("MyObject", json1)
+                    prefsEditor.commit()
                 }
 
             }else{
@@ -196,6 +217,16 @@ lateinit var  arrayItems: ArrayList<Content>
                 prefsEditor.putString("MyObject", json)
                 prefsEditor.commit()
                 view.favourites.setImageDrawable(resources.getDrawable(R.drawable.amazon))
+
+                val appSharedPrefs = PreferenceManager
+                    .getDefaultSharedPreferences(context)
+                val prefsEditor = appSharedPrefs.edit()
+
+                val gson1 = Gson()
+                val json1 = gson1.toJson(arrayItems)
+////                set.addAll(content)
+                prefsEditor.putString("MyObject", json1)
+                prefsEditor.commit()
             }
 //            val json = gson.toJson(data)
 //            prefsEditor.putString("MyObject", json)
@@ -209,7 +240,9 @@ lateinit var  arrayItems: ArrayList<Content>
 //                        )
 //                    )
 
+            }else{
 
+            }
 
         }
         val layoutManager = GridLayoutManager(context, 2)
