@@ -109,10 +109,7 @@ class OrdersDataViewModel @ViewModelInject constructor(
                 }
             }
 
-//    fun initHotelSearchRequest1() = Order(
-//departments.value
-//
-//    )
+
     fun addDepts(depts:Order){
         _departments.value=depts
 

@@ -11,15 +11,21 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.gama.task.R
+import com.gama.task.models.Order
 import kotlinx.android.synthetic.main.fragment_way_checkout.*
 import java.util.*
 
 class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
     private lateinit var myReceiver:MyReceiver
+    private val viewModel: FragmentWayCheckoutViewModel by viewModels()
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
         myReceiver = MyReceiver()
         val filter  = IntentFilter()
         filter.addAction("surepay.mada.RESULT")
@@ -92,6 +98,16 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
         } catch (ex: Exception) {
         }
         return false
+    }
+
+    fun  createOrder(){
+
+        val products12= Order.Products11("0a94af0a3bed4f1dae06738b2629af01",1.0)
+        val depts = Order(678904234.0,58.0, 58.0,2.0,3.0,11.0,"shipped",viewModel.getvendorid(),
+            listOf(products12)
+        )
+        viewModel.addDepts(depts)
+        viewModel.accept_statues1()
     }
 
 }
