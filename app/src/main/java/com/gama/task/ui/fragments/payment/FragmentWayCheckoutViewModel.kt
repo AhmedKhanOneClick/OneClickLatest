@@ -18,13 +18,6 @@ class FragmentWayCheckoutViewModel @ViewModelInject constructor(
     private val generalListsRepository: GeneralListsRepository
 ) : ViewModel() {
 
-
-
-
-
-
-
-
     //result of total of list
     private val _navigatewithresult = MutableLiveData<String>()
 

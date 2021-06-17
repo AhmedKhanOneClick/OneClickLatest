@@ -3,6 +3,7 @@ package com.gama.task.ui.fragments.orders
 import android.util.Log
 import android.view.View
 import androidx.core.os.bundleOf
+import androidx.lifecycle.observe
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -10,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gama.task.R
 
-import com.gama.task.databinding.FragmentMainCategoryBinding
+
 import com.gama.task.databinding.FragmentTransactionsTablesBinding
 import com.gama.task.models.Content
 import com.gama.task.models.Content6
@@ -77,13 +78,13 @@ binding.create.setOnClickListener {
 ////                            "hotelSearchRequest" to viewModel.accountsList.value!!
 //                        )
 //                    )
-//            findNavController().navigate(
-//                R.id.getorderdetails,
-//                bundleOf(
-//                    "req_id" to content.id.toString()
-////                            "hotelSearchRequest" to viewModel.accountsList.value!!
-//                )
-//            )
+            findNavController().navigate(
+                R.id.getorderdetails,
+                bundleOf(
+                    "req_id" to content.id.toString()
+//                            "hotelSearchRequest" to viewModel.accountsList.value!!
+                )
+            )
             Log.d(TAG, "initAccountList: "+content.id.toString())
 
 

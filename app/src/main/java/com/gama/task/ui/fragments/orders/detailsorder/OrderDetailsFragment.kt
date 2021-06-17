@@ -1,10 +1,12 @@
 package com.gama.task.ui.fragments.orders.detailsorder
 
+import android.util.Log
 import androidx.lifecycle.observe
 import androidx.navigation.fragment.navArgs
 import com.gama.task.ui.base.BaseFragment
 import com.gama.task.R
 import com.gama.task.databinding.TransactionIdBinding
+import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment.Companion.TAG
 
 
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,7 +45,9 @@ private fun initDetails(){
 
     viewModel.details.observe(viewLifecycleOwner) {
         if (it.data != null) {
-            binding.requests1 = it.data.data.content
+            Log.d(TAG, "initDetails:999993 "+it.toString())
+            Log.d(TAG, "initDetails:99999 "+it.data.data)
+            binding.requests1 = it.data.data
 
 
 //            binding.step.setImageDrawable(resources.getDrawable(R.drawable.image1_7))
