@@ -21,7 +21,7 @@ import javax.inject.Inject
  */
 @ActivityScoped
 class GeneralListsRepository @Inject constructor(
-    @NormalRequest private val apiService: ApiService, private val favouritedao: FavouriteDao,
+    @NormalRequest private val apiService: ApiService,
     private val userAuthDao: UserAuthDao
 ) {
 
@@ -59,7 +59,7 @@ class GeneralListsRepository @Inject constructor(
         }.asLiveData()
     fun insertOrUpdatefAVOURITE(content: Content) {
 //        var mPrefs: SharedPreferences = getPreferences(MODE_PRIVATE)
-        favouritedao.insertFavourite(content)
+//        favouritedao.insertFavourite(content)
 //        val appSharedPrefs = PreferenceManager
 //            .getDefaultSharedPreferences(this.applicationContext)
 //        val prefsEditor = appSharedPrefs.edit()
@@ -69,8 +69,8 @@ class GeneralListsRepository @Inject constructor(
 //        prefsEditor.commit()
     }
 
-    fun deletefavourite(content: Content) = favouritedao.deleteHotel(content)
-    fun getAllFavourites() = favouritedao.getHotels()
+//    fun deletefavourite(content: Content) = favouritedao.deleteHotel(content)
+//    fun getAllFavourites() = favouritedao.getHotels()
     fun createOrder(changepass: Order) =
         object : NetworkOnlyResource<Any, GeneralResponse<Any>>() {
             override fun createCall() = apiService.createorder(changepass)

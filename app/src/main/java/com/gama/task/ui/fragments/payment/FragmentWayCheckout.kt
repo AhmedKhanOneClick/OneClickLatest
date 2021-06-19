@@ -1,12 +1,12 @@
 package com.gama.task.ui.fragments.payment
 
 import android.app.ActivityManager
+import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -15,8 +15,11 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.gama.task.R
 import com.gama.task.models.Order
+import com.google.gson.Gson
+import com.surepay.integratemada.MadaResponseModel
 import kotlinx.android.synthetic.main.fragment_way_checkout.*
 import java.util.*
+
 
 class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
     private lateinit var myReceiver:MyReceiver
@@ -27,10 +30,25 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
 
 
         myReceiver = MyReceiver()
+        val myReceiver1: BroadcastReceiver = object : BroadcastReceiver() {
+            override fun onReceive(context: Context, intent: Intent) {
+                val result = intent.extras!!.getString("RESULT")
+                Log.e("RESULT", "==================> $result")
+                val topic = Gson().fromJson(
+                    result,
+                    MadaResponseModel::class.java
+                )
+                if (topic != null) Toast.makeText(context, "--> " + topic.aMOUNT, Toast.LENGTH_SHORT).show()
+                Log.e("RESULT1", "==================> " + topic!!.aMOUNT)
+                if (!topic.tX_RESPONSECODE.equals("1")){
+                    createOrder()
+                }
+            }
+        }
         val filter  = IntentFilter()
         filter.addAction("surepay.mada.RESULT")
         requireActivity().registerReceiver(myReceiver, filter)
-
+        requireActivity().registerReceiver(myReceiver1, filter)
 
         post_balance.setOnClickListener {
 
@@ -46,7 +64,7 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
     private fun sendAmountToMadaApplication() {
         if (!isMadaAppInstalled()){
             Log.d("TAG", "Mada App Not Installed ")
-            Toast.makeText(context,"Mada App Not Installed", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Mada App Not Installed", Toast.LENGTH_SHORT).show()
             return
         }
         if (!isMadaAppRunning()){
@@ -58,23 +76,23 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
 
         }
         val array = arrayListOf(
-            "10.02","12.05",
-            "162.09","14426.20",
-            "00.10","120.00",
-            "00.01","5.00",
-            "45.00","8.71",
-            "525.00","12.01",
-            "1002.01","12.01",
-            "52.01","914.01",
-            "9.01","12.01",
-            "8451.01","23.01",
-            "123.01","321.01",
-            "10002.01","102.01"
+            "10.02", "12.05",
+            "162.09", "14426.20",
+            "00.10", "120.00",
+            "00.01", "5.00",
+            "45.00", "8.71",
+            "525.00", "12.01",
+            "1002.01", "12.01",
+            "52.01", "914.01",
+            "9.01", "12.01",
+            "8451.01", "23.01",
+            "123.01", "321.01",
+            "10002.01", "102.01"
         )
         val randomStr = array[Random().nextInt(array.size)]
 
         val intent = Intent("surepay.mada.PAY_AMOUNT")
-        intent.putExtra("AMOUNT",randomStr)
+        intent.putExtra("AMOUNT", randomStr)
         requireActivity(). sendBroadcast(intent);
     }
 
@@ -102,8 +120,9 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
 
     fun  createOrder(){
 
-        val products12= Order.Products11("0a94af0a3bed4f1dae06738b2629af01",1.0)
-        val depts = Order(678904234.0,58.0, 58.0,2.0,3.0,11.0,"shipped",viewModel.getvendorid(),
+        val products12= Order.Products11("0a94af0a3bed4f1dae06738b2629af01", 1.0)
+        val depts = Order(
+            678904234.0, 58.0, 58.0, 2.0, 3.0, 11.0, "shipped", viewModel.getvendorid(),
             listOf(products12)
         )
         viewModel.addDepts(depts)
