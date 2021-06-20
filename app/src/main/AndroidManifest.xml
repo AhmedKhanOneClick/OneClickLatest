@@ -8,9 +8,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
-
     <application
-        android:name="com.gama.task.BaseApp"
+        android:name=".BaseApp"
         android:allowBackup="true"
         android:icon="@drawable/oneclick_logo"
         android:label="OneClick"
@@ -20,29 +19,33 @@
         android:theme="@style/AppTheme.statusBarLight"
         android:usesCleartextTraffic="true"
         tools:replace="android:name">
+        <activity android:name=".ui.fragments.printing.test_print"></activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_api" />
 
         <activity
-            android:name="com.gama.task.ui.main.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme"
-            android:windowSoftInputMode="adjustResize">
-
-        </activity>
+            android:windowSoftInputMode="adjustResize"></activity>
         <activity
             android:name=".ui.auth.AuthActivity"
-            android:theme="@style/AuthTheme"
             android:screenOrientation="portrait"
-            android:windowSoftInputMode="adjustResize" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+            android:theme="@style/AuthTheme"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
 
+        <receiver
+            android:name="com.gama.task.ui.fragments.printing.MyReceiver"
+            android:enabled="true"
+            android:exported="true" />
     </application>
 
 </manifest>

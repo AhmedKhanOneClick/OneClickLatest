@@ -1,4 +1,4 @@
-package com.gama.task.ui.fragments.sidemenu
+package com.gama.task.ui.fragments.sidemenu.FragmentReceipt
 
 import android.os.Bundle
 import android.os.Handler

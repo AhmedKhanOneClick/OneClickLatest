@@ -1,29 +1,26 @@
 package com.gama.task.ui.fragments.allreceipt
 
-import android.os.Build
+//- import com.gama.task.ui.fragments.cart.CartFragmentDirections
+import CTOS.CtPrint
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import android.os.Bundle
 import android.view.View
-import androidx.annotation.RequiresApi
+import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.gama.task.R
-import com.gama.task.ui.fragments.cart.CartAdapter
-//- import com.gama.task.ui.fragments.cart.CartFragmentDirections
-import com.gama.task.ui.fragments.cart.GlobalClass
-import com.gama.task.ui.main.MainActivity
-import kotlinx.android.synthetic.main.fragment_all_receipt.*
-import kotlinx.android.synthetic.main.fragment_cart.*
 import kotlinx.android.synthetic.main.voucher_static_receipt.*
 import java.text.SimpleDateFormat
-import java.time.LocalDateTime
-import java.time.format.DateTimeFormatter
-import java.time.format.FormatStyle
 import java.util.*
 
+
 class VoucherReceiptFragment:Fragment(R.layout.voucher_static_receipt){
+
+    lateinit var  btnPrint: Button
+    lateinit var  viewPrint: View
+    lateinit var  print: CtPrint
 
 val args:VoucherReceiptFragmentArgs by navArgs()
     var imgId=""
@@ -32,7 +29,12 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         super.onViewCreated(view, savedInstanceState)
 
 
+        btnPrint=view.findViewById(R.id.btnPrint)
+        viewPrint=view.findViewById(R.id.view_print)
+        print = CtPrint()
         imgId=args.imgId
+
+        btnPrint.setOnClickListener { doPrinting() }
 
         val url="http://143.198.117.2:8080/api/files/"+imgId
         Glide
@@ -46,4 +48,27 @@ val args:VoucherReceiptFragmentArgs by navArgs()
     }
 
 
+
+    fun getBitmapFromView(view: View): Bitmap {
+        view.measure(
+            View.MeasureSpec.UNSPECIFIED,
+            View.MeasureSpec.UNSPECIFIED
+        )
+        val bitmap = Bitmap.createBitmap(
+            view.measuredWidth, view.measuredHeight,
+            Bitmap.Config.ARGB_8888
+        )
+        val canvas = Canvas(bitmap)
+        view.layout(0, 0, view.measuredWidth, view.measuredHeight)
+        view.draw(canvas)
+        return bitmap
+    }
+
+    private fun doPrinting() {
+        val image4: Bitmap = getBitmapFromView(viewPrint!!)
+        print!!.initPage(image4.height)
+        print!!.drawImage(image4, 0, 0)
+        print!!.printPage()
+        print!!.roll(100)
+    }
 }

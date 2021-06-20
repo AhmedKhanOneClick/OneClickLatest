@@ -106,6 +106,7 @@
     <string name="chose_balance">Chose Balance</string>
     <string name="submit">Submit</string>
     <string name="add_balance">Add Balance</string>
+    <string name="print">Print</string>
 
 
 </resources>

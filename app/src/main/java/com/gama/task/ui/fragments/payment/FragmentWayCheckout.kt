@@ -15,10 +15,12 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.gama.task.R
 import com.gama.task.models.Order
+import com.gama.task.ui.fragments.cart.GlobalClass
 import com.google.gson.Gson
 import com.surepay.integratemada.MadaResponseModel
 import kotlinx.android.synthetic.main.fragment_way_checkout.*
 import java.util.*
+import kotlin.collections.AbstractList
 
 
 class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
@@ -75,20 +77,15 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
             return
 
         }
-        val array = arrayListOf(
-            "10.02", "12.05",
-            "162.09", "14426.20",
-            "00.10", "120.00",
-            "00.01", "5.00",
-            "45.00", "8.71",
-            "525.00", "12.01",
-            "1002.01", "12.01",
-            "52.01", "914.01",
-            "9.01", "12.01",
-            "8451.01", "23.01",
-            "123.01", "321.01",
-            "10002.01", "102.01"
-        )
+        var array = ArrayList<String>()
+        for(item in GlobalClass.globalCartList.indices){
+
+            array.add(GlobalClass.globalCartList.get(item).Price.toString())
+
+            Log.e("dynamic voucher price-",item.toString()+GlobalClass.globalCartList.get(item).Price.toString())
+        }
+
+
         val randomStr = array[Random().nextInt(array.size)]
 
         val intent = Intent("surepay.mada.PAY_AMOUNT")
