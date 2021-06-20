@@ -34,7 +34,9 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         print = CtPrint()
         imgId=args.imgId
 
-        btnPrint.setOnClickListener { doPrinting() }
+        btnPrint.setOnClickListener {
+            //doPrinting()
+             }
 
         val url="http://143.198.117.2:8080/api/files/"+imgId
         Glide
