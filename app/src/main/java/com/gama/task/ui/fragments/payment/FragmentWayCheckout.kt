@@ -77,19 +77,19 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
             return
 
         }
-        var array = ArrayList<String>()
+        var ammount =0.0
         for(item in GlobalClass.globalCartList.indices){
 
-            array.add(GlobalClass.globalCartList.get(item).Price.toString())
+            ammount+=(GlobalClass.globalCartList.get(item).Price)*(GlobalClass.globalCartList.get(item).quanty)
 
-            Log.e("dynamic voucher price-",item.toString()+GlobalClass.globalCartList.get(item).Price.toString())
+
         }
 
-
-        val randomStr = array[Random().nextInt(array.size)]
+        Log.e("receipt  ammount ",ammount.toString())
+      //  val randomStr = array[Random().nextInt(array.size)]
 
         val intent = Intent("surepay.mada.PAY_AMOUNT")
-        intent.putExtra("AMOUNT", randomStr)
+        intent.putExtra("AMOUNT", ammount)
         requireActivity(). sendBroadcast(intent);
     }
 
