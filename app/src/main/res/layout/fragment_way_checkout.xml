@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <import type="android.view.View" />
-
-        <import type="java.util.concurrent.TimeUnit" />
-
-        <import type="androidx.lifecycle.LiveData" />
-
-        <import type="androidx.lifecycle.MutableLiveData" />
-
-        <variable
-            name="requests2"
-            type="com.gama.task.models.MobileData" />
-    </data>
-<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#E2000000"
     android:orientation="horizontal"
     tools:context="com.gama.task.ui.fragments.payment.FragmentWayCheckout"
@@ -119,4 +102,3 @@
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
-</layout>

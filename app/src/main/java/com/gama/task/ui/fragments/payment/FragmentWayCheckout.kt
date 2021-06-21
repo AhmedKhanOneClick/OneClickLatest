@@ -14,29 +14,22 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.gama.task.R
-import com.gama.task.databinding.FragmentTransactionsTablesBinding
-import com.gama.task.databinding.FragmentWayCheckoutBinding
 import com.gama.task.models.Order
-import com.gama.task.ui.base.BaseFragment
 import com.gama.task.ui.fragments.cart.GlobalClass
-import com.gama.task.ui.fragments.orders.OrdersDataViewModel
 import com.google.gson.Gson
 import com.surepay.integratemada.MadaResponseModel
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_way_checkout.*
 import java.util.*
 import kotlin.collections.AbstractList
 
-@AndroidEntryPoint
-class FragmentWayCheckout: BaseFragment<FragmentWayCheckoutViewModel, FragmentWayCheckoutBinding>(
-    FragmentWayCheckoutViewModel::class.java
-) {
-    var ammount=0.0
- //   Fragment(R.layout.fragment_way_checkout) {
+
+class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
     private lateinit var myReceiver:MyReceiver
-//    private val viewModel: FragmentWayCheckoutViewModel by viewModels()
-override fun getLayoutRes() = R.layout.fragment_way_checkout
-    override fun init() {
+    private val viewModel: FragmentWayCheckoutViewModel by viewModels()
+    var ammount=0.0
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
 
         myReceiver = MyReceiver()
         val myReceiver1: BroadcastReceiver = object : BroadcastReceiver() {
@@ -48,8 +41,8 @@ override fun getLayoutRes() = R.layout.fragment_way_checkout
                     MadaResponseModel::class.java
                 )
                 if (topic != null) Toast.makeText(context, "--> " + topic.aMOUNT, Toast.LENGTH_SHORT).show()
-                Log.e("RESULT1", "==================> " + topic!!.aMOUNT+"   txresult"+topic!!.tX_RSLT)
-                if (!topic.tX_RSLT.equals("0")){
+                Log.e("RESULT1", "==================> " + topic!!.aMOUNT)
+                if (!topic.tX_RESPONSECODE.equals("1")){
                     createOrder()
                 }
             }
@@ -59,57 +52,17 @@ override fun getLayoutRes() = R.layout.fragment_way_checkout
         requireActivity().registerReceiver(myReceiver, filter)
         requireActivity().registerReceiver(myReceiver1, filter)
 
-        binding.postBalance.setOnClickListener {
+        post_balance.setOnClickListener {
 
-            findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
+           findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
         }
 
-        binding.bankCard.setOnClickListener {
+        bank_card.setOnClickListener {
             //findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase1())
             Log.d("TAG", "onViewCreated: ")
             sendAmountToMadaApplication()
-            findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
-        }
-    }
-
-
-//   override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        super.onViewCreated(view, savedInstanceState)
-//
-//
-//        myReceiver = MyReceiver()
-//        val myReceiver1: BroadcastReceiver = object : BroadcastReceiver() {
-//            override fun onReceive(context: Context, intent: Intent) {
-//                val result = intent.extras!!.getString("RESULT")
-//                Log.e("RESULT", "==================> $result")
-//                val topic = Gson().fromJson(
-//                    result,
-//                    MadaResponseModel::class.java
-//                )
-//                if (topic != null) Toast.makeText(context, "--> " + topic.aMOUNT, Toast.LENGTH_SHORT).show()
-//                Log.e("RESULT1", "==================> " + topic!!.aMOUNT)
-//                if (!topic.tX_RESPONSECODE.equals("1")){
-//                    createOrder()
-//                }
-//            }
-//        }
-//        val filter  = IntentFilter()
-//        filter.addAction("surepay.mada.RESULT")
-//        requireActivity().registerReceiver(myReceiver, filter)
-//        requireActivity().registerReceiver(myReceiver1, filter)
-//
-//        post_balance.setOnClickListener {
-//
-//           findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
-//        }
-//
-//        bank_card.setOnClickListener {
-//            //findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase1())
-//            Log.d("TAG", "onViewCreated: ")
-//            sendAmountToMadaApplication()
-//                        findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
-//        }
-//    }
+                        findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
+        } }
     private fun sendAmountToMadaApplication() {
         if (!isMadaAppInstalled()){
             Log.d("TAG", "Mada App Not Installed ")
@@ -140,7 +93,7 @@ override fun getLayoutRes() = R.layout.fragment_way_checkout
 
 
         val intent = Intent("surepay.mada.PAY_AMOUNT")
-        intent.putExtra("AMOUNT", (ammount*10).toString())
+        intent.putExtra("AMOUNT", ammount.toString())
         requireActivity(). sendBroadcast(intent);
     }
 
@@ -168,9 +121,9 @@ override fun getLayoutRes() = R.layout.fragment_way_checkout
 
     fun  createOrder(){
 
-        val products12= Order.Products11("95a67a658d814f01814af8e1cc486dba", 1.0)
+        val products12= Order.Products11("0a94af0a3bed4f1dae06738b2629af01", 1.0)
         val depts = Order(
-            6789042314.0, 41.0, 41.0, 2.0, 3.0, 11.0, "shipped", viewModel.getvendorid(),
+            678904234.0, ammount, 58.0, 2.0, 3.0, 11.0, "shipped", viewModel.getvendorid(),
             listOf(products12)
         )
         viewModel.addDepts(depts)
