@@ -5,12 +5,14 @@ import CTOS.CtPrint
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Bundle
+import android.os.Handler
 import android.view.View
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.gama.task.R
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.voucher_receipt_layout.*
 
 import java.text.SimpleDateFormat
@@ -21,6 +23,7 @@ import java.util.*
 class VoucherReceiptFragment:Fragment(R.layout.voucher_receipt_layout){
 
     lateinit var  viewPrint: View
+
     lateinit var  print: CtPrint
 
 val args:VoucherReceiptFragmentArgs by navArgs()
@@ -29,7 +32,7 @@ val args:VoucherReceiptFragmentArgs by navArgs()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+        val url="http://143.198.117.2:8080/api/files/"+imgId
 
         viewPrint=view.findViewById(R.id.view_print)
         print = CtPrint()
@@ -37,20 +40,30 @@ val args:VoucherReceiptFragmentArgs by navArgs()
 
 
             //doPrinting()
+        Picasso.get().load(url).into(card_ligo);
+
+//
+//        Glide
+//            .with(this)
+//            .load(url)
+//            .centerCrop()
+//            .into(card_ligo);
 
 
-        val url="http://143.198.117.2:8080/api/files/"+imgId
-        Glide
-            .with(this)
-            .load(url)
-            .centerCrop()
-            .into(card_ligo);
         var currentDT: String = simpleDateFormat.format(Date())
        voucher_date.text=currentDT.substring(0,10).toString()
         voucher_time.text=currentDT.substring(11,16).toString()
 
+        Handler().postDelayed({
 
-        doPrinting()
+
+            view?.post {
+                // findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToLanguageFragment())
+
+                doPrinting()
+            }
+        }, 1500) // 3000 is the delayed time in milliseconds.
+
     }
 
 
