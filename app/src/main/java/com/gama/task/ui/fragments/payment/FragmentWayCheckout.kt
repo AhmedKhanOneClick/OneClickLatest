@@ -26,7 +26,7 @@ import kotlin.collections.AbstractList
 class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
     private lateinit var myReceiver:MyReceiver
     private val viewModel: FragmentWayCheckoutViewModel by viewModels()
-
+    var ammount=0.0
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -79,7 +79,7 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
         }
         var array = ArrayList<Double>()
 
-        var ammount=0.0
+
         for(item in GlobalClass.globalCartList.indices){
 
            ammount+=(GlobalClass.globalCartList.get(item).Price)*(GlobalClass.globalCartList.get(item).quanty)
@@ -93,7 +93,7 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
 
 
         val intent = Intent("surepay.mada.PAY_AMOUNT")
-        intent.putExtra("AMOUNT", randomStr)
+        intent.putExtra("AMOUNT", ammount.toString())
         requireActivity(). sendBroadcast(intent);
     }
 
@@ -123,7 +123,7 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
 
         val products12= Order.Products11("0a94af0a3bed4f1dae06738b2629af01", 1.0)
         val depts = Order(
-            678904234.0, 58.0, 58.0, 2.0, 3.0, 11.0, "shipped", viewModel.getvendorid(),
+            678904234.0, ammount, 58.0, 2.0, 3.0, 11.0, "shipped", viewModel.getvendorid(),
             listOf(products12)
         )
         viewModel.addDepts(depts)

@@ -20,7 +20,7 @@
             android:icon="@drawable/ic_profile"
             android:title="@string/account"></item>
         <item
-            android:id="@+id/reportsFragment"
+            android:id="@+id/getreports"
             android:icon="@drawable/ic_reports"
             android:title="@string/reports"></item>
 <!--        <item-->
