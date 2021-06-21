@@ -69,268 +69,64 @@
                     android:layout_height="wrap_content"
                     >
 
-
                     <LinearLayout
-                        android:id="@+id/view_print"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
                         android:orientation="vertical">
+
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-
-                            android:layout_marginRight="@dimen/_15sdp"
-                            android:layout_marginLeft="@dimen/_15sdp"
-                            android:layout_marginTop="@dimen/_10sdp"
-                            android:src="@drawable/one_click_logo_gray"
-                            />
+                            android:layout_height="@dimen/_30sdp"
+                            android:padding="@dimen/_4sdp"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:src="@drawable/ic_oneclick_logo__on_white" />
                         <ImageView
                             android:id="@+id/card_ligo"
-                            android:layout_width="wrap_content"
-                            android:layout_height="@dimen/_50sdp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="@dimen/_10sdp"
-                            android:layout_marginRight="@dimen/_10sdp"
-                            android:padding="@dimen/_8sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_30sdp"
                             android:scaleType="centerInside"
                             android:adjustViewBounds="true"
-                            android:layout_marginTop="@dimen/_5sdp"
-
+                            android:padding="4dp"
+                            android:layout_marginTop="@dimen/_15sdp"
                             />
-
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/_12sdp"
-                            android:textStyle="bold"
                             android:layout_gravity="center"
-                            android:text="@string/voucher_receipt"
-                            android:textColor="@android:color/black"
+                            android:layout_marginTop="@dimen/_15sdp"
+                            android:text="cash_receipt"
                             android:textAllCaps="true"
-                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:textColor="@android:color/black"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
 
-                            android:layout_marginTop="@dimen/_6sdp"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:weightSum="3"
-                            >
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginTop="@dimen/_6sdp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/amount"
-                                    android:textAlignment="viewStart"
-
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="123 SR "
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="المبلغ "
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginTop="@dimen/_6sdp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/card_num"
-                                    android:textAlignment="viewStart"
-
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="2039203"
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="رقم البطاقة"
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-                            </LinearLayout>
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="121212121211121212"
-                                android:textAlignment="center"
-                                android:textSize="@dimen/_12sdp"
-                                android:textStyle="bold"
-                                android:layout_marginTop="@dimen/_6sdp"
-                                android:textColor="@android:color/black"/>
-
-
-                        </LinearLayout>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/_10sdp"
                             android:layout_gravity="center"
-                            android:text="-----------------------------------------------------"
+                            android:layout_marginTop="10dp"
+                            android:text="string/shop_name"
+                            android:textSize="15sp" />
 
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="-------------------------------"
+                            android:textSize="13sp"
 
                             />
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:weightSum="3"
-                            >
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginTop="@dimen/_6sdp">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/date"
-                                    android:textAlignment="viewStart"
-
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:id="@+id/voucher_date"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="12/03/2021 "
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="التاريخ"
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginTop="@dimen/_6sdp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Time"
-                                    android:textAlignment="viewStart"
-
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:id="@+id/voucher_time"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="12:20 PM"
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="الوقت "
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-                            </LinearLayout>
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:layout_marginTop="@dimen/_6sdp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="@string/terminal_num"
-                                    android:textAlignment="viewStart"
-
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="123 "
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="رقم الجهاز"
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp" />
-                            </LinearLayout>
-
-
-
-
-
-                        </LinearLayout>
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/_10sdp"
                             android:layout_gravity="center"
-                            android:text="-----------------------------------------------------"
 
+                            android:textStyle="bold"
+                            android:text="12142551344412354"
+                            android:textColor="@android:color/black"
+                            android:textSize="19sp"
 
                             />
 
@@ -338,9 +134,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
-                            android:weightSum="3"
+                            android:weightSum="3">
 
-                            >
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -350,87 +145,356 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="@string/serial"
+                                    android:text="Amount"
                                     android:textAlignment="viewStart"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp"
-                                    android:textStyle="bold" />
+
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="Amount"
+                                    android:textAlignment="center"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="المبلغ "
+                                    android:textAlignment="viewEnd"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="6534425"
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp"
-                                    android:textStyle="bold" />
+                                    android:text="Card Num."
+                                    android:textAlignment="viewStart"
+
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="332323224478 "
+                                    android:textAlignment="viewEnd"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="رقم البطاقة"
+                                    android:textAlignment="viewEnd"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="الرقم التسلسلي"
+                                    android:text="Date"
+                                    android:textAlignment="viewStart"
+
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:id="@+id/voucher_date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="MM/DD/YY "
+                                    android:layout_weight="2"
                                     android:textAlignment="viewEnd"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="@dimen/_10sdp"
-                                    android:textStyle="bold" />
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="التاريخ"
+                                    android:layout_weight="2"
+
+                                    android:textAlignment="viewEnd"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Time"
+                                    android:textAlignment="viewStart"
+
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:id="@+id/voucher_time"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text=""
+                                    android:textAlignment="viewEnd"
+                                    android:textSize="10dp" />
+                                <TextView
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="الوقت"
+                                    android:textAlignment="viewEnd"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:text="-------------------------------"
+                            android:textSize="13sp"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Terminal Num."
+                                    android:textAlignment="viewStart"
+
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="2.7 "
+                                    android:textAlignment="viewEnd"
+                                    android:textSize="10dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="رقم الجهاز"
+                                    android:textAlignment="viewEnd"
+                                    android:textSize="10dp" />
                             </LinearLayout>
 
 
 
+
                         </LinearLayout>
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/_10sdp"
                             android:layout_gravity="center"
-                            android:text="-----------------------------------------------------"
 
+                            android:text="-------------------------------"
+                            android:textSize="13sp"
 
                             />
 
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="@string/user_instruction"
-                            android:textAlignment="viewStart"
-                            android:textColor="@android:color/black"
-                            android:textSize="@dimen/_10sdp"
-                            android:textStyle="bold" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="2"
-
-                            android:layout_marginTop="@dimen/_5sdp"
-                            android:textAlignment="viewStart"
-                            android:text="@string/static_user_info"
-                            android:textSize="@dimen/_9sdp"
-                            android:textStyle="bold" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_13sdp"
-                            android:layout_gravity="center"
-                            android:text="-----------------------"
-                            android:layout_marginRight="@dimen/_30sdp"
-                            android:layout_marginLeft="@dimen/_30sdp"
-
-                            />
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
-                            android:weightSum="3"
 
-                            android:layout_marginRight="@dimen/_30sdp"
-                            android:layout_marginLeft="@dimen/_30sdp"
-                            >
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="string/price"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="65.7 "
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="string/sale"
+                                    android:textAlignment="viewStart"
+
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="0.0 "
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="string/vat"
+                                    android:textAlignment="viewStart"
+
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="2.00 "
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:text="-------------------------------"
+                            android:textSize="13sp"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="User Instruction"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@android:color/black"
+
+                                    android:textSize="12dp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="AIG Pharmaceuticals is a growing Pharmaceutical company that was established in 2010 with its headquarters
+        located in Cairo and Delta with the objective of providing high quality and innovative products to the Egyptian market
+        .In 2011, after 9 years of operations, AIG has grown from a small local company to a market leader of approximately 500 customers."
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@android:color/black"
+
+                                    android:textSize="10dp"
+                                    android:textStyle="bold" />
+
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:text="-------------------------------"
+                            android:textSize="13sp"
+
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:orientation="vertical"
+                            android:weightSum="3">
 
 
                             <TextView
@@ -441,16 +505,14 @@
                                 android:text="@string/thank_you"
                                 android:textAllCaps="true"
                                 android:textColor="@android:color/black"
-                                android:layout_marginBottom="@dimen/_10sdp"
-                                android:textSize="@dimen/_12sdp"
+                                android:textSize="12sp"
                                 android:textStyle="bold" />
 
-
-
-
-
-
                         </LinearLayout>
+
+
+
+
 
 
 

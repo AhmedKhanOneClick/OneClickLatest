@@ -81,7 +81,9 @@
     <string name="terminal_num">Terminal Num</string>
     <string name="serial">Serial.</string>
     <string name="user_instruction">User Instruction</string>
-    <string name="static_user_info">AIG Pharmaceuticals is a growing Pharmaceutical company that was established in 2010 with its headquarters located in Cairo and Delta with the objective of providing high quality and innovative products to the Egyptian market .In 2011, after 9 years of operations, AIG has grown from a small local company to a market leader of approximately 500 customers.</string>
+    <string name="static_user_info">AIG Pharmaceuticals is a growing Pharmaceutical company that was established in 2010 with its headquarters
+        located in Cairo and Delta with the objective of providing high quality and innovative products to the Egyptian market
+        .In 2011, after 9 years of operations, AIG has grown from a small local company to a market leader of approximately 500 customers.</string>
     <string name="light">Light</string>
     <string name="dark">Dark</string>
     <string name="password">Password</string>
