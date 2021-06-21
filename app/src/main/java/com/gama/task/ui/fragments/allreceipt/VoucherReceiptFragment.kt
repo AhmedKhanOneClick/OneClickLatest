@@ -11,14 +11,15 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.gama.task.R
-import kotlinx.android.synthetic.main.voucher_static_receipt.*
+import kotlinx.android.synthetic.main.voucher_receipt_layout.*
+
 import java.text.SimpleDateFormat
 import java.util.*
 
 
-class VoucherReceiptFragment:Fragment(R.layout.voucher_static_receipt){
+//class VoucherReceiptFragment:Fragment(R.layout.voucher_static_receipt){
+class VoucherReceiptFragment:Fragment(R.layout.voucher_receipt_layout){
 
-    lateinit var  btnPrint: Button
     lateinit var  viewPrint: View
     lateinit var  print: CtPrint
 
@@ -29,14 +30,14 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         super.onViewCreated(view, savedInstanceState)
 
 
-        btnPrint=view.findViewById(R.id.btnPrint)
+
         viewPrint=view.findViewById(R.id.view_print)
         print = CtPrint()
         imgId=args.imgId
 
-        btnPrint.setOnClickListener {
+
             //doPrinting()
-             }
+
 
         val url="http://143.198.117.2:8080/api/files/"+imgId
         Glide
@@ -47,6 +48,9 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         var currentDT: String = simpleDateFormat.format(Date())
        voucher_date.text=currentDT.substring(0,10).toString()
         voucher_time.text=currentDT.substring(11,16).toString()
+
+
+        doPrinting()
     }
 
 
