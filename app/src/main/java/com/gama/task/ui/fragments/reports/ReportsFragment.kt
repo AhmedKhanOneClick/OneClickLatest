@@ -41,22 +41,22 @@ class ReportsFragment :
 
 private fun initDetails(){
 binding.linear2.setOnClickListener {
-    findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentTransactionsTables())
+    findNavController().navigate(R.id.getorders)
 }
     binding.linear1.setOnClickListener {
-        findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
+        findNavController().navigate(R.id.getorders)
     }
 }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding.linear2.setOnClickListener {
-            findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentTransactionsTables())
-        }
-        binding.linear1.setOnClickListener {
-            findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
-        }
-    }
+//    override fun onCreate(savedInstanceState: Bundle?) {
+//        super.onCreate(savedInstanceState)
+//        binding.linear2.setOnClickListener {
+//            findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentTransactionsTables())
+//        }
+//        binding.linear1.setOnClickListener {
+//            findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
+//        }
+//    }
     /**
      * Add Anew Contact.
      */

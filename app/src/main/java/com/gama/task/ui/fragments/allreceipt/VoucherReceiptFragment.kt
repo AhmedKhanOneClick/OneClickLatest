@@ -11,15 +11,17 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.gama.task.R
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.voucher_receipt_layout.*
 
 import java.text.SimpleDateFormat
 import java.util.*
 
 
-//class VoucherReceiptFragment:Fragment(R.layout.voucher_static_receipt){
 class VoucherReceiptFragment:Fragment(R.layout.voucher_receipt_layout){
 
+
+    lateinit var  btn: Button
     lateinit var  viewPrint: View
     lateinit var  print: CtPrint
 
@@ -28,29 +30,34 @@ val args:VoucherReceiptFragmentArgs by navArgs()
     val simpleDateFormat= SimpleDateFormat("dd-MM-yyyy HH:MM:SS")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-
+        btn=view.findViewById(R.id.btnPrint)
 
         viewPrint=view.findViewById(R.id.view_print)
         print = CtPrint()
         imgId=args.imgId
 
 
-            //doPrinting()
-
-
         val url="http://143.198.117.2:8080/api/files/"+imgId
-        Glide
-            .with(this)
-            .load(url)
-            .centerCrop()
-            .into(card_ligo);
+            //doPrinting()
+//        Picasso.get()
+//            .load(url)
+//            .resize(50, 50)
+//            .centerCrop()
+//            .into(card_ligo)
+
+        Picasso.get().load(url).into(card_ligo);
+//        Glide
+//            .with(this)
+//            .load(url)
+//            .centerCrop()
+//            .into(card_ligo);
         var currentDT: String = simpleDateFormat.format(Date())
        voucher_date.text=currentDT.substring(0,10).toString()
         voucher_time.text=currentDT.substring(11,16).toString()
+       btn.setOnClickListener {
+           doPrinting()
+       }
 
-
-        doPrinting()
     }
 
 

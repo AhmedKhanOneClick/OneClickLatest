@@ -20,7 +20,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnPrint"
-            android:id="@+id/viewPrint"
+            android:id="@+id/view_print"
             android:layout_width="190dp"
             android:layout_height="0dp"
 
@@ -79,8 +79,12 @@
                             android:id="@+id/card_ligo"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_30sdp"
+                            android:padding="@dimen/_5sdp"
+                            android:scaleType="centerInside"
+
+                           android:adjustViewBounds="true"
                             android:layout_marginTop="@dimen/_15sdp"
-                            android:src="@drawable/mobily_logo" />
+                             />
 
                         <TextView
                             android:layout_width="wrap_content"

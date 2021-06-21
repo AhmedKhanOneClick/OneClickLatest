@@ -52,7 +52,7 @@ app= BaseApp()
 //        model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 //        model.sendSpecified_balance1(topic.aMOUNT)
         val products12= Order.Products11("0a94af0a3bed4f1dae06738b2629af01",1.0)
-        val depts = Order(678904234.0,58.0, 58.0,2.0,3.0,11.0,"shipped",getvendorid(),
+        val depts = Order(678904234.0,58.00, 58.00,2.00,3.00,11.00,"shipped",getvendorid(),
             listOf(products12)
         )
 //        addDepts(depts)

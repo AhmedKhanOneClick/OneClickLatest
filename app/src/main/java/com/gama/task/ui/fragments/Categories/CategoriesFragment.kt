@@ -101,11 +101,11 @@ class CategoriesFragment : BaseFragment<CategoriesDataViewModel, FragmentMainCat
         binding.rvCategories.addOnScrollListener(scrollListener)
 /*
 
-        (activity as MainActivity).open_cart_btn.setOnClickListener {
-            val action= CategoriesFragmentDirections.actionMainCategoryToCart()
-            findNavController().navigate(action)
-
-        }
+//        (activity as MainActivity).open_cart_btn.setOnClickListener {
+//            val action= CategoriesFragmentDirections.actionMainCategoryToCart()
+//            findNavController().navigate(action)
+//
+//        }
 
   */
         viewModel.accountsList.observe(viewLifecycleOwner) {

@@ -337,11 +337,12 @@
         android:label="fragment_all_receipt"
         tools:layout="@layout/fragment_all_receipt" >
         <action
-            android:id="@+id/action_allReceiptFragment_to_fragmentReceipt"
-            app:destination="@id/fragmentReceipt" />
+            android:id="@+id/action_allReceiptFragment_to_fragment_search_home"
+            app:destination="@id/searchPagerFragment" />
         <action
             android:id="@+id/action_allReceiptFragment_to_voucherReceiptFragment"
             app:destination="@id/voucherReceiptFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/reportsFragment"
