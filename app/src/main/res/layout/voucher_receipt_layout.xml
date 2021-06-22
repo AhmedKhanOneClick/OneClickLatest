@@ -80,7 +80,7 @@
                             android:layout_height="@dimen/_30sdp"
                             android:padding="@dimen/_4sdp"
                             android:layout_marginTop="@dimen/_15sdp"
-                            android:src="@drawable/ic_oneclick_logo__on_white" />
+                            android:src="@drawable/one_click_logo_gray" />
                         <ImageView
                             android:id="@+id/card_ligo"
                             android:layout_width="match_parent"
@@ -106,7 +106,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
-                            android:text="string/shop_name"
+                            android:text="shop_name"
                             android:textSize="15sp" />
 
                         <TextView
@@ -151,10 +151,11 @@
                                     android:textSize="10dp" />
 
                                 <TextView
+                                    android:id="@+id/card_price"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2"
-                                    android:text="Amount"
+                                    android:text=""
                                     android:textAlignment="center"
                                     android:textSize="10dp" />
 
@@ -185,7 +186,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_weight="2"
-                                    android:text="332323224478 "
+                                    android:text=""
                                     android:textAlignment="viewEnd"
                                     android:textSize="10dp" />
                                 <TextView
@@ -215,7 +216,7 @@
                                     android:id="@+id/voucher_date"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="MM/DD/YY "
+                                    android:text=""
                                     android:layout_weight="2"
                                     android:textAlignment="viewEnd"
                                     android:textSize="10dp" />
@@ -299,7 +300,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2"
-                                    android:text="2.7 "
+                                    android:text=""
                                     android:textAlignment="viewEnd"
                                     android:textSize="10dp" />
                                 <TextView
