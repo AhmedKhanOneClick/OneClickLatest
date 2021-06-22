@@ -88,12 +88,12 @@ class SubcategoriesFragment : BaseFragment<SubcategoriesDataViewModel, FragmentS
         binding.rvsubcategories.adapter = subcategoriesDataAdapter
 
 
-        (activity as MainActivity).open_cart_btn.setOnClickListener {
-
-            val action=SubcategoriesFragmentDirections.actionSubcategoryToCart()
-            findNavController().navigate(action)
-
-        }
+//        (activity as MainActivity).open_cart_btn.setOnClickListener {
+//
+//            val action=SubcategoriesFragmentDirections.actionSubcategoryToCart()
+//            findNavController().navigate(action)
+//
+//        }
 
         scrollListener = object :
             EndlessRecyclerViewScrollListener(binding.rvsubcategories.layoutManager as LinearLayoutManager) {

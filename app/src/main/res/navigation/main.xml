@@ -447,6 +447,9 @@
         <action
             android:id="@+id/action_voucherReceiptFragment_to_searchPagerFragment"
             app:destination="@id/searchPagerFragment" />
+        <action
+            android:id="@+id/action_voucherReceiptFragment_to_allReceiptFragment"
+            app:destination="@id/allReceiptFragment" />
         <argument
             android:name="img_id"
             app:argType="string"

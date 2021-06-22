@@ -12,6 +12,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="print"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -43,6 +44,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="transactions_id"
+                        android:textColor="@android:color/black"
                         android:textSize="16sp" />
 
                     <TextView
@@ -107,6 +109,7 @@
                             android:layout_gravity="center"
                             android:layout_marginTop="10dp"
                             android:text="shop_name"
+                            android:textColor="@android:color/black"
                             android:textSize="15sp" />
 
                         <TextView
@@ -114,9 +117,9 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:text="-------------------------------"
-                            android:textSize="13sp"
+                            android:textColor="@android:color/black"
 
-                            />
+                            android:textSize="13sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -148,6 +151,7 @@
                                     android:text="Amount"
                                     android:textAlignment="viewStart"
 
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
 
                                 <TextView
@@ -157,6 +161,7 @@
                                     android:layout_weight="2"
                                     android:text=""
                                     android:textAlignment="center"
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
 
                                 <TextView
@@ -165,7 +170,8 @@
                                     android:layout_weight="2"
                                     android:text="المبلغ "
                                     android:textAlignment="viewEnd"
-                                    android:textSize="10dp" />
+                                    android:textSize="10dp"
+                                    android:textColor="@android:color/black" />
                             </LinearLayout>
 
                             <LinearLayout
@@ -180,6 +186,7 @@
                                     android:text="Card Num."
                                     android:textAlignment="viewStart"
 
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
 
                                 <TextView
@@ -188,13 +195,16 @@
                                     android:layout_weight="2"
                                     android:text=""
                                     android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="match_parent"
                                     android:layout_weight="2"
                                     android:text="رقم البطاقة"
                                     android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
                             </LinearLayout>
 
@@ -216,17 +226,20 @@
                                     android:id="@+id/voucher_date"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text=""
                                     android:layout_weight="2"
+                                    android:text=""
                                     android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="التاريخ"
                                     android:layout_weight="2"
+                                    android:text="التاريخ"
 
                                     android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
                             </LinearLayout>
 
@@ -242,6 +255,7 @@
                                     android:text="Time"
                                     android:textAlignment="viewStart"
 
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
 
                                 <TextView
@@ -251,7 +265,9 @@
                                     android:layout_weight="2"
                                     android:text=""
                                     android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
+
                                 <TextView
 
                                     android:layout_width="wrap_content"
@@ -259,6 +275,7 @@
                                     android:layout_weight="2"
                                     android:text="الوقت"
                                     android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
                             </LinearLayout>
 
@@ -271,9 +288,9 @@
                             android:layout_gravity="center"
 
                             android:text="-------------------------------"
-                            android:textSize="13sp"
+                            android:textColor="@android:color/black"
 
-                            />
+                            android:textSize="13sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -294,6 +311,7 @@
                                     android:text="Terminal Num."
                                     android:textAlignment="viewStart"
 
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
 
                                 <TextView
@@ -302,13 +320,16 @@
                                     android:layout_weight="2"
                                     android:text=""
                                     android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
+
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2"
                                     android:text="رقم الجهاز"
                                     android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
                                     android:textSize="10dp" />
                             </LinearLayout>
 
@@ -323,9 +344,9 @@
                             android:layout_gravity="center"
 
                             android:text="-------------------------------"
-                            android:textSize="13sp"
+                            android:textColor="@android:color/black"
 
-                            />
+                            android:textSize="13sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -350,10 +371,11 @@
                                     android:textStyle="bold" />
 
                                 <TextView
+                                    android:id="@+id/card_price2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="2"
-                                    android:text="65.7 "
+                                    android:text=""
                                     android:textAlignment="viewEnd"
                                     android:textColor="@android:color/black"
                                     android:textSize="10dp"
@@ -427,9 +449,9 @@
                             android:layout_gravity="center"
 
                             android:text="-------------------------------"
-                            android:textSize="13sp"
+                            android:textColor="@android:color/black"
 
-                            />
+                            android:textSize="13sp" />
 
                         <LinearLayout
                             android:layout_width="match_parent"

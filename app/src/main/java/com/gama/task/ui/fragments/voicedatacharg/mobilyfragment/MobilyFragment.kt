@@ -81,11 +81,12 @@ lateinit var  arrayItems: ArrayList<Content>
         binding.List.setOnClickListener {
 
         }
-        (activity as MainActivity).open_cart_btn.setOnClickListener {
-            val action=MobilyFragmentDirections.actionMobilyFragmentToCart()
-findNavController().navigate(action)
-
-        }
+//
+//        (activity as MainActivity).open_cart_btn.setOnClickListener {
+//            val action=MobilyFragmentDirections.actionMobilyFragmentToCart()
+//findNavController().navigate(action)
+//
+//        }
 
         binding.fav.setOnClickListener {
             val appSharedPrefs = PreferenceManager
