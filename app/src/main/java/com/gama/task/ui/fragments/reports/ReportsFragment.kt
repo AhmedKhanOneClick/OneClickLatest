@@ -21,10 +21,6 @@ import dagger.hilt.android.AndroidEntryPoint
 class ReportsFragment :
     BaseFragment<ReportsViewModel, ReportsBinding>(ReportsViewModel::class.java) {
 
-
-    /**
-     * The arguments of the fragment.
-     */
 //    private val args by navArgs<OrderDetailsFragmentArgs>()
 
     override fun getLayoutRes() = R.layout.reports
@@ -35,9 +31,6 @@ class ReportsFragment :
         initDetails()
 
     }
-
-
-
 
 private fun initDetails(){
 binding.linear2.setOnClickListener {
@@ -57,12 +50,8 @@ binding.linear2.setOnClickListener {
 //            findNavController().navigate(ReportsFragmentDirections.actionReportsFragmentToFragmentOrderPrint())
 //        }
 //    }
-    /**
-     * Add Anew Contact.
-     */
+
     private fun initCreate() {
-
-
 
 //        binding.back.setOnClickListener {
 //            findNavController().navigateUp()
