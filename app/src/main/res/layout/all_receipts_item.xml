@@ -32,9 +32,11 @@
         android:text="sdfsdfdsfsfsd"/>
     <Button
         android:id="@+id/view_voucher_btn"
-        android:layout_width="@dimen/_20sdp"
-        android:layout_height="@dimen/_25sdp"
-        android:background="@drawable/ic_arrow_go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:background="@drawable/bg_cart_counter_red"
+        android:text="@string/print"
+        android:textStyle="bold"
         android:layout_gravity="center_vertical"
 
 

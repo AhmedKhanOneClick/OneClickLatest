@@ -38,12 +38,10 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         super.onViewCreated(view, savedInstanceState)
 
         position = args.position
-        val url = "http://143.198.117.2:8080/api/files/" + imgId
-
         viewPrint = view.findViewById(R.id.view_print)
         print = CtPrint()
         imgId = args.imgId
-
+        val url = "http://143.198.117.2:8080/api/files/" + imgId
 
         price = ((GlobalClass.globalCartList.get(position).Price) * (GlobalClass.globalCartList.get(
             position
@@ -52,21 +50,21 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         card_price.text = price + " SAR"
         card_price2.text = price + " SAR"
         //doPrinting()
-        Picasso.get().load(url).into(card_ligo);
+       
 
-//        Picasso.get().load(url)
-//            .into(card_ligo, object : Callback {
-//                override fun onSuccess() {
-//                    Toast.makeText(context, "printing now please wait", Toast.LENGTH_SHORT).show()
-//                    doPrinting()
-//                }
-//
-//                override fun onError(e: Exception?) {
-//
-//                }
-//
-//
-//            })
+        Picasso.get().load(url)
+            .into(card_ligo, object : Callback {
+                override fun onSuccess() {
+                    Toast.makeText(context, "printing now please wait", Toast.LENGTH_SHORT).show()
+                    doPrinting()
+                }
+
+                override fun onError(e: Exception?) {
+
+                }
+
+
+            })
 ////
 //        Glide
 //            .with(this)
@@ -80,7 +78,7 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         voucher_time.text = currentDT.substring(11, 16).toString()
 
 
-        btnPrint.setOnClickListener {  doPrinting() }
+       // btnPrint.setOnClickListener {  doPrinting() }
     }
 
 
