@@ -54,20 +54,20 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         //doPrinting()
         Picasso.get().load(url).into(card_ligo);
 
-        Picasso.get().load(url)
-            .into(card_ligo, object : Callback {
-                override fun onSuccess() {
-                    Toast.makeText(context, "printing now please wait", Toast.LENGTH_SHORT).show()
-                    doPrinting()
-                }
-
-                override fun onError(e: Exception?) {
-
-                }
-
-
-            })
+//        Picasso.get().load(url)
+//            .into(card_ligo, object : Callback {
+//                override fun onSuccess() {
+//                    Toast.makeText(context, "printing now please wait", Toast.LENGTH_SHORT).show()
+//                    doPrinting()
+//                }
 //
+//                override fun onError(e: Exception?) {
+//
+//                }
+//
+//
+//            })
+////
 //        Glide
 //            .with(this)
 //            .load(url)
@@ -79,6 +79,8 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         voucher_date.text = currentDT.substring(0, 10).toString()
         voucher_time.text = currentDT.substring(11, 16).toString()
 
+
+        btnPrint.setOnClickListener {  doPrinting() }
     }
 
 

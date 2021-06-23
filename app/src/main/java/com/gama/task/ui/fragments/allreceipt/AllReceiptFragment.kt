@@ -41,7 +41,7 @@ class AllReceiptFragment:Fragment(R.layout.fragment_all_receipt),AllReceiptAdapt
 
 val action=AllReceiptFragmentDirections.actionAllReceiptFragmentToVoucherReceiptFragment()
 
-
+        action.position=position
         action.imgId=GlobalClass.globalCartList.get(position).logo
        // action.position=position
         Log.e("price - quantty",GlobalClass.globalCartList.get(position).Price.toString()+" - "+GlobalClass.globalCartList.get(position).quanty.toString())
