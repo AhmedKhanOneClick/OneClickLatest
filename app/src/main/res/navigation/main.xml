@@ -205,9 +205,6 @@
             android:id="@+id/getreportsfragment"
             app:destination="@id/getorders"
             >
-
-
-
         </action>
     </fragment>
     <fragment
