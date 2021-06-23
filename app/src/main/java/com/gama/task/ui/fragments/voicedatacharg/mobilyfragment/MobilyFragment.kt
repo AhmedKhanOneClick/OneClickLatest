@@ -89,15 +89,15 @@ lateinit var  arrayItems: ArrayList<Content>
 //        }
 
         binding.fav.setOnClickListener {
-            val appSharedPrefs = PreferenceManager
-                .getDefaultSharedPreferences(context)
-            val prefsEditor = appSharedPrefs.edit()
-
-                val gson = Gson()
-            val json = gson.toJson(arrayItems)
-////                set.addAll(content)
-                prefsEditor.putString("MyObject", json)
-                prefsEditor.commit()
+//            val appSharedPrefs = PreferenceManager
+//                .getDefaultSharedPreferences(context)
+//            val prefsEditor = appSharedPrefs.edit()
+//
+//                val gson = Gson()
+//            val json = gson.toJson(arrayItems)
+//////                set.addAll(content)
+//                prefsEditor.putString("MyObject", json)
+//                prefsEditor.commit()
             findNavController().navigate(
                 R.id.action_favouritefragment
             )
@@ -198,15 +198,23 @@ lateinit var  arrayItems: ArrayList<Content>
                         val json = gson.toJson(fromJson)
                         prefsEditor.putString("MyObject", json)
                         prefsEditor.commit()
-                        view.favourites.background=(resources.getDrawable(R.drawable.bg_rounded_gray))
+                        view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
                     }else{
                         arrayItems.add(content)
                         fromJson=arrayItems
                         val json = gson.toJson(fromJson)
                         prefsEditor.putString("MyObject", json)
                         prefsEditor.commit()
-                        view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
-                    }
+                        view.favourites.setImageDrawable(resources.getDrawable(R.drawable.bg_cart_counter_red))
+                        val appSharedPrefs = PreferenceManager
+                            .getDefaultSharedPreferences(context)
+                        val prefsEditor = appSharedPrefs.edit()
+
+                        val gson1 = Gson()
+                        val json1 = gson1.toJson(arrayItems)
+////                set.addAll(content)
+                        prefsEditor.putString("MyObject", json1)
+                        prefsEditor.commit() }
 
                 }else{
                     val arrayItems: ArrayList<Content>
@@ -222,6 +230,17 @@ lateinit var  arrayItems: ArrayList<Content>
 
                     val json = gson.toJson(fromJson1)
                     prefsEditor.putString("MyObject", json)
+                    prefsEditor.commit()
+                    view.favourites.setImageDrawable(resources.getDrawable(R.drawable.bg_cart_counter_red))
+
+                    val appSharedPrefs = PreferenceManager
+                        .getDefaultSharedPreferences(context)
+                    val prefsEditor = appSharedPrefs.edit()
+
+                    val gson1 = Gson()
+                    val json1 = gson1.toJson(arrayItems)
+////                set.addAll(content)
+                    prefsEditor.putString("MyObject", json1)
                     prefsEditor.commit()
 
                     //-------------------------------------------------------------------------------------------------
@@ -245,7 +264,7 @@ lateinit var  arrayItems: ArrayList<Content>
 
                         ,args.logoUrl)
                 )
-                //ad id for the car
+                //ad id for the cart
 
                 if (!GlobalClass.globalCartList.isEmpty()){
                     (activity as MainActivity).observeCartCounter()

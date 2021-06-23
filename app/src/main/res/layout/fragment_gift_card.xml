@@ -87,7 +87,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="190dp"
                         android:layout_weight="1"
-                        android:background="@drawable/amazon_selector"
+
                         android:clickable="true"
                         android:layout_marginRight="-10dp"
                         android:focusable="true" />

@@ -8,13 +8,13 @@
             android:icon="@drawable/ic_homepage"
             android:title="@string/homepage"></item>
 
-      <!--
+
        <item
-            android:id="@+id/favouritesFragment"
+            android:id="@+id/FavouritesFragment"
             android:icon="@drawable/ic_favorite"
             android:title="@string/favorite"></item>
 
-            -->
+
         <item
             android:id="@+id/accountFragmnet"
             android:icon="@drawable/ic_profile"

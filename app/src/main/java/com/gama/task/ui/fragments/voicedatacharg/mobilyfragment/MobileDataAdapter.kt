@@ -11,7 +11,7 @@ import com.gama.task.R
 import com.gama.task.databinding.CardMobilyItemBinding
 import com.gama.task.models.Content
 import com.gama.task.ui.base.DataBoundListAdapter
-import kotlinx.android.synthetic.main.card_favourites_item.view.*
+
 import kotlinx.android.synthetic.main.card_mobily_item.view.*
 
 
