@@ -42,7 +42,7 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
                 )
                 if (topic != null) Toast.makeText(context, "--> " + topic.aMOUNT, Toast.LENGTH_SHORT).show()
                 Log.e("RESULT1", "==================> " + topic!!.aMOUNT)
-                if (!topic.tX_RESPONSECODE.equals("1")){
+                if (topic.tX_RESPONSECODE.equals("0")){
                     createOrder()
                 }
             }
