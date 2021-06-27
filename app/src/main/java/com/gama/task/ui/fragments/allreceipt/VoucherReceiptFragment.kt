@@ -7,6 +7,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -47,8 +48,9 @@ val args:VoucherReceiptFragmentArgs by navArgs()
             position
         ).quanty)).toString()
 
-        card_price.text = price + " SAR"
-        card_price2.text = price + " SAR"
+
+        price2.text = price
+
         //doPrinting()
        
 
@@ -56,7 +58,15 @@ val args:VoucherReceiptFragmentArgs by navArgs()
             .into(card_ligo, object : Callback {
                 override fun onSuccess() {
                     Toast.makeText(context, "printing now please wait", Toast.LENGTH_SHORT).show()
-                    doPrinting()
+                    Handler().postDelayed({
+
+
+                        view?.post {
+
+                                  doPrinting()
+                        }
+                    }, 500) // 3000 is the delayed time in milliseconds.
+
                 }
 
                 override fun onError(e: Exception?) {
@@ -103,14 +113,44 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         print!!.drawImage(image4, 0, 0)
         print!!.printPage()
         print!!.roll(100)
+if (GlobalClass.globalCartList.get(position).quanty==1) {
+    (GlobalClass.globalCartList.removeAt(position))
+    (activity as MainActivity).observeCartCounter()
+    if (GlobalClass.globalCartList.size == 0) {
+        Log.e("list now?0---", GlobalClass.globalCartList.size.toString())
+        val action =
+            VoucherReceiptFragmentDirections.actionVoucherReceiptFragmentToSearchPagerFragment()
+        findNavController().navigate(action)
+    } else {
+        Log.e("list now!?0---", GlobalClass.globalCartList.size.toString())
+        val action =
+            VoucherReceiptFragmentDirections.actionVoucherReceiptFragmentToAllReceiptFragment()
+        findNavController().navigate(action)
+    }
+}
+        //multi items for same product
+        if (GlobalClass.globalCartList.get(position).quanty>1){
+            GlobalClass.globalCartList.get(position).quanty=(GlobalClass.globalCartList.get(position).quanty)-1
+            val action =
+                VoucherReceiptFragmentDirections.actionVoucherReceiptFragmentToAllReceiptFragment()
+            findNavController().navigate(action)
+        }
+    }
+    private fun doMultiPrinting() {
+        val image4: Bitmap = getBitmapFromView(viewPrint!!)
+        print!!.initPage(image4.height)
+        print!!.drawImage(image4, 0, 0)
+        print!!.printPage()
+        print!!.roll(100)
 
         (GlobalClass.globalCartList.removeAt(position))
         (activity as MainActivity).observeCartCounter()
         if (GlobalClass.globalCartList.size==0){
-
+            Log.e("list now?0---",GlobalClass.globalCartList.size.toString())
             val action=VoucherReceiptFragmentDirections.actionVoucherReceiptFragmentToSearchPagerFragment()
             findNavController().navigate(action)
         }else{
+            Log.e("list now!?0---",GlobalClass.globalCartList.size.toString())
             val action=VoucherReceiptFragmentDirections.actionVoucherReceiptFragmentToAllReceiptFragment()
             findNavController().navigate(action)
         }

@@ -228,6 +228,7 @@ android:visibility="invisible"
                                     android:textColor="@android:color/black"
                                     android:textSize="10dp" />
                                 <TextView
+                                    android:id="@+id/price2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textStyle="bold"

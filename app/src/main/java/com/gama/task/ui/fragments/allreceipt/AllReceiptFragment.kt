@@ -29,10 +29,10 @@ class AllReceiptFragment:Fragment(R.layout.fragment_all_receipt),AllReceiptAdapt
         all_receipt_rv.layoutManager = LinearLayoutManager(context)
         all_receipt_rv.setHasFixedSize(true)
        total?.setText(checkout.toString())
-        final_receipt_btn.setOnClickListener {
-       findNavController().navigate(AllReceiptFragmentDirections.actionAllReceiptFragmentToFragmentReceipt())
-
-        }
+//        final_receipt_btn.setOnClickListener {
+//       findNavController().navigate(AllReceiptFragmentDirections.actionAllReceiptFragmentToVoucherReceiptFragment())
+//
+//        }
     }
 
 
