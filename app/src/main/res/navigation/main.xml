@@ -333,9 +333,8 @@
         android:name="com.gama.task.ui.fragments.allreceipt.AllReceiptFragment"
         android:label="fragment_all_receipt"
         tools:layout="@layout/fragment_all_receipt" >
-        <action
-            android:id="@+id/action_allReceiptFragment_to_fragmentReceipt"
-            app:destination="@id/fragmentReceipt" />
+
+
         <action
             android:id="@+id/action_allReceiptFragment_to_voucherReceiptFragment"
             app:destination="@id/voucherReceiptFragment" />
@@ -361,16 +360,7 @@
             android:id="@+id/action_bottomSheetCheckOut_to_cartFragment"
             app:destination="@id/cartFragment" />
     </dialog>
-    <fragment
-        android:id="@+id/fragmentReceipt"
-        android:name="com.gama.task.ui.fragments.sidemenu.FragmentReceipt"
-        android:label="fragment_receipt"
-        tools:layout="@layout/fragment_receipt">
-        <action
-            android:id="@+id/action_fragmentReceipt_to_searchPagerFragment"
-            app:destination="@id/searchPagerFragment" />
 
-    </fragment>
 
 
     <fragment

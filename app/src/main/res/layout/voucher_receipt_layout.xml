@@ -88,6 +88,7 @@ android:visibility="invisible"
                             android:layout_width="match_parent"
                             android:layout_height="@dimen/_30sdp"
                             android:scaleType="centerInside"
+
                             android:adjustViewBounds="true"
                             android:padding="4dp"
 
@@ -98,41 +99,24 @@ android:visibility="invisible"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_marginTop="@dimen/_15sdp"
-                            android:text="cash_receipt"
+                            android:text="AYED MOHAMED"
                             android:textAllCaps="true"
                             android:textColor="@android:color/black"
-                            android:textSize="17sp"
+                            android:textSize="15sp"
                             android:textStyle="bold" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="5dp"
                             android:text="shop_name"
                             android:textColor="@android:color/black"
                             android:textSize="15sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:text="-------------------------------"
-                            android:textColor="@android:color/black"
 
-                            android:textSize="13sp" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
 
-                            android:textStyle="bold"
-                            android:text="12142551344412354"
-                            android:textColor="@android:color/black"
-                            android:textSize="19sp"
-
-                            />
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -140,74 +124,7 @@ android:visibility="invisible"
                             android:orientation="vertical"
                             android:weightSum="3">
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Amount"
-                                    android:textAlignment="viewStart"
-
-                                    android:textColor="@android:color/black"
-                                    android:textSize="10dp" />
-
-                                <TextView
-                                    android:id="@+id/card_price"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="2"
-                                    android:text=""
-                                    android:textAlignment="center"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="10dp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="2"
-                                    android:text="المبلغ "
-                                    android:textAlignment="viewEnd"
-                                    android:textSize="10dp"
-                                    android:textColor="@android:color/black" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Card Num."
-                                    android:textAlignment="viewStart"
-
-                                    android:textColor="@android:color/black"
-                                    android:textSize="10dp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="2"
-                                    android:text=""
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="10dp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:layout_weight="2"
-                                    android:text="رقم البطاقة"
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="10dp" />
-                            </LinearLayout>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -288,38 +205,33 @@ android:visibility="invisible"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
 
-                            android:text="-------------------------------"
+                            android:text="------------------------------------------------"
                             android:textColor="@android:color/black"
 
                             android:textSize="13sp" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
 
-                            android:orientation="vertical"
-                            android:weightSum="3">
 
                             <LinearLayout
-                                android:layout_width="match_parent"
+                                android:layout_width="@dimen/_100sdp"
                                 android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
                                 android:orientation="horizontal">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="Terminal Num."
-                                    android:textAlignment="viewStart"
-
+                                    android:textStyle="bold"
+                                    android:text="ZAIN - "
+                                    android:textAlignment="viewEnd"
                                     android:textColor="@android:color/black"
                                     android:textSize="10dp" />
-
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="2"
-                                    android:text=""
+                                    android:textStyle="bold"
+                                    android:text="20"
                                     android:textAlignment="viewEnd"
                                     android:textColor="@android:color/black"
                                     android:textSize="10dp" />
@@ -327,8 +239,9 @@ android:visibility="invisible"
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="2"
-                                    android:text="رقم الجهاز"
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="@dimen/_4sdp"
+                                    android:text="SAR"
                                     android:textAlignment="viewEnd"
                                     android:textColor="@android:color/black"
                                     android:textSize="10dp" />
@@ -337,14 +250,14 @@ android:visibility="invisible"
 
 
 
-                        </LinearLayout>
+
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
 
-                            android:text="-------------------------------"
+                            android:text="------------------------------------------------"
                             android:textColor="@android:color/black"
 
                             android:textSize="13sp" />
@@ -365,78 +278,108 @@ android:visibility="invisible"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="string/price"
+                                    android:text="Order ID :"
                                     android:textAlignment="viewStart"
+
                                     android:textColor="@android:color/black"
-                                    android:textSize="10dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="10dp" />
 
                                 <TextView
-                                    android:id="@+id/card_price2"
+                                    android:id="@+id/card_price"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="666666"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="2"
+                                    android:text="رقم الطلب :"
+                                    android:textAlignment="viewEnd"
+                                    android:textSize="10dp"
+                                    android:textColor="@android:color/black" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Exp. Data :"
+                                    android:textAlignment="viewStart"
+
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="2022-08-08"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="2"
+                                    android:text="ت انتهاء :"
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Serial :"
+                                    android:textAlignment="viewStart"
+
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_weight="2"
                                     android:text=""
                                     android:textAlignment="viewEnd"
                                     android:textColor="@android:color/black"
-                                    android:textSize="10dp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                    android:textSize="10dp" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="string/sale"
-                                    android:textAlignment="viewStart"
-
-                                    android:textColor="@android:color/black"
-                                    android:textSize="10dp"
-                                    android:textStyle="bold" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_height="match_parent"
                                     android:layout_weight="2"
-                                    android:text="0.0 "
+                                    android:text="تسلسل :"
                                     android:textAlignment="viewEnd"
                                     android:textColor="@android:color/black"
-                                    android:textSize="10dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="10dp" />
                             </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
+                            <TextView
+                                android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:orientation="horizontal">
+                                android:layout_gravity="center"
 
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="string/vat"
-                                    android:textAlignment="viewStart"
+                                android:text="First Original Copy"
+                                android:textColor="@android:color/black"
 
-                                    android:textColor="@android:color/black"
-                                    android:textSize="10dp"
-                                    android:textStyle="bold" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="2"
-                                    android:text="2.00 "
-                                    android:textAlignment="viewEnd"
-                                    android:textColor="@android:color/black"
-                                    android:textSize="10dp"
-                                    android:textStyle="bold" />
-                            </LinearLayout>
-
+                                android:textSize="13sp" />
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -449,11 +392,40 @@ android:visibility="invisible"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
 
-                            android:text="-------------------------------"
+                            android:text="------------------------------------------------"
                             android:textColor="@android:color/black"
 
                             android:textSize="13sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
 
+                            android:text="PIN CODE"
+                            android:textStyle="bold"
+                            android:textColor="@android:color/black"
+
+                            android:textSize="11sp" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:textStyle="bold"
+                            android:text="12142551344454"
+                            android:textColor="@android:color/black"
+                            android:textSize="16sp"
+
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+
+                            android:text="------------------------------------------------"
+                            android:textColor="@android:color/black"
+
+                            android:textSize="13sp" />
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -461,46 +433,255 @@ android:visibility="invisible"
                             android:orientation="vertical"
                             android:weightSum="3">
 
+
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+
                                 android:orientation="horizontal">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:text="Recharge Instruction"
                                     android:layout_weight="1"
-                                    android:text="User Instruction"
                                     android:textAlignment="viewStart"
                                     android:textColor="@android:color/black"
-
-                                    android:textSize="12dp"
-                                    android:textStyle="bold" />
+                                    android:textSize="10dp" />
 
 
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textStyle="bold"
+                                    android:layout_marginStart="@dimen/_4sdp"
+                                    android:text="تعليمات الشحن"
+                                    android:layout_weight="1"
+
+                                    android:textAlignment="viewEnd"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="10dp" />
                             </LinearLayout>
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
-                                android:layout_marginTop="10dp"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"
                                 >
-
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_weight="1"
-                                    android:text="AIG Pharmaceuticals is a growing Pharmaceutical company that was established in 2010 with its headquarters
-        located in Cairo and Delta with the objective of providing high quality and innovative products to the Egyptian market
-        .In 2011, after 9 years of operations, AIG has grown from a small local company to a market leader of approximately 500 customers."
-                                    android:textAlignment="viewStart"
+                                    android:text="* 141 * "
+                                    android:layout_marginStart="@dimen/_5sdp"
+
+                                    android:textAlignment="center"
                                     android:textColor="@android:color/black"
-
-                                    android:textSize="10dp"
-                                    android:textStyle="bold" />
-
-
+                                    android:textSize="9dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Voucher Number # Call"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
                             </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="- For Balance Enquiry Please Dial :"
+                                    android:layout_marginStart="@dimen/_5sdp"
+
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                                <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="* 142 #" android:layout_marginEnd="@dimen/_5sdp"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="9dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                               android:gravity="center"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="- For More Information, Dial "
+                                    android:layout_marginStart="@dimen/_5sdp"
+
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="959"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2"
+                                android:text="لاعادة شحن رصيدك ادخل من اليسار الي اليمين -"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/black"
+                                android:textSize="9dp" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" رقم الشحن # اتصال -"
+                                    android:layout_marginStart="@dimen/_5sdp"
+
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="* 141 *"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                            </LinearLayout>
+
+
+
+
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="- 959 "
+                                    android:layout_marginStart="@dimen/_5sdp"
+
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="لمذيد من المعلومات اتصل علي"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:gravity="center"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="ریچارج واوچر نمبر# کال بٹن دبائیں۔"
+                                    android:layout_marginStart="@dimen/_5sdp"
+
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" * 141 * "
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="اپنا بقایا بیلنس معلوم کرنے کے لیے"
+                                    android:layout_marginStart="@dimen/_5sdp"
+
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=" * 141 # " android:layout_marginEnd="@dimen/_5sdp"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center"
+                                >
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="- 959 "
+                                    android:layout_marginStart="@dimen/_5sdp"
+
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="مزید معلومات کے لئے ، ڈائل کریں"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:textAlignment="center"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="9dp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                />
                         </LinearLayout>
 
                         <TextView

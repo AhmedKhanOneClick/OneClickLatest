@@ -198,8 +198,12 @@ lateinit var  arrayItems: ArrayList<Content>
                         val json = gson.toJson(fromJson)
                         prefsEditor.putString("MyObject", json)
                         prefsEditor.commit()
-                        view.favourites.background=(resources.getDrawable(R.drawable.bg_cart_counter_red))
-                    }else{
+                        view.favourites.background=(resources.getDrawable(R.drawable.favourites))
+                   //removed to favourites
+                    }
+                    //added to  product is in fav
+                    else{
+
                         arrayItems.add(content)
                         fromJson=arrayItems
                         val json = gson.toJson(fromJson)
