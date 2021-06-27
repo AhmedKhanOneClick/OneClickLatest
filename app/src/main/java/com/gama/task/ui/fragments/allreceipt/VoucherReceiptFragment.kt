@@ -129,12 +129,13 @@ if (GlobalClass.globalCartList.get(position).quanty==1) {
     }
 }
         //multi items for same product
-        if (GlobalClass.globalCartList.get(position).quanty>1){
+        if (GlobalClass.globalCartList.size!=0){
+        if ((GlobalClass.globalCartList.get(position).quanty)>1){
             GlobalClass.globalCartList.get(position).quanty=(GlobalClass.globalCartList.get(position).quanty)-1
             val action =
                 VoucherReceiptFragmentDirections.actionVoucherReceiptFragmentToAllReceiptFragment()
             findNavController().navigate(action)
-        }
+        }}
     }
     private fun doMultiPrinting() {
         val image4: Bitmap = getBitmapFromView(viewPrint!!)
