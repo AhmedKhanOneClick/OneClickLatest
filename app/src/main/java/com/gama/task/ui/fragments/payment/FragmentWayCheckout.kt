@@ -18,11 +18,12 @@ import com.gama.task.models.Order
 import com.gama.task.ui.fragments.cart.GlobalClass
 import com.google.gson.Gson
 import com.surepay.integratemada.MadaResponseModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_way_checkout.*
 import java.util.*
 import kotlin.collections.AbstractList
 
-
+@AndroidEntryPoint
 class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
     private lateinit var myReceiver:MyReceiver
     private val viewModel: FragmentWayCheckoutViewModel by viewModels()

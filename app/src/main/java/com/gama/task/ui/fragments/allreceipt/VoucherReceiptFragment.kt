@@ -48,7 +48,7 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         ).quanty)).toString()
 
         card_price.text = price + " SAR"
-        card_price2.text = price + " SAR"
+//        card_price2.text = price + " SAR"
         //doPrinting()
        
 

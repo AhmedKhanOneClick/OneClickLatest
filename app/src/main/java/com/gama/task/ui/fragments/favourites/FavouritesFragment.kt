@@ -2,13 +2,16 @@ package com.gama.task.ui.fragments.favourites
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.content.ContentValues
 import android.content.Context
 import android.content.Intent
 import android.preference.PreferenceManager
 import android.util.Log
+import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.observe
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -25,6 +28,9 @@ import com.gama.task.util.autoCleared
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.card_favourites_item.view.*
+import kotlinx.android.synthetic.main.card_mobily_item.view.*
+import kotlinx.android.synthetic.main.card_mobily_item.view.favourites
 import java.util.*
 
 
@@ -52,34 +58,9 @@ class FavouritesFragment (): BaseFragment<FavouritesViewModel, FragmentFavourite
 
 //init account list
         initAccountList()
-        //init Add account
-//        binding.searchresult.setOnSearchClickListener {
-////            binding.toolbar.visibility= View.GONE
-////
-////            binding.userIcon.visibility= View.GONE
-////            binding.notificationIcon.visibility= View.GONE
-//
-//
-//        }
-//        binding.searchresult.setOnCloseListener(object : SearchView.OnCloseListener {
-//            override fun onClose(): Boolean {
-////                binding.toolbar.visibility= View.VISIBLE
-////                binding.userIcon.visibility= View.VISIBLE
-////                binding.notificationIcon.visibility= View.VISIBLE
-//
-//                return false
-//            }
-//        })
+
         binding.sort.setOnClickListener {
-//            viewModel.accountsList.observe(viewLifecycleOwner) {
-//
-//                it.sortByDescending { it.price }
-//
-//                mobileDataAdapter.submitList(it)
-//                mobileDataAdapter.notifyDataSetChanged()
-//            }
-//
-//        }
+
             DepartmentFragment.newInstance(
                 "", ""
             )
@@ -89,38 +70,95 @@ class FavouritesFragment (): BaseFragment<FavouritesViewModel, FragmentFavourite
                 .show(childFragmentManager, DepartmentFragment.TAG)
         }
         val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-//        model.message.observe(viewLifecycleOwner) {
-//            Log.d(ContentValues.TAG, "init: "+it.toString())
-//            viewModel.accountsList.observe(viewLifecycleOwner) {
-//
-//                it.sortByDescending { it.createdAt }
-//
-//                favouritesAdapter.submitList(it)
-//                favouritesAdapter.notifyDataSetChanged()
-//            }
-//        }
-//
-//        model.asc.observe(viewLifecycleOwner) {
-//            Log.d(ContentValues.TAG, "init: "+it.toString())
-//            viewModel.accountsList.observe(viewLifecycleOwner) {
-//
-//                it.sortBy { it.price }
-//
-//                favouritesAdapter.submitList(it)
-//                favouritesAdapter.notifyDataSetChanged()
-//            }
-//        }
-//
-//        model.desc.observe(viewLifecycleOwner) {
-//            Log.d(ContentValues.TAG, "init: "+it.toString())
-//            viewModel.accountsList.observe(viewLifecycleOwner) {
-//
-//                it.sortByDescending { it.price }
-//
-//                favouritesAdapter.submitList(it)
-//                favouritesAdapter.notifyDataSetChanged()
-//            }
-//        }
+        model.message.observe(viewLifecycleOwner) {
+            val appSharedPrefs = requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
+            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+
+            val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
+            Log.d(TAG, "initAccountList: " + serializedObject.toString())
+
+            if (!serializedObject.equals("")) {
+//            val gson = Gson()
+                val gson = GsonBuilder().serializeNulls().create()
+
+                val fromJson: List<Content> =
+                    gson.fromJson(serializedObject, object : TypeToken<ArrayList<Content?>?>() {}.type)
+                Log.d(TAG, "initAccountList: "+fromJson.size)
+                model.sendfavourites2()
+                for ( i in 0..fromJson.size-1){
+
+                    Log.d(TAG, "initAccountList: "+fromJson[i])
+                    model.sendfavourites1(fromJson[i])
+                }
+                Log.d(TAG, "initAccountList: dfsf")
+                model._accountsList1.observe(viewLifecycleOwner){
+                    it!!.sortBy { it.quantity }
+                    favouritesAdapter.submitList(it)
+                    favouritesAdapter.notifyDataSetChanged()
+                }
+            }
+        }
+
+        model.asc.observe(viewLifecycleOwner) {
+            Log.d(ContentValues.TAG, "init: "+it.toString())
+
+            val appSharedPrefs = requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
+            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+
+            val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
+            Log.d(TAG, "initAccountList: " + serializedObject.toString())
+
+            if (!serializedObject.equals("")) {
+//            val gson = Gson()
+                val gson = GsonBuilder().serializeNulls().create()
+
+                val fromJson: List<Content> =
+                    gson.fromJson(serializedObject, object : TypeToken<ArrayList<Content?>?>() {}.type)
+                Log.d(TAG, "initAccountList: "+fromJson.size)
+                model.sendfavourites2()
+                for ( i in 0..fromJson.size-1){
+
+                    Log.d(TAG, "initAccountList: "+fromJson[i])
+                    model.sendfavourites1(fromJson[i])
+                }
+                Log.d(TAG, "initAccountList: dfsf")
+                model._accountsList1.observe(viewLifecycleOwner){
+                    it!!.sortBy { it.price }
+                    favouritesAdapter.submitList(it)
+                    favouritesAdapter.notifyDataSetChanged()
+                }
+            }
+        }
+
+        model.desc.observe(viewLifecycleOwner) {
+            Log.d(ContentValues.TAG, "init: "+it.toString())
+            val appSharedPrefs = requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
+            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+
+            val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
+            Log.d(TAG, "initAccountList: " + serializedObject.toString())
+
+            if (!serializedObject.equals("")) {
+//            val gson = Gson()
+                val gson = GsonBuilder().serializeNulls().create()
+
+                val fromJson: List<Content> =
+                    gson.fromJson(serializedObject, object : TypeToken<ArrayList<Content?>?>() {}.type)
+                Log.d(TAG, "initAccountList: "+fromJson.size)
+                model.sendfavourites2()
+                for ( i in 0..fromJson.size-1){
+
+                    Log.d(TAG, "initAccountList: "+fromJson[i])
+                    model.sendfavourites1(fromJson[i])
+                }
+                Log.d(TAG, "initAccountList: dfsf")
+                model._accountsList1.observe(viewLifecycleOwner){
+                    it!!.sortByDescending { it.price }
+                    favouritesAdapter.submitList(it)
+                    favouritesAdapter.notifyDataSetChanged()
+                }
+            }
+        }
     }
 
 
@@ -137,16 +175,53 @@ class FavouritesFragment (): BaseFragment<FavouritesViewModel, FragmentFavourite
 
 
         favouritesAdapter = FavouritesAdapter(dataBindingComponent, appExecutors) {
+                content: Content, view: View ->
+            if  (view .id==R.id.favourites1 ){
+                val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
+                val appSharedPrefs = requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
+                val prefsEditor = appSharedPrefs.edit()
+                val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
+                Log.e("click","favourites1")
+                val gson = GsonBuilder().serializeNulls().create()
 
-//            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
-//            model.sendfavourites(it)
-//                    findNavController().navigate(
-//                        R.id.hotelsListFragment,
-//                        bundleOf(
-//                            "req_no" to it.id.toString()
-////                            "hotelSearchRequest" to viewModel.accountsList.value!!
-//                        )
-//                    )
+                var fromJson: List<Content> =
+                    gson.fromJson(
+                        serializedObject,
+                        object : TypeToken<java.util.ArrayList<Content?>?>() {}.type
+                    )
+                var arrayItems: ArrayList<Content>
+                arrayItems= arrayListOf()
+
+                arrayItems= fromJson as ArrayList<Content>
+                Log.e("click","favourites2")
+                arrayItems.remove(content)
+                fromJson=arrayItems
+                val json = gson.toJson(fromJson)
+                prefsEditor.putString("MyObject", json)
+                prefsEditor.commit()
+                view.favourites1.setImageDrawable(resources.getDrawable(R.drawable.favourites))
+findNavController().navigate(R.id.getitselffavourites)
+
+//            val gson = Gson()
+//                    val gson1 = GsonBuilder().serializeNulls().create()
+//
+//                    val fromJson1: List<Content> =
+//                        gson1.fromJson(serializedObject, object : TypeToken<ArrayList<Content?>?>() {}.type)
+//                    Log.d(TAG, "initAccountList: "+fromJson1.size)
+//                    model.sendfavourites2()
+//                    for ( i in 0..fromJson1.size-1){
+//
+//                        Log.d(TAG, "hiii"+fromJson1.size)
+//                        model.sendfavourites1(fromJson1[i])
+//                    }
+//                    Log.d(TAG, "initAccountList: dfsf")
+//                    model._accountsList1.observe(viewLifecycleOwner){
+//                        Log.d(TAG, "hiii345"+it!!.size)
+//                        favouritesAdapter.submitList(it)
+//                        favouritesAdapter.notifyDataSetChanged()
+//                    }
+
+            }
 
 
 
