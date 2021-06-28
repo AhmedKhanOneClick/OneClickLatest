@@ -43,8 +43,8 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
                 )
                 if (topic != null) Toast.makeText(context, "--> " + topic.aMOUNT, Toast.LENGTH_SHORT).show()
                 Log.e("RESULT1", "==================> " + topic!!.aMOUNT)
-                if (topic.tX_RESPONSECODE.equals("0")){
-                    createOrder()
+                if (topic.tX_RSLT.equals("0")){
+                   createOrder()
                 }
             }
         }
@@ -89,8 +89,8 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
             Log.e("dynamic voucher price-",item.toString()+GlobalClass.globalCartList.get(item).Price.toString())
         }
 
-        val randomStr = array[Random().nextInt(array.size)]
 
+ammount=ammount*10
 
 
         val intent = Intent("surepay.mada.PAY_AMOUNT")

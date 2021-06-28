@@ -28,7 +28,6 @@ class ReportsFragment :
 //binding.transactionId.setText("Transaction ID / "+args.reqId)
         initCreate()
         initDetails()
-
     }
 
 private fun initDetails(){
