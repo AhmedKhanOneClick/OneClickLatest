@@ -124,7 +124,7 @@ ammount=ammount*10
 
         val products12= Order.Products11("0a94af0a3bed4f1dae06738b2629af01", 1.0)
         val depts = Order(
-            678904234.0, ammount, 58.0, 2.0, 3.0, 11.0, "shipped", viewModel.getvendorid(),
+            678904234.0, ammount, 11.0, 2.0, 3.0, 11.0, "shipped", viewModel.getvendorid(),
             listOf(products12)
         )
         viewModel.addDepts(depts)

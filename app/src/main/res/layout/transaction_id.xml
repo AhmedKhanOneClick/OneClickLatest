@@ -75,34 +75,34 @@
             android:background="@drawable/account_card">
 
 
-
             <TextView
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="left"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
                 android:text="Date"
                 android:textColor="#6A7995"
-                android:textSize="30sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
+
             <TextView
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
                 android:id="@+id/date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:text="@{String.valueOf(requests1.createdAt)}"
                 android:textColor="#444343"
-                android:textSize="30dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
@@ -144,34 +144,34 @@
             android:background="@drawable/account_card">
 
 
-
             <TextView
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="left"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
                 android:text="Product Name"
                 android:textColor="#6A7995"
-                android:textSize="30sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
+
             <TextView
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:text="@{requests1.products.get(0).name}"
                 android:textColor="#444343"
-                android:textSize="30dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
@@ -213,34 +213,34 @@
             android:background="@drawable/account_card">
 
 
-
             <TextView
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="left"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
                 android:text="Main Category"
                 android:textColor="#6A7995"
-                android:textSize="30sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
+
             <TextView
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
                 android:id="@+id/category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:text="@{requests1.products.get(0).name}"
                 android:textColor="#444343"
-                android:textSize="30dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
@@ -282,34 +282,34 @@
             android:background="@drawable/account_card">
 
 
-
             <TextView
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="left"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
                 android:text="Statues"
                 android:textColor="#6A7995"
-                android:textSize="30sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
+
             <TextView
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
                 android:id="@+id/statues"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:text="@{requests1.status}"
                 android:textColor="#444343"
-                android:textSize="30dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
@@ -351,34 +351,34 @@
             android:background="@drawable/account_card">
 
 
-
             <TextView
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="left"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
                 android:text="Quantity"
                 android:textColor="#6A7995"
-                android:textSize="30sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
+
             <TextView
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
                 android:id="@+id/quantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:text="@{String.valueOf(requests1.total)}"
                 android:textColor="#444343"
-                android:textSize="30dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
@@ -420,34 +420,34 @@
             android:background="@drawable/account_card">
 
 
-
             <TextView
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="left"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
                 android:text="Payment Amount"
                 android:textColor="#6A7995"
-                android:textSize="30sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
+
             <TextView
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
                 android:id="@+id/amount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:text="@{String.valueOf(requests1.subTotal)}"
                 android:textColor="#444343"
-                android:textSize="30dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
@@ -489,34 +489,34 @@
             android:background="@drawable/account_card">
 
 
-
             <TextView
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="left"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
                 android:text="Made Of Transactions"
                 android:textColor="#6A7995"
-                android:textSize="30sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
+
             <TextView
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
                 android:id="@+id/transaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:text="@{String.valueOf(requests1.total)}"
                 android:textColor="#444343"
-                android:textSize="30dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
@@ -558,34 +558,34 @@
             android:background="@drawable/account_card">
 
 
-
             <TextView
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginBottom="10dp"
-                android:gravity="left"
-
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="10dp"
+                android:gravity="left"
                 android:text="Card Details"
                 android:textColor="#6A7995"
-                android:textSize="30sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
+
             <TextView
-                android:layout_marginLeft="30dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="20dp"
-                android:gravity="center_horizontal"
                 android:id="@+id/card_details"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
                 android:text="@{String.valueOf(requests1.createdAt)}"
                 android:textColor="#444343"
-                android:textSize="30dp"
+                android:textSize="12sp"
                 android:textStyle="bold"
 
                 tools:ignore="MissingConstraints" />
