@@ -2,6 +2,7 @@ package com.gama.task.ui.fragments.favourites
 
 import android.content.Context
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingComponent
 import androidx.databinding.DataBindingUtil
@@ -14,7 +15,9 @@ import com.gama.task.databinding.CardMobilyItemBinding
 import com.gama.task.models.Content
 
 import com.gama.task.ui.base.DataBoundListAdapter
+import kotlinx.android.synthetic.main.card_favourites_item.view.*
 import kotlinx.android.synthetic.main.card_mobily_item.view.*
+import kotlinx.android.synthetic.main.card_mobily_item.view.favourites
 
 
 /**
@@ -29,7 +32,7 @@ class FavouritesAdapter(
     private val dataBindingComponent: DataBindingComponent,
     private val appExecutors: AppExecutors,
 
-    private val onHotelClicked: (Content) -> Unit
+    private val onHotelClicked: (Content,it: View) -> Unit,
 ) : DataBoundListAdapter<Content, CardFavouritesItemBinding>(
     appExecutors,
     object : DiffUtil.ItemCallback<Content>() {
@@ -53,14 +56,21 @@ class FavouritesAdapter(
 //                submitList(item.amenities)
 //            }
 
-        binding.root.setOnClickListener { onHotelClicked(item) }
-//        binding.root.favourites.setOnClickListener {
+
+        binding.root.favourites1.setOnClickListener {
 //            if(binding.root.favourites.drawable== resources.getDrawable(=R.drawable.favourites))
 //            val contect=it.context.applicationContext.r
 //            val model = ViewModelProvider(context).get(SharedViewModel::class.java)
 //            model1.sendfavourites(item)
-//            onHotelClicked(item)
-////            itemClick(layoutPosition)
-//        }
+            onHotelClicked(item,it)
+//            itemClick(layoutPosition)
+        }
+
+
+        binding.root.setOnClickListener {
+            onHotelClicked(item,it)
+//       onCardlClicked(item)
+//            itemClick(layoutPosition)
+        }
     }
 }

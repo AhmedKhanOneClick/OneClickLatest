@@ -96,7 +96,13 @@
         android:id="@+id/FavouritesFragment"
         android:name="com.gama.task.ui.fragments.favourites.FavouritesFragment"
         android:label="fragment_favourite"
-        tools:layout="@layout/fragment_favourites" />
+        tools:layout="@layout/fragment_favourites" >
+        <action
+            android:id="@+id/getitselffavourites"
+            app:destination="@id/FavouritesFragment"
+            >
+        </action>
+    </fragment>
     <fragment
         android:id="@+id/getreports"
         android:name="com.gama.task.ui.fragments.reports.ReportsFragment"

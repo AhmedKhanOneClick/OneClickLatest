@@ -98,9 +98,9 @@ lateinit var  arrayItems: ArrayList<Content>
 //////                set.addAll(content)
 //                prefsEditor.putString("MyObject", json)
 //                prefsEditor.commit()
-            findNavController().navigate(
-                R.id.action_favouritefragment
-            )
+//            findNavController().navigate(
+//                R.id.action_favouritefragment
+//            )
         }
         binding.sort.setOnClickListener {
 //            viewModel.accountsList.observe(viewLifecycleOwner) {
@@ -178,7 +178,7 @@ lateinit var  arrayItems: ArrayList<Content>
                 Log.d(TAG, "initAccountList: " + serializedObject.toString())
 
                 if (!serializedObject.equals("")) {
-                    Log.d(TAG, "initAccountList:sdfj ")
+                    Log.e("click","favourites1")
                     val gson = GsonBuilder().serializeNulls().create()
 
                     var fromJson: List<Content> =
@@ -192,24 +192,24 @@ lateinit var  arrayItems: ArrayList<Content>
 
                     arrayItems= fromJson as ArrayList<Content>
                     if(arrayItems.contains(content)){
-
+                        Log.e("click","favourites2")
                         arrayItems.remove(content)
                         fromJson=arrayItems
                         val json = gson.toJson(fromJson)
                         prefsEditor.putString("MyObject", json)
                         prefsEditor.commit()
-                        view.favourites.background=(resources.getDrawable(R.drawable.favourites))
+                        view.favourites.setImageDrawable(resources.getDrawable(R.drawable.favourites))
                    //removed to favourites
                     }
                     //added to  product is in fav
                     else{
-
+                        Log.e("click","favourites3")
                         arrayItems.add(content)
                         fromJson=arrayItems
                         val json = gson.toJson(fromJson)
                         prefsEditor.putString("MyObject", json)
                         prefsEditor.commit()
-                        view.favourites.setImageDrawable(resources.getDrawable(R.drawable.bg_cart_counter_red))
+                        view.favourites.setImageDrawable(resources.getDrawable(R.drawable.favouritesred))
                         val appSharedPrefs = PreferenceManager
                             .getDefaultSharedPreferences(context)
                         val prefsEditor = appSharedPrefs.edit()
@@ -221,6 +221,7 @@ lateinit var  arrayItems: ArrayList<Content>
                         prefsEditor.commit() }
 
                 }else{
+                    Log.e("click","favourites4")
                     val arrayItems: ArrayList<Content>
                     arrayItems= arrayListOf()
                     Log.d(TAG, "initAccountList:sdfs ")
@@ -235,7 +236,7 @@ lateinit var  arrayItems: ArrayList<Content>
                     val json = gson.toJson(fromJson1)
                     prefsEditor.putString("MyObject", json)
                     prefsEditor.commit()
-                    view.favourites.setImageDrawable(resources.getDrawable(R.drawable.bg_cart_counter_red))
+                    view.favourites.setImageDrawable(resources.getDrawable(R.drawable.favouritesred))
 
                     val appSharedPrefs = PreferenceManager
                         .getDefaultSharedPreferences(context)

@@ -12,6 +12,7 @@ import androidx.core.widget.doOnTextChanged
 import androidx.databinding.BindingAdapter
 import com.gama.task.models.Content
 import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
+import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment.Companion.TAG
 import com.gama.task.util.extensions.getDrawableCompat
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.shape.CornerFamily
@@ -399,10 +400,11 @@ object BindingAdapters {
 //            val model = ViewModelProvider(requireActivity()).get(SharedViewModel::class.java)
 
         val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
-        Log.d(DepartmentFragment.TAG, "initAccountList: " + serializedObject.toString())
+        Log.d(DepartmentFragment.TAG, "setdatetime:7 " + serializedObject.toString())
 
-        if (!serializedObject.equals("")) {
-            Log.d(DepartmentFragment.TAG, "initAccountList:sdfj ")
+        if (!serializedObject.equals("")||!serializedObject.equals("[]")) {
+
+
             val gson = GsonBuilder().serializeNulls().create()
 
             var fromJson: List<Content> =
@@ -410,21 +412,48 @@ object BindingAdapters {
                     serializedObject,
                     object : TypeToken<ArrayList<Content?>?>() {}.type
                 )
-            Log.d(DepartmentFragment.TAG, "initAccountList: " + fromJson.size)
+
             var arrayItems: ArrayList<Content>
             arrayItems= arrayListOf()
 
             arrayItems= fromJson as ArrayList<Content>
+            if(arrayItems.size==0){
+
+                resourceId = context.resources.getIdentifier(
+                    "favourites",
+                    "drawable",
+                    context.packageName
+                )
+            }
+//            else{
+//                resourceId = context.resources.getIdentifier(
+//                    "favouritesred",
+//                    "drawable",
+//                    context.packageName
+//                )
+//            }
+
   for(i in 0..arrayItems.size-1){
+      Log.d(TAG, "setdatetime:3 ")
       if(arrayItems[i].createdAt.equals(image)){
+          Log.d(TAG, "setdatetime:4 ")
            resourceId = context.resources.getIdentifier(
-              "amazon",
+              "favouritesred",
               "drawable",
               context.packageName
           )
       }
+//      else{
+//          Log.d(TAG, "setdatetime:5 ")
+//          resourceId = context.resources.getIdentifier(
+//              "favourites",
+//              "drawable",
+//              context.packageName
+//          )
+//      }
   }
         }else{
+
             resourceId = context.resources.getIdentifier(
                 "favourites",
                 "drawable",
