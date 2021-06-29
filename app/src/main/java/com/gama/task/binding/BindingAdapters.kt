@@ -402,7 +402,7 @@ object BindingAdapters {
         val serializedObject: String = appSharedPrefs.getString("MyObject", "")!!
         Log.d(DepartmentFragment.TAG, "setdatetime:7 " + serializedObject.toString())
 
-        if (!serializedObject.equals("")||!serializedObject.equals("[]")) {
+        if (serializedObject.isNotBlank()) {
 
 
             val gson = GsonBuilder().serializeNulls().create()

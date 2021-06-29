@@ -14,8 +14,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.gama.task.R
+import com.gama.task.databinding.FragmentDataRechargMobilyBinding
+import com.gama.task.databinding.FragmentWayCheckoutBinding
 import com.gama.task.models.Order
+import com.gama.task.ui.Home.AdvancedSearch.Departments.DepartmentFragment
+import com.gama.task.ui.base.BaseFragment
 import com.gama.task.ui.fragments.cart.GlobalClass
+import com.gama.task.ui.fragments.voicedatacharg.mobilyfragment.MobilyDataViewModel
 import com.google.gson.Gson
 import com.surepay.integratemada.MadaResponseModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -24,16 +29,22 @@ import java.util.*
 import kotlin.collections.AbstractList
 
 @AndroidEntryPoint
-class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
+class FragmentWayCheckout: BaseFragment<FragmentWayCheckoutViewModel, FragmentWayCheckoutBinding>(
+    FragmentWayCheckoutViewModel::class.java
+)
+//   Fragment(R.layout.fragment_way_checkout)
+{
     private lateinit var myReceiver:MyReceiver
-    private val viewModel: FragmentWayCheckoutViewModel by viewModels()
+    lateinit var  myReceiver1: BroadcastReceiver
+
     var ammount=0.0
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+    override fun getLayoutRes() = R.layout.fragment_way_checkout
+    override fun init() {
+
 
 
         myReceiver = MyReceiver()
-        val myReceiver1: BroadcastReceiver = object : BroadcastReceiver() {
+        myReceiver1= object : BroadcastReceiver() {
             override fun onReceive(context: Context, intent: Intent) {
                 val result = intent.extras!!.getString("RESULT")
                 Log.e("RESULT", "==================> $result")
@@ -53,17 +64,20 @@ class FragmentWayCheckout: Fragment(R.layout.fragment_way_checkout) {
         requireActivity().registerReceiver(myReceiver, filter)
         requireActivity().registerReceiver(myReceiver1, filter)
 
-        post_balance.setOnClickListener {
+        binding.postBalance.setOnClickListener {
 
-           findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
+           findNavController().navigate(R.id.action_fragmentWayCheckout_to_allReceiptFragment)
         }
-
-        bank_card.setOnClickListener {
+           binding.bankCard .setOnClickListener {
             //findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase1())
             Log.d("TAG", "onViewCreated: ")
             sendAmountToMadaApplication()
-                        findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment())
+               findNavController().navigate(R.id.action_fragmentWayCheckout_to_allReceiptFragment)
         } }
+
+
+
+
     private fun sendAmountToMadaApplication() {
         if (!isMadaAppInstalled()){
             Log.d("TAG", "Mada App Not Installed ")
@@ -130,5 +144,9 @@ ammount=ammount*10
         viewModel.addDepts(depts)
         viewModel.accept_statues1()
     }
+
+  //  override fun setI(name: String?) {
+   //     Log.d(DepartmentFragment.TAG, "onActivityResult: 113245555")
+  //  }
 
 }
