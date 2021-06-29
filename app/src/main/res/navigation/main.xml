@@ -214,8 +214,8 @@
         android:label="fragment_way_checkout"
         tools:layout="@layout/fragment_way_checkout" >
         <action
-            android:id="@+id/action_fragmentWayCheckout_to_fragmentpurchase2"
-            app:destination="@id/fragmentpurchase2" />
+            android:id="@+id/action_fragmentWayCheckout_to_cart"
+            app:destination="@id/cartFragment" />
         <action
             android:id="@+id/action_fragmentWayCheckout_to_allReceiptFragment"
             app:destination="@id/allReceiptFragment" />
