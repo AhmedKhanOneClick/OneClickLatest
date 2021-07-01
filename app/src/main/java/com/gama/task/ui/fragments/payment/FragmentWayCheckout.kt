@@ -49,6 +49,7 @@ class FragmentWayCheckout: BaseFragment<FragmentWayCheckoutViewModel, FragmentWa
             override fun onReceive(context: Context, intent: Intent) {
                 val result = intent.extras!!.getString("RESULT")
                 Log.e("RESULT", "==================> $result")
+
                 val topic = Gson().fromJson(
                     result,
                     MadaResponseModel::class.java
