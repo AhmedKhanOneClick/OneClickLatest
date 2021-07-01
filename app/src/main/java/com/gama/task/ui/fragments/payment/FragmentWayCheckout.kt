@@ -55,10 +55,10 @@ class FragmentWayCheckout: BaseFragment<FragmentWayCheckoutViewModel, FragmentWa
                     MadaResponseModel::class.java
                 )
                 if (topic != null) Toast.makeText(context, "--> " + topic.aMOUNT, Toast.LENGTH_SHORT).show()
-              //  Log.e("RESULT1", "=================> " + topic!!.aMOUNT)
-              //  Log.e("response",topic.tX_RSLT.toString())
+                //  Log.e("RESULT1", "=================> " + topic!!.aMOUNT)
+                //  Log.e("response",topic.tX_RSLT.toString())
                 if (topic.tX_RSLT.equals("0")){
-                   createOrder()
+                    createOrder()
                     val action=FragmentWayCheckoutDirections.actionFragmentWayCheckoutToAllReceiptFragment()
                     findNavController().navigate(action)
                 }
@@ -76,25 +76,25 @@ class FragmentWayCheckout: BaseFragment<FragmentWayCheckoutViewModel, FragmentWa
                 }
                 if (topic.tX_RSLT.equals("3")){
                     Log.d(TAG, "onReceive: txRslt3")
-                  //  val action=FragmentWayCheckoutDirections.actionFragmentWayCheckoutToCart()
-               //     findNavController().navigate(action)
+                    //  val action=FragmentWayCheckoutDirections.actionFragmentWayCheckoutToCart()
+                    //     findNavController().navigate(action)
                 }
             }
         }
         val filter  = IntentFilter()
         filter.addAction("surepay.mada.RESULT")
-       // requireActivity().registerReceiver(myReceiver, filter)
+        // requireActivity().registerReceiver(myReceiver, filter)
         requireActivity().registerReceiver(myReceiver1, filter)
 
         binding.postBalance.setOnClickListener {
 
-           findNavController().navigate(R.id.action_fragmentWayCheckout_to_allReceiptFragment)
+            findNavController().navigate(R.id.action_fragmentWayCheckout_to_allReceiptFragment)
         }
-           binding.bankCard .setOnClickListener {
+        binding.bankCard .setOnClickListener {
             //findNavController().navigate(FragmentWayCheckoutDirections.actionFragmentWayCheckoutToFragmentpurchase1())
             Log.d("TAG", "onViewCreated: ")
             sendAmountToMadaApplication()
-              // findNavController().navigate(R.id.action_fragmentWayCheckout_to_allReceiptFragment)
+            // findNavController().navigate(R.id.action_fragmentWayCheckout_to_allReceiptFragment)
         } }
 
 
@@ -119,14 +119,14 @@ class FragmentWayCheckout: BaseFragment<FragmentWayCheckoutViewModel, FragmentWa
 
         for(item in GlobalClass.globalCartList.indices){
 
-           ammount+=(GlobalClass.globalCartList.get(item).Price)*(GlobalClass.globalCartList.get(item).quanty)
+            ammount+=(GlobalClass.globalCartList.get(item).Price)*(GlobalClass.globalCartList.get(item).quanty)
             array.add((GlobalClass.globalCartList.get(item).Price)*(GlobalClass.globalCartList.get(item).quanty))
 
             Log.e("dynamic voucher price-",item.toString()+GlobalClass.globalCartList.get(item).Price.toString())
         }
 
 
-ammount=ammount*10
+        ammount=ammount*10
 
 
         val intent = Intent("surepay.mada.PAY_AMOUNT")
@@ -167,8 +167,8 @@ ammount=ammount*10
         viewModel.accept_statues1()
     }
 
-  //  override fun setI(name: String?) {
-   //     Log.d(DepartmentFragment.TAG, "onActivityResult: 113245555")
-  //  }
+    //  override fun setI(name: String?) {
+    //     Log.d(DepartmentFragment.TAG, "onActivityResult: 113245555")
+    //  }
 
 }
