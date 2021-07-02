@@ -31,7 +31,7 @@ class VoucherReceiptFragment:Fragment(R.layout.voucher_receipt_layout){
     lateinit var  print: CtPrint
     var position=0
     var price=""
-val args:VoucherReceiptFragmentArgs by navArgs()
+    val args:VoucherReceiptFragmentArgs by navArgs()
     var imgId=""
     val simpleDateFormat= SimpleDateFormat("dd-MM-yyyy HH:MM:SS")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -50,7 +50,7 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         card_price.text = price + " SAR"
 //        card_price2.text = price + " SAR"
         //doPrinting()
-       
+
 
         Picasso.get().load(url)
             .into(card_ligo, object : Callback {
@@ -78,7 +78,7 @@ val args:VoucherReceiptFragmentArgs by navArgs()
         voucher_time.text = currentDT.substring(11, 16).toString()
 
 
-       // btnPrint.setOnClickListener {  doPrinting() }
+        // btnPrint.setOnClickListener {  doPrinting() }
     }
 
 

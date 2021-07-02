@@ -256,5 +256,6 @@ dependencies {
     implementation files('libs/CTOS.CtPrint_0.0.15.jar')
     implementation 'com.squareup.picasso:picasso:2.71828'
     implementation 'com.zeugmasolutions.localehelper:locale-helper-android:1.1.4'
-
+//    implementation 'com.google.android.gms:play-services-maps:17.0.1'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
 }

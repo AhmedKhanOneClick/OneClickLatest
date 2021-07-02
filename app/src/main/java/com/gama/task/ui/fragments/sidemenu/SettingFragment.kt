@@ -1,5 +1,6 @@
 package com.gama.task.ui.fragments.sidemenu
 
+import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.preference.PreferenceManager
@@ -8,12 +9,22 @@ import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.gama.task.R
+import com.gama.task.ui.fragments.sidemenu.Map.MainMapActivity
+import com.gama.task.ui.fragments.sidemenu.Map.MapsActivity
 import com.gama.task.ui.main.MainActivity
+import com.gama.task.util.extensions.openActivity
 import kotlinx.android.synthetic.main.fragment_menu_setting.*
 
 class SettingFragment:Fragment(R.layout.fragment_menu_setting) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val sharedPreferencesmap: SharedPreferences = requireActivity().getSharedPreferences("map", Context.MODE_PRIVATE)
+        val prefsEditor = sharedPreferencesmap.edit()
+        val serializedObject: String = sharedPreferencesmap.getString("latitude", "")!!
+        if(serializedObject.isNotBlank()){
+            val name:String = sharedPreferencesmap.getString("name","")!!
+            address.setText(name)
+        }
 
         val sp: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         val mEdit1: SharedPreferences.Editor = sp.edit()
@@ -60,6 +71,9 @@ class SettingFragment:Fragment(R.layout.fragment_menu_setting) {
 
 
             })
+        map.setOnClickListener {
+            openActivity(MapsActivity::class.java, true)
+        }
     }
 }
 

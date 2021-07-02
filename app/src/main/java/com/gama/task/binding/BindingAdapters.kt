@@ -392,7 +392,7 @@ object BindingAdapters {
     @JvmStatic
     @BindingAdapter("image")
     fun ImageView.setdatetime(image: String?) {
- var  resourceId=0
+        var  resourceId=0
         if (image == null)
             return
         val appSharedPrefs = context.getSharedPreferences("pref", Context.MODE_PRIVATE)
@@ -433,16 +433,16 @@ object BindingAdapters {
 //                )
 //            }
 
-  for(i in 0..arrayItems.size-1){
-      Log.d(TAG, "setdatetime:3 ")
-      if(arrayItems[i].createdAt.equals(image)){
-          Log.d(TAG, "setdatetime:4 ")
-           resourceId = context.resources.getIdentifier(
-              "favouritesred",
-              "drawable",
-              context.packageName
-          )
-      }
+            for(i in 0..arrayItems.size-1){
+                Log.d(TAG, "setdatetime:3 ")
+                if(arrayItems[i].createdAt.equals(image)){
+                    Log.d(TAG, "setdatetime:4 ")
+                    resourceId = context.resources.getIdentifier(
+                        "favouritesred",
+                        "drawable",
+                        context.packageName
+                    )
+                }
 //      else{
 //          Log.d(TAG, "setdatetime:5 ")
 //          resourceId = context.resources.getIdentifier(
@@ -451,7 +451,7 @@ object BindingAdapters {
 //              context.packageName
 //          )
 //      }
-  }
+            }
         }else{
 
             resourceId = context.resources.getIdentifier(

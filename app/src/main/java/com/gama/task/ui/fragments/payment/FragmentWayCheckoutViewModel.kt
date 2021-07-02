@@ -23,6 +23,13 @@ class FragmentWayCheckoutViewModel @ViewModelInject constructor(
 ,private val userAuthDao: UserAuthDao
 ) : ViewModel() {
 
+    private val _navigateToMainActivity = MutableLiveData<Event<Unit>>()
+
+    /**
+     * Immutable version of [_navigateToMainActivity]
+     */
+    val navigateToMainActivity = _navigateToMainActivity as LiveData<Event<Unit>>
+
     private val _departments = MutableLiveData<Order>()
     val departments = _departments as LiveData<Order>
 
@@ -50,6 +57,7 @@ class FragmentWayCheckoutViewModel @ViewModelInject constructor(
             .apply {
                 observeForever {
                     if(it.status== Status.SUCCESS){
+                        _navigateToMainActivity.postValue(Event(Unit))
                         Log.d(DepartmentFragment.TAG, "accept_statues: "+it)
                     }else{
                         Log.d(DepartmentFragment.TAG, "accept_statues: error"+it.message+" "+it.status+" "+it.code+" "+it.message)

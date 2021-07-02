@@ -2,6 +2,7 @@
 <resources>
     <!--    <string name="google_maps_api" translatable="false">AIzaSyDJHmxqgx4Hd5Fc_Mnr16LGNEwQByg_wAM</string>-->
 
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyCAIrZI-NdKgNSYLwu-Npr6dTczWfiJ0jE</string>
 
     <string name="google_maps_api" translatable="false">AIzaSyAodPzqQmmFS8NMlPP2pzUXUHiVn6vNB0s</string>
 </resources>

@@ -3,10 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.gama.task">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+
+
+
 
     <application
         android:name=".BaseApp"
@@ -24,7 +31,12 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_api" />
-
+        <activity
+            android:name=".ui.fragments.sidemenu.Map.MainMapActivity"
+          ></activity>
+        <activity
+            android:name=".ui.fragments.sidemenu.Map.MapsActivity"
+            ></activity>
         <activity
             android:name=".ui.main.MainActivity"
             android:screenOrientation="portrait"
@@ -46,6 +58,9 @@
             android:name="com.gama.task.ui.fragments.printing.MyReceiver"
             android:enabled="true"
             android:exported="true" />
+<!--        <meta-data-->
+<!--            android:name="com.google.android.geo.API_KEY"-->
+<!--            android:value="@string/google_maps_key" />-->
     </application>
 
 </manifest>

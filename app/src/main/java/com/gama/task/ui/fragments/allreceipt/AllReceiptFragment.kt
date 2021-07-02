@@ -28,7 +28,7 @@ class AllReceiptFragment:Fragment(R.layout.fragment_all_receipt),AllReceiptAdapt
         all_receipt_rv.adapter = AllReceiptAdapter(this.requireContext(),GlobalClass.globalCartList,this)
         all_receipt_rv.layoutManager = LinearLayoutManager(context)
         all_receipt_rv.setHasFixedSize(true)
-       total?.setText(checkout.toString())
+        total?.setText(checkout.toString())
         final_receipt_btn.setOnClickListener {
 //       findNavController().navigate(AllReceiptFragmentDirections.actionAllReceiptFragmentToFragmentReceipt())
 
@@ -39,11 +39,11 @@ class AllReceiptFragment:Fragment(R.layout.fragment_all_receipt),AllReceiptAdapt
 
     override fun onClick(position: Int) {
 
-val action=AllReceiptFragmentDirections.actionAllReceiptFragmentToVoucherReceiptFragment()
+        val action=AllReceiptFragmentDirections.actionAllReceiptFragmentToVoucherReceiptFragment()
 
         action.position=position
         action.imgId=GlobalClass.globalCartList.get(position).logo
-       // action.position=position
+        // action.position=position
         Log.e("price - quantty",GlobalClass.globalCartList.get(position).Price.toString()+" - "+GlobalClass.globalCartList.get(position).quanty.toString())
         findNavController().navigate(action)
     }
