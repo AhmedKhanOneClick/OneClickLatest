@@ -12,7 +12,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="print"
-android:visibility="invisible"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -103,6 +103,7 @@ android:visibility="invisible"
                             android:textAllCaps="true"
                             android:textColor="@android:color/black"
                             android:textSize="15sp"
+                            android:visibility="gone"
                             android:textStyle="bold" />
 
                         <TextView
@@ -111,6 +112,7 @@ android:visibility="invisible"
                             android:layout_gravity="center"
                             android:layout_marginTop="5dp"
                             android:text="shop_name"
+                            android:visibility="gone"
                             android:textColor="@android:color/black"
                             android:textSize="15sp" />
 
@@ -220,6 +222,7 @@ android:visibility="invisible"
                                 android:orientation="horizontal">
 
                                 <TextView
+                                    android:id="@+id/logo_name"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textStyle="bold"
@@ -408,10 +411,11 @@ android:visibility="invisible"
 
                             android:textSize="11sp" />
                         <TextView
+                            android:id="@+id/pin_code"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-
+                            android:inputType="textPassword"
                             android:textStyle="bold"
                             android:text="12142551344454"
                             android:textColor="@android:color/black"

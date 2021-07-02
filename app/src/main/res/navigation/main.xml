@@ -81,6 +81,9 @@
         <argument
             android:name="logo_url"
             app:argType="string" />
+        <argument
+            android:name="logo_name"
+            app:argType="string" />
 
         <action
             android:id="@+id/action_favouritefragment"

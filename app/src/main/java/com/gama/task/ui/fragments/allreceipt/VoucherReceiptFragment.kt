@@ -7,6 +7,7 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.os.Bundle
 import android.os.Handler
+import android.text.method.PasswordTransformationMethod
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -47,16 +48,22 @@ val args:VoucherReceiptFragmentArgs by navArgs()
             position
         ).quanty)).toString()
 
-        card_price.text = price + " SAR"
+        card_price.text = price +" SAR"
+        logo_name.text=GlobalClass.globalCartList.get(position).logo_name
 //        card_price2.text = price + " SAR"
         //doPrinting()
        
+btnPrint.setOnClickListener {
+    Toast.makeText(context, "printing now please wait", Toast.LENGTH_SHORT).show()
 
+    pin_code.transformationMethod = PasswordTransformationMethod.getInstance()
+    doPrinting()
+}
         Picasso.get().load(url)
             .into(card_ligo, object : Callback {
                 override fun onSuccess() {
-                    Toast.makeText(context, "printing now please wait", Toast.LENGTH_SHORT).show()
-                    doPrinting()
+                 //   Toast.makeText(context, "printing now please wait", Toast.LENGTH_SHORT).show()
+                   // doPrinting()
                 }
 
                 override fun onError(e: Exception?) {

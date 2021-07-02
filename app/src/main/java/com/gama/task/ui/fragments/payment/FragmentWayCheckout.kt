@@ -65,19 +65,19 @@ class FragmentWayCheckout: BaseFragment<FragmentWayCheckoutViewModel, FragmentWa
                 if (topic.tX_RSLT.equals("1")){
                     // Log.e()
                     Log.d(TAG, "onReceive: txRslt1")
-//                    val action=FragmentWayCheckoutDirections.actionFragmentWayCheckoutToCart()
-//                    findNavController().navigate(action)
+                    val action=FragmentWayCheckoutDirections.actionFragmentWayCheckoutToCart()
+                    findNavController().navigate(action)
 
                 }
                 if (topic.tX_RSLT.equals("2")){
                     Log.d(TAG, "onReceive: txRslt2")
-//                    val action=FragmentWayCheckoutDirections.actionFragmentWayCheckoutToCart()
-//                    findNavController().navigate(action)
+                    val action=FragmentWayCheckoutDirections.actionFragmentWayCheckoutToCart()
+                    findNavController().navigate(action)
                 }
                 if (topic.tX_RSLT.equals("3")){
                     Log.d(TAG, "onReceive: txRslt3")
-                    //  val action=FragmentWayCheckoutDirections.actionFragmentWayCheckoutToCart()
-                    //     findNavController().navigate(action)
+                      val action=FragmentWayCheckoutDirections.actionFragmentWayCheckoutToCart()
+                         findNavController().navigate(action)
                 }
             }
         }

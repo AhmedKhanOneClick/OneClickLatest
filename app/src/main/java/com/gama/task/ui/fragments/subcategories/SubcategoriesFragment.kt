@@ -71,7 +71,8 @@ class SubcategoriesFragment : BaseFragment<SubcategoriesDataViewModel, FragmentS
                         R.id.actionproducts,
                         bundleOf(
                             "req_id" to it.id,
-                            "logo_url" to it.imageURL
+                            "logo_url" to it.imageURL,
+                            "logo_name" to it.name
 //                            "hotelSearchRequest" to viewModel.accountsList.value!!
                         )
                     )
