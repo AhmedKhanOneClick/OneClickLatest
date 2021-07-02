@@ -267,7 +267,8 @@ lateinit var  arrayItems: ArrayList<Content>
 
                         ,content.description
 
-                        ,args.logoUrl)
+                        ,args.logoUrl
+                    ,args.logoName)
                 )
                 //ad id for the cart
 
